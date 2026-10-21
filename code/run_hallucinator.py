@@ -176,8 +176,11 @@ def main_p2(args):
     out.mkdir(parents=True, exist_ok=True)
     (out / "papers.txt").write_text("\n".join(papers) + "\n", encoding="utf-8")
     cache = out / "hallucinator_cache.sqlite"
-    fake = pd.read_csv(ROOT / "results" / "p2_fake_items.csv", dtype=str, keep_default_na=False)
+    fp_ = ROOT / "results" / "p2_fake_items.csv"
+    fake = pd.read_csv(fp_, dtype=str, keep_default_na=False) if fp_.exists() else pd.DataFrame(columns=["set", "item_id"])
     fake = fake[fake.set == "gen_a"].sort_values("item_id").reset_index(drop=True)
+    if not len(fake):
+        print("no gen_a items (results/p2_fake_items.csv missing): recall PDFs skipped", flush=True)
     fake_ents = []
     for r in fake.itertuples():
         e = {"ID": r.item_id, "title": r.title, "author": r.author, "year": r.year}
