@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
-"""Topic 43 / P2 / T10c: non-determinism of CheckIfExist (zabbonat/References-Validation @ e4605651; P0 harness
-tools/scripts/run_cie.mts) -- 3 runs, one after the other, on the same input PDF; appendix material.
+"""Topic 43 / P2 / T10c: run-to-run stability of CheckIfExist (zabbonat/References-Validation @ e4605651; P0 harness
+tools/scripts/run_cie.mts) -- 3 runs, one after the other (no other network job running), on the same input PDF;
+appendix material. P0's 5-vs-15 difference came from a run that overlapped another tool (rate limits: the tool counts
+429 as "not found"); this script tests the sequential case.
 
 Input: the IEEEtran-strip render of one hallucinator P2 paper ($THS_DATASETS/_derived/43/tools/hall_p2/<id>/
 IEEEtran_strip/main.pdf). Per extracted reference, the status of each run (verified / partial_match / mismatch /
