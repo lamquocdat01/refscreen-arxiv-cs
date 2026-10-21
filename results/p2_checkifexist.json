@@ -1,0 +1,50 @@
+{
+ "interim": false,
+ "tool": "CheckIfExist @ e4605651 (P0 harness)",
+ "paper": "2403.11482",
+ "input": "IEEEtran strip render (main.pdf)",
+ "runs": 3,
+ "n_extracted": [
+  49,
+  49,
+  49
+ ],
+ "counts": [
+  {
+   "not_found": 19,
+   "verified": 27,
+   "partial_match": 2,
+   "mismatch": 1
+  },
+  {
+   "not_found": 19,
+   "verified": 27,
+   "partial_match": 2,
+   "mismatch": 1
+  },
+  {
+   "not_found": 19,
+   "verified": 27,
+   "partial_match": 2,
+   "mismatch": 1
+  }
+ ],
+ "runtime_s": [
+  116.158,
+  114.993,
+  111.346
+ ],
+ "http_requests": [
+  340,
+  340,
+  340
+ ],
+ "n_compared": 49,
+ "n_status_differs": 0,
+ "n_flag_differs": 0,
+ "flagged_per_run": [
+  20,
+  20,
+  20
+ ]
+}

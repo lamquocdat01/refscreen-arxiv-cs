@@ -17,7 +17,7 @@ screen reaches title similarity >= 0.9; def 2 also flags it when no such backend
 surname. Items whose screen had a failed (rate-limited) backend and no hit are excluded from that screen's
 denominator and counted. Recall = flagged / evaluated among fabricated/problematic items; for badalova's verified
 items the same share is an FP.
-Stages: build -> query (network; resumable via the API cache) -> select -> recall
+Stages: build -> query (network; resumable via the API cache) -> select -> recall; refresh after a re-query
 Outputs: $THS_DATASETS/_derived/43/fake/{items,items_queried}.csv, results/p2_fake_items.csv (used items),
          results/p2_recall.csv, results/p2_recall.json
 Usage: python p2_fake_refs.py build|query|select|recall --seed 42 [--workers 3]
@@ -207,6 +207,20 @@ def select(args):
     print(used.groupby(["set", "label"]).size().to_string())
 
 
+def refresh(args):
+    """After a re-query (e.g. S2 failures retried at night): copy the query columns of items_queried.csv into
+    results/p2_fake_items.csv for the same item_ids. The set of used items (gen_a draw) is not changed."""
+    q = pd.read_csv(DER / "items_queried.csv", dtype=str, keep_default_na=False).set_index("item_id")
+    u = pd.read_csv(ROOT / "results" / "p2_fake_items.csv", dtype=str, keep_default_na=False)
+    cols = [c for c in q.columns if c.startswith(("sim_", "id_", "fail_", "auth_", "skip_")) or c == "status"]
+    before = {c: u[c].copy() for c in cols if c in u}
+    for c in cols:
+        u[c] = u.item_id.map(q[c]).fillna("")
+    changed = sum(int((before[c] != u[c]).sum()) for c in before)
+    u.to_csv(ROOT / "results" / "p2_fake_items.csv", index=False)
+    print(f"refreshed {len(cols)} columns for {len(u)} items; {changed} cells changed")
+
+
 def flags(df, upto, definition):
     """1 flagged, 0 not, NaN excluded (failed backend and no hit) for screen = SCREENS[:upto+1]."""
     out = []
@@ -268,11 +282,11 @@ def recall(args):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("stage", choices=["build", "query", "select", "recall"])
+    ap.add_argument("stage", choices=["build", "query", "select", "recall", "refresh"])
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--workers", type=int, default=3)
     args = ap.parse_args()
-    {"build": build, "query": query, "select": select, "recall": recall}[args.stage](args)
+    {"build": build, "query": query, "select": select, "recall": recall, "refresh": refresh}[args.stage](args)
 
 
 if __name__ == "__main__":

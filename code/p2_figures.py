@@ -4,7 +4,8 @@ figures/<F>.sources.txt with the sha256 of every source file it reads (C8b). No 
 
 F1  four verdicts on one bibliography: u_A by cumulative backend x period, paper-bootstrap 95 % CI
 F2  discrete ROC per backend: FP on legitimate academic refs (u_A, 2019-21) vs recall on fabricated items (def 1 and
-    def 2), per item family (results/p2_recall.csv; skipped while it is missing)
+    def 2), per item family; main version after the recall-drop audit (results/p2_recall_audited.csv), F2b with
+    the original labels (appendix)
 F3  PPV ceiling vs web share w_W, two backend sets (Crossref-only, full cascade), pi = 0.39 % and 0.5 %
 F4  P(false flag, k = 2) vs n for the measured tier mix of cs.CV / cs.NI / cs.CL (full cascade) + observed tertiles
 F5  FP by style x variant (GROBID, union screen): certified-real vs the 58 manually verified render refs
@@ -88,18 +89,29 @@ def f1(seed):
     save(fig, "F1_four_verdicts", ["p1_backend_table.csv"], seed)
 
 
-def f2(seed):
+def f2(seed, audited=True):
+    """audited=True (main): GPTZero / Badalova-Mayr recall after the recall-drop audit (LABEL_WRONG removed,
+    results/p2_recall_audited.csv); audited=False: original labels (appendix)."""
     p = RES / "p2_recall.csv"
     if not p.exists():
         print("F2 skipped: results/p2_recall.csv missing")
         return
     rc = pd.read_csv(p)
+    pa = RES / "p2_recall_audited.csv"
+    if audited:
+        if not pa.exists():
+            print("F2 (audited) skipped: results/p2_recall_audited.csv missing")
+            return
+        ra = pd.read_csv(pa)
+        ra = ra[ra.version.str.startswith("after audit")].drop(columns="version")
+        rc = pd.concat([rc[~rc["set"].isin(ra["set"].unique())], ra], ignore_index=True)
     b = bt_rows()
     r = b[(b.period == "2019-21") & (b.stratum == "A")].iloc[0]
     keys = ["crossref" if c == "crossref" else f"+{c}" for c, _ in COLS]
     fp = {k: float(r[f"u_{c}"]) * 100 for k, (c, _) in zip(keys, COLS)}
     fams = [("gen_a", "fabricated", "fabricated title (gen; 100 % by construction)", C1, "o"),
-            ("gptzero", "hallucinated", "GPTZero NeurIPS 2025 (n = 100)", C2, "s"),
+            ("gptzero", "hallucinated", "GPTZero NeurIPS 2025 (n = 99 after audit)" if audited else
+             "GPTZero NeurIPS 2025 (n = 100, original labels)", C2, "s"),
             ("gen_b", "fabricated", "real title, swapped authors (gen, n = 100)", C3, "^")]
     fig, axes = plt.subplots(1, 2, figsize=(7.4, 3.5), sharey=True)
     for ax, d in zip(axes, (1, 2)):
@@ -128,7 +140,11 @@ def f2(seed):
     fig.text(0.01, -0.16, "Each point is one cumulative backend set (left to right: +S2 ... Crossref-only). Bars: "
              "bounds with items excluded for a failed backend counted as not flagged / flagged.", fontsize=6.5,
              color=MUTED)
-    save(fig, "F2_roc_backend", ["p2_recall.csv", "p1_backend_table.csv"], seed)
+    if audited:
+        save(fig, "F2_roc_backend", ["p2_recall.csv", "p2_recall_audited.csv", "p2_recall_drop_audit.csv",
+                                     "p1_backend_table.csv"], seed)
+    else:
+        save(fig, "F2b_roc_backend_original_labels", ["p2_recall.csv", "p1_backend_table.csv"], seed)
 
 
 def f3(seed):
@@ -220,6 +236,7 @@ def main():
     args = ap.parse_args()
     for f in (f1, f2, f3, f4, f5, f6):
         f(args.seed)
+    f2(args.seed, audited=False)
 
 
 if __name__ == "__main__":
