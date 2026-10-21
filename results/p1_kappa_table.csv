@@ -1,0 +1,4 @@
+,interim,pass2=exists,pass2=not-found,pass2=ambiguous
+pass1=exists,False,39,0,1
+pass1=not-found,False,0,0,0
+pass1=ambiguous,False,0,0,0

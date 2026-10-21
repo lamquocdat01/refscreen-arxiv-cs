@@ -1,0 +1,10 @@
+# Python 3.11.9 (versions used for P1, 20-10-2026)
+numpy==1.26.4
+pandas==2.3.3
+scipy==1.16.3
+matplotlib==3.10.8
+requests==2.31.0
+feedparser==6.0.14
+bibtexparser==1.4.4
+rapidfuzz==3.14.6
+lxml==6.0.2

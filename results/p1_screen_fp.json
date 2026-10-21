@@ -1,0 +1,511 @@
+{
+ "interim": false,
+ "seed": 42,
+ "boot": 1000,
+ "threshold": 0.9,
+ "n_render_papers": 100,
+ "n_rendered_refs": 46032,
+ "n_unique_strings": 21793,
+ "n_stage_b_queries": 5481,
+ "s2_live": false,
+ "arxiv_ids_in_strings": 1559,
+ "arxiv_ids_without_title": 0,
+ "query_errors": {
+  "crossref": 0,
+  "s2": 881,
+  "arxiv": 21
+ },
+ "manual_exists_in_render_papers": 0,
+ "manual_note": "manual sample (2019-21 papers) does not overlap the 2024-26 render papers; manual-exists rows are the bib-title screen (substitute, labelled)",
+ "render_missing": {
+  "IEEEtran/orig": {
+   "k": 0,
+   "n": 5754,
+   "n_papers": 0
+  },
+  "IEEEtran/strip": {
+   "k": 2,
+   "n": 5754,
+   "n_papers": 1
+  },
+  "IEEEtran_doi/orig": {
+   "k": 0,
+   "n": 5754,
+   "n_papers": 0
+  },
+  "IEEEtran_doi/strip": {
+   "k": 2,
+   "n": 5754,
+   "n_papers": 1
+  },
+  "IEEEtran_doi_raw/orig": {
+   "k": 207,
+   "n": 5754,
+   "n_papers": 5
+  },
+  "IEEEtran_doi_raw/strip": {
+   "k": 2,
+   "n": 5754,
+   "n_papers": 1
+  },
+  "acmart/orig": {
+   "k": 1,
+   "n": 5754,
+   "n_papers": 1
+  },
+  "acmart/strip": {
+   "k": 1,
+   "n": 5754,
+   "n_papers": 1
+  },
+  "elsarticle-num/orig": {
+   "k": 0,
+   "n": 5754,
+   "n_papers": 0
+  },
+  "elsarticle-num/strip": {
+   "k": 0,
+   "n": 5754,
+   "n_papers": 0
+  }
+ },
+ "H3": {
+  "fp_a": 0.0025906735751295338,
+  "k_a": 6,
+  "n_a": 2316,
+  "fp_b": 0.00043047783039173483,
+  "k_b": 1,
+  "n_b": 2323,
+  "ratio": 6.018134715025907,
+  "ratio_ci": [
+   2.0053983787808334,
+   NaN
+  ],
+  "n_papers": 97,
+  "PASS": true,
+  "strong": true,
+  "spec": "FP(IEEEtran v1.14, strip) / FP(IEEEtran-DOI, orig); certified-real; full cascade; GROBID titles"
+ },
+ "H3_crossref_only": {
+  "fp_a": 0.08129032258064516,
+  "k_a": 189,
+  "n_a": 2325,
+  "fp_b": 0.015483870967741935,
+  "k_b": 36,
+  "n_b": 2325,
+  "ratio": 5.25,
+  "ratio_ci": [
+   2.7883890845070423,
+   11.817187499999996
+  ],
+  "n_papers": 97,
+  "PASS": true,
+  "strong": true,
+  "spec": "same as H3 but Crossref-only screen (secondary)"
+ },
+ "H3_plus_dblp": {
+  "fp_a": 0.006881720430107527,
+  "k_a": 16,
+  "n_a": 2325,
+  "fp_b": 0.0012903225806451613,
+  "k_b": 3,
+  "n_b": 2325,
+  "ratio": 5.333333333333333,
+  "ratio_ci": [
+   2.3333333333333335,
+   NaN
+  ],
+  "n_papers": 97,
+  "PASS": true,
+  "strong": true,
+  "spec": "same as H3 but Crossref-only + DBLP offline screen (secondary, not preregistered)"
+ },
+ "H4": {
+  "crossref": {
+   "screen": "crossref",
+   "fp_manual_weighted": 0.4114539928853013,
+   "fp_certified": 0.4077877620881472,
+   "diff": 0.003666230797154113,
+   "diff_ci": [
+    -0.10566932069781408,
+    0.1111006118159655
+   ],
+   "n_certified": 2337,
+   "k_certified": 953,
+   "n_manual": 189,
+   "k_manual": 108,
+   "manual_by_tier": {
+    "B": [
+     23,
+     34
+    ],
+    "C": [
+     17,
+     37
+    ],
+    "J": [
+     7,
+     36
+    ],
+    "P": [
+     20,
+     32
+    ],
+    "S": [
+     22,
+     22
+    ],
+    "W": [
+     19,
+     28
+    ]
+   },
+   "weights": {
+    "B": 0.0366,
+    "C": 0.5127,
+    "J": 0.3223,
+    "P": 0.01,
+    "S": 0.0058,
+    "W": 0.1125
+   },
+   "n_papers": 264,
+   "PASS": false,
+   "seed": 42,
+   "boot": 1000
+  },
+  "dblp": {
+   "screen": "dblp",
+   "fp_manual_weighted": 0.17538260094336666,
+   "fp_certified": 0.0038510911424903724,
+   "diff": 0.17153150980087628,
+   "diff_ci": [
+    0.11265241227186365,
+    0.23240316742097358
+   ],
+   "n_certified": 2337,
+   "k_certified": 9,
+   "n_manual": 189,
+   "k_manual": 59,
+   "manual_by_tier": {
+    "B": [
+     13,
+     34
+    ],
+    "C": [
+     4,
+     37
+    ],
+    "J": [
+     4,
+     36
+    ],
+    "P": [
+     0,
+     32
+    ],
+    "S": [
+     22,
+     22
+    ],
+    "W": [
+     16,
+     28
+    ]
+   },
+   "weights": {
+    "B": 0.0366,
+    "C": 0.5127,
+    "J": 0.3223,
+    "P": 0.01,
+    "S": 0.0058,
+    "W": 0.1125
+   },
+   "n_papers": 264,
+   "PASS": true,
+   "seed": 42,
+   "boot": 1000
+  },
+  "union": {
+   "screen": "union",
+   "fp_manual_weighted": 0.12223019038814961,
+   "fp_certified": 0.0012836970474967907,
+   "diff": 0.12094649334065283,
+   "diff_ci": [
+    0.07125932280810496,
+    0.16937464077939338
+   ],
+   "n_certified": 2337,
+   "k_certified": 3,
+   "n_manual": 189,
+   "k_manual": 48,
+   "manual_by_tier": {
+    "B": [
+     6,
+     34
+    ],
+    "C": [
+     2,
+     37
+    ],
+    "J": [
+     2,
+     36
+    ],
+    "P": [
+     0,
+     32
+    ],
+    "S": [
+     22,
+     22
+    ],
+    "W": [
+     16,
+     28
+    ]
+   },
+   "weights": {
+    "B": 0.0366,
+    "C": 0.5127,
+    "J": 0.3223,
+    "P": 0.01,
+    "S": 0.0058,
+    "W": 0.1125
+   },
+   "n_papers": 264,
+   "PASS": true,
+   "seed": 42,
+   "boot": 1000
+  }
+ },
+ "ratios_vs_doi_style_exploratory": [
+  {
+   "fp_a": 0.002152389151958674,
+   "k_a": 5,
+   "n_a": 2323,
+   "fp_b": 0.00043047783039173483,
+   "k_b": 1,
+   "n_b": 2323,
+   "ratio": 5.0,
+   "ratio_ci": [
+    1.6666666666666665,
+    NaN
+   ],
+   "n_papers": 97,
+   "screen": "union",
+   "style": "IEEEtran",
+   "variant": "orig",
+   "parser": "grobid",
+   "label": "exploratory"
+  },
+  {
+   "fp_a": 0.002152389151958674,
+   "k_a": 5,
+   "n_a": 2323,
+   "fp_b": 0.00043047783039173483,
+   "k_b": 1,
+   "n_b": 2323,
+   "ratio": 5.0,
+   "ratio_ci": [
+    1.6666666666666665,
+    NaN
+   ],
+   "n_papers": 97,
+   "screen": "union",
+   "style": "IEEEtran",
+   "variant": "orig",
+   "parser": "anystyle",
+   "label": "exploratory"
+  },
+  {
+   "fp_a": 0.0,
+   "k_a": 0,
+   "n_a": 2320,
+   "fp_b": 0.00043047783039173483,
+   "k_b": 1,
+   "n_b": 2323,
+   "ratio": 0.0,
+   "ratio_ci": [
+    0.0,
+    NaN
+   ],
+   "n_papers": 97,
+   "screen": "union",
+   "style": "elsarticle-num",
+   "variant": "orig",
+   "parser": "grobid",
+   "label": "exploratory"
+  },
+  {
+   "fp_a": 0.0,
+   "k_a": 0,
+   "n_a": 2321,
+   "fp_b": 0.00043047783039173483,
+   "k_b": 1,
+   "n_b": 2323,
+   "ratio": 0.0,
+   "ratio_ci": [
+    0.0,
+    NaN
+   ],
+   "n_papers": 97,
+   "screen": "union",
+   "style": "elsarticle-num",
+   "variant": "orig",
+   "parser": "anystyle",
+   "label": "exploratory"
+  },
+  {
+   "fp_a": 0.0017368649587494573,
+   "k_a": 4,
+   "n_a": 2303,
+   "fp_b": 0.00043047783039173483,
+   "k_b": 1,
+   "n_b": 2323,
+   "ratio": 4.0347372991749895,
+   "ratio_ci": [
+    1.3406157953439075,
+    NaN
+   ],
+   "n_papers": 97,
+   "screen": "union",
+   "style": "elsarticle-num",
+   "variant": "strip",
+   "parser": "grobid",
+   "label": "exploratory"
+  },
+  {
+   "fp_a": 0.0021645021645021645,
+   "k_a": 5,
+   "n_a": 2310,
+   "fp_b": 0.00043047783039173483,
+   "k_b": 1,
+   "n_b": 2323,
+   "ratio": 5.028138528138528,
+   "ratio_ci": [
+    1.51837735176348,
+    NaN
+   ],
+   "n_papers": 97,
+   "screen": "union",
+   "style": "elsarticle-num",
+   "variant": "strip",
+   "parser": "anystyle",
+   "label": "exploratory"
+  },
+  {
+   "fp_a": 0.0025906735751295338,
+   "k_a": 6,
+   "n_a": 2316,
+   "fp_b": 0.00043047783039173483,
+   "k_b": 1,
+   "n_b": 2323,
+   "ratio": 6.018134715025907,
+   "ratio_ci": [
+    2.0053983787808334,
+    NaN
+   ],
+   "n_papers": 97,
+   "screen": "union",
+   "style": "IEEEtran_doi",
+   "variant": "strip",
+   "parser": "grobid",
+   "label": "exploratory"
+  },
+  {
+   "fp_a": 0.00258732212160414,
+   "k_a": 6,
+   "n_a": 2319,
+   "fp_b": 0.00043047783039173483,
+   "k_b": 1,
+   "n_b": 2323,
+   "ratio": 6.010349288486417,
+   "ratio_ci": [
+    2.0030608443235587,
+    NaN
+   ],
+   "n_papers": 97,
+   "screen": "union",
+   "style": "IEEEtran_doi",
+   "variant": "strip",
+   "parser": "anystyle",
+   "label": "exploratory"
+  },
+  {
+   "fp_a": 0.0008628127696289905,
+   "k_a": 2,
+   "n_a": 2318,
+   "fp_b": 0.00043047783039173483,
+   "k_b": 1,
+   "n_b": 2323,
+   "ratio": 2.004314063848145,
+   "ratio_ci": [
+    0.0,
+    NaN
+   ],
+   "n_papers": 97,
+   "screen": "union",
+   "style": "acmart",
+   "variant": "orig",
+   "parser": "grobid",
+   "label": "exploratory"
+  },
+  {
+   "fp_a": 0.00129366106080207,
+   "k_a": 3,
+   "n_a": 2319,
+   "fp_b": 0.00043047783039173483,
+   "k_b": 1,
+   "n_b": 2323,
+   "ratio": 3.0051746442432083,
+   "ratio_ci": [
+    0.0,
+    NaN
+   ],
+   "n_papers": 97,
+   "screen": "union",
+   "style": "acmart",
+   "variant": "orig",
+   "parser": "anystyle",
+   "label": "exploratory"
+  },
+  {
+   "fp_a": 0.0017543859649122807,
+   "k_a": 4,
+   "n_a": 2280,
+   "fp_b": 0.00043047783039173483,
+   "k_b": 1,
+   "n_b": 2323,
+   "ratio": 4.075438596491228,
+   "ratio_ci": [
+    0.0,
+    NaN
+   ],
+   "n_papers": 97,
+   "screen": "union",
+   "style": "acmart",
+   "variant": "strip",
+   "parser": "grobid",
+   "label": "exploratory"
+  },
+  {
+   "fp_a": 0.003076923076923077,
+   "k_a": 7,
+   "n_a": 2275,
+   "fp_b": 0.00043047783039173483,
+   "k_b": 1,
+   "n_b": 2323,
+   "ratio": 7.147692307692307,
+   "ratio_ci": [
+    1.356844950674974,
+    NaN
+   ],
+   "n_papers": 97,
+   "screen": "union",
+   "style": "acmart",
+   "variant": "strip",
+   "parser": "anystyle",
+   "label": "exploratory"
+  }
+ ]
+}

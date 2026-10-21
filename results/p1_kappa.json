@@ -1,0 +1,68 @@
+{
+ "interim": false,
+ "seed": 42,
+ "boot": 1000,
+ "n": 40,
+ "rater": "CC (intra-rater)",
+ "min_gap_hours": 48.26277777777778,
+ "kappa3": 0.0,
+ "kappa3_boot95": [
+  0.0,
+  0.0
+ ],
+ "kappa3_asymptotic_se": 0.9874208829065746,
+ "raw_agreement": 0.975,
+ "expected_agreement": 0.975,
+ "kappa_binary_exists": 0.0,
+ "kappa_binary_boot95": [
+  0.0,
+  0.0
+ ],
+ "raw_agreement_binary": 0.975,
+ "table_rows_pass1_cols_pass2": {
+  "categories": [
+   "exists",
+   "not-found",
+   "ambiguous"
+  ],
+  "counts": [
+   [
+    39,
+    0,
+    1
+   ],
+   [
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0
+   ]
+  ]
+ },
+ "pass1_counts": {
+  "exists": 40
+ },
+ "pass2_counts": {
+  "exists": 39,
+  "ambiguous": 1
+ },
+ "disagreements": [
+  {
+   "sample_id": "M168",
+   "tier": "W",
+   "exists_1": "exists",
+   "exists_2": "ambiguous"
+  }
+ ],
+ "kappa_ge_0.7": false,
+ "exploratory_pabak3": 0.9624999999999999,
+ "exploratory_pabak_binary": 0.95,
+ "raw_agreement_wilson95": [
+  0.8711834051199223,
+  0.9955732825922052
+ ]
+}

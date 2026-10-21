@@ -1,0 +1,136 @@
+#!/usr/bin/env python3
+"""Topic 43 / P1 / T08: false positives of a public screening tool (hallucinator-cli v0.2.4, AGPL-3.0) on the
+100 render papers (PREREG §6.3 "Scope"; tool facts and install: env/TOOLS_P0.md).
+
+For each render paper x style (orig variant; IEEEtran v1.14, IEEEtran-DOI with escaped DOIs, elsarticle-num), the
+cited entries are compiled into a PDF with one body line before the bibliography. Without it the tool's reference-
+section detection keeps only the last page (P0: 11 of 35 references). The tool then runs in WSL:
+  hallucinator-cli check --no-color --num-workers 2 --disable-dbs DBLP --cache-path <sqlite> --json <out> main.pdf
+(DBLP disabled: its online API is behind a bot wall; no Kaggle token -> arXiv online, rate-limited, as in TOOLS_P0).
+Tool results are mapped to .bbl keys via `original_number`. Flag = status in {not_found, mismatch, author_mismatch,
+retracted}. inconclusive and skipped are excluded from the FP denominator and counted.
+Outputs: $THS_DATASETS/_derived/43/tools/hall_p1/<id>/<style>/ (pdf, json, report)
+         results/p1_tool_hallucinator.csv (per style: FP on certified-real + all refs, paper bootstrap CI)
+Usage: python run_hallucinator.py --seed 42 [--limit N] [--resume] [--styles IEEEtran,IEEEtran_doi,elsarticle-num]
+"""
+import argparse
+import json
+import shutil
+import subprocess
+import sys
+import time
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import render_strip as rs  # noqa: E402
+from ground_truth import DERIVED, ROOT, SRC, parse_bibs  # noqa: E402
+from screen_baseline import boot_ci  # noqa: E402
+
+OUT = DERIVED / "tools" / "hall_p1"
+CLI = "~/tools43/bin/hallucinator-cli"
+FLAG = {"not_found", "mismatch", "author_mismatch", "retracted"}
+BODY_SKELETON = rs.SKELETON.replace("\\begin{document}\n", "\\begin{document}\nThis page lists the references.\n\n")
+
+
+def wsl_path(p):
+    s = str(Path(p).resolve()).replace("\\", "/")
+    return "/mnt/" + s[0].lower() + s[2:]
+
+
+def run_tool(pdf, out_json, report, cache, timeout=3600):
+    cmd = (f"DB_TIMEOUT=30 DB_TIMEOUT_SHORT=15 {CLI} check --no-color --num-workers 2 --disable-dbs DBLP "
+           f"--cache-path '{wsl_path(cache)}' --json '{wsl_path(out_json)}' -o '{wsl_path(report)}' '{wsl_path(pdf)}'")
+    t0 = time.time()
+    try:
+        p = subprocess.run(["wsl", "-d", "Ubuntu-24.04", "--", "bash", "-lc", cmd], capture_output=True,
+                           timeout=timeout)
+        rc = p.returncode
+    except subprocess.TimeoutExpired:
+        rc = -9
+    return rc, time.time() - t0
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--seed", type=int, default=42)
+    ap.add_argument("--limit", type=int, default=0, help="max papers")
+    ap.add_argument("--resume", action="store_true", help="skip paper x style whose tool JSON already exists")
+    ap.add_argument("--styles", default="IEEEtran,IEEEtran_doi,elsarticle-num")
+    ap.add_argument("--boot", type=int, default=1000)
+    args = ap.parse_args()
+
+    gt = pd.read_csv(DERIVED / "p1_groundtruth_refs_full.csv", dtype={"arxiv_id": str, "key": str}, low_memory=False)
+    papers = rs.select_render100(gt, args.seed)
+    if args.limit:
+        papers = papers[:args.limit]
+    lab = gt.drop_duplicates(["arxiv_id", "key"]).set_index(["arxiv_id", "key"])[["label", "tier"]]
+    doi_bst = rs.find_doi_bst()
+    OUT.mkdir(parents=True, exist_ok=True)
+    cache = OUT / "hallucinator_cache.sqlite"
+    rows = []
+    for i, pid in enumerate(papers, 1):
+        ents_all = parse_bibs(sorted((SRC / pid.replace("/", "_")).rglob("*.bib")))
+        keys = [k for k in gt[gt.arxiv_id == pid].key if str(k).lower() in ents_all]
+        ents = [ents_all[str(k).lower()] for k in keys]
+        for style in args.styles.split(","):
+            d = OUT / pid.replace("/", "_") / style
+            js = d / "tool.json"
+            if not (args.resume and js.exists()):
+                shutil.rmtree(d, ignore_errors=True)
+                d.mkdir(parents=True)
+                bst = style
+                if style == "IEEEtran_doi":
+                    shutil.copy2(doi_bst, d / doi_bst.name)
+                    bst = doi_bst.stem
+                rs.write_bib(ents, d / "refs.bib", strip=False, escape_doi=(style == "IEEEtran_doi"))
+                sk = rs.SKELETON
+                rs.SKELETON = BODY_SKELETON
+                try:
+                    rs.compile_dir(d, bst)
+                finally:
+                    rs.SKELETON = sk
+                rc, sec = run_tool(d / "main.pdf", js, d / "report.txt", cache)
+                (d / "runtime.txt").write_text(f"rc={rc} seconds={sec:.0f}\n", encoding="utf-8")
+                print(f"[{i}/{len(papers)}] {pid} {style}: rc={rc} {sec:.0f}s", flush=True)
+            order = rs.bbl_keys(d)
+            try:
+                res = json.loads(js.read_text(encoding="utf-8"))[0]["references"]
+            except (OSError, ValueError, IndexError, KeyError):
+                res = []
+            got = {}
+            for r in res:
+                n = r.get("original_number")
+                if isinstance(n, int) and 1 <= n <= len(order):
+                    got[n] = r
+            for n, key in enumerate(order, 1):
+                r = got.get(n)
+                st = "not-extracted" if r is None else ("inconclusive" if r.get("inconclusive") else
+                                                        (r.get("effective_status") or r.get("status") or ""))
+                m = lab.loc[(pid, key)] if (pid, key) in lab.index else None
+                rows.append(dict(arxiv_id=pid, style=style, n=n, key=key, tool_status=st,
+                                 label=None if m is None else m["label"], tier=None if m is None else m["tier"]))
+    df = pd.DataFrame(rows)
+    df.to_csv(OUT / "hallucinator_refs.csv", index=False)
+    df["flag"] = np.where(df.tool_status.isin(FLAG), 1.0,
+                          np.where(df.tool_status.isin(["verified"]), 0.0, np.nan))
+    summ = []
+    for (style, subset), g in [((s, "certified-real"), x[x.label == "certified-real"]) for s, x in df.groupby("style")] + \
+                              [((s, "all refs"), x) for s, x in df.groupby("style")]:
+        e = g[g.flag.notna()]
+        lo, hi = boot_ci(e, "flag", args.seed, args.boot) if len(e) else (np.nan, np.nan)
+        summ.append(dict(tool="hallucinator-cli 0.2.4", style=style, subset=subset, n_refs=len(g),
+                         n_papers=g.arxiv_id.nunique(), n_not_extracted=int((g.tool_status == "not-extracted").sum()),
+                         n_inconclusive=int((g.tool_status == "inconclusive").sum()),
+                         n_skipped=int((g.tool_status == "skipped").sum()), n_evaluated=len(e),
+                         k_flagged=int(e.flag.sum()), fp=e.flag.mean() if len(e) else np.nan, ci_lo=lo, ci_hi=hi,
+                         seed=args.seed, boot=args.boot, arxiv_backend="online (no Kaggle snapshot)",
+                         dblp="disabled"))
+    pd.DataFrame(summ).to_csv(ROOT / "results" / "p1_tool_hallucinator.csv", index=False)
+    print(pd.DataFrame(summ).to_string())
+
+
+if __name__ == "__main__":
+    main()
