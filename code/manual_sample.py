@@ -10,6 +10,12 @@ Outputs: results/p1_manual_sample.csv (columns to fill: exists, evidence_url, ev
          the screen status columns come last, per manual_protocol.md), results/p1_manual_recheck.csv
 Usage: python manual_sample.py --seed 42 [--n 200] [--limit N] [--resume] [--force]
        --resume keeps an existing sample untouched (it never overwrites filled rows); --force redraws.
+
+P2 (PREREG_AMENDMENT_4 (f)): python manual_sample.py --phase p2 --seed 42 --from render100 --n 60
+  Pool: the cited entries of the 100 render papers (screen_p1/screen_refs.csv, one row per paper x key). n/6 per tier
+  (J, C, P, B, S, W); within a tier, entries without DOI and arXiv id are drawn first, then the others. Simple random
+  sampling within each group. Output: results/p2_manual_sample.csv (sample ids R001...); no recheck list (the P2
+  recheck is drawn by p2_recheck.py under Amendment 4 (b)).
 """
 import argparse
 import csv
@@ -63,7 +69,11 @@ def main():
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--stage0", action="store_true", help="draw from p1_refs_stage0.csv (same rows and order as the "
                     "final ground truth; def1/def2 statuses left empty and joined after route (a))")
+    ap.add_argument("--phase", choices=["p1", "p2"], default="p1")
+    ap.add_argument("--from", dest="src", default="", help="p2: pool, only 'render100'")
     args = ap.parse_args()
+    if args.phase == "p2":
+        return draw_p2(args)
     out = ROOT / "results" / "p1_manual_sample.csv"
     if out.exists() and not args.force:
         filled = pd.read_csv(out, dtype=str)[FILL].notna().any(axis=1).sum()
@@ -122,6 +132,46 @@ def main():
     print(f"eligible {len(el)} refs ({el.paper_id.nunique()} papers), available by tier {avail}")
     print(f"allocation {alloc}; sample {len(sample)} refs from {sample.paper_id.nunique()} papers; "
           f"recheck {len(re_)} (seed {args.seed})")
+
+
+def draw_p2(args):
+    if args.src != "render100":
+        sys.exit("--phase p2 needs --from render100")
+    out = ROOT / "results" / "p2_manual_sample.csv"
+    if out.exists() and not args.force:
+        filled = pd.read_csv(out, dtype=str)[FILL].notna().any(axis=1).sum()
+        print(f"{out.name} exists ({filled} rows already filled); keeping it (use --force to redraw)")
+        return
+    cols = ["arxiv_id", "style", "variant", "parser", "key", "tier", "bib_has_doi", "bib_has_arxiv", "label",
+            "bib_title"]
+    sr = pd.read_csv(DATA / "_derived" / "43" / "screen_p1" / "screen_refs.csv", dtype=str, keep_default_na=False,
+                     usecols=cols)
+    el = sr[(sr["style"] == "IEEEtran") & (sr["variant"] == "orig") & (sr["parser"] == "grobid")].copy()
+    el = el.drop_duplicates(["arxiv_id", "key"]).sort_values(["arxiv_id", "key"]).reset_index(drop=True)
+    el["noid"] = (el.bib_has_doi == "0") & (el.bib_has_arxiv == "0")
+    per = args.n // len(TIERS)
+    rng = np.random.default_rng(args.seed)
+    picks = []
+    for t in TIERS:
+        need = per
+        for noid in (True, False):
+            g = el[(el.tier == t) & (el.noid == noid)]
+            k = min(need, len(g))
+            if k:
+                picks.append(g.iloc[np.sort(rng.choice(len(g), k, replace=False))])
+            need -= k
+    s = pd.concat(picks).reset_index(drop=True)
+    with (DATA / "arxiv_src_43" / "manifest.csv").open(encoding="utf-8") as f:
+        pub = {r["arxiv_id"]: r["published"] for r in csv.DictReader(f)}
+    cache = {}
+    rows = [dict(sample_id=f"R{i + 1:03d}", paper_id=r.arxiv_id, citing_paper_date=pub.get(r.arxiv_id, ""),
+                 tier=r.tier, key=r.key, has_id=int(not r.noid), certified_real=int(r.label == "certified-real"),
+                 title=r.bib_title, bib_entry=bib_entry_text(r.arxiv_id, r.key, cache), **{c: "" for c in FILL})
+            for i, r in s.iterrows()]
+    pd.DataFrame(rows).to_csv(out, index=False)
+    print(f"pool {len(el)} entries ({el.arxiv_id.nunique()} papers); sample {len(rows)} from "
+          f"{s.arxiv_id.nunique()} papers; by tier {s.tier.value_counts().to_dict()}; "
+          f"with id {int((~s.noid).sum())} (seed {args.seed})")
 
 
 if __name__ == "__main__":

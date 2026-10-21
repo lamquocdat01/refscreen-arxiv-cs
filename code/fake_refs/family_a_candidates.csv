@@ -1,0 +1,131 @@
+cand_id,field,tier,title,authors,venue,year,arxiv_id
+A001,cs.CV,C,Lattice-Guided Token Pruning for Dense Prediction with Hierarchical Vision Transformers,Tomasz Wierzbicki and Haruka Ozawa and Daniel Ferreira,IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR),2023,
+A002,cs.CV,J,Spectral Occlusion Reasoning for Monocular Depth Completion in Cluttered Indoor Scenes,Mehdi Rostami and Lena Hartwig,IEEE Transactions on Image Processing,2022,
+A003,cs.CV,C,Contour-Aware Diffusion Priors for Few-Shot Instance Segmentation of Aerial Imagery,Priya Raghunathan and Felix Ostermann and Chen Yuxuan,European Conference on Computer Vision (ECCV),2024,
+A004,cs.CV,P,Rethinking Patch Shuffling as a Regulariser for Self-Supervised Video Representation Learning,Ingrid Solberg and Kwame Asante,arXiv preprint,2023,2306.14829
+A005,cs.CV,J,A Bilateral Calibration Network for Cross-Spectrum Pedestrian Re-Identification Under Low Illumination,Wenjie Tan and Sofia Marchetti and Arjun Kulkarni,Pattern Recognition,2021,
+A006,cs.CV,C,Learning Topology-Preserving Correspondences for Non-Rigid Point Cloud Registration in the Wild,Oskar Lindqvist and Mai Thi Huong,IEEE/CVF International Conference on Computer Vision (ICCV),2021,
+A007,cs.CV,J,Frequency-Decoupled Attention for Underwater Image Restoration with Physical Scattering Constraints,Rafael Quintero and Yuki Matsuda and Elena Popescu,International Journal of Computer Vision,2024,
+A008,cs.CV,C,Hierarchical Prompt Distillation for Open-Vocabulary Panoptic Segmentation on Edge Devices,Bogdan Kravets and Aiko Nishimura,AAAI Conference on Artificial Intelligence,2025,
+A009,cs.CV,P,Towards Calibrated Uncertainty in Event-Camera Optical Flow via Stochastic Spike Ensembles,Nadia El-Sayed and Henrik Vogel,arXiv preprint,2024,2403.19072
+A010,cs.CV,J,Multi-Granular Shape Priors for Weakly Supervised Lesion Localisation in Dermoscopic Images,Clara Dumont and Siddharth Menon and Lukas Brenner,Medical Image Analysis,2022,
+A011,cs.CV,C,Geodesic Feature Warping for Temporally Consistent Video Inpainting of Long Sequences,Jae-Won Park and Isabella Conti,British Machine Vision Conference (BMVC),2022,
+A012,cs.CV,J,Adaptive Receptive-Field Mixing for Real-Time Semantic Segmentation of Urban Driving Scenes,Mateus Albuquerque and Rina Kobayashi and Pavel Novak,IEEE Transactions on Intelligent Transportation Systems,2023,
+A013,cs.CV,C,Counterfactual Viewpoint Synthesis for Robust 3D Human Pose Estimation from Sparse Cameras,Leila Haddad and Viktor Petrenko,IEEE/CVF Winter Conference on Applications of Computer Vision (WACV),2024,
+A014,cs.CV,P,Sparse Radiance Anchors: Memory-Efficient Neural Fields for City-Scale Reconstruction,Daniel Okonkwo and Mei Lin and Jonas Weber,arXiv preprint,2025,2501.08413
+A015,cs.CV,J,Illumination-Invariant Keypoint Descriptors via Contrastive Photometric Augmentation,Hana Novotna and Rui Carvalho,Computer Vision and Image Understanding,2021,
+A016,cs.CV,C,Glyph-Level Consistency Learning for Scene Text Recognition in Low-Resource Scripts,Thanh Nguyen Van and Amira Benali and Erik Holm,International Conference on Document Analysis and Recognition (ICDAR),2023,
+A017,cs.CV,J,A Residual Graph Formulation for Crowd Counting Under Severe Perspective Distortion,Gabriel Moreau and Sunita Yadav,IEEE Transactions on Circuits and Systems for Video Technology,2022,
+A018,cs.CV,C,Progressive Mask Unfolding for Amodal Completion of Occluded Vehicles in Traffic Video,Ahmet Yildirim and Katarina Horvat and Liang Shuo,IEEE International Conference on Image Processing (ICIP),2021,
+A019,cs.CV,P,Do Vision-Language Models See Shadows? Probing Physical Commonsense in Image Captioning,Freya Lindahl and Omar Saleh,arXiv preprint,2024,2409.11760
+A020,cs.CV,J,Cross-Resolution Knowledge Transfer for Tiny Object Detection in Satellite Time Series,Andrei Volkov and Paula Jimenez and Kenji Arakawa,Remote Sensing of Environment,2024,
+A021,cs.CV,C,Equivariant Slot Attention for Unsupervised Discovery of Articulated Object Parts,Marta Kowalczyk and Dev Banerjee,Neural Information Processing Systems (NeurIPS),2023,
+A022,cs.CV,J,Temporal Gradient Folding for Efficient Action Recognition on Resource-Constrained Cameras,Yaw Mensah and Charlotte Lambert,IEEE Transactions on Multimedia,2023,
+A023,cs.CV,C,Hallucination-Resistant Region Grounding for Referring Expression Comprehension in Remote Sensing,Zhou Minghao and Laura Bianchi and Tariq Hussain,ACM International Conference on Multimedia (ACM MM),2024,
+A024,cs.CV,P,Local Curvature Tokens Improve Generalisation of Point Transformers Across Sensor Domains,Ilse de Vries and Mohan Krishnamurthy,arXiv preprint,2022,2211.05397
+A025,cs.CV,J,Stochastic Exposure Fusion Networks for High Dynamic Range Imaging of Fast-Moving Scenes,Bruno Cardoso and Natsuki Hayashi and Olga Smirnova,Signal Processing: Image Communication,2020,
+A026,cs.CV,C,Interleaved Depth and Normal Refinement for Transparent Object Grasping from RGB Input,Ewa Zielinska and Rahul Iyer,IEEE International Conference on Robotics and Automation (ICRA),2022,
+A027,cs.LG,C,Curvature-Adaptive Learning Rate Warmup for Stable Training of Deep Equilibrium Models,Sebastian Kruger and Ana Lucia Ramos,International Conference on Machine Learning (ICML),2023,
+A028,cs.LG,J,On the Sample Complexity of Offline Policy Selection with Heteroscedastic Reward Noise,Marcus Lindgren and Aditi Sharma and Ivo Petrov,Journal of Machine Learning Research,2022,
+A029,cs.LG,C,Gradient Echo Pruning: Sparse Training Without Dense Warm Starts,Haruto Inoue and Beatriz Moreno,International Conference on Learning Representations (ICLR),2024,
+A030,cs.LG,P,Tabular Foundation Models Struggle with Monotone Constraints: An Empirical Audit,Fatima Zahra Idrissi and Peter Halvorsen,arXiv preprint,2025,2502.17733
+A031,cs.LG,C,Federated Conformal Prediction Under Label Shift with Client-Level Privacy Guarantees,Luca Ferraro and Shreya Nair and Tobias Engel,Neural Information Processing Systems (NeurIPS),2024,
+A032,cs.LG,J,Regret Bounds for Contextual Bandits with Delayed and Aggregated Feedback in Recommender Systems,Ji-Hoon Kang and Margaux Lefevre,Machine Learning,2021,
+A033,cs.LG,C,Spectral Normalisation Is Not Enough: Certified Robustness of Graph Neural Networks to Edge Rewiring,Anton Sokolov and Mira Patel,International Conference on Artificial Intelligence and Statistics (AISTATS),2023,
+A034,cs.LG,P,Mixture-of-Depth Routing for Energy-Proportional Inference in Large Language Models,Eitan Ben-David and Sun Jiayi and Rosa Delgado,arXiv preprint,2024,2405.20184
+A035,cs.LG,J,A Kernel Two-Sample Test for Temporal Distribution Shift in Streaming Sensor Data,Grace Achieng and Stefan Hoffmann,IEEE Transactions on Neural Networks and Learning Systems,2022,
+A036,cs.LG,C,Implicit Bias of Sharpness-Aware Minimisation in Overparameterised Linear Diagonal Networks,Yusuf Demir and Hannah Schulz,Conference on Learning Theory (COLT),2023,
+A037,cs.LG,C,Causal Feature Bottlenecks for Out-of-Distribution Generalisation in Clinical Time Series,Noor Al-Rashid and Daniel Pereira and Kaito Suzuki,AAAI Conference on Artificial Intelligence,2022,
+A038,cs.LG,J,Probabilistic Forecast Reconciliation with Normalising Flows for Hierarchical Energy Demand,Maja Johansson and Vikram Reddy,International Journal of Forecasting,2024,
+A039,cs.LG,P,When Do Synthetic Pretraining Tasks Transfer? A Controlled Study with Formal Languages,Leon Dubois and Akosua Boateng,arXiv preprint,2023,2310.06618
+A040,cs.LG,C,Annealed Score Distillation for Discrete Diffusion over Molecular Graphs,Tiago Fonseca and Wang Ruoxi and Emre Kaya,International Conference on Machine Learning (ICML),2025,
+A041,cs.LG,J,Low-Rank Tensor Completion with Side Information for Missing Traffic Data Imputation,Kateryna Bondarenko and Hiroshi Takeda,IEEE Transactions on Knowledge and Data Engineering,2021,
+A042,cs.LG,C,Reward Model Ensembles with Disagreement Penalties Reduce Overoptimisation in Preference Learning,Amelia Grant and Rohan Bhatt,International Conference on Learning Representations (ICLR),2025,
+A043,cs.LG,J,Online Change-Point Detection in Multivariate Count Processes via Variational Inference,Diego Salinas and Ewelina Mazur,Statistics and Computing,2020,
+A044,cs.LG,P,Benchmarking Continual Learners on Long-Tailed Task Streams with Recurring Classes,Nikolai Orlov and Ayesha Siddiqui and Paul Girard,arXiv preprint,2022,2208.13561
+A045,cs.LG,C,Neural Additive Survival Models with Monotone Hazard Constraints,Isabel Romero and Tunde Adeyemi,Machine Learning for Healthcare Conference (MLHC),2023,
+A046,cs.LG,J,Robust Matrix Factorisation for Implicit Feedback Under Adversarial Shilling Attacks,Chang Wei Lun and Sara Lindberg,ACM Transactions on Information Systems,2023,
+A047,cs.LG,C,Quantile Temporal-Difference Learning with Function Approximation: A Finite-Sample Analysis,Matteo Galli and Yoon Seo-yeon,Conference on Uncertainty in Artificial Intelligence (UAI),2024,
+A048,cs.LG,J,Active Learning with Abstention for Expensive Annotation in Materials Discovery,Kofi Owusu and Annika Bauer and Lin Xiaoyu,Patterns,2024,
+A049,cs.LG,P,Layerwise Linear Mode Connectivity Explains Model Soup Failures in Vision Transformers,Gustav Eriksson and Neha Joshi,arXiv preprint,2024,2407.09925
+A050,cs.LG,C,Distributionally Robust Imitation from Suboptimal Demonstrations with Unknown Experts,Rafael Mendes and Aya Takahashi and Oleksandr Hrytsenko,Conference on Robot Learning (CoRL),2022,
+A051,cs.LG,J,Explaining Ensemble Tree Models with Shapley Interaction Graphs for Credit Risk Assessment,Elif Aksoy and Thomas Lenz,Expert Systems with Applications,2022,
+A052,cs.LG,C,Memory-Efficient Second-Order Optimisation via Randomised Kronecker Sketches,Samuel Achebe and Hu Yiting,Neural Information Processing Systems (NeurIPS),2022,
+A053,cs.CL,C,Discourse-Aware Retrieval Augmentation for Multi-Hop Question Answering over Legal Statutes,Ines Carvalho and Bao Ngoc Tran and Felix Hartmann,Annual Meeting of the Association for Computational Linguistics (ACL),2024,
+A054,cs.CL,J,Morphology-Informed Subword Segmentation for Neural Machine Translation of Agglutinative Languages,Aigerim Nurlanovna and Joost Bakker,Computational Linguistics,2021,
+A055,cs.CL,C,Calibrating Abstention in Instruction-Tuned Models with Self-Consistency Margins,Maximilian Brandt and Kavya Subramanian,Conference on Empirical Methods in Natural Language Processing (EMNLP),2024,
+A056,cs.CL,P,Do Multilingual Encoders Encode Politeness? Probing Honorific Systems Across Twelve Languages,Hye-Jin Lim and Mateo Silva,arXiv preprint,2023,2304.12875
+A057,cs.CL,C,Contrastive Span Alignment for Low-Resource Cross-Lingual Named Entity Recognition,Ruslan Akhmetov and Paola Ricci,Conference of the North American Chapter of the ACL (NAACL),2022,
+A058,cs.CL,J,A Corpus of Annotated Clarification Requests in Task-Oriented Customer Service Dialogue,Nora Lindstrom and Ibrahim Danjuma and Chen Siyu,Language Resources and Evaluation,2023,
+A059,cs.CL,C,Faithfulness-Guided Decoding for Abstractive Summarisation of Clinical Trial Reports,Jasper Visser and Ananya Ghosh,International Conference on Computational Linguistics (COLING),2022,
+A060,cs.CL,J,Detecting Implicit Hate Speech Through Pragmatic Inference Chains,Lucia Navarro and Kwabena Darko,Transactions of the Association for Computational Linguistics,2024,
+A061,cs.CL,P,Tokenizer Drift: How Vocabulary Updates Silently Change Model Behaviour Across Releases,Yonatan Levi and Mariana Costa and Sato Ren,arXiv preprint,2025,2503.04418
+A062,cs.CL,C,Event Coreference Resolution with Temporal Graph Constraints in Historical Newspapers,Erik Sandberg and Zeynep Arslan,Conference of the European Chapter of the ACL (EACL),2023,
+A063,cs.CL,J,Lexical Simplification for Second-Language Readers Using Graded Frequency Profiles,Camille Rousseau and Nikhil Varma,Natural Language Engineering,2020,
+A064,cs.CL,C,Dynamic Curriculum Sampling for Continued Pretraining on Domain-Specific Scientific Text,Hamid Farahani and Stine Larsen,Findings of the Association for Computational Linguistics (ACL Findings),2024,
+A065,cs.CL,P,Evaluating Long-Context Retrieval in Code-Switched Conversations: A New Benchmark,Arif Rahman and Jelena Markovic,arXiv preprint,2024,2410.03367
+A066,cs.CL,C,Neural Prosody Transfer for Expressive Speech Synthesis in Under-Resourced Dialects,Kalinda Perera and Matthias Graf,Interspeech,2021,
+A067,cs.CL,J,Argument Mining from Parliamentary Debates with Weak Supervision from Voting Records,Tereza Dvorakova and Obinna Eze,Argument & Computation,2022,
+A068,cs.CL,C,Scalable Fact Verification over Tables with Program-Guided Entailment,Ryo Hasegawa and Valentina Russo and Ahmed Mansour,Conference on Empirical Methods in Natural Language Processing (EMNLP),2021,
+A069,cs.CL,J,Bias Amplification in Machine-Translated Job Advertisements: A Cross-Lingual Audit,Sanne Jansen and Prakash Rao,Journal of Artificial Intelligence Research,2023,
+A070,cs.CL,P,Self-Refining Chain-of-Thought Without External Feedback Degrades on Arithmetic Word Problems,Dmitri Kuznetsov and Li Hanwen,arXiv preprint,2023,2312.08154
+A071,cs.CL,C,Unsupervised Dialect Identification from Speech Transcripts Using Phonotactic Embeddings,Fatou Diallo and Henrik Nyberg,International Conference on Language Resources and Evaluation (LREC),2022,
+A072,cs.CL,J,Measuring Lexical Semantic Change in Online Health Forums with Diachronic Contextual Embeddings,Alessia Marino and Jun Takeuchi,Journal of Biomedical Informatics,2021,
+A073,cs.CL,C,Query-Focused Opinion Summarisation of Product Reviews with Aspect Graphs,Pooja Bhattacharya and Ruben Smits,ACM SIGIR Conference on Research and Development in Information Retrieval,2023,
+A074,cs.CL,J,Robustness of Grammatical Error Correction Systems to Learner Typing Noise,Hyun-Woo Choi and Grete Andersen,ACM Transactions on Asian and Low-Resource Language Information Processing,2022,
+A075,cs.CL,C,Retrieval-Augmented Lexical Constraints for Terminology-Consistent Patent Translation,Lorenzo Greco and Wanjiru Kamau,Conference of the Association for Machine Translation in the Americas (AMTA),2024,
+A076,cs.CL,P,Language Models as Annotators of Rhetorical Moves in Scientific Abstracts,Agnieszka Wrobel and Tomas Lindqvist,arXiv preprint,2024,2406.15528
+A077,cs.CL,J,Cross-Domain Sarcasm Detection with Prompted Contrastive Adapters,Babak Rahimi and Ellen Fischer,Information Processing & Management,2023,
+A078,cs.CL,C,Coreference-Aware Evaluation of Narrative Coherence in Machine-Generated Stories,Imani Mwangi and Florian Becker and Sun Haoran,Conference on Natural Language Learning (CoNLL),2022,
+A079,cs.NI,J,Age-of-Information-Aware Scheduling for Multi-Hop Industrial Wireless Sensor Networks with Energy Harvesting,Riccardo Lombardi and Thandiwe Nkosi,IEEE Transactions on Wireless Communications,2022,
+A080,cs.NI,C,Learning-Based Beam Tracking for Vehicular Millimetre-Wave Links Under Blockage Bursts,Kim Do-hyun and Annette Kraus,IEEE International Conference on Communications (ICC),2023,
+A081,cs.NI,J,Joint Placement and Routing of Virtual Network Functions in Satellite-Terrestrial Integrated Networks,Hossein Karimi and Laura Gonzalez and Zhang Pengfei,IEEE Transactions on Network and Service Management,2023,
+A082,cs.NI,C,Congestion Control for Low-Latency Cloud Gaming over Shared Wi-Fi 6 Access Points,Mikael Strand and Divya Krishnan,IEEE Conference on Computer Communications (INFOCOM),2024,
+A083,cs.NI,P,A Measurement Study of QUIC Connection Migration in Mobile Carrier Networks,Pedro Antunes and Asha Mwakalinga,arXiv preprint,2023,2305.10937
+A084,cs.NI,J,Digital-Twin-Assisted Handover Optimisation for Ultra-Dense Small-Cell Deployments,Vanessa Hoang and Gerhard Pichler,IEEE Journal on Selected Areas in Communications,2024,
+A085,cs.NI,C,Federated Traffic Classification at the Network Edge with Encrypted Flow Statistics,Ali Reza Moradi and Sophie Laurent,IEEE Global Communications Conference (GLOBECOM),2022,
+A086,cs.NI,J,Stochastic Geometry Analysis of Coverage in Reconfigurable-Intelligent-Surface-Aided UAV Networks,Chiara De Luca and Bayo Adebayo and Ma Linlin,IEEE Transactions on Vehicular Technology,2023,
+A087,cs.NI,C,Lightweight Intrusion-Tolerant Routing for LoRaWAN Mesh Extensions,Jakub Nowicki and Esi Quaye,IEEE International Conference on Network Protocols (ICNP),2021,
+A088,cs.NI,J,Energy-Efficient Task Offloading for Wearable Devices via Lyapunov-Guided Deep Reinforcement Learning,Soo-Min Han and Andreas Koller,Computer Networks,2022,
+A089,cs.NI,P,Characterising Starlink Latency Variability for Real-Time Video Conferencing,Hugo Martins and Rukhsana Begum,arXiv preprint,2024,2404.17219
+A090,cs.NI,C,Programmable Data Plane Telemetry for Microburst Detection in Data Centre Fabrics,Nicolas Fabre and Yeo Jun Hao,ACM SIGCOMM Conference,2023,
+A091,cs.NI,J,Fairness-Aware Spectrum Sharing Between Radar and Cellular Users in the 3.5 GHz Band,Olumide Bankole and Karin Ek,IEEE Transactions on Cognitive Communications and Networking,2021,
+A092,cs.NI,C,Predictive Caching for Adaptive Bitrate Streaming with Viewer Engagement Signals,Giulia Rinaldi and Arvind Pillai,ACM Multimedia Systems Conference (MMSys),2022,
+A093,cs.NI,J,Delay-Bounded Time-Sensitive Networking Schedules for In-Vehicle Ethernet with Mixed Criticality,Florian Stadler and Mariam Haidari,IEEE Transactions on Industrial Informatics,2023,
+A094,cs.NI,C,Semantic Communication for Collaborative Perception in Connected Autonomous Vehicles,Wu Zhenyu and Helena Sousa,IEEE Vehicular Technology Conference (VTC),2024,
+A095,cs.NI,P,Open RAN xApps for Interference-Aware Slice Admission Control: A Testbed Evaluation,Rasmus Holm and Chiamaka Obi,arXiv preprint,2025,2501.12096
+A096,cs.NI,J,A Queueing Model for Serverless Function Cold Starts in Edge Computing Clusters,Tatiana Morozova and Ikechukwu Nwosu,IEEE Transactions on Cloud Computing,2024,
+A097,cs.NI,C,Graph Neural Network Delay Prediction for Software-Defined WANs Under Link Failures,Javier Ortega and Mio Fujita,IEEE/IFIP Network Operations and Management Symposium (NOMS),2022,
+A098,cs.NI,J,Cooperative Spectrum Sensing with Byzantine-Robust Aggregation in Cognitive Radio Networks,Anil Choudhary and Petra Kovac,IEEE Transactions on Communications,2020,
+A099,cs.NI,C,Battery-Aware Duty Cycling for Acoustic Monitoring Networks in Remote Forests,Elias Brandstrom and Nalini Rao,ACM Conference on Embedded Networked Sensor Systems (SenSys),2021,
+A100,cs.NI,J,Multipath Transport Scheduling for Teleoperated Driving over Heterogeneous Cellular Links,Bettina Roth and Kwesi Appiah and Liu Chang,IEEE Transactions on Mobile Computing,2024,
+A101,cs.NI,C,Scalable Topology Inference for Overlay Networks from End-to-End Delay Tomography,Sergio Navas and Yuna Okada,IEEE International Conference on Distributed Computing Systems (ICDCS),2023,
+A102,cs.NI,P,Low-Earth-Orbit Inter-Satellite Routing with Predictive Link Availability,Mohammed Al-Farsi and Ilona Wojcik,arXiv preprint,2023,2309.14602
+A103,cs.NI,J,Throughput Fairness in Dense IEEE 802.11be Networks with Multi-Link Operation,Lars Petersen and Ama Owusu-Ansah,IEEE Communications Letters,2024,
+A104,cs.NI,C,Edge-Assisted Volumetric Video Streaming with Viewport-Adaptive Point Cloud Tiling,Seo Ji-ho and Martina Esposito,IEEE International Conference on Computer Communications and Networks (ICCCN),2022,
+A105,cs.CR,C,Side-Channel Leakage of Speculative Decoding in Shared GPU Inference Servers,Konstantin Belov and Ayumi Saito and Ethan Rivers,USENIX Security Symposium,2025,
+A106,cs.CR,J,Formal Verification of Key Rotation Protocols for Hardware Security Modules in Payment Networks,Margarida Lopes and Chukwuma Okafor,IEEE Transactions on Dependable and Secure Computing,2023,
+A107,cs.CR,C,Fingerprinting Smart-Home Devices from Encrypted Matter Traffic Bursts,Viktoria Haas and Anand Raman,IEEE Symposium on Security and Privacy (S&P),2024,
+A108,cs.CR,P,Membership Inference Against Retrieval-Augmented Generation Pipelines via Citation Leakage,Daniela Fuentes and Park Min-seo,arXiv preprint,2024,2408.16251
+A109,cs.CR,J,A Lattice-Based Threshold Signature Scheme with Identifiable Aborts for Blockchain Custody,Reza Tehrani and Ingeborg Dahl,IEEE Transactions on Information Forensics and Security,2024,
+A110,cs.CR,C,Detecting Malicious Browser Extensions with Behavioural Provenance Graphs,Tommaso Rossi and Abena Owusu and Hu Zhen,Network and Distributed System Security Symposium (NDSS),2023,
+A111,cs.CR,J,Differentially Private Synthetic Trajectories with Road-Network Consistency Guarantees,Sabine Wolff and Kunal Desai,ACM Transactions on Privacy and Security,2022,
+A112,cs.CR,C,Fuzzing Automotive Diagnostic Services with Protocol-State Reinforcement Learning,Jun Watanabe and Teodora Ionescu,ACM Conference on Computer and Communications Security (CCS),2022,
+A113,cs.CR,P,Prompt Injection Through Document Metadata in Enterprise LLM Assistants: A Field Study,Bilal Qureshi and Nina Halvorsen,arXiv preprint,2025,2502.09310
+A114,cs.CR,J,Static Detection of Reentrancy Variants in Smart Contracts via Typed Intermediate Representations,Oliver Brandt and Mei-Ling Chou,Computers & Security,2023,
+A115,cs.CR,C,Physical Adversarial Patches Against Thermal Pedestrian Detectors at Night,Adaeze Nwankwo and Stefan Kovacs,European Symposium on Research in Computer Security (ESORICS),2021,
+A116,cs.CR,J,Anomaly Detection in Industrial Control Networks Using Process-Aware Sequence Models,Gonzalo Herrera and Kristin Moe and Takumi Abe,International Journal of Critical Infrastructure Protection,2021,
+A117,cs.CR,C,Revisiting Password Strength Meters with Large Language Model Guessing Attacks,Ruth Abebe and Christoph Weiss,USENIX Symposium on Usable Privacy and Security (SOUPS),2024,
+A118,cs.CR,P,Watermark Removal Attacks on Code Generation Models Through Semantics-Preserving Rewrites,Arnav Malhotra and Elisa Ferrari,arXiv preprint,2024,2411.05682
+A119,cs.CR,J,Secure Aggregation for Cross-Device Federated Learning with Dropout-Resilient Masking,Kim Seung-woo and Ana Petrovic,IEEE Internet of Things Journal,2022,
+A120,cs.CR,C,Kernel Control-Flow Integrity for eBPF Programs with Verified Bounds,Paulo Santos and Yasmin Khalil,ACM Asia Conference on Computer and Communications Security (AsiaCCS),2023,
+A121,cs.CR,J,Phishing Website Detection from Visual Layout Similarity and DOM Structure Embeddings,Mehmet Ozturk and Joanna Sikora,Journal of Information Security and Applications,2022,
+A122,cs.CR,C,Timing Attacks on Post-Quantum Key Encapsulation in Embedded Bootloaders,Henrik Aalto and Funmilayo Ade and Gao Yifan,Conference on Cryptographic Hardware and Embedded Systems (CHES),2024,
+A123,cs.CR,P,Auditing Data Deletion in Machine Learning Services with Verifiable Unlearning Proofs,Ivana Horak and Sameer Kapoor,arXiv preprint,2023,2311.07745
+A124,cs.CR,J,Location Privacy Leakage from Wi-Fi Probe Requests in Randomised MAC Address Regimes,Laure Girard and Emmanuel Asamoah,Computer Communications,2021,
+A125,cs.CR,C,Graph-Based Detection of Lateral Movement in Enterprise Authentication Logs,Wojciech Lis and Hina Yamaguchi,Annual Computer Security Applications Conference (ACSAC),2022,
+A126,cs.CR,J,Privacy Risks of Voice Assistant Skill Ecosystems: A Longitudinal Permission Analysis,Sandra Kuhn and Nguyen Minh Quan,Proceedings on Privacy Enhancing Technologies (PoPETs),2023,
+A127,cs.CR,C,Byzantine-Resilient Gossip Learning for Decentralised Malware Classification,Fernando Ruiz and Leila Moradi,IEEE/IFIP International Conference on Dependable Systems and Networks (DSN),2023,
+A128,cs.CR,J,Model Extraction Attacks on Cloud Speech Recognition APIs with Query-Efficient Distillation,Karim Benali and Astrid Nilsson,IEEE Transactions on Information Forensics and Security,2025,
+A129,cs.CR,C,Rowhammer-Induced Bit Flips in Quantised Neural Network Accelerators on FPGAs,Daisuke Mori and Patricia Lemos,International Symposium on Research in Attacks Intrusions and Defenses (RAID),2021,
+A130,cs.CR,P,Evaluating Software Bill of Materials Accuracy Across Open-Source Package Ecosystems,Emeka Uchenna and Johanna Lind,arXiv preprint,2025,2504.11873

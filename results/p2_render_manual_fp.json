@@ -1,0 +1,106 @@
+{
+ "interim": false,
+ "seed": 42,
+ "n_sample": 60,
+ "outcomes": {
+  "exists": 58,
+  "ambiguous": 2
+ },
+ "n_exists": 58,
+ "n_papers": 35,
+ "label": "descriptive (PREREG_AMENDMENT_4 (f))",
+ "h3_check_grobid": {
+  "crossref": {
+   "k_a": 26,
+   "n_a": 58,
+   "k_b": 27,
+   "n_b": 58,
+   "ratio": 0.962962962962963,
+   "ratio_note": "",
+   "reverses_h3": true
+  },
+  "union": {
+   "k_a": 14,
+   "n_a": 55,
+   "k_b": 15,
+   "n_b": 56,
+   "ratio": 0.9503030303030302,
+   "ratio_note": "",
+   "reverses_h3": true
+  }
+ },
+ "by_tier_IEEEtran_strip_grobid": [
+  {
+   "tier": "B",
+   "screen": "crossref",
+   "k": 5,
+   "n": 10
+  },
+  {
+   "tier": "B",
+   "screen": "union",
+   "k": 1,
+   "n": 9
+  },
+  {
+   "tier": "C",
+   "screen": "crossref",
+   "k": 3,
+   "n": 10
+  },
+  {
+   "tier": "C",
+   "screen": "union",
+   "k": 0,
+   "n": 10
+  },
+  {
+   "tier": "J",
+   "screen": "crossref",
+   "k": 1,
+   "n": 10
+  },
+  {
+   "tier": "J",
+   "screen": "union",
+   "k": 0,
+   "n": 10
+  },
+  {
+   "tier": "P",
+   "screen": "crossref",
+   "k": 1,
+   "n": 9
+  },
+  {
+   "tier": "P",
+   "screen": "union",
+   "k": 0,
+   "n": 9
+  },
+  {
+   "tier": "S",
+   "screen": "crossref",
+   "k": 8,
+   "n": 9
+  },
+  {
+   "tier": "S",
+   "screen": "union",
+   "k": 7,
+   "n": 8
+  },
+  {
+   "tier": "W",
+   "screen": "crossref",
+   "k": 8,
+   "n": 10
+  },
+  {
+   "tier": "W",
+   "screen": "union",
+   "k": 6,
+   "n": 9
+  }
+ ]
+}

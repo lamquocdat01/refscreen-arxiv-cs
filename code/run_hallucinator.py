@@ -12,6 +12,15 @@ retracted}. inconclusive and skipped are excluded from the FP denominator and co
 Outputs: $THS_DATASETS/_derived/43/tools/hall_p1/<id>/<style>/ (pdf, json, report)
          results/p1_tool_hallucinator.csv (per style: FP on certified-real + all refs, paper bootstrap CI)
 Usage: python run_hallucinator.py --seed 42 [--limit N] [--resume] [--styles IEEEtran,IEEEtran_doi,elsarticle-num]
+
+P2 (PREREG_AMENDMENT_4 (d)): python run_hallucinator.py --phase p2 --seed 42 --resume
+  30 of the 100 render papers (seed 42); styles "IEEEtran:strip" (primary), then "IEEEtran_doi:orig" on the same
+  papers while the 6 h budget lasts; DBLP from the offline database (--dblp-offline, built from the Amendment 3 dump);
+  other backends online and keyless. 100 fabricated-title references (results/p2_fake_items.csv, set gen_a) are
+  compiled into 4 extra PDFs of 25 (IEEEtran) for recall, run after the primary style. A new PDF is not started once
+  the budget is used up; the results are then labelled partial.
+  Outputs: $THS_DATASETS/_derived/43/tools/hall_p2/..., results/p2_tool_hallucinator.csv,
+           results/p2_tool_hallucinator_refs.csv
 """
 import argparse
 import json
@@ -40,8 +49,9 @@ def wsl_path(p):
     return "/mnt/" + s[0].lower() + s[2:]
 
 
-def run_tool(pdf, out_json, report, cache, timeout=3600):
-    cmd = (f"DB_TIMEOUT=30 DB_TIMEOUT_SHORT=15 {CLI} check --no-color --num-workers 2 --disable-dbs DBLP "
+def run_tool(pdf, out_json, report, cache, timeout=3600, dblp_offline=""):
+    dbs = f"--dblp-offline '{dblp_offline}' " if dblp_offline else "--disable-dbs DBLP "
+    cmd = (f"DB_TIMEOUT=30 DB_TIMEOUT_SHORT=15 {CLI} check --no-color --num-workers 2 {dbs}"
            f"--cache-path '{wsl_path(cache)}' --json '{wsl_path(out_json)}' -o '{wsl_path(report)}' '{wsl_path(pdf)}'")
     t0 = time.time()
     try:
@@ -60,7 +70,13 @@ def main():
     ap.add_argument("--resume", action="store_true", help="skip paper x style whose tool JSON already exists")
     ap.add_argument("--styles", default="IEEEtran,IEEEtran_doi,elsarticle-num")
     ap.add_argument("--boot", type=int, default=1000)
+    ap.add_argument("--phase", choices=["p1", "p2"], default="p1")
+    ap.add_argument("--n-papers", type=int, default=30)
+    ap.add_argument("--dblp-offline", default="/root/tools43/db/dblp.sqlite")
+    ap.add_argument("--budget-hours", type=float, default=6.0)
     args = ap.parse_args()
+    if args.phase == "p2":
+        return main_p2(args)
 
     gt = pd.read_csv(DERIVED / "p1_groundtruth_refs_full.csv", dtype={"arxiv_id": str, "key": str}, low_memory=False)
     papers = rs.select_render100(gt, args.seed)
@@ -130,6 +146,117 @@ def main():
                          dblp="disabled"))
     pd.DataFrame(summ).to_csv(ROOT / "results" / "p1_tool_hallucinator.csv", index=False)
     print(pd.DataFrame(summ).to_string())
+
+
+def flag_col(df):
+    return np.where(df.tool_status.isin(FLAG), 1.0, np.where(df.tool_status.isin(["verified"]), 0.0, np.nan))
+
+
+def summ_row(g, style, subset, seed, boot, extra, ci=True):
+    e = g[g.flag.notna()]
+    lo, hi = boot_ci(e, "flag", seed, boot) if (ci and len(e)) else (np.nan, np.nan)
+    return dict(tool="hallucinator-cli 0.2.4", style=style, subset=subset, n_refs=len(g),
+                n_papers=g.arxiv_id.nunique(), n_not_extracted=int((g.tool_status == "not-extracted").sum()),
+                n_inconclusive=int((g.tool_status == "inconclusive").sum()),
+                n_skipped=int((g.tool_status == "skipped").sum()), n_evaluated=len(e), k_flagged=int(e.flag.sum()),
+                share_flagged=e.flag.mean() if len(e) else np.nan, ci_lo=lo, ci_hi=hi, seed=seed, boot=boot, **extra)
+
+
+def main_p2(args):
+    t_start = time.time()
+    out = DERIVED / "tools" / "hall_p2"
+    gt = pd.read_csv(DERIVED / "p1_groundtruth_refs_full.csv", dtype={"arxiv_id": str, "key": str}, low_memory=False)
+    p100 = sorted(rs.select_render100(gt, args.seed))
+    rng = np.random.default_rng(args.seed)
+    papers = [p100[i] for i in np.sort(rng.choice(len(p100), args.n_papers, replace=False))]
+    if args.limit:
+        papers = papers[:args.limit]
+    lab = gt.drop_duplicates(["arxiv_id", "key"]).set_index(["arxiv_id", "key"])[["label", "tier"]]
+    doi_bst = rs.find_doi_bst()
+    out.mkdir(parents=True, exist_ok=True)
+    (out / "papers.txt").write_text("\n".join(papers) + "\n", encoding="utf-8")
+    cache = out / "hallucinator_cache.sqlite"
+    fake = pd.read_csv(ROOT / "results" / "p2_fake_items.csv", dtype=str, keep_default_na=False)
+    fake = fake[fake.set == "gen_a"].sort_values("item_id").reset_index(drop=True)
+    fake_ents = []
+    for r in fake.itertuples():
+        e = {"ID": r.item_id, "title": r.title, "author": r.author, "year": r.year}
+        if r.tier == "J":
+            e.update(ENTRYTYPE="article", journal=r.venue)
+        elif r.tier == "C":
+            e.update(ENTRYTYPE="inproceedings", booktitle=r.venue)
+        else:
+            e.update(ENTRYTYPE="misc", howpublished="arXiv preprint")
+        fake_ents.append(e)
+    jobs = [(pid, "IEEEtran", "strip") for pid in papers]
+    jobs += [(f"FAKE{c + 1}", "IEEEtran", "orig") for c in range((len(fake_ents) + 24) // 25)]
+    jobs += [(pid, "IEEEtran_doi", "orig") for pid in papers]
+    rows, skipped_jobs = [], []
+    for j, (pid, style, var) in enumerate(jobs, 1):
+        d = out / pid.replace("/", "_") / f"{style}_{var}"
+        js = d / "tool.json"
+        if not (args.resume and js.exists()):
+            if time.time() - t_start > args.budget_hours * 3600:
+                skipped_jobs.append(f"{pid}/{style}_{var}")
+                continue
+            shutil.rmtree(d, ignore_errors=True)
+            d.mkdir(parents=True)
+            if pid.startswith("FAKE"):
+                c = int(pid[4:]) - 1
+                ents = fake_ents[25 * c: 25 * (c + 1)]
+            else:
+                ents_all = parse_bibs(sorted((SRC / pid.replace("/", "_")).rglob("*.bib")))
+                ents = [ents_all[str(k).lower()] for k in gt[gt.arxiv_id == pid].key if str(k).lower() in ents_all]
+            bst = style
+            if style == "IEEEtran_doi":
+                shutil.copy2(doi_bst, d / doi_bst.name)
+                bst = doi_bst.stem
+            rs.write_bib(ents, d / "refs.bib", strip=(var == "strip"), escape_doi=(style == "IEEEtran_doi"))
+            sk = rs.SKELETON
+            rs.SKELETON = BODY_SKELETON
+            try:
+                rs.compile_dir(d, bst)
+            finally:
+                rs.SKELETON = sk
+            rc, sec = run_tool(d / "main.pdf", js, d / "report.txt", cache, dblp_offline=args.dblp_offline)
+            (d / "runtime.txt").write_text(f"rc={rc} seconds={sec:.0f}\n", encoding="utf-8")
+            print(f"[{j}/{len(jobs)}] {pid} {style}_{var}: rc={rc} {sec:.0f}s "
+                  f"(total {(time.time() - t_start) / 3600:.2f} h)", flush=True)
+        order = rs.bbl_keys(d)
+        try:
+            res = json.loads(js.read_text(encoding="utf-8"))[0]["references"]
+        except (OSError, ValueError, IndexError, KeyError):
+            res = []
+        got = {r.get("original_number"): r for r in res if isinstance(r.get("original_number"), int)}
+        for n, key in enumerate(order, 1):
+            r = got.get(n)
+            st = "not-extracted" if r is None else ("inconclusive" if r.get("inconclusive") else
+                                                    (r.get("effective_status") or r.get("status") or ""))
+            if pid.startswith("FAKE"):
+                labl, tier = "fabricated (gen_a)", ""
+            else:
+                m = lab.loc[(pid, key)] if (pid, key) in lab.index else None
+                labl, tier = (None, None) if m is None else (m["label"], m["tier"])
+            rows.append(dict(arxiv_id=pid, style=f"{style}_{var}", n=n, key=key, tool_status=st, label=labl,
+                             tier=tier))
+    df = pd.DataFrame(rows)
+    df.to_csv(ROOT / "results" / "p2_tool_hallucinator_refs.csv", index=False)
+    df["flag"] = flag_col(df)
+    extra = dict(arxiv_backend="online (no Kaggle snapshot)", dblp="offline (dump 2026-10-19)", s2="online keyless",
+                 partial=bool(skipped_jobs), skipped_jobs=len(skipped_jobs), interim=False,
+                 hours=round((time.time() - t_start) / 3600, 2))
+    real, fk = df[~df.arxiv_id.str.startswith("FAKE")], df[df.arxiv_id.str.startswith("FAKE")]
+    summ = []
+    for style, x in real.groupby("style"):
+        summ.append(summ_row(x[x.label == "certified-real"], style, "certified-real", args.seed, args.boot, extra))
+        summ.append(summ_row(x, style, "all refs", args.seed, args.boot, extra))
+    if len(fk):
+        summ.append(summ_row(fk, "IEEEtran_orig", "fabricated (gen_a)", args.seed, args.boot, extra, ci=False))
+    summ = pd.DataFrame(summ)
+    summ.to_csv(ROOT / "results" / "p2_tool_hallucinator.csv", index=False)
+    print(summ.to_string())
+    if skipped_jobs:
+        print("PARTIAL: budget used up; jobs not run:", len(skipped_jobs), skipped_jobs[:5])
 
 
 if __name__ == "__main__":
