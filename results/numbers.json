@@ -212,5 +212,37 @@
    ],
    "mc_mean": 0.0
   }
+ },
+ "identifier_scenario": {
+  "u_id": 0.00259,
+  "u_id_upper": 0.00602,
+  "k": 6,
+  "n": 2316,
+  "source": "certified-real, render, union, GROBID, IEEEtran strip",
+  "nA11": {
+   "p_two_flags": 0.0003632564208675676,
+   "p_two_flags_upper": 0.0019225125525189977,
+   "cantelli_two_flags": 0.05336305486178991
+  },
+  "nA19": {
+   "p_two_flags": 0.001113932192392785,
+   "p_two_flags_upper": 0.005789210803319389,
+   "cantelli_two_flags": 0.15888903408755461
+  },
+  "nA32": {
+   "p_two_flags": 0.003159629651363917,
+   "p_two_flags_upper": 0.015946546991815254,
+   "cantelli_two_flags": 0.2762386035505703
+  },
+  "nA47": {
+   "p_two_flags": 0.006711397305041872,
+   "p_two_flags_upper": 0.032757424530589274,
+   "cantelli_two_flags": 0.37718528682053826
+  },
+  "nA66": {
+   "p_two_flags": 0.012892069417941939,
+   "p_two_flags_upper": 0.06034641622112001,
+   "cantelli_two_flags": 0.601961930198901
+  }
  }
 }

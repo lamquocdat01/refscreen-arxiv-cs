@@ -29,6 +29,7 @@
    "reverses_h3": true
   }
  },
+ "h3_reading": "uninformative for H3 by design: 0 of the 60 refs carries a DOI or arXiv id (decision LQD 21-10-2026)",
  "by_tier_IEEEtran_strip_grobid": [
   {
    "tier": "B",
@@ -102,5 +103,97 @@
    "k": 6,
    "n": 9
   }
- ]
+ ],
+ "h4_render": {
+  "style": "IEEEtran orig, GROBID",
+  "weights_noid_tier_share": {
+   "C": 0.4423949198669489,
+   "J": 0.382824312065316,
+   "W": 0.1025098276383429,
+   "B": 0.027819776232234653,
+   "P": 0.02388872089507106,
+   "S": 0.020562443302086484
+  },
+  "boot": 1000,
+  "crossref": {
+   "fp_manual_weighted": 0.29013540301716895,
+   "k_manual": 27,
+   "n_manual": 58,
+   "fp_certified": 0.021075268817204302,
+   "k_certified": 49,
+   "n_certified": 2325,
+   "diff": 0.26906013419996466,
+   "diff_ci": [
+    0.09987161718927616,
+    0.4028210748666131
+   ],
+   "above_zero": true,
+   "manual_by_tier": {
+    "B": [
+     5,
+     10
+    ],
+    "C": [
+     3,
+     10
+    ],
+    "J": [
+     1,
+     10
+    ],
+    "P": [
+     1,
+     9
+    ],
+    "S": [
+     9,
+     9
+    ],
+    "W": [
+     8,
+     10
+    ]
+   }
+  },
+  "union": {
+   "fp_manual_weighted": 0.09284010348419178,
+   "k_manual": 15,
+   "n_manual": 56,
+   "fp_certified": 0.002152389151958674,
+   "k_certified": 5,
+   "n_certified": 2323,
+   "diff": 0.0906877143322331,
+   "diff_ci": [
+    0.04900645045925382,
+    0.12176370320647281
+   ],
+   "above_zero": true,
+   "manual_by_tier": {
+    "B": [
+     1,
+     9
+    ],
+    "C": [
+     0,
+     10
+    ],
+    "J": [
+     0,
+     10
+    ],
+    "P": [
+     0,
+     9
+    ],
+    "S": [
+     7,
+     8
+    ],
+    "W": [
+     7,
+     10
+    ]
+   }
+  }
+ }
 }

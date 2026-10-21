@@ -8,6 +8,10 @@ $THS_DATASETS/_derived/43/screen_p1/screen_refs.csv. A failed query (NaN flag) i
 Next to each cell: the certified-real FP of the same cell (results/p1_screen_fp.csv). Intervals: Wilson (refs);
 n per tier < 10 -> k/n only. H3 check: ratio FP(IEEEtran strip) / FP(IEEEtran-DOI orig), union, GROBID, on these rows;
 a ratio < 1 is reported as a threat to H3.
+Decision 21-10 (LQD): the 60 refs carry no identifier by design, so they are uninformative for H3 (Amendment 4 (f) is
+read this way); they are used for H4 on the render set ("H4-render", descriptive): FP_manual weighted by the share of
+each tier among the render refs without identifier, minus FP_certified of the same cell; paper bootstrap over the 100
+render papers (B = 1000, seed 42), resampling manual and certified refs of the drawn papers together.
 Outputs: results/p2_render_manual_fp.csv, results/p2_render_manual_fp.json
 Usage: python p2_render_manual_fp.py --seed 42
 """
@@ -80,14 +84,57 @@ def main():
         h3[sc] = dict(k_a=int(a.k_manual), n_a=int(a.n_manual), k_b=int(b.k_manual), n_b=int(b.n_manual),
                       ratio=None if not np.isfinite(ratio) else ratio, ratio_note="inf (k_b = 0)" if ratio == np.inf
                       else "", reverses_h3=bool(np.isfinite(ratio) and ratio < 1))
+    # H4-render
+    lab = pd.read_csv(DATA / "_derived" / "43" / "screen_p1" / "screen_refs.csv", dtype=str, keep_default_na=False,
+                      usecols=["arxiv_id", "style", "variant", "parser", "key", "tier", "label", "bib_has_doi",
+                               "bib_has_arxiv"] + list(SCREENS.values()))
+    lab = lab[(lab["style"] == "IEEEtran") & (lab.variant == "orig") & (lab.parser == "grobid")]
+    noid = lab[(lab.bib_has_doi == "0") & (lab.bib_has_arxiv == "0")]
+    w = (noid.tier.value_counts() / len(noid)).to_dict()
+    h4 = {}
+    rng0 = args.seed
+    for sc, fc in SCREENS.items():
+        man = m[(m["style"] == "IEEEtran") & (m.variant == "orig") & (m.parser == "grobid")].copy()
+        man["f"] = pd.to_numeric(man[fc], errors="coerce")
+        man = man[man.f.notna()]
+        cer = lab[lab.label == "certified-real"].copy()
+        cer["f"] = pd.to_numeric(cer[fc], errors="coerce")
+        cer = cer[cer.f.notna()]
+
+        def est(mm, cc):
+            g = mm.groupby("tier").f.agg(["sum", "count"])
+            ws = {t: w.get(t, 0) for t in g.index}
+            tot = sum(ws.values())
+            fm = sum(ws[t] * g.loc[t, "sum"] / g.loc[t, "count"] for t in g.index) / tot if tot else np.nan
+            return fm, cc.f.mean()
+        fm, fcz = est(man, cer)
+        rng = np.random.default_rng(rng0)
+        papers = np.array(sorted(set(lab.arxiv_id)))
+        mg, cg = dict(tuple(man.groupby("paper_id"))), dict(tuple(cer.groupby("arxiv_id")))
+        diffs = []
+        for _ in range(1000):
+            pick = rng.choice(papers, len(papers), replace=True)
+            bm = pd.concat([mg[p] for p in pick if p in mg]) if any(p in mg for p in pick) else man.head(0)
+            bc = pd.concat([cg[p] for p in pick if p in cg])
+            if len(bm):
+                a, b = est(bm, bc)
+                diffs.append(a - b)
+        lo, hi = np.nanpercentile(diffs, [2.5, 97.5])
+        h4[sc] = dict(fp_manual_weighted=fm, k_manual=int(man.f.sum()), n_manual=len(man),
+                      fp_certified=fcz, k_certified=int(cer.f.sum()), n_certified=len(cer), diff=fm - fcz,
+                      diff_ci=[float(lo), float(hi)], above_zero=bool(lo > 0),
+                      manual_by_tier={t: [int(x.f.sum()), len(x)] for t, x in man.groupby("tier")})
     meta = dict(interim=False, seed=args.seed, n_sample=len(ms), outcomes=ms.exists.value_counts().to_dict(),
                 n_exists=len(ex), n_papers=ex.paper_id.nunique(), label="descriptive (PREREG_AMENDMENT_4 (f))",
-                h3_check_grobid=h3, by_tier_IEEEtran_strip_grobid=by_tier)
+                h3_check_grobid=h3, h3_reading="uninformative for H3 by design: 0 of the 60 refs carries a DOI or "
+                "arXiv id (decision LQD 21-10-2026)", by_tier_IEEEtran_strip_grobid=by_tier,
+                h4_render=dict(style="IEEEtran orig, GROBID", weights_noid_tier_share=w, boot=1000, **h4))
     (ROOT / "results" / "p2_render_manual_fp.json").write_text(json.dumps(meta, indent=1, default=float),
                                                                encoding="utf-8")
     print(out[["style", "variant", "parser", "screen", "k_manual", "n_manual", "fp_manual", "k_cert", "n_cert",
                "fp_cert"]].to_string())
     print(json.dumps(h3, indent=1, default=float))
+    print(json.dumps(h4, indent=1, default=float))
 
 
 if __name__ == "__main__":

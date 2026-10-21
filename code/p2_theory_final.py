@@ -19,6 +19,11 @@ Backend scenarios: crossref_only and full (+S2), the two headline columns.
    Checks: share of the 299 legitimate papers rejected (Wilson), and MC (5 seeds x 20,000 papers resampled
    from the 299 tier-count vectors, U_is ~ Beta(mu_s, rho_s), N_is ~ Bin(n_is, U_is)) per rule.
 4. k_i for 5 typical papers (n_A at the 10/25/50/75/90 % quantiles) x 2 scenarios x 3 rules.
+5. Identifier scenario (Thm 3 / Prop 3.1 consequence; decision LQD 21-10): every academic reference prints a
+   resolvable identifier, so its unresolved rate is the certified-real FP of the render experiment (union, GROBID,
+   IEEEtran strip: k/n and paper-bootstrap upper bound from results/p1_screen_fp.csv). Same 5 papers, same rules with
+   u_s = that FP for every tier (u+ = its upper bound) and rho+_s of the full cascade (conservative; no ICC is
+   measurable at 6 flags), plus P(N >= 2) for the "2 flags" rule.
 Outputs: results/p2_theory_final.csv (long), results/numbers.json, results/numbers.tex (\\newcommand macros; C6)
 Usage: python p2_theory_final.py --seed 42 [--mc 20000]
 """
@@ -155,6 +160,34 @@ def main():
                     rows.append(dict(table="k_typical", scenario=sc, quantile=qv, paper_id=r_.paper_id, n_J=c[0],
                                      n_C=c[1], n_P=c[2], n_A=sum(c), N_A_obs=int(r_.N_A), alpha=alpha, rule=rule,
                                      value=kv))
+    # 5. identifier scenario
+    sf = pd.read_csv(RES / "p1_screen_fp.csv", dtype=str, keep_default_na=False)
+    c = sf[(sf.subset == "certified-real") & (sf.source == "render") & (sf.tier == "all") & (sf["style"] == "IEEEtran")
+           & (sf.variant == "strip") & (sf.parser == "grobid") & (sf.backend == "union")].iloc[0]
+    u_id, u_id_up = float(c.fp), float(c.ci_hi)
+    up_id = {s: u_id_up for s in A}
+    rho_full_up = {s: bb["full"]["tiers"][s]["rho_boot95"][1] for s in A}
+    nums["identifier_scenario"] = {"u_id": u_id, "u_id_upper": u_id_up, "k": int(c.k_flagged), "n": int(c.n_refs),
+                                   "source": "certified-real, render, union, GROBID, IEEEtran strip"}
+    typ = [r for r in rows if r.get("table") == "k_typical" and r["scenario"] == "full" and r["rule"] == "R1_CI"
+           and r["alpha"] == 0.05]
+    for r_ in typ:
+        cnt = (r_["n_J"], r_["n_C"], r_["n_P"])
+        for alpha in ALPHAS:
+            kr, _ = rules_for(cnt, up_id, rho_full_up, alpha)
+            for rule, kv in kr.items():
+                rows.append(dict(table="k_identifier", scenario="identifier", quantile=r_["quantile"], n_A=sum(cnt),
+                                 alpha=alpha, rule=rule, value=kv))
+        p2_pt = tt.pb_tail(cnt, [u_id] * 3, 2)
+        p2_up = tt.pb_tail(cnt, [u_id_up] * 3, 2)
+        lam = sum(cnt) * u_id_up
+        v = sum(math.sqrt(var_bb(n, u_id_up, rho_full_up[s])) for n, s in zip(cnt, A)) ** 2
+        cant = v / (v + (2 - lam) ** 2) if 2 > lam else 1.0
+        rows.append(dict(table="p_two_flags_identifier", scenario="identifier", quantile=r_["quantile"],
+                         n_A=sum(cnt), value=p2_pt, lo=np.nan, hi=p2_up,
+                         note=f"P(N>=2): PoiBin at u_id (value) / at u_id upper (hi); Cantelli bound {cant:.4f}"))
+        nums["identifier_scenario"][f"nA{sum(cnt)}"] = {"p_two_flags": p2_pt, "p_two_flags_upper": p2_up,
+                                                        "cantelli_two_flags": cant}
     out = pd.DataFrame(rows)
     out["seed"], out["interim"] = args.seed, False
     out.to_csv(RES / "p2_theory_final.csv", index=False)
@@ -168,6 +201,10 @@ def main():
     print(kt.to_string())
     for sc in SCEN:
         print(sc, json.dumps(nums[sc]["dispersion"]))
+    ki = out[out.table == "k_identifier"].pivot_table(index=["n_A"], columns=["alpha", "rule"], values="value")
+    print("identifier scenario u =", nums["identifier_scenario"]["u_id"], "upper", nums["identifier_scenario"]["u_id_upper"])
+    print(ki.to_string())
+    print(out[out.table == "p_two_flags_identifier"][["n_A", "value", "hi", "note"]].to_string())
 
 
 def write_tex(nums):

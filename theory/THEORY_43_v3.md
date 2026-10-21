@@ -363,11 +363,45 @@ BH / BY over papers.
   - under Crossref-only: 12, 27, 32.
   - The cost of these thresholds in recall must be read together with the recall table (P2 Việc 2).
 
-*Interpretation.* Calibrating a desk-reject threshold on corpus-average unresolved rates (R1, and the k = 1 / k = 2
-rules a fortiori) does not control the false-reject rate. The reason is that unresolved references concentrate in a
-minority of papers (ICC 0.05–0.08 on A). A guarantee that survives this needs the between-paper spread (R2) or the
-variance (R3), and then the threshold rises to a level where only papers with many unresolved academic references are
-flagged.
+**§4.P Policy conclusion 1 (desk-reject thresholds).** Numbers: 299 legitimate papers of 2019–21 (def 1), seed 42,
+`results/p2_theory_final.csv`.
+
+- **(a) A threshold with only an estimation margin is not α-safe.**
+  - R1 sets δ = the upper CI bound of u_s, i.e. a margin for estimation error only.
+  - At nominal α = 0.05 (full cascade) it rejects 19/299 = 6.4 % [Wilson 4.1, 9.7] of the legitimate papers; MC
+    under the fitted beta-binomial gives 5.2 %. At α = 0.01 it rejects 12/299 = 4.0 % [2.3, 6.9].
+  - Under Crossref-only the rates are 12.7 % and 7.0 %.
+  - The cause is Prop 2‴: unresolved references concentrate in a minority of papers (ICC 0.045–0.082 on A). The
+    observed dispersion is 3.3× the Poisson-binomial variance.
+- **(b) Thresholds that are α-safe need k = 15–19; so "≥ 2 flags" cannot be calibrated with today's backends.**
+  - The rules that remain α-safe under heterogeneity are R2 (Beta quantile) and R3 (Cantelli). For the median paper
+    (n_A = 32, full cascade, α = 0.05) they need k = 19 and 15. Across the five typical papers the range is
+    8–27 / 6–20; under Crossref-only it is 11–57 / 14–76.
+  - For the same papers, k = 2 lies below every α-safe threshold. P1 measured what this means: the k = 2 rule flags
+    142/299 = 47.5 % of legitimate papers even with the full cascade.
+  - Hence no α-safe rule built on the current backend sets resembles the deployed "≥ 1" or "≥ 2 non-existent
+    references" policies. The margin needed to absorb between-paper heterogeneity is an order of magnitude larger than
+    the number of flags these policies act on.
+- **(c) Printed identifiers are the necessary condition for an α-safe rule with small k** (consequence of Thm 3 and
+  Prop 3.1).
+  - Without an identifier, no test can push FPR below u_S × recall (Thm 3). So small-k rules are out of reach
+    whatever the screen does.
+  - With an identifier, the unresolved rate becomes the identifier-failure rate u_id (Prop 3.1). In the render
+    experiment, u_id = 0.26 % (6/2,316 certified-real refs, union, GROBID, IEEEtran strip; paper-bootstrap upper
+    bound 0.60 %).
+  - Setting u_s = u_id for every academic tier, with u⁺ = 0.60 % and the full-cascade ρ⁺_s (conservative, since no
+    ICC is measurable from 6 flags), the median paper (n_A = 32) needs k = 11 (R2) and k = 6 (R3) at α = 0.05,
+    against 19 and 15 without identifiers. Across the five papers this is 5–16 and 3–9 (§9).
+  - Under conditional independence, P(N_A ≥ 2) = 0.32 % at n_A = 32 (1.6 % at u⁺). The "≥ 2" rule is then α-safe at
+    0.05 up to n_A ≈ 47 (3.3 % at u⁺); at n_A = 66 it reaches 6.0 %.
+  - With the conservative dispersion, the Cantelli bound for k = 2 is 0.28 at n_A = 32. A small k becomes defensible
+    only if the identifier failures of a paper are measured to be less clustered than its unresolved references.
+  - **Caveat:** u_id is measured on certified-real references, which already resolved by identifier once. It is a
+    lower bound for identifiers in the wild (typos, style corruption; P0: IEEEtran v1.14 prints no DOI).
+
+*Policy conclusion 1.* A desk-reject rule that counts "non-existent" references is α-safe only at thresholds far above
+the 1–2 used in practice, unless the references carry resolvable identifiers. Requiring printed DOIs or arXiv ids,
+or a style that prints them, is the precondition for any small-k rule. It is not a cosmetic recommendation.
 
 **H5 (PREREG §5).**
 - **Result:** FAIL, kept as registered. Under (3′), with per-paper LOO u_s, all tiers and k = 2, the prediction for
@@ -567,3 +601,17 @@ beta-binomial variance with the Cauchy–Schwarz cross-tier bound.
   J/C/P mix: a paper with more journal references gets a higher k at the same n_A, because u_J and ρ_J are the
   largest of the three tiers.
 - A threshold larger than n_A (Crossref-only, R3) means the paper can never be rejected.
+
+**Identifier scenario (§4.P (c)).**
+- Inputs: u_id = 0.26 % (6/2,316) and u⁺_id = 0.60 % for every academic tier; ρ⁺_s as in the full cascade
+  (conservative).
+- Same five papers as above.
+- P(N ≥ 2) is the Poisson-binomial value at u_id, with the value at u⁺_id in brackets.
+
+| n_A | α = 0.05: R1 / R2 / R3 | α = 0.01: R1 / R2 / R3 | P(N ≥ 2) [at u⁺] | Cantelli bound, k = 2 |
+|---|---|---|---|---|
+| 11 | 2 / 5 / 3 | 2 / 8 / 5 | 0.04 % [0.19 %] | 0.053 |
+| 19 | 2 / 8 / 4 | 2 / 14 / 9 | 0.11 % [0.58 %] | 0.159 |
+| 32 | 2 / 11 / 6 | 3 / 18 / 12 | 0.32 % [1.6 %] | 0.276 |
+| 47 | 2 / 12 / 7 | 3 / 20 / 14 | 0.67 % [3.3 %] | 0.377 |
+| 66 | 3 / 16 / 9 | 3 / 28 / 21 | 1.3 % [6.0 %] | 0.602 |
