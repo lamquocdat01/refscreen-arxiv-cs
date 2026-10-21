@@ -1,0 +1,43 @@
+{
+ "interim": false,
+ "seed": 42,
+ "sim_threshold": 0.9,
+ "exist_check_sim": 0.8,
+ "items": [
+  {
+   "set": "badalova",
+   "label": "problematic",
+   "n": 33
+  },
+  {
+   "set": "badalova",
+   "label": "verified",
+   "n": 71
+  },
+  {
+   "set": "gen_a",
+   "label": "fabricated",
+   "n": 100
+  },
+  {
+   "set": "gen_b",
+   "label": "fabricated",
+   "n": 100
+  },
+  {
+   "set": "gen_c",
+   "label": "fabricated",
+   "n": 100
+  },
+  {
+   "set": "gptzero",
+   "label": "hallucinated",
+   "n": 100
+  }
+ ],
+ "gen_a_check": {
+  "passed": 91,
+  "unverified": 9
+ },
+ "note": "def 1 = title only; def 2 = title + first-author surname. gen_b (swapped authors) is undetectable by def 1 by construction (Thm 3); gen_c (wrong venue/year) is undetectable by both definitions, which check neither venue nor year."
+}

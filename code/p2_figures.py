@@ -96,28 +96,38 @@ def f2(seed):
     rc = pd.read_csv(p)
     b = bt_rows()
     r = b[(b.period == "2019-21") & (b.stratum == "A")].iloc[0]
-    fp = {("crossref" if c == "crossref" else f"+{c}"): float(r[f"u_{c}"]) * 100 for c, _ in COLS}
-    fams = [("gen_a", "fabricated", "fabricated title (gen)", C1, "o"),
-            ("gptzero", "hallucinated", "GPTZero NeurIPS 2025", C2, "s"),
-            ("gen_b", "fabricated", "real title, swapped authors (gen)", C3, "^")]
-    fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.2), sharey=True)
+    keys = ["crossref" if c == "crossref" else f"+{c}" for c, _ in COLS]
+    fp = {k: float(r[f"u_{c}"]) * 100 for k, (c, _) in zip(keys, COLS)}
+    fams = [("gen_a", "fabricated", "fabricated title (gen; 100 % by construction)", C1, "o"),
+            ("gptzero", "hallucinated", "GPTZero NeurIPS 2025 (n = 100)", C2, "s"),
+            ("gen_b", "fabricated", "real title, swapped authors (gen, n = 100)", C3, "^")]
+    fig, axes = plt.subplots(1, 2, figsize=(7.4, 3.5), sharey=True)
     for ax, d in zip(axes, (1, 2)):
         for st, lab, name, col, mk in fams:
-            g = rc[(rc["set"] == st) & (rc.label == lab) & (rc.definition == d)].set_index("screen")
-            xs = [fp[s] for s, _ in [(("crossref" if c == "crossref" else f"+{c}"), 0) for c, _ in COLS]]
-            ys = [g.loc["crossref" if c == "crossref" else f"+{c}", "share_flagged"] * 100 for c, _ in COLS]
+            g = rc[(rc["set"] == st) & (rc.label == lab) & (rc.definition == d)].set_index("screen").loc[keys]
+            xs = [fp[k] for k in keys]
+            ys = g.share_flagged.values * 100
             ax.plot(xs, ys, color=col, marker=mk, markersize=5, linewidth=1.5, label=name)
-        for c, labl in COLS:
-            ax.annotate(labl, (fp["crossref" if c == "crossref" else f"+{c}"], 2), fontsize=6, color=MUTED,
-                        rotation=90, ha="center", va="bottom")
+            lo, hi = g.bound_lo.values * 100, g.bound_hi.values * 100
+            ax.errorbar(xs, ys, yerr=[np.clip(ys - lo, 0, None), np.clip(hi - ys, 0, None)], fmt="none", ecolor=col,
+                        elinewidth=0.8, capsize=2)
+        for k, labl in zip(keys, [lab for _, lab in COLS]):
+            if k == "+openalex":
+                continue  # 0.4 points left of +DBLP: labelled together
+            labl = "+DBLP / +OpenAlex" if k == "+dblp" else labl
+            ax.annotate(labl, (fp[k], 104), fontsize=6, color=MUTED, rotation=60, ha="left", va="bottom",
+                        annotation_clip=False)
         ax.set_xscale("log")
-        ax.set_xlabel("FP: u_A on legitimate refs, 2019-21 (%, log)")
-        ax.set_title(f"def {d}: {'title only' if d == 1 else 'title + first author'}", fontsize=9, loc="left")
-        ax.set_ylim(0, 105)
+        ax.set_xlabel("FP = def-1 u_A, 2019-21 (%, log)")
+        ax.set_title(f"recall, def {d}: {'title only' if d == 1 else 'title + first author'}", fontsize=9,
+                     loc="left", pad=62)
+        ax.set_ylim(-3, 103)
     axes[0].set_ylabel("Recall on fabricated items (%)")
-    axes[1].legend(loc="lower left", fontsize=7)
-    fig.suptitle("Discrete ROC per backend set (each point = one cumulative backend set)", fontsize=9, x=0.02,
-                 ha="left", color=INK)
+    fig.legend(*axes[0].get_legend_handles_labels(), loc="lower center", ncol=3, fontsize=7,
+               bbox_to_anchor=(0.5, -0.1))
+    fig.text(0.01, -0.16, "Each point is one cumulative backend set (left to right: +S2 ... Crossref-only). Bars: "
+             "bounds with items excluded for a failed backend counted as not flagged / flagged.", fontsize=6.5,
+             color=MUTED)
     save(fig, "F2_roc_backend", ["p2_recall.csv", "p1_backend_table.csv"], seed)
 
 

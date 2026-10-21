@@ -201,7 +201,7 @@ def select(args):
         use_a = pd.concat([passed, unv.iloc[np.sort(rng.choice(len(unv), k, replace=False))] if k else unv.head(0)])
     a[["item_id", "title", "max_sim", "check", "openalex_asked"]].to_csv(DER / "gen_a_check.csv", index=False)
     print("gen_a: OpenAlex answered for", int(a.openalex_asked.sum()), "of", len(a))
-    used = pd.concat([use_a.drop(columns=["max_sim"]), q[q.set != "gen_a"]])
+    used = pd.concat([use_a.drop(columns=["max_sim", "check", "openalex_asked"]), q[q.set != "gen_a"]])
     used = used.merge(a[["item_id", "check"]], on="item_id", how="left").fillna({"check": ""})
     used.to_csv(ROOT / "results" / "p2_fake_items.csv", index=False)
     print(used.groupby(["set", "label"]).size().to_string())
@@ -248,6 +248,10 @@ def recall(args):
                 rows.append(dict(set=st, label=lab, screen="crossref" if i == 0 else f"+{b}", definition=d,
                                  n_items=len(g), n_evaluated=n, n_excluded=len(g) - n, k_flagged=k,
                                  share_flagged=k / n if n else np.nan, wilson_lo=lo, wilson_hi=hi,
+                                 # excluded items are exactly the unresolved-so-far ones whose last backend failed,
+                                 # i.e. would-be flags: bounds treat all of them as not flagged / flagged
+                                 bound_lo=k / len(g) if len(g) else np.nan,
+                                 bound_hi=(k + len(g) - n) / len(g) if len(g) else np.nan,
                                  measure="FP" if lab == "verified" else "recall", seed=args.seed, interim=False))
     out = pd.DataFrame(rows)
     out.to_csv(ROOT / "results" / "p2_recall.csv", index=False)
