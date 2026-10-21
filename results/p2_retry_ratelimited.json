@@ -1,0 +1,19 @@
+{
+ "interim": false,
+ "seed": 42,
+ "s2_key": false,
+ "n_retried": 382,
+ "def1_after": {
+  "rate-limited": 20,
+  "resolved": 328,
+  "unresolved": 34
+ },
+ "def2_after": {
+  "rate-limited": 238,
+  "resolved": 96,
+  "unresolved": 45,
+  "excluded-no-registry-authors": 3
+ },
+ "cells_changed_ge_0_05pp": 5,
+ "max_abs_delta_pp": 0.9317850516830095
+}

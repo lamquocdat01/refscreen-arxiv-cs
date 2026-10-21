@@ -3,7 +3,8 @@
 the numbers match the committed ones key by key (C7(h)).
 
 Run it in a fresh clone (the scripts write to <clone>/results/): it snapshots the committed outputs, reruns
-  p1_backend_table.py, p1_hypotheses.py, p1_h5_betabinom.py --boot 200, p2_render_manual_fp.py, p2_theory_final.py
+  p1_backend_table.py, p1_hypotheses.py, p1_h5_betabinom.py --boot 200, p2_render_manual_fp.py, p2_theory_final.py,
+  p2_merge_retry.py + p1_backend_table.py --name p2_backend_table_retry (P2 main table after the night retry)
 (all --seed 42; no network: every answer comes from $THS_DATASETS/_derived/43/cache), then compares
   results/numbers.json        key by key (numbers: |a - b| <= 1e-9 * max(1, |a|); other values: equal)
   the CSV outputs             cell by cell as text, after dropping the `interim` column (the P1 stamp)
@@ -23,8 +24,11 @@ HERE = Path(__file__).resolve().parent
 RES = HERE.parent / "results"
 STEPS = [["p1_backend_table.py", "--seed", "42"], ["p1_hypotheses.py", "--seed", "42"],
          ["p1_h5_betabinom.py", "--seed", "42", "--boot", "200"], ["p2_render_manual_fp.py", "--seed", "42"],
-         ["p2_theory_final.py", "--seed", "42"]]
-CSVS = ["p1_backend_table.csv", "p1_h5_betabinom.csv", "p2_render_manual_fp.csv", "p2_theory_final.csv"]
+         ["p2_theory_final.py", "--seed", "42"], ["p2_merge_retry.py"],
+         ["p1_backend_table.py", "--seed", "42", "--input", "{DERIVED}/p2_groundtruth_refs_full.csv",
+          "--name", "p2_backend_table_retry"]]
+CSVS = ["p1_backend_table.csv", "p1_h5_betabinom.csv", "p2_render_manual_fp.csv", "p2_theory_final.csv",
+        "p2_backend_table_retry.csv"]
 JSONS = ["numbers.json", "p1_hypotheses_h1h2.json", "p1_h5_betabinom.json", "p2_render_manual_fp.json"]
 
 
@@ -53,7 +57,9 @@ def main():
         shutil.copy2(RES / f, snap / f)
     for step in STEPS:
         print(">>", " ".join(step), flush=True)
-        r = subprocess.run([sys.executable, str(HERE / step[0])] + step[1:], cwd=HERE,
+        derived = Path(__import__("os").environ.get("THS_DATASETS", r"D:\Datasets")) / "_derived" / "43"
+        r = subprocess.run([sys.executable, str(HERE / step[0])] + [a.replace("{DERIVED}", str(derived))
+                                                                       for a in step[1:]], cwd=HERE,
                            env={**__import__("os").environ, "PYTHONIOENCODING": "utf-8"},
                            capture_output=True, text=True, encoding="utf-8", errors="replace")
         if r.returncode:

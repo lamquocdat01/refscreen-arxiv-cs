@@ -14,7 +14,9 @@ no-id, and P/with-id = arxiv-id + doi-only). CI: paper-level bootstrap (B = 1000
 secondary. Rate-limited references after the retry rounds are excluded from the denominator and counted per row.
 Input:  $THS_DATASETS/_derived/43/p1_groundtruth_refs_full.csv (ground_truth_p1.py)
 Output: results/p1_backend_table.csv, results/p1_backend_table.json, results/p1_backend_table.png
-Usage:  python p1_backend_table.py --seed 42 [--boot 1000] [--input <csv>] [--interim]
+Usage:  python p1_backend_table.py --seed 42 [--boot 1000] [--input <csv>] [--interim] [--name <stem>]
+        --name: output stem (default p1_backend_table); P2 after the night retry:
+        --input $THS_DATASETS/_derived/43/p2_groundtruth_refs_full.csv --name p2_backend_table_retry
         --interim: input $THS_DATASETS/_derived/43/interim/p1_groundtruth_refs_full.csv (ground_truth_p1.py --interim),
         output results/interim/ with "interim": true and "s2_pending": n. The +S2 column is written as
         "chưa hoàn tất, n_pending=<n>" and +OpenAlex (when no stored answer resolved a ref) as
@@ -78,6 +80,7 @@ def main():
     ap.add_argument("--boot", type=int, default=1000)
     ap.add_argument("--input", default=None)
     ap.add_argument("--interim", action="store_true")
+    ap.add_argument("--name", default="p1_backend_table")
     args = ap.parse_args()
     der, out_dir = (DERIVED / "interim", ROOT / "results" / "interim") if args.interim else (DERIVED, ROOT / "results")
     args.input = args.input or str(der / "p1_groundtruth_refs_full.csv")
@@ -113,7 +116,7 @@ def main():
         tab = pd.DataFrame(rows)
         plot_cols = [c for c in COLS if c not in blank]
         oa_note = oa_note if oa_hits else "không có dữ liệu (keyless 429)"
-    tab.to_csv(out_dir / "p1_backend_table.csv", index=False)
+    tab.to_csv(out_dir / f"{args.name}.csv", index=False)
     meta = {"seed": args.seed, "boot": args.boot, "input": args.input, "columns": [LABEL[c] for c in COLS],
             "openalex_note": oa_note, "dblp_dump": DBLP_DUMP,
             "note": "def 1; cumulative backends in cascade order (PREREG_AMENDMENT_3); same denominator per row",
@@ -128,14 +131,14 @@ def main():
         meta.update(interim=True, s2_pending=s2_pending,
                     interim_note="INTERIM: round-1 replay from the cache; Crossref-only, +arXiv, +DBLP exact; "
                                  "+S2 not final (s2_pending refs counted unresolved in the denominator)")
-    (out_dir / "p1_backend_table.json").write_text(json.dumps(meta, indent=1, ensure_ascii=False), encoding="utf-8")
+    (out_dir / f"{args.name}.json").write_text(json.dumps(meta, indent=1, ensure_ascii=False), encoding="utf-8")
     show = tab[["period", "stratum", "n"] + [f"u_{c}" for c in COLS] + ["n_oa_skipped", "n_s2_pending"]]
     print(show.rename(columns={f"u_{c}": LABEL[c] for c in COLS}).to_string(index=False))
     print("OpenAlex:", oa_note)
-    plot(tab, oa_note, plot_cols, out_dir, "INTERIM — " if args.interim else "")
+    plot(tab, oa_note, plot_cols, out_dir, "INTERIM — " if args.interim else "", name=args.name)
 
 
-def plot(tab, oa_note, cols=COLS, out_dir=ROOT / "results", tag=""):
+def plot(tab, oa_note, cols=COLS, out_dir=ROOT / "results", tag="", name="p1_backend_table"):
     COLS = cols  # noqa: N806 (columns drawn: all, or up to +DBLP for an interim table)
     import matplotlib
     matplotlib.use("Agg")
@@ -164,7 +167,7 @@ def plot(tab, oa_note, cols=COLS, out_dir=ROOT / "results", tag=""):
     fig.suptitle(f"{tag}Cumulative backends; paper bootstrap 95 % CI (B=1000, seed 42); OpenAlex {oa_note}; "
                  "shaded = H1 window 0.5-5 %", fontsize=8)
     fig.tight_layout()
-    fig.savefig(out_dir / "p1_backend_table.png", dpi=150)
+    fig.savefig(out_dir / f"{name}.png", dpi=150)
 
 
 if __name__ == "__main__":

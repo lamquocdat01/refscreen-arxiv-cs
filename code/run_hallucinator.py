@@ -21,6 +21,13 @@ P2 (PREREG_AMENDMENT_4 (d)): python run_hallucinator.py --phase p2 --seed 42 --r
   the budget is used up; the results are then labelled partial.
   Outputs: $THS_DATASETS/_derived/43/tools/hall_p2/..., results/p2_tool_hallucinator.csv,
            results/p2_tool_hallucinator_refs.csv
+
+P2 reduced (LQD 21-10 evening, "giam mau, ly do thoi gian"; execution detail of Amendment 4 (d), scope not widened):
+  python run_hallucinator.py --phase p2 --seed 42 --resume --keep-first 7 --add 8 --no-fake --pairs --budget-hours 5.34
+  15 papers = the first 7 of the seed-42 list of 30 (the papers already started) + 8 drawn with seed 42 from the other
+  23; both styles per paper, run pair by pair (strip, then IEEEtran-DOI) so that a budget stop leaves whole pairs;
+  the 4 fabricated-reference PDFs are dropped (recall of the tool is not measured here). Budget = 6 h cumulative
+  minus the 0.66 h already used. FP is reported on complete pairs only (subset "... (paired)").
 """
 import argparse
 import json
@@ -74,6 +81,10 @@ def main():
     ap.add_argument("--n-papers", type=int, default=30)
     ap.add_argument("--dblp-offline", default="/root/tools43/db/dblp.sqlite")
     ap.add_argument("--budget-hours", type=float, default=6.0)
+    ap.add_argument("--keep-first", type=int, default=0, help="p2 reduced: keep the first K of the 30 papers")
+    ap.add_argument("--add", type=int, default=0, help="p2 reduced: draw A more papers (seed) from the rest")
+    ap.add_argument("--no-fake", action="store_true", help="p2: skip the fabricated-reference PDFs")
+    ap.add_argument("--pairs", action="store_true", help="p2: run both styles paper by paper")
     args = ap.parse_args()
     if args.phase == "p2":
         return main_p2(args)
@@ -169,18 +180,28 @@ def main_p2(args):
     p100 = sorted(rs.select_render100(gt, args.seed))
     rng = np.random.default_rng(args.seed)
     papers = [p100[i] for i in np.sort(rng.choice(len(p100), args.n_papers, replace=False))]
+    reduced = bool(args.keep_first)
+    if reduced:
+        rest = papers[args.keep_first:]
+        rng2 = np.random.default_rng(args.seed)
+        papers = papers[:args.keep_first] + [rest[i] for i in np.sort(rng2.choice(len(rest), args.add, replace=False))]
     if args.limit:
         papers = papers[:args.limit]
     lab = gt.drop_duplicates(["arxiv_id", "key"]).set_index(["arxiv_id", "key"])[["label", "tier"]]
     doi_bst = rs.find_doi_bst()
     out.mkdir(parents=True, exist_ok=True)
-    (out / "papers.txt").write_text("\n".join(papers) + "\n", encoding="utf-8")
+    if reduced:
+        (out / "papers_reduced15.txt").write_text("\n".join(papers) + "\n", encoding="utf-8")
+    else:
+        (out / "papers.txt").write_text("\n".join(papers) + "\n", encoding="utf-8")
     cache = out / "hallucinator_cache.sqlite"
     fp_ = ROOT / "results" / "p2_fake_items.csv"
     fake = pd.read_csv(fp_, dtype=str, keep_default_na=False) if fp_.exists() else pd.DataFrame(columns=["set", "item_id"])
     fake = fake[fake.set == "gen_a"].sort_values("item_id").reset_index(drop=True)
     if not len(fake):
         print("no gen_a items (results/p2_fake_items.csv missing): recall PDFs skipped", flush=True)
+    if args.no_fake:
+        fake = fake.iloc[0:0]
     fake_ents = []
     for r in fake.itertuples():
         e = {"ID": r.item_id, "title": r.title, "author": r.author, "year": r.year}
@@ -191,9 +212,13 @@ def main_p2(args):
         else:
             e.update(ENTRYTYPE="misc", howpublished="arXiv preprint")
         fake_ents.append(e)
-    jobs = [(pid, "IEEEtran", "strip") for pid in papers]
+    if args.pairs:
+        jobs = [(pid, st, v) for pid in papers for st, v in (("IEEEtran", "strip"), ("IEEEtran_doi", "orig"))]
+    else:
+        jobs = [(pid, "IEEEtran", "strip") for pid in papers]
     jobs += [(f"FAKE{c + 1}", "IEEEtran", "orig") for c in range((len(fake_ents) + 24) // 25)]
-    jobs += [(pid, "IEEEtran_doi", "orig") for pid in papers]
+    if not args.pairs:
+        jobs += [(pid, "IEEEtran_doi", "orig") for pid in papers]
     rows, skipped_jobs = [], []
     for j, (pid, style, var) in enumerate(jobs, 1):
         d = out / pid.replace("/", "_") / f"{style}_{var}"
@@ -247,12 +272,20 @@ def main_p2(args):
     df["flag"] = flag_col(df)
     extra = dict(arxiv_backend="online (no Kaggle snapshot)", dblp="offline (dump 2026-10-19)", s2="online keyless",
                  partial=bool(skipped_jobs), skipped_jobs=len(skipped_jobs), interim=False,
-                 hours=round((time.time() - t_start) / 3600, 2))
+                 hours_this_run=round((time.time() - t_start) / 3600, 2),
+                 hours_cumulative=round(sum(float(t.read_text().split("seconds=")[1]) for t in
+                                            out.rglob("runtime.txt")) / 3600, 2),
+                 sample=("reduced: 15 pairs, giam mau, ly do thoi gian" if reduced else "30 papers"))
     real, fk = df[~df.arxiv_id.str.startswith("FAKE")], df[df.arxiv_id.str.startswith("FAKE")]
+    if args.pairs:
+        done = real.groupby("arxiv_id")["style"].nunique()
+        real = real[real.arxiv_id.isin(done[done == 2].index)]
+        extra["n_pairs"] = int((done == 2).sum())
+    sfx = " (paired)" if args.pairs else ""
     summ = []
     for style, x in real.groupby("style"):
-        summ.append(summ_row(x[x.label == "certified-real"], style, "certified-real", args.seed, args.boot, extra))
-        summ.append(summ_row(x, style, "all refs", args.seed, args.boot, extra))
+        summ.append(summ_row(x[x.label == "certified-real"], style, "certified-real" + sfx, args.seed, args.boot, extra))
+        summ.append(summ_row(x, style, "all refs" + sfx, args.seed, args.boot, extra))
     if len(fk):
         summ.append(summ_row(fk, "IEEEtran_orig", "fabricated (gen_a)", args.seed, args.boot, extra, ci=False))
     summ = pd.DataFrame(summ)
