@@ -309,6 +309,10 @@ def tools():
         y = t[(t["style"] == st) & t.subset.str.startswith("all")].iloc[0]
         put(f"hallAllFp{tag}", pct(y.share_flagged, 2), src, f"{st}/all/share_flagged")
         put(f"hallAllK{tag}", f"{y.k_flagged}/{y.n_evaluated}", src, f"{st}/all/k,n_evaluated")
+        put(f"hallAllRefs{tag}", num(y.n_refs), src, f"{st}/all/n_refs")
+        put(f"hallInconcl{tag}", num(y.n_inconclusive), src, f"{st}/all/n_inconclusive")
+        put(f"hallSkipped{tag}", num(y.n_skipped), src, f"{st}/all/n_skipped")
+        put(f"hallNotExtr{tag}", num(y.n_not_extracted), src, f"{st}/all/n_not_extracted")
     put("hallPairs", t.n_pairs.iloc[0], src, "n_pairs")
     put("hallHours", t.hours_cumulative.iloc[0], src, "hours_cumulative")
     c = J("p2_checkifexist.json")
@@ -397,14 +401,14 @@ def theory():
         y = kt[(kt.n_A.astype(float).astype(int) == nA) & (kt.scenario == "full") & (kt.alpha == "0.05")]
         k0 = " / ".join(str(int(float(y[y.rule == rr].value.iloc[0]))) for rr in ("R2", "R3"))
         z = pt[pt.n_A.astype(float).astype(int) == nA]
-        pz = f"{pct(z.value.iloc[0], 2)} [{pct(z.hi.iloc[0], 2)}]" if len(z) else "--"
+        pz = f"{pct(z.value.iloc[0], 3)} [{pct(z.hi.iloc[0], 2)}]" if len(z) else "--"
         lines.append(f"{nA} & {k0} & {ks} & {pz} \\\\")
         if nA == 32:
             put("kIdMedR2", str(int(float(x[x.rule == "R2"].value.iloc[0]))), "results/p2_theory_final.csv", "k_identifier/0.05/R2/n_A=32")
             put("kIdMedR3", str(int(float(x[x.rule == "R3"].value.iloc[0]))), "results/p2_theory_final.csv", "k_identifier/0.05/R3/n_A=32")
             if len(z):
-                put("pTwoIdMed", pct(z.value.iloc[0], 2), "results/p2_theory_final.csv", "p_two_flags_identifier/n_A=32")
-                put("pTwoIdMedHi", pct(z.hi.iloc[0], 1), "results/p2_theory_final.csv", "p_two_flags_identifier/n_A=32/hi")
+                put("pTwoIdMed", pct(z.value.iloc[0], 3), "results/p2_theory_final.csv", "p_two_flags_identifier/n_A=32")
+                put("pTwoIdMedHi", pct(z.hi.iloc[0], 2), "results/p2_theory_final.csv", "p_two_flags_identifier/n_A=32/hi")
     (OUT / "tab_k_identifier.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
     th = J("p1_theory_headlines.json")
     _ = th
@@ -420,6 +424,10 @@ def h5():
         put(f"hFiveCi{tag}", f"[{float(r.wilson_lo):.3f}, {float(r.wilson_hi):.3f}]", src, f"{r.scenario}/{r.tertile}/wilson")
         put(f"hFivePred{tag}", f"{float(r.pred_mean):.3f}", src, f"{r.scenario}/{r.tertile}/pred_mean")
         put(f"hFiveN{tag}", f"{int(float(r.n_refs_median))}", src, f"{r.scenario}/{r.tertile}/n_refs_median")
+    dg = C("p1_h5_diag.csv")
+    for _, r in dg[(dg.scenario == "full") & (dg.k == "2")].iterrows():
+        put(f"hFiveLam{r.tertile}", f"{float(r.mean_lambda):.2f}", "results/p1_h5_diag.csv", f"full/k2/{r.tertile}/mean_lambda")
+        put(f"hFiveMeanN{r.tertile}", f"{float(r.mean_N):.2f}", "results/p1_h5_diag.csv", f"full/k2/{r.tertile}/mean_N")
     b = J("p1_h5_betabinom.json")
     src = "results/p1_h5_betabinom.json"
     flat = json.dumps(b)
@@ -434,7 +442,7 @@ def agreement():
     p = J("p2_kappa_pairs.json")
     src = "results/p2_kappa_pairs.json"
     lines = []
-    for pr, role in (("R1-R3", "inter-rater (criterion)"), ("R1-R2", "intra-rater"), ("R2-R3", "inter-rater")):
+    for pr, role in (("R1-R3", "inter-rater (decision rule)"), ("R1-R2", "intra-rater"), ("R2-R3", "inter-rater")):
         s = p[pr]
         t = pr.replace("-", "")
         put(f"agr{t}N", str(s["n"]), src, f"{pr}/n")
@@ -445,7 +453,11 @@ def agreement():
         put(f"agr{t}Raw", pct(s["raw"], 1), src, f"{pr}/raw")
         lines.append(f"{pr.replace('-', '--')} & {role} & {s['n']} & {pct(s['raw'], 1)} & {s['pabak']:.2f} {ci(*s['pabak_ci'], d=2, scale=1)} & "
                      f"{s['ac1']:.2f} & {s['kappa']:.2f} \\\\")
+    a4p = J("p2_kappa.json")["pooled"]
+    lines.insert(0, f"Pooled 40 rows & registered criterion & {a4p['n']} & {pct(a4p['raw'], 1)} & {a4p['pabak']:.2f} "
+                    f"{ci(*a4p['pabak_ci'], d=2, scale=1)} & {a4p['ac1']:.2f} & {a4p['kappa']:.2f} \\\\")
     a3 = p["AC1 three raters"]
+    lines.append(f"R1--R2--R3 & three-rater AC1 & {a3['n']} & -- & -- & {a3['ac1']:.2f} & -- \\\\")
     put("agrThreeAc", f"{a3['ac1']:.2f}", src, "AC1 three raters/ac1")
     put("agrThreeAcCi", ci(*a3["ac1_ci"], d=2, scale=1), src, "AC1 three raters/ac1_ci")
     put("agrThreeUnan", f"{a3['unanimous']}/{a3['n']}", src, "AC1 three raters/unanimous")
@@ -471,8 +483,17 @@ def agreement():
                 lines.append(f"{pr.replace('-', '--')} (P3) & after Amendment~5 & {s['n']} & {pct(s['raw'], 1)} & "
                              f"{s['pabak']:.2f} {ci(*s['pabak_ci'], d=2, scale=1)} & {s['ac1']:.2f} & {s['kappa']:.2f} \\\\")
         put("pThreeStatus", "available", src, "exists")
+        if "R2-R3" in q and "R1-R3" in q:
+            put("pThreeSentence", "In a supplementary recheck of 40 new references under the revised rules (seed 43), PABAK is "
+                f"{q['R2-R3']['pabak']:.2f} {ci(*q['R2-R3']['pabak_ci'], d=2, scale=1)} between the two raters who applied the "
+                f"revised rules (R2--R3) and {q['R1-R3']['pabak']:.2f} {ci(*q['R1-R3']['pabak_ci'], d=2, scale=1)} against the "
+                "first-pass labels, which were made under the original rules (Table~\ref{tab:agree}). This recheck is post hoc "
+                "and does not replace the failed registered result.", src, "R2-R3, R1-R3")
     else:
         put("pThreeStatus", "pending", "results/p3_kappa.json", "missing (R3 not returned yet)")
+        put("pThreeSentence", "A supplementary recheck of 40 new references under the revised rules (seed 43) has its first "
+            "two raters' labels (Supplement S8); the second rater's labels were not yet available at this version "
+            "[to be completed before submission].", "results/p3_kappa.json", "missing")
     (OUT / "tab_agreement.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
@@ -503,9 +524,91 @@ def design():
                                & ~pol.appeal_process.str.lower().str.startswith("not ")).sum()), src, "appeal_process stated")
 
 
+# ---------------------------------------------------------------- P3 revision checks (exploratory) + identifier scenario
+def revision():
+    r = J("p3_revision_checks.json")
+    src = "results/p3_revision_checks.json"
+    for c, v in r["paper_flags_academic_only"].items():
+        for k in ("k1", "k2"):
+            x = v[k]
+            put(f"acFlag{c}{k}", pct(x["share"], 1), src, f"paper_flags_academic_only/{c}/{k}/share")
+            put(f"acFlag{c}{k}K", f"{x['papers']}/{x['n']}", src, f"paper_flags_academic_only/{c}/{k}/papers,n")
+            put(f"acFlag{c}{k}Ci", ci(*x["wilson"], d=1), src, f"paper_flags_academic_only/{c}/{k}/wilson")
+    for sc in ("union", "dblp"):
+        x = r["fp_manual_academic"][sc]
+        put(f"fpManAc{sc}", pct(x["share"], 1), src, f"fp_manual_academic/{sc}/share")
+        put(f"fpManAc{sc}K", f"{x['k']}/{x['n']}", src, f"fp_manual_academic/{sc}/k,n")
+        put(f"fpManAc{sc}Ci", ci(*x["wilson"], d=1), src, f"fp_manual_academic/{sc}/wilson")
+        put(f"fpManRaw{sc}", pct(x["raw_all_share"], 1), src, f"fp_manual_academic/{sc}/raw_all_share")
+    for fc, tag in (("flag_union", "Union"), ("flag_crossref", "Cr")):
+        x = r["h3_paired"][fc]
+        put(f"hThreePair{tag}StripOnly", str(x["strip_only"]), src, f"h3_paired/{fc}/strip_only")
+        put(f"hThreePair{tag}DoiOnly", str(x["doi_only"]), src, f"h3_paired/{fc}/doi_only")
+        put(f"hThreePair{tag}Both", str(x["both"]), src, f"h3_paired/{fc}/both")
+        put(f"hThreePair{tag}N", num(x["pairs"]), src, f"h3_paired/{fc}/pairs")
+        p_ = x["exact_p_two_sided"]
+        put(f"hThreePair{tag}P", f"{p_:.3f}" if p_ >= 0.001 else r"$<10^{-" + str(int(-math.log10(p_))) + "}$", src,
+            f"h3_paired/{fc}/exact_p_two_sided")
+    v = r["pre_llm_versions"]
+    put("lateBibPapers", str(v["papers_bib_after_2022_11_30"]), src, "pre_llm_versions/papers_bib_after_2022_11_30")
+    put("uANoLate", pct(v["u_A_full_without_late"]), src, "pre_llm_versions/u_A_full_without_late")
+    put("uANoLateCi", ci(*v["boot95_without_late"]), src, "pre_llm_versions/boot95_without_late")
+    put("uANoLatePapers", str(v["papers_without_late"]), src, "pre_llm_versions/papers_without_late")
+    for k, tag in (("IEEEtran_doi/orig/union", "IdUnion"), ("IEEEtran_doi/orig/idonly", "IdOnly")):
+        x = r["identifier_scenario"][k]
+        put(f"scen{tag}", pct(x["fp"], 3 if x["fp"] < 0.001 else 1), src, f"identifier_scenario/{k}/fp")
+        put(f"scen{tag}K", f"{x['k']}/{num(x['n'])}", src, f"identifier_scenario/{k}/k,n")
+        put(f"scen{tag}Hi", pct(x["boot95"][1], 3 if x["boot95"][1] < 0.01 else 1), src, f"identifier_scenario/{k}/boot95[1]")
+    for per, tag in (("2019-21", "Pre"), ("2024-26", "Post")):
+        x = r["openalex_refusals_academic"][per]
+        put(f"oaSkip{tag}", num(x["oa_skipped"]), src, f"openalex_refusals_academic/{per}/oa_skipped")
+        put(f"oaSkipUnres{tag}", num(x["oa_skipped_and_unresolved"]), src, f"openalex_refusals_academic/{per}/oa_skipped_and_unresolved")
+    b = J("p2_backend_table_retry.json")
+    a = [x for x in b["rows"] if x["period"] == "2019-21" and x["stratum"] == "A"][0]
+    lb = (a["k_s2"] - r["openalex_refusals_academic"]["2019-21"]["oa_skipped_and_unresolved"]) / a["n"]
+    put("uALowerOa", pct(lb), "results/p3_revision_checks.json + p2_backend_table_retry.json", "(k_s2 - oa_skipped_and_unresolved)/n, A 2019-21")
+    e = r["empirical_NA"]
+    put("empQNinetyFive", f"{e['q95_all']:.0f}", src, "empirical_NA/q95_all")
+    put("empQNinetyNine", f"{e['q99_all']:.0f}", src, "empirical_NA/q99_all")
+    put("empMax", str(e["max_all"]), src, "empirical_NA/max_all")
+    for k in (3, 4, 5):
+        x = e[f"share_ge{k}"]
+        put(f"empPreGe{k}", pct(x["share"], 1), src, f"empirical_NA/share_ge{k}/share")
+        put(f"empPreGe{k}K", f"{x['papers']}/{x['n']}", src, f"empirical_NA/share_ge{k}/papers,n")
+        put(f"empPreGe{k}Ci", ci(*x["wilson"], d=1), src, f"empirical_NA/share_ge{k}/wilson")
+    for k in (1, 2, 3, 4, 5):
+        x = r["empirical_NA_2024_26"][f"share_ge{k}"]
+        put(f"empPostGe{k}", pct(x["share"], 1), src, f"empirical_NA_2024_26/share_ge{k}/share")
+        put(f"empPostGe{k}K", f"{x['papers']}/{x['n']}", src, f"empirical_NA_2024_26/share_ge{k}/papers,n")
+        put(f"empPostGe{k}Ci", ci(*x["wilson"], d=1), src, f"empirical_NA_2024_26/share_ge{k}/wilson")
+    lines = []
+    pre = [r["paper_flags_academic_only"]["s2"]["k1"], r["paper_flags_academic_only"]["s2"]["k2"]] + [e[f"share_ge{k}"] for k in (3, 4, 5)]
+    for k, xp in zip((1, 2, 3, 4, 5), pre):
+        xq = r["empirical_NA_2024_26"][f"share_ge{k}"]
+        xpw = xp["wilson"]
+        lines.append("$" + chr(92) + f"ge{k}$ & {pct(xp['share'], 1)} ({xp['papers']}/{xp['n']}) {ci(*xpw, d=1)} & "
+                     f"{pct(xq['share'], 1)} ({xq['papers']}/{xq['n']}) {ci(*xq['wilson'], d=1)} \\\\")
+    (OUT / "tab_empirical.tex").write_text(chr(10).join(lines) + chr(10), encoding="utf-8")
+    acc = r["accounting"]
+    for k, val in acc.items():
+        put("acc" + "".join(w.title() for w in k.split("_")), str(val), src, f"accounting/{k}")
+    th = J("numbers.json")["identifier_scenario"]
+    put("idScenU", pct(th["u_id"], 3), "results/numbers.json", "identifier_scenario/u_id")
+    put("idScenUHi", pct(th["u_id_upper"], 3), "results/numbers.json", "identifier_scenario/u_id_upper")
+    pol = C("p2_policy_survey.csv")
+    org = pol.venue.str.replace(r"\s*\(.*\)", "", regex=True).str.replace(r"\s+\d{4}$", "", regex=True).str.strip()
+    put("nVenueOrgs", str(org.nunique()), "results/p2_policy_survey.csv", "distinct venue names without year/qualifier")
+    ri = C("p1_render_identifiers.csv")
+    for _, x in ri.iterrows():
+        tag = re.sub("[^A-Za-z]", "", x["style"]) + x.variant
+        put(f"ridDoiPrinted{tag}", f"{float(x.pct_bib_doi_printed):.1f}", "results/p1_render_identifiers.csv", f"{x['style']}/{x.variant}/pct_bib_doi_printed")
+        put(f"ridArxiv{tag}", f"{float(x.pct_printed_arxiv):.1f}", "results/p1_render_identifiers.csv", f"{x['style']}/{x.variant}/pct_printed_arxiv")
+        put(f"ridAnyId{tag}", f"{float(x.pct_printed_resolvable_id):.1f}", "results/p1_render_identifiers.csv", f"{x['style']}/{x.variant}/pct_printed_resolvable_id")
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    for f in (backend, hypotheses, render, h4, recall, tools, theory, h5, agreement, design):
+    for f in (backend, hypotheses, render, h4, recall, tools, theory, h5, agreement, design, revision):
         f()
     tex = ["% generated by code/make_ms_numbers.py from results/; do not edit"]
     for k, v in NV.items():

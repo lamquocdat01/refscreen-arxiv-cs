@@ -35,7 +35,7 @@ from ground_truth import boot_ratio, wilson  # noqa: E402
 from ground_truth_p1 import ACADEMIC, BACKENDS, DERIVED, ROOT  # noqa: E402
 
 COLS = ["crossref", "arxiv", "dblp", "openalex", "s2"]
-DBLP_DUMP = "18-10-2026"  # server last-modified of dblp.xml.gz (D:/Datasets/dblp/DATA_SOURCES.md)
+DBLP_DUMP = "2026-10-19 release (server last-modified 2026-10-18 23:39 UTC)"  # D:/Datasets/dblp/DATA_SOURCES.md
 LABEL = {"crossref": "Crossref-only", "arxiv": "+arXiv", "dblp": f"+DBLP (dump {DBLP_DUMP})", "openalex": "+OpenAlex",
          "s2": "+S2"}
 assert tuple(COLS) == BACKENDS

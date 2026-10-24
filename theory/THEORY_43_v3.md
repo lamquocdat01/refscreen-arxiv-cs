@@ -87,7 +87,7 @@ decreasing map u ↦ PPV*(π, u):
 | Crossref-only | 30.2 % [27.7, 32.6] | **1.3 %** [1.2, 1.4] | 1.6 % [1.5, 1.8] |
 | Full cascade (+S2) | 2.11 % [1.64, 2.58] | **15.7 %** [13.2, 19.3] | 19.2 % [16.3, 23.5] |
 
-So, at a fabrication rate of 0.39 %, at most about 1 flag in 75 is a fabrication under a Crossref-only screen, and
+So, at a fabrication rate of 0.39 %, at most about 1 flag in 78 is a fabrication under a Crossref-only screen, and
 at most about 1 in 6 under the full cascade. The ratio of the false-flag odds is u_A(Crossref) / u_A(full) ≈ 14.
 
 *Proof.* (1′) with the measured u_A. PPV* is strictly decreasing in u, so the interval endpoints map to the reverse
@@ -262,8 +262,11 @@ event "the printed identifier resolves and the registry metadata match the rende
 definition of d_TV gives d_TV ≥ P_F(I^c) − P_R(I^c) ≥ (1 − ε) − u_id. For the PPV, the map (t, f) ↦ πt / (πt + (1 − π) f)
 is increasing in t and decreasing in f; insert t ≥ 1 − ε and f ≤ u_id. ∎
 
-*Measured u_id.* The render experiment estimates u_id as the share of certified-real references with a printed DOI
-that fail the identifier route (screen column `idonly`, style IEEEtran-DOI orig, `results/p1_screen_fp.csv`).
+*Measured u_id.* The render experiment gives two related rates on certified-real references rendered with the
+DOI-printing style (`results/p1_screen_fp.csv`): the identifier route alone fails for 3.2 % (column `idonly`; this
+includes references whose identifier was not printed or not extracted), and the identifier route followed by the
+title cascade fails for 0.043 % (column `union`). The second is the rate that matters for a screen that uses printed
+identifiers.
 
 *Interpretation.*
 - Without an identifier the problem is information-theoretically hard: no test can push the false-positive rate below
@@ -272,8 +275,8 @@ that fail the identifier route (screen column `idonly`, style IEEEtran-DOI orig,
   coverage.
 - Printing resolvable identifiers is therefore the condition that makes a bibliography machine-verifiable. The render
   experiment (E2) measures how often common styles erase them.
-- **Identifier erasure:** IEEEtran.bst v1.14 prints no DOI. P0 measured that it prints 20.3 % of .bib DOIs, versus
-  74.5 % for the DOI patch and 100 % for elsarticle-num (n = 192 refs, 30 papers).
+- **Identifier erasure:** IEEEtran.bst v1.14 has no DOI field; in the pilot it printed 20.3 % of .bib DOIs (only
+  through URL fields), versus 74.5 % for the DOI patch and 100 % for elsarticle-num (n = 192 refs, 30 papers).
 
 ---
 
@@ -293,8 +296,8 @@ probability.
 
 **(a′) Simultaneous bounds.** The guarantee needs u_s ≤ u⁺_s for all s ∈ A at once. With per-tier upper bounds at
 level 1 − δ/|A| (|A| = 3), Bonferroni gives simultaneous coverage ≥ 1 − δ. Default in the scripts: the 97.5 %
-paper-bootstrap quantile per tier (individual coverage). The Bonferroni version (99.17 % quantile) is not computed
-yet (open point, §5).
+paper-bootstrap quantile per tier (individual coverage). Simultaneous coverage of the estimation step is therefore
+an assumption of the rules below, not a computed guarantee.
 
 **(a″) α-safety is relative to the backend set.** u_s and hence k*_A depend on the backends of the screen
 (Crossref-only vs the full cascade, `results/p1_backend_table.csv`). A rule calibrated on the full cascade is not
@@ -325,7 +328,7 @@ BH / BY over papers.
 *Rules* (all thresholds are per paper, through n_{i,s}):
 
 - **R1 (estimation margin only).** k¹_i = min{k : P(PoiBin(n_{i,s}, u⁺_s) ≥ k) ≤ α}.
-  This is the prompt's rule with δ_s = u⁺_s − u_s, and it is Prop 4′ evaluated per paper.
+  It sets δ_s = u⁺_s − u_s, and it is Prop 4′ evaluated per paper.
 - **R2 (heterogeneity quantile).** Let q_s be the (1 − α/(2|A|)) quantile of the Beta law with mean u⁺_s and ICC
   ρ⁺_s. Then k²_i = min{k : P(PoiBin(n_{i,s}, q_s) ≥ k) ≤ α/2}.
 - **R3 (Cantelli).** Set λ⁺_i = Σ_s n_{i,s} u⁺_s and V⁺_i = (Σ_s √(n_{i,s} u⁺_s (1 − u⁺_s)(1 + (n_{i,s} − 1) ρ⁺_s)))².
@@ -361,7 +364,7 @@ BH / BY over papers.
 - **The price is the threshold.** For the median paper (n_A = 32, full cascade, α = 0.05):
   - k¹ = 5, k² = 19, k³ = 15;
   - under Crossref-only: 12, 27, 32.
-  - The cost of these thresholds in recall must be read together with the recall table (P2 Việc 2).
+  - The cost of these thresholds in recall must be read together with the recall table.
 
 **§4.P Policy conclusion 1 (desk-reject thresholds).** Numbers: 299 legitimate papers of 2019–21 (def 1), seed 42,
 `results/p2_theory_final.csv`.
@@ -386,18 +389,19 @@ BH / BY over papers.
   Prop 3.1).
   - Without an identifier, no test can push FPR below u_S × recall (Thm 3). So small-k rules are out of reach
     whatever the screen does.
-  - With an identifier, the unresolved rate becomes the identifier-failure rate u_id (Prop 3.1). In the render
-    experiment, u_id = 0.26 % (6/2,316 certified-real refs, union, GROBID, IEEEtran strip; paper-bootstrap upper
-    bound 0.60 %).
-  - Setting u_s = u_id for every academic tier, with u⁺ = 0.60 % and the full-cascade ρ⁺_s (conservative, since no
-    ICC is measurable from 6 flags), the median paper (n_A = 32) needs k = 11 (R2) and k = 6 (R3) at α = 0.05,
-    against 19 and 15 without identifiers. Across the five papers this is 5–16 and 3–9 (§9).
-  - Under conditional independence, P(N_A ≥ 2) = 0.32 % at n_A = 32 (1.6 % at u⁺). The "≥ 2" rule is then α-safe at
-    0.05 up to n_A ≈ 47 (3.3 % at u⁺); at n_A = 66 it reaches 6.0 %.
-  - With the conservative dispersion, the Cantelli bound for k = 2 is 0.28 at n_A = 32. A small k becomes defensible
-    only if the identifier failures of a paper are measured to be less clustered than its unresolved references.
-  - **Caveat:** u_id is measured on certified-real references, which already resolved by identifier once. It is a
-    lower bound for identifiers in the wild (typos, style corruption; P0: IEEEtran v1.14 prints no DOI).
+  - With an identifier, a screen that checks the printed identifier first and falls back to the title cascade flags
+    a real reference only when both routes fail. In the render experiment (certified-real references, DOI-printing
+    style with identifiers kept, union screen, GROBID) this rate is 0.043 % (1/2,323; paper-bootstrap upper bound
+    0.185 %). The identifier route alone fails for 3.2 % (74/2,325), mostly because the identifier is not printed or
+    not extracted, so the title fallback matters. (Correction of 24-10-2026: the P2 version of this paragraph used the
+    IEEEtran strip cell, 0.26 %, which carries no printed identifier.)
+  - Setting u_s to this rate for every academic tier, with u⁺ = 0.185 % and the full-cascade ρ⁺_s (conservative, since
+    no ICC is measurable from one flag), the median paper (n_A = 32) needs k = 6 (R2) and k = 3 (R3) at α = 0.05,
+    against 19 and 15 without identifiers. Across the five papers this is 4–9 and 2–5 (§9).
+  - Under conditional independence, P(N_A ≥ 2) = 0.009 % at n_A = 32 (0.16 % at u⁺). With the conservative
+    dispersion, the Cantelli bound for k = 2 is 0.093 at n_A = 32, so k = 2 is not certified at α = 0.05 even then.
+  - **Caveat:** the rate rests on a single flag and is measured on certified-real references, which already resolved
+    by identifier once. It is a lower bound for identifiers in the wild (typos, style corruption).
 
 *Policy conclusion 1.* A desk-reject rule that counts "non-existent" references is α-safe only at thresholds far above
 the 1–2 used in practice, unless the references carry resolvable identifiers. Requiring printed DOIs or arXiv ids,
@@ -603,6 +607,9 @@ beta-binomial variance with the Cauchy–Schwarz cross-tier bound.
 - A threshold larger than n_A (Crossref-only, R3) means the paper can never be rejected.
 
 **Identifier scenario (§4.P (c)).**
+- **Superseded 24-10-2026:** the table below is the P2 version (u_id = 0.26 %, IEEEtran strip). The corrected scenario
+  (u = 0.043 %, u⁺ = 0.185 %, DOI-printing style, identifiers kept) is in `results/p2_theory_final.csv` (tables
+  `k_identifier`, `p_two_flags_identifier`) and §4.P (c).
 - Inputs: u_id = 0.26 % (6/2,316) and u⁺_id = 0.60 % for every academic tier; ρ⁺_s as in the full cascade
   (conservative).
 - Same five papers as above.

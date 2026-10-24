@@ -57,7 +57,8 @@ def save(fig, name, sources, seed):
 
 
 def bt_rows():
-    b = pd.read_csv(RES / "p1_backend_table.csv", dtype=str, keep_default_na=False)
+    # P3: the main table of the article is the P2 table after the night retry (2019-21 identical to P1)
+    b = pd.read_csv(RES / "p2_backend_table_retry.csv", dtype=str, keep_default_na=False)
     return b
 
 
@@ -86,7 +87,7 @@ def f1(seed):
     ax.legend(loc="upper right", fontsize=8)
     ax.set_title("Same references, four verdicts: u_A by cumulative backend set (def 1, 95 % paper-bootstrap CI)",
                  fontsize=9, loc="left", color=INK)
-    save(fig, "F1_four_verdicts", ["p1_backend_table.csv"], seed)
+    save(fig, "F1_four_verdicts", ["p2_backend_table_retry.csv"], seed)
 
 
 def f2(seed, audited=True):
@@ -113,8 +114,12 @@ def f2(seed, audited=True):
             ("gptzero", "hallucinated", "GPTZero NeurIPS 2025 (n = 99 after audit)" if audited else
              "GPTZero NeurIPS 2025 (n = 100, original labels)", C2, "s"),
             ("gen_b", "fabricated", "real title, swapped authors (gen, n = 100)", C3, "^")]
-    fig, axes = plt.subplots(1, 2, figsize=(7.4, 3.5), sharey=True)
-    for ax, d in zip(axes, (1, 2)):
+    # P3: one panel only. The horizontal axis is the def-1 false-positive rate, so only def-1 recall is paired with
+    # it (the def-2 panel of P2 plotted def-2 recall against the def-1 FP); def-2 recall is in Table 6 of the article.
+    fig, ax0 = plt.subplots(1, 1, figsize=(6.2, 3.9))
+    fig.subplots_adjust(bottom=0.27)
+    axes = [ax0]
+    for ax, d in zip(axes, (1,)):
         for st, lab, name, col, mk in fams:
             g = rc[(rc["set"] == st) & (rc.label == lab) & (rc.definition == d)].set_index("screen").loc[keys]
             xs = [fp[k] for k in keys]
@@ -130,21 +135,22 @@ def f2(seed, audited=True):
             ax.annotate(labl, (fp[k], 104), fontsize=6, color=MUTED, rotation=60, ha="left", va="bottom",
                         annotation_clip=False)
         ax.set_xscale("log")
-        ax.set_xlabel("FP = def-1 u_A, 2019-21 (%, log)")
-        ax.set_title(f"recall, def {d}: {'title only' if d == 1 else 'title + first author'}", fontsize=9,
-                     loc="left", pad=62)
+        ax.set_xticks([2, 3, 5, 10, 20, 30], ["2", "3", "5", "10", "20", "30"])
+        ax.minorticks_off()
+        ax.set_xlabel("False-positive rate: def-1 u_A of legitimate academic refs, 2019-21 (%, log)")
+        ax.set_title("recall vs false-positive rate, def 1 (title only)", fontsize=9, loc="left", pad=62)
         ax.set_ylim(-3, 103)
     axes[0].set_ylabel("Recall on fabricated items (%)")
     fig.legend(*axes[0].get_legend_handles_labels(), loc="lower center", ncol=3, fontsize=7,
-               bbox_to_anchor=(0.5, -0.1))
-    fig.text(0.01, -0.16, "Each point is one cumulative backend set (left to right: +S2 ... Crossref-only). Bars: "
+               bbox_to_anchor=(0.5, -0.02))
+    fig.text(0.01, -0.06, "Each point is one cumulative backend set (left to right: +S2 ... Crossref-only). Bars: "
              "bounds with items excluded for a failed backend counted as not flagged / flagged.", fontsize=6.5,
              color=MUTED)
     if audited:
         save(fig, "F2_roc_backend", ["p2_recall.csv", "p2_recall_audited.csv", "p2_recall_drop_audit.csv",
-                                     "p1_backend_table.csv"], seed)
+                                     "p2_backend_table_retry.csv"], seed)
     else:
-        save(fig, "F2b_roc_backend_original_labels", ["p2_recall.csv", "p1_backend_table.csv"], seed)
+        save(fig, "F2b_roc_backend_original_labels", ["p2_recall.csv", "p2_backend_table_retry.csv"], seed)
 
 
 def f3(seed):
@@ -227,7 +233,7 @@ def f6(seed):
     ax.set_ylim(0, 110)
     ax.legend(fontsize=8, loc="upper left")
     ax.set_title("Unresolved rate of legitimate refs by tier and period (def 1, 95 % CI)", fontsize=9, loc="left")
-    save(fig, "F6_u_by_tier", ["p1_backend_table.csv"], seed)
+    save(fig, "F6_u_by_tier", ["p2_backend_table_retry.csv"], seed)
 
 
 def main():

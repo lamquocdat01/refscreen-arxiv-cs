@@ -98,6 +98,8 @@ URL = [  # key, type, fields
                                          url="https://neurips.cc/Conferences/2026/MainTrackHandbook", howpublished="Web page, accessed 21 October 2026")),
     ("ICML2026ethics", "misc", dict(author="{ICML 2026 Organizers}", title="{ICML} 2026 Peer Review Ethics", year="2026",
                                     url="https://icml.cc/Conferences/2026/PeerReviewEthics", howpublished="Web page, accessed 21 October 2026")),
+    ("ICML2026ACinstructions", "misc", dict(author="{ICML 2026 Organizers}", title="{ICML} 2026 Area Chair Instructions", year="2026",
+                                            url="https://icml.cc/Conferences/2026/AreaChairInstructions", howpublished="Web page, accessed 24 October 2026")),
     ("USENIXSec2026report", "misc", dict(author="{USENIX Security 2026 Program Chairs}",
                                          title="{USENIX} Security 2026: Report on Submissions with Invalid References", year="2026",
                                          url="https://docs.google.com/document/d/e/2PACX-1vSnHpeTFReelMZ124SzmgObXrHDN_B-UgxhOaE2RKfnfHn_qWuobI7kPg4TKBMhhZy_qxYtggCo7vjK/pub",

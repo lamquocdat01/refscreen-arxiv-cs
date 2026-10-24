@@ -11,7 +11,7 @@
   "+S2"
  ],
  "openalex_note": "keyless: 148 ref từ câu trả lời đã cache; phần còn lại không hỏi được (429), 10.2 % ref không được hỏi",
- "dblp_dump": "18-10-2026",
+ "dblp_dump": "2026-10-19 release (server last-modified 2026-10-18 23:39 UTC)",
  "note": "def 1; cumulative backends in cascade order (PREREG_AMENDMENT_3); same denominator per row",
  "column_definitions": {
   "Crossref-only": "Crossref alone (DOI check + title search); not the same as Crossref+arXiv",

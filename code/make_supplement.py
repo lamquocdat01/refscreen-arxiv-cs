@@ -72,8 +72,11 @@ def s1_theory():
     t = t[t.index("## 0. Setting"):t.index("## 5. Open points")]
     return r"\section{Statements and full proofs}\label{sec:s1}" + "\n" + \
         "This section reproduces sections 0--4 of the theory note verbatim (file \\texttt{theory/THEORY\\_43\\_v3.md} in " \
-        "the repository). Theorem numbers there (1$'$, 2$'$, 3, 3.1, 4$''$) correspond to Theorems 1--3 and " \
-        "Propositions 1--3 of the article. Numerical values quoted inside the note are those of the result files.\n\n" + pandoc(t)
+        "the repository). Correspondence with the article: Theorem 1$'$ = Theorem 1; Theorem 2$'$ = Theorem 2; " \
+        "Proposition 2$'''$ = Proposition 3; Theorem 3 = Theorem 4; Proposition 3.1 = Proposition 5; Proposition " \
+        "4$''$ = Proposition 6 (Proposition 4$'$ and the beta-binomial Theorem 2$''$ are not used in the article). " \
+        "Assumption A$'$ is conditional independence of references given the paper. Numerical values quoted inside " \
+        "the note are those of the result files.\n\n" + pandoc(t)
 
 
 def s2_prereg():

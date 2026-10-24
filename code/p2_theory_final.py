@@ -20,10 +20,11 @@ Backend scenarios: crossref_only and full (+S2), the two headline columns.
    from the 299 tier-count vectors, U_is ~ Beta(mu_s, rho_s), N_is ~ Bin(n_is, U_is)) per rule.
 4. k_i for 5 typical papers (n_A at the 10/25/50/75/90 % quantiles) x 2 scenarios x 3 rules.
 5. Identifier scenario (Thm 3 / Prop 3.1 consequence; decision LQD 21-10): every academic reference prints a
-   resolvable identifier, so its unresolved rate is the certified-real FP of the render experiment (union, GROBID,
-   IEEEtran strip: k/n and paper-bootstrap upper bound from results/p1_screen_fp.csv). Same 5 papers, same rules with
-   u_s = that FP for every tier (u+ = its upper bound) and rho+_s of the full cascade (conservative; no ICC is
-   measurable at 6 flags), plus P(N >= 2) for the "2 flags" rule.
+   resolvable identifier, so its unresolved rate is the certified-real FP of the render experiment with identifiers
+   printed (union = identifier route then title cascade, GROBID, IEEEtran-DOI orig: k/n and paper-bootstrap upper
+   bound from results/p1_screen_fp.csv; P3 correction of 24-10, P2 used the stripped IEEEtran cell). Same 5 papers,
+   same rules with u_s = that FP for every tier (u+ = its upper bound) and rho+_s of the full cascade (conservative;
+   no ICC is measurable from so few flags), plus P(N >= 2) for the "2 flags" rule.
 Outputs: results/p2_theory_final.csv (long), results/numbers.json, results/numbers.tex (\\newcommand macros; C6)
 Usage: python p2_theory_final.py --seed 42 [--mc 20000]
 """
@@ -162,13 +163,16 @@ def main():
                                      value=kv))
     # 5. identifier scenario
     sf = pd.read_csv(RES / "p1_screen_fp.csv", dtype=str, keep_default_na=False)
-    c = sf[(sf.subset == "certified-real") & (sf.source == "render") & (sf.tier == "all") & (sf["style"] == "IEEEtran")
-           & (sf.variant == "strip") & (sf.parser == "grobid") & (sf.backend == "union")].iloc[0]
+    # P3 correction (hostile read 24-10): the rate of a screen on references that PRINT identifiers is the union FP of
+    # the DOI-printing style with identifiers kept (identifier route first, title cascade as fallback). P2 used the
+    # IEEEtran strip cell, which has no printed identifier (backup %TEMP%/p2_theory_final.py.bak_20261024_uid).
+    c = sf[(sf.subset == "certified-real") & (sf.source == "render") & (sf.tier == "all") & (sf["style"] == "IEEEtran_doi")
+           & (sf.variant == "orig") & (sf.parser == "grobid") & (sf.backend == "union")].iloc[0]
     u_id, u_id_up = float(c.fp), float(c.ci_hi)
     up_id = {s: u_id_up for s in A}
     rho_full_up = {s: bb["full"]["tiers"][s]["rho_boot95"][1] for s in A}
     nums["identifier_scenario"] = {"u_id": u_id, "u_id_upper": u_id_up, "k": int(c.k_flagged), "n": int(c.n_refs),
-                                   "source": "certified-real, render, union, GROBID, IEEEtran strip"}
+                                   "source": "certified-real, render, union, GROBID, IEEEtran-DOI orig"}
     typ = [r for r in rows if r.get("table") == "k_typical" and r["scenario"] == "full" and r["rule"] == "R1_CI"
            and r["alpha"] == 0.05]
     for r_ in typ:

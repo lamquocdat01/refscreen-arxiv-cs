@@ -214,35 +214,35 @@
   }
  },
  "identifier_scenario": {
-  "u_id": 0.00259,
-  "u_id_upper": 0.00602,
-  "k": 6,
-  "n": 2316,
-  "source": "certified-real, render, union, GROBID, IEEEtran strip",
+  "u_id": 0.00043,
+  "u_id_upper": 0.00185,
+  "k": 1,
+  "n": 2323,
+  "source": "certified-real, render, union, GROBID, IEEEtran-DOI orig",
   "nA11": {
-   "p_two_flags": 0.0003632564208675676,
-   "p_two_flags_upper": 0.0019225125525189977,
-   "cantelli_two_flags": 0.05336305486178991
+   "p_two_flags": 1.0143296508977332e-05,
+   "p_two_flags_upper": 0.00018615962016751243,
+   "cantelli_two_flags": 0.01632819429339164
   },
   "nA19": {
-   "p_two_flags": 0.001113932192392785,
-   "p_two_flags_upper": 0.005789210803319389,
-   "cantelli_two_flags": 0.15888903408755461
+   "p_two_flags": 3.14642122892713e-05,
+   "p_two_flags_upper": 0.0005731120129024476,
+   "cantelli_two_flags": 0.050953171786270374
   },
   "nA32": {
-   "p_two_flags": 0.003159629651363917,
-   "p_two_flags_upper": 0.015946546991815254,
-   "cantelli_two_flags": 0.2762386035505703
+   "p_two_flags": 9.0925366949517e-05,
+   "p_two_flags_upper": 0.0016359966579494651,
+   "cantelli_two_flags": 0.09267701464455089
   },
   "nA47": {
-   "p_two_flags": 0.006711397305041872,
-   "p_two_flags_upper": 0.032757424530589274,
-   "cantelli_two_flags": 0.37718528682053826
+   "p_two_flags": 0.0001973166919607745,
+   "p_two_flags_upper": 0.0035005249027580884,
+   "cantelli_two_flags": 0.1308574870074604
   },
   "nA66": {
-   "p_two_flags": 0.012892069417941939,
-   "p_two_flags_upper": 0.06034641622112001,
-   "cantelli_two_flags": 0.601961930198901
+   "p_two_flags": 0.00038940741664525506,
+   "p_two_flags_upper": 0.006786361873522544,
+   "cantelli_two_flags": 0.2536910637485598
   }
  }
 }

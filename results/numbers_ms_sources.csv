@@ -1,5 +1,5 @@
 key,value,source,field
-dblpDump,18-10-2026,results/p2_backend_table_retry.json,dblp_dump
+dblpDump,2026-10-19 release (server last-modified 2026-10-18 23:39 UTC),results/p2_backend_table_retry.json,dblp_dump
 nJPre,"3,697",results/p2_backend_table_retry.json,2019-21/J/n
 npJPre,289,results/p2_backend_table_retry.json,2019-21/J/n_papers
 uJPrecrossref,18.4,results/p2_backend_table_retry.json,2019-21/J/u_crossref
@@ -688,11 +688,19 @@ hallKstrip,2/390,results/p2_tool_hallucinator.csv,"IEEEtran_strip/certified/k,n_
 hallCistrip,"[0.00, 1.62]",results/p2_tool_hallucinator.csv,IEEEtran_strip/certified/ci
 hallAllFpstrip,0.84,results/p2_tool_hallucinator.csv,IEEEtran_strip/all/share_flagged
 hallAllKstrip,8/953,results/p2_tool_hallucinator.csv,"IEEEtran_strip/all/k,n_evaluated"
+hallAllRefsstrip,"1,107",results/p2_tool_hallucinator.csv,IEEEtran_strip/all/n_refs
+hallInconclstrip,95,results/p2_tool_hallucinator.csv,IEEEtran_strip/all/n_inconclusive
+hallSkippedstrip,57,results/p2_tool_hallucinator.csv,IEEEtran_strip/all/n_skipped
+hallNotExtrstrip,2,results/p2_tool_hallucinator.csv,IEEEtran_strip/all/n_not_extracted
 hallFpdoi,0.00,results/p2_tool_hallucinator.csv,IEEEtran_doi_orig/certified/share_flagged
 hallKdoi,0/384,results/p2_tool_hallucinator.csv,"IEEEtran_doi_orig/certified/k,n_evaluated"
 hallCidoi,"[0.00, 0.00]",results/p2_tool_hallucinator.csv,IEEEtran_doi_orig/certified/ci
 hallAllFpdoi,0.74,results/p2_tool_hallucinator.csv,IEEEtran_doi_orig/all/share_flagged
 hallAllKdoi,7/945,results/p2_tool_hallucinator.csv,"IEEEtran_doi_orig/all/k,n_evaluated"
+hallAllRefsdoi,"1,107",results/p2_tool_hallucinator.csv,IEEEtran_doi_orig/all/n_refs
+hallInconcldoi,87,results/p2_tool_hallucinator.csv,IEEEtran_doi_orig/all/n_inconclusive
+hallSkippeddoi,30,results/p2_tool_hallucinator.csv,IEEEtran_doi_orig/all/n_skipped
+hallNotExtrdoi,45,results/p2_tool_hallucinator.csv,IEEEtran_doi_orig/all/n_not_extracted
 hallPairs,15,results/p2_tool_hallucinator.csv,n_pairs
 hallHours,2.43,results/p2_tool_hallucinator.csv,hours_cumulative
 cieRuns,3,results/p2_checkifexist.json,n_runs
@@ -769,10 +777,10 @@ nAMed,32,results/p2_theory_final.csv,k_typical/n_A (median paper)
 kMedR1,5,results/p2_theory_final.csv,k_typical/full/0.05/R1/n_A=32
 kMedR2,19,results/p2_theory_final.csv,k_typical/full/0.05/R2/n_A=32
 kMedR3,15,results/p2_theory_final.csv,k_typical/full/0.05/R3/n_A=32
-kIdMedR2,11,results/p2_theory_final.csv,k_identifier/0.05/R2/n_A=32
-kIdMedR3,6,results/p2_theory_final.csv,k_identifier/0.05/R3/n_A=32
-pTwoIdMed,0.32,results/p2_theory_final.csv,p_two_flags_identifier/n_A=32
-pTwoIdMedHi,1.6,results/p2_theory_final.csv,p_two_flags_identifier/n_A=32/hi
+kIdMedR2,6,results/p2_theory_final.csv,k_identifier/0.05/R2/n_A=32
+kIdMedR3,3,results/p2_theory_final.csv,k_identifier/0.05/R3/n_A=32
+pTwoIdMed,0.009,results/p2_theory_final.csv,p_two_flags_identifier/n_A=32
+pTwoIdMedHi,0.16,results/p2_theory_final.csv,p_two_flags_identifier/n_A=32/hi
 hFiveObsFullT1,0.400,results/p1_h5.csv,full/T1/obs
 hFiveCiFullT1,"[0.309, 0.498]",results/p1_h5.csv,full/T1/wilson
 hFivePredFullT1,0.421,results/p1_h5.csv,full/T1/pred_mean
@@ -809,6 +817,12 @@ hFiveObsplus_dblpT3,0.800,results/p1_h5.csv,plus_dblp/T3/obs
 hFiveCiplus_dblpT3,"[0.711, 0.867]",results/p1_h5.csv,plus_dblp/T3/wilson
 hFivePredplus_dblpT3,0.903,results/p1_h5.csv,plus_dblp/T3/pred_mean
 hFiveNplus_dblpT3,60,results/p1_h5.csv,plus_dblp/T3/n_refs_median
+hFiveLamT1,1.93,results/p1_h5_diag.csv,full/k2/T1/mean_lambda
+hFiveMeanNT1,1.88,results/p1_h5_diag.csv,full/k2/T1/mean_N
+hFiveLamT2,3.38,results/p1_h5_diag.csv,full/k2/T2/mean_lambda
+hFiveMeanNT2,3.45,results/p1_h5_diag.csv,full/k2/T2/mean_N
+hFiveLamT3,5.53,results/p1_h5_diag.csv,full/k2/T3/mean_lambda
+hFiveMeanNT3,5.50,results/p1_h5_diag.csv,full/k2/T3/mean_N
 pOneRaw,97.5,results/p1_kappa.json,raw
 agrR1R3N,20,results/p2_kappa_pairs.json,R1-R3/n
 agrR1R3Pabak,0.70,results/p2_kappa_pairs.json,R1-R3/pabak
@@ -836,6 +850,7 @@ agrPooledPabak,0.74,results/p2_kappa.json,pooled/pabak
 agrPooledPabakCi,"[0.55, 0.91]",results/p2_kappa.json,pooled/pabak_ci
 agrPooledN,40,results/p2_kappa.json,pooled/n
 pThreeStatus,pending,results/p3_kappa.json,missing (R3 not returned yet)
+pThreeSentence,A supplementary recheck of 40 new references under the revised rules (seed 43) has its first two raters' labels (Supplement S8); the second rater's labels were not yet available at this version [to be completed before submission].,results/p3_kappa.json,missing
 hashPrereg,38378e74,results/prereg_hash.txt,PREREG_43.md
 hashProtocol,9ab6c684,results/prereg_hash.txt,manual_protocol.md
 hashAmOne,f9137b5f,results/prereg_hash.txt,PREREG_AMENDMENT_1.md
@@ -850,3 +865,131 @@ nVenuesConfirmed,27,results/p2_policy_survey.csv,verify_status=confirmed
 nVenuesPolicy,23,results/p2_policy_survey.csv,policy_exists starts with yes
 nVenuesToolNamed,4,results/p2_policy_survey.csv,tool_named disclosed
 nVenuesAppeal,3,results/p2_policy_survey.csv,appeal_process stated
+acFlagcrossrefk1,97.0,results/p3_revision_checks.json,paper_flags_academic_only/crossref/k1/share
+acFlagcrossrefk1K,290/299,results/p3_revision_checks.json,"paper_flags_academic_only/crossref/k1/papers,n"
+acFlagcrossrefk1Ci,"[94.4, 98.4]",results/p3_revision_checks.json,paper_flags_academic_only/crossref/k1/wilson
+acFlagcrossrefk2,90.0,results/p3_revision_checks.json,paper_flags_academic_only/crossref/k2/share
+acFlagcrossrefk2K,269/299,results/p3_revision_checks.json,"paper_flags_academic_only/crossref/k2/papers,n"
+acFlagcrossrefk2Ci,"[86.0, 92.9]",results/p3_revision_checks.json,paper_flags_academic_only/crossref/k2/wilson
+acFlagarxivk1,94.6,results/p3_revision_checks.json,paper_flags_academic_only/arxiv/k1/share
+acFlagarxivk1K,283/299,results/p3_revision_checks.json,"paper_flags_academic_only/arxiv/k1/papers,n"
+acFlagarxivk1Ci,"[91.5, 96.7]",results/p3_revision_checks.json,paper_flags_academic_only/arxiv/k1/wilson
+acFlagarxivk2,86.6,results/p3_revision_checks.json,paper_flags_academic_only/arxiv/k2/share
+acFlagarxivk2K,259/299,results/p3_revision_checks.json,"paper_flags_academic_only/arxiv/k2/papers,n"
+acFlagarxivk2Ci,"[82.3, 90.0]",results/p3_revision_checks.json,paper_flags_academic_only/arxiv/k2/wilson
+acFlagdblpk1,63.5,results/p3_revision_checks.json,paper_flags_academic_only/dblp/k1/share
+acFlagdblpk1K,190/299,results/p3_revision_checks.json,"paper_flags_academic_only/dblp/k1/papers,n"
+acFlagdblpk1Ci,"[57.9, 68.8]",results/p3_revision_checks.json,paper_flags_academic_only/dblp/k1/wilson
+acFlagdblpk2,33.8,results/p3_revision_checks.json,paper_flags_academic_only/dblp/k2/share
+acFlagdblpk2K,101/299,results/p3_revision_checks.json,"paper_flags_academic_only/dblp/k2/papers,n"
+acFlagdblpk2Ci,"[28.7, 39.3]",results/p3_revision_checks.json,paper_flags_academic_only/dblp/k2/wilson
+acFlagopenalexk1,61.2,results/p3_revision_checks.json,paper_flags_academic_only/openalex/k1/share
+acFlagopenalexk1K,183/299,results/p3_revision_checks.json,"paper_flags_academic_only/openalex/k1/papers,n"
+acFlagopenalexk1Ci,"[55.6, 66.6]",results/p3_revision_checks.json,paper_flags_academic_only/openalex/k1/wilson
+acFlagopenalexk2,29.1,results/p3_revision_checks.json,paper_flags_academic_only/openalex/k2/share
+acFlagopenalexk2K,87/299,results/p3_revision_checks.json,"paper_flags_academic_only/openalex/k2/papers,n"
+acFlagopenalexk2Ci,"[24.2, 34.5]",results/p3_revision_checks.json,paper_flags_academic_only/openalex/k2/wilson
+acFlags2k1,38.5,results/p3_revision_checks.json,paper_flags_academic_only/s2/k1/share
+acFlags2k1K,115/299,results/p3_revision_checks.json,"paper_flags_academic_only/s2/k1/papers,n"
+acFlags2k1Ci,"[33.1, 44.1]",results/p3_revision_checks.json,paper_flags_academic_only/s2/k1/wilson
+acFlags2k2,16.1,results/p3_revision_checks.json,paper_flags_academic_only/s2/k2/share
+acFlags2k2K,48/299,results/p3_revision_checks.json,"paper_flags_academic_only/s2/k2/papers,n"
+acFlags2k2Ci,"[12.3, 20.6]",results/p3_revision_checks.json,paper_flags_academic_only/s2/k2/wilson
+fpManAcunion,3.8,results/p3_revision_checks.json,fp_manual_academic/union/share
+fpManAcunionK,4/105,results/p3_revision_checks.json,"fp_manual_academic/union/k,n"
+fpManAcunionCi,"[1.5, 9.4]",results/p3_revision_checks.json,fp_manual_academic/union/wilson
+fpManRawunion,25.4,results/p3_revision_checks.json,fp_manual_academic/union/raw_all_share
+fpManAcdblp,7.6,results/p3_revision_checks.json,fp_manual_academic/dblp/share
+fpManAcdblpK,8/105,results/p3_revision_checks.json,"fp_manual_academic/dblp/k,n"
+fpManAcdblpCi,"[3.9, 14.3]",results/p3_revision_checks.json,fp_manual_academic/dblp/wilson
+fpManRawdblp,31.2,results/p3_revision_checks.json,fp_manual_academic/dblp/raw_all_share
+hThreePairUnionStripOnly,5,results/p3_revision_checks.json,h3_paired/flag_union/strip_only
+hThreePairUnionDoiOnly,0,results/p3_revision_checks.json,h3_paired/flag_union/doi_only
+hThreePairUnionBoth,1,results/p3_revision_checks.json,h3_paired/flag_union/both
+hThreePairUnionN,"2,316",results/p3_revision_checks.json,h3_paired/flag_union/pairs
+hThreePairUnionP,0.062,results/p3_revision_checks.json,h3_paired/flag_union/exact_p_two_sided
+hThreePairCrStripOnly,153,results/p3_revision_checks.json,h3_paired/flag_crossref/strip_only
+hThreePairCrDoiOnly,0,results/p3_revision_checks.json,h3_paired/flag_crossref/doi_only
+hThreePairCrBoth,36,results/p3_revision_checks.json,h3_paired/flag_crossref/both
+hThreePairCrN,"2,325",results/p3_revision_checks.json,h3_paired/flag_crossref/pairs
+hThreePairCrP,$<10^{-45}$,results/p3_revision_checks.json,h3_paired/flag_crossref/exact_p_two_sided
+lateBibPapers,4,results/p3_revision_checks.json,pre_llm_versions/papers_bib_after_2022_11_30
+uANoLate,2.16,results/p3_revision_checks.json,pre_llm_versions/u_A_full_without_late
+uANoLateCi,"[1.67, 2.68]",results/p3_revision_checks.json,pre_llm_versions/boot95_without_late
+uANoLatePapers,293,results/p3_revision_checks.json,pre_llm_versions/papers_without_late
+scenIdUnion,0.043,results/p3_revision_checks.json,identifier_scenario/IEEEtran_doi/orig/union/fp
+scenIdUnionK,"1/2,323",results/p3_revision_checks.json,"identifier_scenario/IEEEtran_doi/orig/union/k,n"
+scenIdUnionHi,0.185,results/p3_revision_checks.json,identifier_scenario/IEEEtran_doi/orig/union/boot95[1]
+scenIdOnly,3.2,results/p3_revision_checks.json,identifier_scenario/IEEEtran_doi/orig/idonly/fp
+scenIdOnlyK,"74/2,325",results/p3_revision_checks.json,"identifier_scenario/IEEEtran_doi/orig/idonly/k,n"
+scenIdOnlyHi,5.8,results/p3_revision_checks.json,identifier_scenario/IEEEtran_doi/orig/idonly/boot95[1]
+oaSkipPre,293,results/p3_revision_checks.json,openalex_refusals_academic/2019-21/oa_skipped
+oaSkipUnresPre,155,results/p3_revision_checks.json,openalex_refusals_academic/2019-21/oa_skipped_and_unresolved
+oaSkipPost,"1,409",results/p3_revision_checks.json,openalex_refusals_academic/2024-26/oa_skipped
+oaSkipUnresPost,887,results/p3_revision_checks.json,openalex_refusals_academic/2024-26/oa_skipped_and_unresolved
+uALowerOa,0.69,results/p3_revision_checks.json + p2_backend_table_retry.json,"(k_s2 - oa_skipped_and_unresolved)/n, A 2019-21"
+empQNinetyFive,3,results/p3_revision_checks.json,empirical_NA/q95_all
+empQNinetyNine,7,results/p3_revision_checks.json,empirical_NA/q99_all
+empMax,17,results/p3_revision_checks.json,empirical_NA/max_all
+empPreGe3,9.0,results/p3_revision_checks.json,empirical_NA/share_ge3/share
+empPreGe3K,27/299,results/p3_revision_checks.json,"empirical_NA/share_ge3/papers,n"
+empPreGe3Ci,"[6.3, 12.8]",results/p3_revision_checks.json,empirical_NA/share_ge3/wilson
+empPreGe4,4.0,results/p3_revision_checks.json,empirical_NA/share_ge4/share
+empPreGe4K,12/299,results/p3_revision_checks.json,"empirical_NA/share_ge4/papers,n"
+empPreGe4Ci,"[2.3, 6.9]",results/p3_revision_checks.json,empirical_NA/share_ge4/wilson
+empPreGe5,2.3,results/p3_revision_checks.json,empirical_NA/share_ge5/share
+empPreGe5K,7/299,results/p3_revision_checks.json,"empirical_NA/share_ge5/papers,n"
+empPreGe5Ci,"[1.1, 4.8]",results/p3_revision_checks.json,empirical_NA/share_ge5/wilson
+empPostGe1,39.3,results/p3_revision_checks.json,empirical_NA_2024_26/share_ge1/share
+empPostGe1K,393/999,results/p3_revision_checks.json,"empirical_NA_2024_26/share_ge1/papers,n"
+empPostGe1Ci,"[36.4, 42.4]",results/p3_revision_checks.json,empirical_NA_2024_26/share_ge1/wilson
+empPostGe2,19.2,results/p3_revision_checks.json,empirical_NA_2024_26/share_ge2/share
+empPostGe2K,192/999,results/p3_revision_checks.json,"empirical_NA_2024_26/share_ge2/papers,n"
+empPostGe2Ci,"[16.9, 21.8]",results/p3_revision_checks.json,empirical_NA_2024_26/share_ge2/wilson
+empPostGe3,10.5,results/p3_revision_checks.json,empirical_NA_2024_26/share_ge3/share
+empPostGe3K,105/999,results/p3_revision_checks.json,"empirical_NA_2024_26/share_ge3/papers,n"
+empPostGe3Ci,"[8.8, 12.6]",results/p3_revision_checks.json,empirical_NA_2024_26/share_ge3/wilson
+empPostGe4,5.7,results/p3_revision_checks.json,empirical_NA_2024_26/share_ge4/share
+empPostGe4K,57/999,results/p3_revision_checks.json,"empirical_NA_2024_26/share_ge4/papers,n"
+empPostGe4Ci,"[4.4, 7.3]",results/p3_revision_checks.json,empirical_NA_2024_26/share_ge4/wilson
+empPostGe5,4.5,results/p3_revision_checks.json,empirical_NA_2024_26/share_ge5/share
+empPostGe5K,45/999,results/p3_revision_checks.json,"empirical_NA_2024_26/share_ge5/papers,n"
+empPostGe5Ci,"[3.4, 6.0]",results/p3_revision_checks.json,empirical_NA_2024_26/share_ge5/wilson
+accGptzeroItems,100,results/p3_revision_checks.json,accounting/gptzero_items
+accGptzeroItemsAfterAudit,99,results/p3_revision_checks.json,accounting/gptzero_items_after_audit
+accGptzeroEvaluatedAfterAudit,94,results/p3_revision_checks.json,accounting/gptzero_evaluated_after_audit
+accP1ManualExists,196,results/p3_revision_checks.json,accounting/p1_manual_exists
+accP1ManualExistsUsedInH4,189,results/p3_revision_checks.json,accounting/p1_manual_exists_used_in_h4
+idScenU,0.043,results/numbers.json,identifier_scenario/u_id
+idScenUHi,0.185,results/numbers.json,identifier_scenario/u_id_upper
+nVenueOrgs,25,results/p2_policy_survey.csv,distinct venue names without year/qualifier
+ridDoiPrintedIEEEtranorig,27.2,results/p1_render_identifiers.csv,IEEEtran/orig/pct_bib_doi_printed
+ridArxivIEEEtranorig,28.7,results/p1_render_identifiers.csv,IEEEtran/orig/pct_printed_arxiv
+ridAnyIdIEEEtranorig,31.9,results/p1_render_identifiers.csv,IEEEtran/orig/pct_printed_resolvable_id
+ridDoiPrintedIEEEtranstrip,0.0,results/p1_render_identifiers.csv,IEEEtran/strip/pct_bib_doi_printed
+ridArxivIEEEtranstrip,24.6,results/p1_render_identifiers.csv,IEEEtran/strip/pct_printed_arxiv
+ridAnyIdIEEEtranstrip,24.6,results/p1_render_identifiers.csv,IEEEtran/strip/pct_printed_resolvable_id
+ridDoiPrintedIEEEtrandoiorig,97.4,results/p1_render_identifiers.csv,IEEEtran_doi/orig/pct_bib_doi_printed
+ridArxivIEEEtrandoiorig,28.8,results/p1_render_identifiers.csv,IEEEtran_doi/orig/pct_printed_arxiv
+ridAnyIdIEEEtrandoiorig,41.0,results/p1_render_identifiers.csv,IEEEtran_doi/orig/pct_printed_resolvable_id
+ridDoiPrintedIEEEtrandoistrip,0.0,results/p1_render_identifiers.csv,IEEEtran_doi/strip/pct_bib_doi_printed
+ridArxivIEEEtrandoistrip,24.6,results/p1_render_identifiers.csv,IEEEtran_doi/strip/pct_printed_arxiv
+ridAnyIdIEEEtrandoistrip,24.6,results/p1_render_identifiers.csv,IEEEtran_doi/strip/pct_printed_resolvable_id
+ridDoiPrintedIEEEtrandoiraworig,86.8,results/p1_render_identifiers.csv,IEEEtran_doi_raw/orig/pct_bib_doi_printed
+ridArxivIEEEtrandoiraworig,28.6,results/p1_render_identifiers.csv,IEEEtran_doi_raw/orig/pct_printed_arxiv
+ridAnyIdIEEEtrandoiraworig,39.6,results/p1_render_identifiers.csv,IEEEtran_doi_raw/orig/pct_printed_resolvable_id
+ridDoiPrintedIEEEtrandoirawstrip,0.0,results/p1_render_identifiers.csv,IEEEtran_doi_raw/strip/pct_bib_doi_printed
+ridArxivIEEEtrandoirawstrip,24.6,results/p1_render_identifiers.csv,IEEEtran_doi_raw/strip/pct_printed_arxiv
+ridAnyIdIEEEtrandoirawstrip,24.6,results/p1_render_identifiers.csv,IEEEtran_doi_raw/strip/pct_printed_resolvable_id
+ridDoiPrintedacmartorig,95.3,results/p1_render_identifiers.csv,acmart/orig/pct_bib_doi_printed
+ridArxivacmartorig,26.7,results/p1_render_identifiers.csv,acmart/orig/pct_printed_arxiv
+ridAnyIdacmartorig,38.8,results/p1_render_identifiers.csv,acmart/orig/pct_printed_resolvable_id
+ridDoiPrintedacmartstrip,0.0,results/p1_render_identifiers.csv,acmart/strip/pct_bib_doi_printed
+ridArxivacmartstrip,22.0,results/p1_render_identifiers.csv,acmart/strip/pct_printed_arxiv
+ridAnyIdacmartstrip,22.0,results/p1_render_identifiers.csv,acmart/strip/pct_printed_resolvable_id
+ridDoiPrintedelsarticlenumorig,100.0,results/p1_render_identifiers.csv,elsarticle-num/orig/pct_bib_doi_printed
+ridArxivelsarticlenumorig,29.4,results/p1_render_identifiers.csv,elsarticle-num/orig/pct_printed_arxiv
+ridAnyIdelsarticlenumorig,41.9,results/p1_render_identifiers.csv,elsarticle-num/orig/pct_printed_resolvable_id
+ridDoiPrintedelsarticlenumstrip,0.0,results/p1_render_identifiers.csv,elsarticle-num/strip/pct_bib_doi_printed
+ridArxivelsarticlenumstrip,24.6,results/p1_render_identifiers.csv,elsarticle-num/strip/pct_printed_arxiv
+ridAnyIdelsarticlenumstrip,24.6,results/p1_render_identifiers.csv,elsarticle-num/strip/pct_printed_resolvable_id
