@@ -1,0 +1,289 @@
+{
+ "seed": 43,
+ "boot": 1000,
+ "n": 40,
+ "n_papers": 35,
+ "label": "recheck after Amendment 5 (post hoc, supplementary); does not replace the registered P2 FAIL",
+ "criterion": "PABAK >= 0.8 (Amendment 4)",
+ "labels": {
+  "R1": {
+   "exists": 40
+  },
+  "R2": {
+   "exists": 40
+  },
+  "R3": {
+   "exists": 40
+  }
+ },
+ "R1-R2": {
+  "n": 40,
+  "raw": 1.0,
+  "pabak": 1.0,
+  "ac1": 1.0,
+  "kappa": null,
+  "table": [
+   [
+    40,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0
+   ]
+  ],
+  "bin_raw": 1.0,
+  "bin_pabak": 1.0,
+  "bin_ac1": 1.0,
+  "noamb_n": 40,
+  "noamb_pabak": 1.0,
+  "disagree_n": 0,
+  "pabak_ci": [
+   1.0,
+   1.0
+  ],
+  "ac1_ci": [
+   1.0,
+   1.0
+  ],
+  "bin_pabak_ci": [
+   1.0,
+   1.0
+  ],
+  "bin_ac1_ci": [
+   1.0,
+   1.0
+  ],
+  "disagree_cp_upper": 0.08809730287880237,
+  "pabak_cp_lower": 0.8678540456817965,
+  "bin_pabak_cp_lower": 0.8238053942423953,
+  "pass": true,
+  "disagreements": []
+ },
+ "R1-R3": {
+  "n": 40,
+  "raw": 1.0,
+  "pabak": 1.0,
+  "ac1": 1.0,
+  "kappa": null,
+  "table": [
+   [
+    40,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0
+   ]
+  ],
+  "bin_raw": 1.0,
+  "bin_pabak": 1.0,
+  "bin_ac1": 1.0,
+  "noamb_n": 40,
+  "noamb_pabak": 1.0,
+  "disagree_n": 0,
+  "pabak_ci": [
+   1.0,
+   1.0
+  ],
+  "ac1_ci": [
+   1.0,
+   1.0
+  ],
+  "bin_pabak_ci": [
+   1.0,
+   1.0
+  ],
+  "bin_ac1_ci": [
+   1.0,
+   1.0
+  ],
+  "disagree_cp_upper": 0.08809730287880237,
+  "pabak_cp_lower": 0.8678540456817965,
+  "bin_pabak_cp_lower": 0.8238053942423953,
+  "pass": true,
+  "disagreements": []
+ },
+ "R2-R3": {
+  "n": 40,
+  "raw": 1.0,
+  "pabak": 1.0,
+  "ac1": 1.0,
+  "kappa": null,
+  "table": [
+   [
+    40,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0
+   ]
+  ],
+  "bin_raw": 1.0,
+  "bin_pabak": 1.0,
+  "bin_ac1": 1.0,
+  "noamb_n": 40,
+  "noamb_pabak": 1.0,
+  "disagree_n": 0,
+  "pabak_ci": [
+   1.0,
+   1.0
+  ],
+  "ac1_ci": [
+   1.0,
+   1.0
+  ],
+  "bin_pabak_ci": [
+   1.0,
+   1.0
+  ],
+  "bin_ac1_ci": [
+   1.0,
+   1.0
+  ],
+  "disagree_cp_upper": 0.08809730287880237,
+  "pabak_cp_lower": 0.8678540456817965,
+  "bin_pabak_cp_lower": 0.8238053942423953,
+  "pass": true,
+  "disagreements": []
+ },
+ "three raters": {
+  "ac1": 1.0,
+  "ac1_ci": [
+   1.0,
+   1.0
+  ],
+  "unanimous": 40
+ },
+ "routes": {
+  "N": {
+   "n": 20,
+   "tiers": {
+    "S": 10,
+    "W": 9,
+    "B": 1
+   },
+   "def1_status": {
+    "unresolved": 20
+   },
+   "r2_route": {
+    "archived": 10,
+    "direct": 9,
+    "moved": 1
+   },
+   "r3_route": {
+    "direct": 10,
+    "moved": 5,
+    "secondary": 5
+   },
+   "entry_defect": 2,
+   "r3_review_secondary": [
+    "Q20",
+    "Q39"
+   ]
+  },
+  "E": {
+   "n": 20,
+   "tiers": {
+    "J": 4,
+    "C": 4,
+    "P": 3,
+    "B": 3,
+    "S": 3,
+    "W": 3
+   },
+   "def1_status": {
+    "resolved": 17,
+    "unresolved": 2,
+    "no-title": 1
+   },
+   "r2_route": {
+    "direct": 17,
+    "archived": 2,
+    "moved": 1
+   },
+   "r3_route": {
+    "direct": 17,
+    "moved": 2,
+    "secondary": 1
+   },
+   "entry_defect": 4,
+   "r3_review_secondary": []
+  }
+ },
+ "flat": {
+  "recheck_posthoc_r1r2_n": 40,
+  "recheck_posthoc_r1r2_raw": 1.0,
+  "recheck_posthoc_r1r2_pabak": 1.0,
+  "recheck_posthoc_r1r2_ac1": 1.0,
+  "recheck_posthoc_r1r2_bin_pabak": 1.0,
+  "recheck_posthoc_r1r2_pabak_cp_lower": 0.8678540456817965,
+  "recheck_posthoc_r1r2_disagree_n": 0,
+  "recheck_posthoc_r1r2_pabak_ci_lo": 1.0,
+  "recheck_posthoc_r1r2_pabak_ci_hi": 1.0,
+  "recheck_posthoc_r1r2_kappa_defined": false,
+  "recheck_posthoc_r1r3_n": 40,
+  "recheck_posthoc_r1r3_raw": 1.0,
+  "recheck_posthoc_r1r3_pabak": 1.0,
+  "recheck_posthoc_r1r3_ac1": 1.0,
+  "recheck_posthoc_r1r3_bin_pabak": 1.0,
+  "recheck_posthoc_r1r3_pabak_cp_lower": 0.8678540456817965,
+  "recheck_posthoc_r1r3_disagree_n": 0,
+  "recheck_posthoc_r1r3_pabak_ci_lo": 1.0,
+  "recheck_posthoc_r1r3_pabak_ci_hi": 1.0,
+  "recheck_posthoc_r1r3_kappa_defined": false,
+  "recheck_posthoc_r2r3_n": 40,
+  "recheck_posthoc_r2r3_raw": 1.0,
+  "recheck_posthoc_r2r3_pabak": 1.0,
+  "recheck_posthoc_r2r3_ac1": 1.0,
+  "recheck_posthoc_r2r3_bin_pabak": 1.0,
+  "recheck_posthoc_r2r3_pabak_cp_lower": 0.8678540456817965,
+  "recheck_posthoc_r2r3_disagree_n": 0,
+  "recheck_posthoc_r2r3_pabak_ci_lo": 1.0,
+  "recheck_posthoc_r2r3_pabak_ci_hi": 1.0,
+  "recheck_posthoc_r2r3_kappa_defined": false,
+  "recheck_posthoc_three_ac1": 1.0,
+  "recheck_posthoc_three_unanimous": 40,
+  "recheck_posthoc_n": 40,
+  "recheck_posthoc_n_papers": 35,
+  "recheck_posthoc_r1_nonexists": 0,
+  "recheck_posthoc_pass_r1r3": true,
+  "recheck_posthoc_n_r3_direct": 10,
+  "recheck_posthoc_n_r3_moved": 5,
+  "recheck_posthoc_n_r3_secondary": 5,
+  "recheck_posthoc_n_r2_archived": 10,
+  "recheck_posthoc_n_r2_direct": 9,
+  "recheck_posthoc_n_r2_moved": 1,
+  "recheck_posthoc_n_entry_defect": 2,
+  "recheck_posthoc_e_r3_direct": 17,
+  "recheck_posthoc_e_r3_moved": 2,
+  "recheck_posthoc_e_r3_secondary": 1,
+  "recheck_posthoc_e_r2_direct": 17,
+  "recheck_posthoc_e_r2_archived": 2,
+  "recheck_posthoc_e_r2_moved": 1,
+  "recheck_posthoc_e_entry_defect": 4,
+  "recheck_posthoc_n_any_indirect": 13
+ }
+}

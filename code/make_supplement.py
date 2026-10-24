@@ -9,12 +9,13 @@ Content
   S5 diagnosis of unresolved journal/conference references (results/p1_diag_unresolved_jc60.csv)
   S6 audit of the recall drop (results/p2_recall_drop_audit.csv)
   S7 H5 by tertile: Theorem 2 under independence and the beta-binomial variant (results/p1_h5_betabinom.csv)
-  S8 agreement tables (P1 recheck, P2 three raters, P3 post-hoc recheck when available)
+  S8 agreement tables (P1 recheck, P2 three raters, P3 post-hoc recheck: agreement, route table, verbatim sheet, hashes)
   S9 public tools (hallucinator, CheckIfExist) and S10 additional figures
 Every table is generated here from result files; nothing is typed. Engine: xelatex (Unicode in the verbatim
 documents), main font Cambria.
 Usage: python make_supplement.py
 """
+import hashlib
 import json
 import re
 import shutil
@@ -196,16 +197,74 @@ def s8_agree():
     k1 = json.loads((RES / "p1_kappa.json").read_text(encoding="utf-8"))
     out.append(f"P1 intra-rater recheck (40 rows, stratified by tier): raw agreement {100 * k1.get('raw', 0.975):.1f}\\%, "
                "Cohen's $\\kappa$ = 0 (degenerate: all first-pass labels were \\emph{exists}).")
-    f3 = RES / "p3_kappa.json"
+    f3 = RES / "p3_recheck_stats.json"
     if f3.exists():
         q = json.loads(f3.read_text(encoding="utf-8"))
-        for pr in ("R1-R3", "R1-R2", "R2-R3"):
-            if pr in q:
-                s = q[pr]
-                rows = [[cats[i]] + [str(v) for v in s["table"][i]] for i in range(3)]
-                out.append(longtable("@{}lrrr@{}", [pr] + cats, rows,
-                                     f"Post-hoc recheck after Amendment 5 (supplementary), {pr}: n = {s['n']}, "
-                                     f"PABAK {s['pabak']:.2f} [{s['pabak_ci'][0]:.2f}, {s['pabak_ci'][1]:.2f}].", f"tab:q{pr}"))
+        m = pd.read_csv(RES / "p3_recheck_merged.csv", dtype=str, keep_default_na=False)
+        out.append(r"\subsection*{Post-hoc recheck after Amendment 5 (supplementary)}")
+        out.append(f"{q['n']} new references from {q['n_papers']} papers were drawn with seed 43, 20 per first-pass "
+                   "stratum. No first-pass \\emph{not-found} or \\emph{ambiguous} label remained in the pool, so the "
+                   "not-exists stratum (N) was filled with first-pass \\emph{exists} references that the full cascade left "
+                   "unresolved. R2 (a fresh Claude Code sub-agent) and R3 (Claude Cowork; the author reviewed and approved "
+                   "the sheet but did not label blind) rated the blind sheet under the revised rules. Labels: " +
+                   "; ".join(f"{r} {', '.join(f'{k} {v}' for k, v in q['labels'][r].items())}" for r in ("R1", "R2", "R3")) +
+                   ". Binary statistics (exists vs not-exists, \\emph{ambiguous} counted as disagreement with both sides) "
+                   "and the variant that drops \\emph{ambiguous} rows coincide with the 3-outcome ones because no row is "
+                   "ambiguous. The paper bootstrap (B = 1000, seed 43) is degenerate with no disagreement; the exact "
+                   "Clopper--Pearson bound treats the 40 references as independent.")
+        rows = []
+        for pr in ("R1-R2", "R1-R3", "R2-R3"):
+            x = q[pr]
+            rows.append([pr, x["n"], f"{100 * x['raw']:.1f}", f"{x['pabak']:.2f}", f"{x['pabak_cp_lower']:.2f}",
+                         f"{x['bin_pabak']:.2f}", f"{x['ac1']:.2f}", "undefined" if x["kappa"] is None else f"{x['kappa']:.2f}",
+                         "PASS (post hoc)" if x["pass"] else "FAIL (post hoc)"])
+        t3 = q["three raters"]
+        rows.append(["R1-R2-R3", q["n"], "--", "--", "--", "--", f"{t3['ac1']:.2f}", "--",
+                     f"{t3['unanimous']}/{q['n']} unanimous"])
+        out.append(longtable("@{}lrrrrrrll@{}", ["Pair", "n", r"Raw \%", "PABAK", "CP lower", "Binary PABAK", "AC1",
+                                                 r"$\kappa$", r"PABAK $\ge$ 0.8"], rows,
+                             "Post-hoc recheck (Amendment 5): agreement. It does not replace the registered P2 result (FAIL).",
+                             "tab:qagr"))
+        out.append(r"\subsection*{Screen-unresolved references are real: search depth, not existence}")
+        rn, re_ = q["routes"]["N"], q["routes"]["E"]
+        kv = lambda d: ", ".join(f"{k} {v}" for k, v in d.items())  # noqa: E731
+        out.append("The post-hoc recheck has no inter-rater disagreement to diagnose. The finding sits in stratum N: all "
+                   f"{rn['n']} references that the full cascade left unresolved (tiers: {kv(rn['tiers'])}) were confirmed "
+                   "real by all three raters. The table records, for every row, how each rater reached the resource (coded "
+                   "by the author's AI agent from the raters' evidence notes): \\emph{direct} = the cited URL or a "
+                   "bibliographic record; \\emph{moved} = a renamed repository, moved page or later file version; "
+                   "\\emph{archived} = a Wayback capture; \\emph{secondary} = pages that cite the resource, when the "
+                   f"resource itself could not be fetched. In stratum N, R3 used: {kv(rn['r3_route'])}; R2 used: "
+                   f"{kv(rn['r2_route'])}. R3 flagged {', '.join(rn['r3_review_secondary'])} as resting on secondary "
+                   f"evidence only. In stratum E, R3 used: {kv(re_['r3_route'])}. A checker who stops at the cited URL "
+                   "would therefore flag several real references, which is the screen's own failure mode (Theorem 3: "
+                   "unresolved is not nonexistent). In the registered P2 recheck, all four R1--R3 and all four R2--R3 "
+                   "disagreements were \\emph{ambiguous} (R1 or R2) against \\emph{exists} (R3); the five R1--R2 "
+                   "disagreements went both ways (four R1 \\emph{exists} vs R2 \\emph{ambiguous}, one the reverse); none "
+                   "involved \\emph{not-found}.")
+        rows = [[r["recheck_id"], r["stratum"], r["tier"], r["def1_status"], r["r2_route"], r["r3_route"],
+                 esc(r["entry_defect"]), esc(r["note"])] for _, r in m.iterrows()]
+        out.append("{\\scriptsize\n" + longtable("@{}llllllp{3.2cm}p{5.4cm}@{}", ["Row", "Str.", "Tier", "Screen",
+                                                                            "R2 route", "R3 route", "Entry defect", "Note"],
+                                               rows, "Route table of the post-hoc recheck (all 40 rows).", "tab:qroute") + "}")
+        rows = []
+        for _, r in m.iterrows():
+            rows.append([r["recheck_id"], f"{esc(r['title'])} ({r['tier']}, {r['stratum']}; .bib {r['src_version']} "
+                         f"{r['bib_version_date']})", r" \newline ".join(r[x] for x in ("R1", "R2", "R3")),
+                         url(r["R2_evidence_url"]) + " " + esc(r["R2_evidence_note"]),
+                         url(r["R3_evidence_url"]) + " " + esc(r["R3_evidence_note"])])
+        rr = r">{\raggedright\arraybackslash}"
+        out.append("{\\scriptsize\n" + longtable(f"@{{}}l{rr}p{{3.4cm}}p{{1.2cm}}{rr}p{{5.4cm}}{rr}p{{5.4cm}}@{{}}",
+                                               ["Row", "Reference (tier, stratum; .bib version)", "R1 R2 R3", "R2 evidence",
+                                                "R3 evidence"], rows,
+                                               "Post-hoc recheck sheet: verbatim labels and evidence of the three raters "
+                                               f"(R2: {esc(m.R2_checker.iloc[0])}; R3: {esc(m.R3_checker.iloc[0])}). "
+                                               "R1 recorded labels only.", "tab:qsheet") + "}")
+        rows = [[esc(f), hashlib.sha256((RES / f).read_bytes()).hexdigest()] for f in
+                ("p3_recheck_sheet.csv", "p3_recheck_rules.md", "p3_recheck_r2.csv", "p3_recheck_r3.csv",
+                 "p3_recheck_diagnosis.csv", "p3_recheck_merged.csv", "p3_recheck_stats.json")]
+        out.append(longtable("@{}lp{11cm}@{}", ["File (results/)", "sha256"], rows,
+                             "*Hashes of the post-hoc recheck files (unnumbered).", "tab:qhash"))
     else:
         out.append("The post-hoc recheck after Amendment 5 (40 new rows, seed 43) was pending the second rater when this "
                    "supplement was built; the first-pass and blind-recheck labels (R1, R2) are in the repository.")

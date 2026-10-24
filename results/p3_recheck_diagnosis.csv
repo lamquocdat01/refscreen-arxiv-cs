@@ -1,0 +1,41 @@
+recheck_id,r2_route,r3_route,entry_defect,note
+Q01,direct,direct,none,CGF 2015 record
+Q02,direct,direct,none,DOI record
+Q03,direct,direct,none,NDSS 2011 page
+Q04,direct,direct,none,USENIX NSDI 2015 page
+Q05,direct,direct,none,Interspeech 2018 record
+Q06,direct,direct,none,arXiv 1902.09243 / CoNLL 2019
+Q07,direct,direct,none,medRxiv DOI
+Q08,direct,direct,none,arXiv 1802.08760
+Q09,direct,direct,bibstyle spacing code in parsed title,"MIT Press 2016 book; parsed title 'Deep learning. 1em plus 0.5em minus 0'"
+Q10,direct,direct,none,NIPS 21 proceedings page
+Q11,direct,direct,none,Springer chapter
+Q12,archived,moved,none,repo srsLTE/srsLTE renamed to srsran/srsRAN_4G
+Q13,direct,direct,none,GitHub commit; Wayback URL in entry not needed
+Q14,moved,moved,none,repo moved facebook -> facebookarchive
+Q15,direct,moved,none,docs file vhost-user.txt converted to .rst on master; R2 read the tagged v4.0.0 file
+Q16,archived,secondary,none,osxfuse.github.io not readable by R3; project org and site repo confirmed
+Q17,direct,direct,none,libfuse repo
+Q18,direct,direct,none,nccgroup/gitpwnd repo
+Q19,archived,direct,none,google/sanitizers wiki page
+Q20,archived,secondary,none,R3 report PDF not fetchable by R3; confirmed via citing pages (R3 flagged REVIEW)
+Q21,archived,moved,none,course chapter renumbered on the course site
+Q22,archived,secondary,none,openvswitch.org not readable by R3; confirmed via project documentation
+Q23,direct,direct,parsed title truncated ('In-' dropped),TKDE 2015 DOI
+Q24,direct,direct,tier label wrong (no venue field),EMNLP 2018
+Q25,archived,moved,none,Lenovo advisory moved to a new URL
+Q26,archived,secondary,given name and surname swapped,WSJ paywalled for R3; confirmed via a news briefing citing headline and author
+Q27,archived,direct,none,Medium post
+Q28,direct,direct,none,IEEE TGRS DOI
+Q29,direct,direct,tier label wrong (@article for proceedings),NeurIPS 2024
+Q30,direct,direct,none,ICCV 2023
+Q31,direct,direct,none,Wiley 2018 book
+Q32,archived,moved,none,whitepaper copy at the cited course URL; R3 used the project's own copy
+Q33,direct,secondary,none,huggingface.co not readable by R3; confirmed via TII announcement listing the authors
+Q34,moved,moved,none,repo renamed LLMTest_NeedleInAHaystack -> needle-in-a-haystack
+Q35,direct,direct,none,google/clusterfuzz repo
+Q36,direct,direct,none,tatsu-lab/alpaca_eval repo
+Q37,direct,direct,wrong year (1978),IEEE ICIBA 2020
+Q38,direct,direct,none,site tagline since changed (subtitle variant)
+Q39,archived,secondary,none,blog not fetchable by R3; confirmed via citing pages (R3 flagged REVIEW)
+Q40,archived,direct,none,Ethnologue page

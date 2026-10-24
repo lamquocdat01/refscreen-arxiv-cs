@@ -849,8 +849,31 @@ agrNotFoundDisagree,0,results/p2_kappa_pairs.json,disagreements with not-found
 agrPooledPabak,0.74,results/p2_kappa.json,pooled/pabak
 agrPooledPabakCi,"[0.55, 0.91]",results/p2_kappa.json,pooled/pabak_ci
 agrPooledN,40,results/p2_kappa.json,pooled/n
-pThreeStatus,pending,results/p3_kappa.json,missing (R3 not returned yet)
-pThreeSentence,A supplementary recheck of 40 new references under the revised rules (seed 43) has its first two raters' labels (Supplement S8); the second rater's labels were not yet available at this version [to be completed before submission].,results/p3_kappa.json,missing
+rphR1R2Pabak,1.00,results/p3_recheck_stats.json,flat/recheck_posthoc_r1r2_pabak
+rphR1R2Disagree,0,results/p3_recheck_stats.json,flat/recheck_posthoc_r1r2_disagree_n
+rphR1R3Pabak,1.00,results/p3_recheck_stats.json,flat/recheck_posthoc_r1r3_pabak
+rphR1R3Disagree,0,results/p3_recheck_stats.json,flat/recheck_posthoc_r1r3_disagree_n
+rphR2R3Pabak,1.00,results/p3_recheck_stats.json,flat/recheck_posthoc_r2r3_pabak
+rphR2R3Disagree,0,results/p3_recheck_stats.json,flat/recheck_posthoc_r2r3_disagree_n
+rphPabakCpLo,0.87,results/p3_recheck_stats.json,flat/recheck_posthoc_r1r3_pabak_cp_lower
+rphBinPabakCpLo,0.82,results/p3_recheck_stats.json,R1-R3/bin_pabak_cp_lower
+rphDisCpUp,8.8,results/p3_recheck_stats.json,R1-R3/disagree_cp_upper
+rphThreeAc,1.00,results/p3_recheck_stats.json,flat/recheck_posthoc_three_ac1
+rphUnan,40/40,results/p3_recheck_stats.json,flat/recheck_posthoc_three_unanimous
+rphN,40,results/p3_recheck_stats.json,flat/recheck_posthoc_n
+rphPapers,35,results/p3_recheck_stats.json,flat/recheck_posthoc_n_papers
+rphROneNonExists,0,results/p3_recheck_stats.json,flat/recheck_posthoc_r1_nonexists
+rphNStratum,20,results/p3_recheck_stats.json,routes/N/n
+rphNTierSW,19,results/p3_recheck_stats.json,routes/N/tiers S+W
+rphNRthreeDirect,10,results/p3_recheck_stats.json,routes/N/r3_route/direct
+rphNRthreeMoved,5,results/p3_recheck_stats.json,routes/N/r3_route/moved
+rphNRthreeSecondary,5,results/p3_recheck_stats.json,routes/N/r3_route/secondary
+rphNRtwoArchived,10,results/p3_recheck_stats.json,routes/N/r2_route/archived
+rphNAnyIndirect,13,results/p3_recheck_stats.json,flat/recheck_posthoc_n_any_indirect
+rphNReview,2,results/p3_recheck_stats.json,routes/N/r3_review_secondary
+rphDefects,6,results/p3_recheck_stats.json,routes/*/entry_defect
+pThreeStatus,available,results/p3_recheck_stats.json,exists
+pThreeSentence,"A supplementary recheck after Amendment~5 drew 40 new references from 35 papers (seed 43) and was rated blind by R2 and R3 under the revised rules. All three raters labelled all 40 references \emph{exists}: every pairwise PABAK is 1.00 (exact 95\% lower bound 0.87; $\kappa$ undefined), which meets the 0.8 bar post hoc. The result is narrower than it looks: no first-pass label in the pool was \emph{not-found} or \emph{ambiguous}, so the not-exists side of the stratification was filled with references the screen left unresolved, and the recheck tests agreement on real references only. This recheck does not replace the failed registered result.",results/p3_recheck_stats.json,"R1-R3, n, n_papers"
 hashPrereg,38378e74,results/prereg_hash.txt,PREREG_43.md
 hashProtocol,9ab6c684,results/prereg_hash.txt,manual_protocol.md
 hashAmOne,f9137b5f,results/prereg_hash.txt,PREREG_AMENDMENT_1.md

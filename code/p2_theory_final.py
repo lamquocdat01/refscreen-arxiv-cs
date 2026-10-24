@@ -192,6 +192,10 @@ def main():
                          note=f"P(N>=2): PoiBin at u_id (value) / at u_id upper (hi); Cantelli bound {cant:.4f}"))
         nums["identifier_scenario"][f"nA{sum(cnt)}"] = {"p_two_flags": p2_pt, "p_two_flags_upper": p2_up,
                                                         "cantelli_two_flags": cant}
+    f3 = RES / "p3_recheck_stats.json"  # post-hoc recheck (p3_recheck.py stats), carried into numbers.json/.tex
+    if f3.exists():
+        nums["recheck_posthoc"] = {k.removeprefix("recheck_posthoc_"): v for k, v in
+                                   json.loads(f3.read_text(encoding="utf-8"))["flat"].items()}
     out = pd.DataFrame(rows)
     out["seed"], out["interim"] = args.seed, False
     out.to_csv(RES / "p2_theory_final.csv", index=False)

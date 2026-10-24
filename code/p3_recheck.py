@@ -11,8 +11,17 @@ draw   Pool = pass-1 rows of results/p1_manual_sample.csv (minus the 40 P1 reche
 kappa  Reads R2 = results/p3_recheck_r2.csv and R3 = results/p3_recheck_r3.csv (each a filled copy of the sheet), joins
        R1 (pass 1) from the key, and reports PABAK, Gwet AC1, raw kappa, raw agreement and the 3 x 3 table for R1-R3,
        R1-R2, R2-R3, plus the three-rater AC1; bootstrap 95 % CI resampling citing papers (B = 1000, seed 43).
-Outputs: results/p3_kappa.json, results/p3_kappa.csv
+       Outputs: results/p3_kappa.json, results/p3_kappa.csv
+merge  Joins R1 (key), R2, R3 and the hand-coded route table results/p3_recheck_diagnosis.csv (how each rater found the
+       resource; coded by CC from the evidence notes) -> results/p3_recheck_merged.csv (no internal paths, no emails).
+stats  Reads only results/p3_recheck_merged.csv (so reproduce.py can rerun it without the internal key) and writes
+       results/p3_recheck_stats.json: per pair and three-rater, 3-outcome and binary statistics (exists vs not-exists;
+       ambiguous = disagreement with both sides, and a variant dropping ambiguous), paper-bootstrap CI (B = 1000, seed
+       43), an exact Clopper-Pearson bound on the disagreement rate (the bootstrap is degenerate when no row disagrees),
+       kappa = null when undefined, PASS/FAIL against PABAK >= 0.8 labelled post hoc, flat recheck_posthoc_* keys, and
+       the route counts by stratum.
 Usage: python p3_recheck.py draw --seed 43 ;  python p3_recheck.py kappa --seed 43 [--boot 1000]
+       python p3_recheck.py merge ;  python p3_recheck.py stats --seed 43 [--boot 1000]
 """
 import argparse
 import json
@@ -21,6 +30,7 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+from scipy.stats import beta
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import ground_truth as gtm  # noqa: E402
@@ -128,13 +138,129 @@ def kappa(args):
     print(json.dumps({k: v for k, v in out.items()}, indent=1)[:4000])
 
 
+MERGED = RES / "p3_recheck_merged.csv"
+RATERS = ["R1", "R2", "R3"]
+
+
+def merge(args):
+    rc = pd.read_csv(KEY, dtype=str, keep_default_na=False).rename(columns={"pass1": "R1"})
+    rc["R1_note"] = "first pass (original rules)"
+    for r, f in (("R2", "p3_recheck_r2.csv"), ("R3", "p3_recheck_r3.csv")):
+        x = pd.read_csv(RES / f, dtype=str, keep_default_na=False)
+        x = x[["recheck_id", "exists", "evidence_url", "evidence_note", "checker", "checked_at"]]
+        rc = rc.merge(x.rename(columns={c: f"{r}_{c}" if c != "exists" else r for c in x.columns if c != "recheck_id"}),
+                      on="recheck_id", how="left")
+    dg = pd.read_csv(RES / "p3_recheck_diagnosis.csv", dtype=str, keep_default_na=False)
+    rc = rc.merge(dg, on="recheck_id", how="left")
+    cols = ["recheck_id", "paper_id", "stratum", "tier", "def1_status", "src_version", "citing_paper_date",
+            "bib_version_date", "title", "R1", "R2", "R3", "R2_evidence_url", "R2_evidence_note", "R3_evidence_url",
+            "R3_evidence_note", "R2_checker", "R3_checker", "R2_checked_at", "R3_checked_at", "r2_route", "r3_route",
+            "entry_defect", "note"]
+    out = rc[cols].sort_values("recheck_id")
+    assert not out.apply(lambda c: c.str.contains(r"@[\w-]+\.[a-z]{2,}", regex=True)).any().any(), "email-like string"
+    out.to_csv(MERGED, index=False)
+    print(out[["recheck_id", "stratum", "tier", "R1", "R2", "R3", "r2_route", "r3_route"]].to_string())
+
+
+def pair_stats(x, y):
+    """3-outcome and binary statistics for two label vectors (strings in CATS)."""
+    x, y = list(x), list(y)
+    t = np.zeros((3, 3))
+    for a, b in zip(x, y):
+        t[CATS.index(a), CATS.index(b)] += 1
+    n = len(x)
+    po = float(np.trace(t) / n)
+    pe = float((t.sum(0) * t.sum(1)).sum() / n ** 2)
+    pi = (t.sum(0) + t.sum(1)) / (2 * n)
+    pe_ac = float((pi * (1 - pi)).sum() / 2)
+    # binary: exists vs not-exists; ambiguous disagrees with both sides
+    agree_b = [a == b and a != "ambiguous" for a, b in zip(x, y)]
+    pob = float(np.mean(agree_b))
+    ex = np.array([[a == "exists", b == "exists"] for a, b in zip(x, y)], dtype=float)
+    pib = ex.mean()
+    pe_acb = float(2 * pib * (1 - pib))
+    keep = [a != "ambiguous" and b != "ambiguous" for a, b in zip(x, y)]
+    pox = float(np.mean([a == b for a, b, k in zip(x, y, keep) if k])) if any(keep) else np.nan
+    return dict(n=n, raw=po, pabak=(3 * po - 1) / 2, ac1=(po - pe_ac) / (1 - pe_ac),
+                kappa=(po - pe) / (1 - pe) if pe < 1 else None, table=t.astype(int).tolist(),
+                bin_raw=pob, bin_pabak=2 * pob - 1, bin_ac1=(pob - pe_acb) / (1 - pe_acb),
+                noamb_n=int(sum(keep)), noamb_pabak=2 * pox - 1 if any(keep) else None,
+                disagree_n=int(n - np.trace(t)))
+
+
+def cp_upper(k, n, conf=0.95):
+    return float(beta.ppf(1 - (1 - conf) / 2, k + 1, n - k)) if k < n else 1.0
+
+
+def stats_posthoc(args):
+    m = pd.read_csv(MERGED, dtype=str, keep_default_na=False)
+    assert m[RATERS].isin(CATS).all().all(), "unlabelled rows"
+    out = {"seed": args.seed, "boot": args.boot, "n": len(m), "n_papers": int(m.paper_id.nunique()),
+           "label": "recheck after Amendment 5 (post hoc, supplementary); does not replace the registered P2 FAIL",
+           "criterion": "PABAK >= 0.8 (Amendment 4)", "labels": {r: m[r].value_counts().to_dict() for r in RATERS}}
+    flat = {}
+    rng0 = args.seed
+    papers = m.paper_id.unique()
+    for a, b in (("R1", "R2"), ("R1", "R3"), ("R2", "R3")):
+        s = pair_stats(m[a], m[b])
+        rng = np.random.default_rng(rng0)
+        bs = []
+        for _ in range(args.boot):
+            d = pd.concat([m[m.paper_id == p] for p in rng.choice(papers, len(papers), replace=True)])
+            bs.append(pair_stats(d[a], d[b]))
+        for k in ("pabak", "ac1", "bin_pabak", "bin_ac1"):
+            s[f"{k}_ci"] = [float(np.nanpercentile([z[k] for z in bs], q)) for q in (2.5, 97.5)]
+        ub = cp_upper(s["disagree_n"], s["n"])
+        s["disagree_cp_upper"] = ub
+        s["pabak_cp_lower"] = (3 * (1 - ub) - 1) / 2
+        s["bin_pabak_cp_lower"] = 2 * (1 - ub) - 1
+        s["pass"] = bool(s["pabak"] >= 0.8)
+        s["disagreements"] = m[m[a] != m[b]][["recheck_id", "stratum", a, b]].to_dict("records")
+        out[f"{a}-{b}"] = s
+        t = f"{a}{b}".lower()
+        for k in ("n", "raw", "pabak", "ac1", "bin_pabak", "pabak_cp_lower", "disagree_n"):
+            flat[f"recheck_posthoc_{t}_{k}"] = s[k]
+        flat[f"recheck_posthoc_{t}_pabak_ci_lo"], flat[f"recheck_posthoc_{t}_pabak_ci_hi"] = s["pabak_ci"]
+        flat[f"recheck_posthoc_{t}_kappa_defined"] = s["kappa"] is not None
+    a3 = ac1_multi(m[RATERS])
+    rng = np.random.default_rng(rng0)
+    bs = [ac1_multi(pd.concat([m[m.paper_id == p] for p in rng.choice(papers, len(papers), replace=True)])[RATERS])
+          for _ in range(args.boot)]
+    unan = int((m.R1.eq(m.R2) & m.R2.eq(m.R3)).sum())
+    out["three raters"] = {"ac1": a3, "ac1_ci": [float(np.nanpercentile(bs, q)) for q in (2.5, 97.5)],
+                           "unanimous": unan}
+    flat.update(recheck_posthoc_three_ac1=a3, recheck_posthoc_three_unanimous=unan, recheck_posthoc_n=len(m),
+                recheck_posthoc_n_papers=out["n_papers"],
+                recheck_posthoc_r1_nonexists=int((m.R1 != "exists").sum()),
+                recheck_posthoc_pass_r1r3=out["R1-R3"]["pass"])
+    routes = {}
+    for st in ("N", "E"):
+        d = m[m.stratum == st]
+        routes[st] = {"n": len(d), "tiers": d.tier.value_counts().to_dict(),
+                      "def1_status": d.def1_status.value_counts().to_dict(),
+                      "r2_route": d.r2_route.value_counts().to_dict(), "r3_route": d.r3_route.value_counts().to_dict(),
+                      "entry_defect": int((d.entry_defect != "none").sum()),
+                      "r3_review_secondary": d[d.R3_evidence_note.str.contains("REVIEW")].recheck_id.tolist()}
+        for k, v in routes[st]["r3_route"].items():
+            flat[f"recheck_posthoc_{st.lower()}_r3_{k}"] = v
+        for k, v in routes[st]["r2_route"].items():
+            flat[f"recheck_posthoc_{st.lower()}_r2_{k}"] = v
+        flat[f"recheck_posthoc_{st.lower()}_entry_defect"] = routes[st]["entry_defect"]
+    nd = m[m.stratum == "N"]
+    flat["recheck_posthoc_n_any_indirect"] = int(((nd.r2_route != "direct") | (nd.r3_route != "direct")).sum())
+    out["routes"] = routes
+    out["flat"] = flat
+    (RES / "p3_recheck_stats.json").write_text(json.dumps(out, indent=1, default=float), encoding="utf-8")
+    print(json.dumps(flat, indent=1, default=float))
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("stage", choices=["draw", "kappa"])
+    ap.add_argument("stage", choices=["draw", "kappa", "merge", "stats"])
     ap.add_argument("--seed", type=int, default=43)
     ap.add_argument("--boot", type=int, default=1000)
     args = ap.parse_args()
-    (draw if args.stage == "draw" else kappa)(args)
+    {"draw": draw, "kappa": kappa, "merge": merge, "stats": stats_posthoc}[args.stage](args)
 
 
 if __name__ == "__main__":

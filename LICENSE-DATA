@@ -1,0 +1,15 @@
+Derived data in this repository (results/*.csv, results/*.json, data_manifest/*.csv, supplement/**/*.csv)
+and the documents in docs/ and theory/ are licensed under the Creative Commons Attribution 4.0 International
+License (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/legalcode
+
+Copyright (c) 2026 Dat Lam Quoc
+
+You are free to share and adapt the material for any purpose, provided you give appropriate credit, provide a
+link to the license, and indicate if changes were made.
+
+Scope notes:
+- Code (code/, Makefile) is under the MIT License (see LICENSE).
+- Titles, author names and venue strings of cited works that appear in the derived tables are bibliographic
+  metadata of third-party works; they are included only to make the measurements verifiable.
+- arXiv source files, raw database responses and the DBLP dump are not redistributed here. Database records
+  remain under the terms of their providers (Crossref, arXiv, DBLP, OpenAlex, Semantic Scholar).

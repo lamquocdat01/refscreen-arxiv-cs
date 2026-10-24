@@ -468,32 +468,53 @@ def agreement():
     put("agrPooledPabak", f"{a4['pooled']['pabak']:.2f}", src, "pooled/pabak")
     put("agrPooledPabakCi", ci(*a4["pooled"]["pabak_ci"], d=2, scale=1), src, "pooled/pabak_ci")
     put("agrPooledN", str(a4["pooled"]["n"]), src, "pooled/n")
-    f3 = RES / "p3_kappa.json"
+    f3 = RES / "p3_recheck_stats.json"
     if f3.exists():
         q = json.loads(f3.read_text(encoding="utf-8"))
-        src = "results/p3_kappa.json"
-        for pr in ("R1-R3", "R1-R2", "R2-R3"):
-            if pr in q:
-                s = q[pr]
-                t = pr.replace("-", "")
-                put(f"qagr{t}N", str(s["n"]), src, f"{pr}/n")
-                put(f"qagr{t}Pabak", f"{s['pabak']:.2f}", src, f"{pr}/pabak")
-                put(f"qagr{t}PabakCi", ci(*s["pabak_ci"], d=2, scale=1), src, f"{pr}/pabak_ci")
-                put(f"qagr{t}Ac", f"{s['ac1']:.2f}", src, f"{pr}/ac1")
-                lines.append(f"{pr.replace('-', '--')} (P3) & after Amendment~5 & {s['n']} & {pct(s['raw'], 1)} & "
-                             f"{s['pabak']:.2f} {ci(*s['pabak_ci'], d=2, scale=1)} & {s['ac1']:.2f} & {s['kappa']:.2f} \\\\")
+        src = "results/p3_recheck_stats.json"
+        fl = q["flat"]
+        for t in ("r1r2", "r1r3", "r2r3"):
+            T = t.upper()
+            put(f"rph{T}Pabak", f"{fl[f'recheck_posthoc_{t}_pabak']:.2f}", src, f"flat/recheck_posthoc_{t}_pabak")
+            put(f"rph{T}Disagree", str(fl[f"recheck_posthoc_{t}_disagree_n"]), src, f"flat/recheck_posthoc_{t}_disagree_n")
+        lo = fl["recheck_posthoc_r1r3_pabak_cp_lower"]
+        put("rphPabakCpLo", f"{lo:.2f}", src, "flat/recheck_posthoc_r1r3_pabak_cp_lower")
+        put("rphBinPabakCpLo", f"{q['R1-R3']['bin_pabak_cp_lower']:.2f}", src, "R1-R3/bin_pabak_cp_lower")
+        put("rphDisCpUp", pct(q["R1-R3"]["disagree_cp_upper"], 1), src, "R1-R3/disagree_cp_upper")
+        put("rphThreeAc", f"{fl['recheck_posthoc_three_ac1']:.2f}", src, "flat/recheck_posthoc_three_ac1")
+        put("rphUnan", f"{fl['recheck_posthoc_three_unanimous']}/{fl['recheck_posthoc_n']}", src,
+            "flat/recheck_posthoc_three_unanimous")
+        put("rphN", str(fl["recheck_posthoc_n"]), src, "flat/recheck_posthoc_n")
+        put("rphPapers", str(fl["recheck_posthoc_n_papers"]), src, "flat/recheck_posthoc_n_papers")
+        put("rphROneNonExists", str(fl["recheck_posthoc_r1_nonexists"]), src, "flat/recheck_posthoc_r1_nonexists")
+        rn = q["routes"]["N"]
+        put("rphNStratum", str(rn["n"]), src, "routes/N/n")
+        put("rphNTierSW", str(rn["tiers"].get("S", 0) + rn["tiers"].get("W", 0)), src, "routes/N/tiers S+W")
+        for k in ("direct", "moved", "secondary"):
+            put(f"rphNRthree{k.capitalize()}", str(rn["r3_route"].get(k, 0)), src, f"routes/N/r3_route/{k}")
+        put("rphNRtwoArchived", str(rn["r2_route"].get("archived", 0)), src, "routes/N/r2_route/archived")
+        put("rphNAnyIndirect", str(fl["recheck_posthoc_n_any_indirect"]), src, "flat/recheck_posthoc_n_any_indirect")
+        put("rphNReview", str(len(rn["r3_review_secondary"])), src, "routes/N/r3_review_secondary")
+        put("rphDefects", str(q["routes"]["N"]["entry_defect"] + q["routes"]["E"]["entry_defect"]), src,
+            "routes/*/entry_defect")
+        k3 = "undefined" if not fl["recheck_posthoc_r1r3_kappa_defined"] else f"{q['R1-R3']['kappa']:.2f}"
+        lines.append(f"R1--R2--R3, post hoc$^{{a}}$ & after Amendment~5, new rows & {q['n']} & "
+                     f"{pct(q['R1-R3']['raw'], 1)} & {fl['recheck_posthoc_r1r3_pabak']:.2f} [{lo:.2f}, 1.00]$^{{b}}$ & "
+                     f"{fl['recheck_posthoc_three_ac1']:.2f} & {k3} \\\\")
         put("pThreeStatus", "available", src, "exists")
-        if "R2-R3" in q and "R1-R3" in q:
-            put("pThreeSentence", "In a supplementary recheck of 40 new references under the revised rules (seed 43), PABAK is "
-                f"{q['R2-R3']['pabak']:.2f} {ci(*q['R2-R3']['pabak_ci'], d=2, scale=1)} between the two raters who applied the "
-                f"revised rules (R2--R3) and {q['R1-R3']['pabak']:.2f} {ci(*q['R1-R3']['pabak_ci'], d=2, scale=1)} against the "
-                "first-pass labels, which were made under the original rules (Table~\ref{tab:agree}). This recheck is post hoc "
-                "and does not replace the failed registered result.", src, "R2-R3, R1-R3")
+        put("pThreeSentence", f"A supplementary recheck after Amendment~5 drew {q['n']} new references from "
+            f"{q['n_papers']} papers (seed 43) and was rated blind by R2 and R3 under the revised rules. All three raters "
+            f"labelled all {q['n']} references \emph{{exists}}: every pairwise PABAK is "
+            f"{fl['recheck_posthoc_r1r3_pabak']:.2f} (exact 95\% lower bound {lo:.2f}; $\kappa$ undefined), which meets "
+            "the 0.8 bar post hoc. The result is narrower than it looks: no first-pass label in the pool was "
+            "\emph{not-found} or \emph{ambiguous}, so the not-exists side of the stratification was filled with "
+            "references the screen left unresolved, and the recheck tests agreement on real references only. This "
+            "recheck does not replace the failed registered result.", src, "R1-R3, n, n_papers")
     else:
-        put("pThreeStatus", "pending", "results/p3_kappa.json", "missing (R3 not returned yet)")
+        put("pThreeStatus", "pending", "results/p3_recheck_stats.json", "missing (R3 not returned yet)")
         put("pThreeSentence", "A supplementary recheck of 40 new references under the revised rules (seed 43) has its first "
             "two raters' labels (Supplement S8); the second rater's labels were not yet available at this version "
-            "[to be completed before submission].", "results/p3_kappa.json", "missing")
+            "[to be completed before submission].", "results/p3_recheck_stats.json", "missing")
     (OUT / "tab_agreement.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 

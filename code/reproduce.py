@@ -5,7 +5,8 @@ the numbers match the committed ones key by key (C7(h)).
 Run it in a fresh clone (the scripts write to <clone>/results/): it snapshots the committed outputs, reruns
   p1_backend_table.py, p1_hypotheses.py, p1_h5_betabinom.py --boot 200, p2_render_manual_fp.py, p2_theory_final.py,
   p2_merge_retry.py + p1_backend_table.py --name p2_backend_table_retry (P2 main table after the night retry),
-  p2_render_manual_fp.py --adjudicated (H4-render with the Amendment-5 adjudication)
+  p2_render_manual_fp.py --adjudicated (H4-render with the Amendment-5 adjudication),
+  p3_recheck.py stats --seed 43 (post-hoc recheck statistics from results/p3_recheck_merged.csv)
 (all --seed 42; no network). Inputs: results/ plus three derived files under $THS_DATASETS/_derived/43/
 (p1_groundtruth_refs_full.csv, p2_retry_ratelimited.csv, screen_p1/screen_refs.csv; Zenodo deposit). Then it compares
   results/numbers.json        key by key (numbers: |a - b| <= 1e-9 * max(1, |a|); other values: equal)
@@ -27,13 +28,14 @@ RES = HERE.parent / "results"
 STEPS = [["p1_backend_table.py", "--seed", "42"], ["p1_hypotheses.py", "--seed", "42"],
          ["p1_h5_betabinom.py", "--seed", "42", "--boot", "200"], ["p2_render_manual_fp.py", "--seed", "42"],
          ["p2_render_manual_fp.py", "--seed", "42", "--adjudicated"],
+         ["p3_recheck.py", "stats", "--seed", "43"],
          ["p2_theory_final.py", "--seed", "42"], ["p2_merge_retry.py"],
          ["p1_backend_table.py", "--seed", "42", "--input", "{DERIVED}/p2_groundtruth_refs_full.csv",
           "--name", "p2_backend_table_retry"]]
 CSVS = ["p1_backend_table.csv", "p1_h5_betabinom.csv", "p2_render_manual_fp.csv", "p2_theory_final.csv",
         "p2_backend_table_retry.csv", "p2_render_manual_fp_adjudicated.csv"]
 JSONS = ["numbers.json", "p1_hypotheses_h1h2.json", "p1_h5_betabinom.json", "p2_render_manual_fp.json",
-         "p2_render_manual_fp_adjudicated.json"]
+         "p2_render_manual_fp_adjudicated.json", "p3_recheck_stats.json"]
 
 
 def flat(d, pre=""):

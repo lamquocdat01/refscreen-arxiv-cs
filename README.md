@@ -23,7 +23,7 @@ and 2024–26), and bounds what any screen can achieve.
 2. In a fresh virtual environment: `pip install -r requirements.txt`, then `python code/reproduce.py` (or `make reproduce`).
 
 The script reruns the main table, H1/H2, the beta-binomial fit, both H4-render variants, the theory and policy tables,
-and the merge of the night retry. It then compares every number with the committed results and exits 1 on any
+the merge of the night retry and the post-hoc recheck statistics. It then compares every number with the committed results and exits 1 on any
 difference. `code/make_ms_numbers.py` turns the result files into the number macros and tables of the manuscript.
 
 Not included: arXiv source files (not re-hosted), raw database responses and the DBLP dump. The resolution and
@@ -37,8 +37,10 @@ python screen_baseline.py --phase p1 --seed 42       # render -> parse -> screen
 python p1_h4_bias.py --seed 42                       # H4 and selection-bias coefficients
 python p2_theory_final.py --seed 42                  # Theorem 1 headlines, dispersion, alpha-safe rules
 python p2_recheck_pairs.py --seed 42                 # agreement of hand verification (R1/R2/R3)
-python p3_recheck.py kappa --seed 43                 # post-hoc recheck after Amendment 5
+python p3_recheck.py merge                           # post-hoc recheck after Amendment 5: join R1/R2/R3 + route table
+python p3_recheck.py stats --seed 43                 # its agreement statistics (results/p3_recheck_stats.json)
 ```
 
 ## License
-To be added at release (proposed: MIT for code, CC BY 4.0 for derived data).
+Code: MIT (`LICENSE`). Derived data and documents: CC BY 4.0 (`LICENSE-DATA`). Citation metadata: `CITATION.cff`,
+`.zenodo.json`.
