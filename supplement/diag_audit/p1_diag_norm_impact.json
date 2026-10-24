@@ -1,0 +1,71 @@
+{
+ "label": "diagnostic, exploratory; cache only",
+ "n_refs_jcp": 53556,
+ "a-latex-accent": {
+  "refs": 102,
+  "by_status": {
+   "resolved": 52,
+   "unresolved": 50
+  },
+  "by_set_tier": {
+   "pilot/C": 23,
+   "pilot/J": 57,
+   "pilot/P": 14,
+   "prellm/C": 5,
+   "prellm/J": 3
+  },
+  "certified_real": 28,
+  "unresolved_flip_lower_bound": 3
+ },
+ "b-registry-markup": {
+  "refs": 43,
+  "by_status": {
+   "unresolved": 43
+  },
+  "by_set_tier": {
+   "pilot/C": 15,
+   "pilot/J": 20,
+   "pilot/P": 1,
+   "prellm/C": 2,
+   "prellm/J": 5
+  },
+  "certified_real": 0,
+  "unresolved_flip": 43
+ },
+ "c-c1-control": {
+  "refs": 0,
+  "by_status": {},
+  "by_set_tier": {},
+  "certified_real": 0
+ },
+ "c-fffd-bib": {
+  "refs": 0,
+  "by_status": {},
+  "by_set_tier": {},
+  "certified_real": 0
+ },
+ "u_A_prellm": {
+  "round1_replay": [
+   1378,
+   10967,
+   0.1256
+  ],
+  "after_fixes_lower_bound": [
+   1371,
+   10967,
+   0.125
+  ]
+ },
+ "u_A_pilot": {
+  "round1_replay": [
+   6475,
+   42353,
+   0.1529
+  ],
+  "after_fixes_lower_bound": [
+   6436,
+   42353,
+   0.152
+  ]
+ }
+}

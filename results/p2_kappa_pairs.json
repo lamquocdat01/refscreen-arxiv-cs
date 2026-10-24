@@ -1,0 +1,494 @@
+{
+ "seed": 42,
+ "boot": 1000,
+ "criterion": "PABAK(R1, R3) >= 0.8 (LQD 24-10-2026)",
+ "R1-R3": {
+  "n": 20,
+  "raw": 0.8,
+  "pabak": 0.7000000000000002,
+  "ac1": 0.7707736389684814,
+  "kappa": 0.27272727272727293,
+  "table": [
+   [
+    15,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0
+   ],
+   [
+    4,
+    0,
+    1
+   ]
+  ],
+  "raw_ci": [
+   0.6,
+   0.95
+  ],
+  "pabak_ci": [
+   0.3999999999999999,
+   0.9249999999999998
+  ],
+  "ac1_ci": [
+   0.5238095238095237,
+   0.948750800768738
+  ],
+  "kappa_ci": [
+   0.0,
+   0.6923076923076923
+  ],
+  "n_papers": 20,
+  "role": "main, inter-rater",
+  "disagreements": [
+   {
+    "recheck_id": "K25",
+    "R1": "ambiguous",
+    "R3": "exists"
+   },
+   {
+    "recheck_id": "K29",
+    "R1": "ambiguous",
+    "R3": "exists"
+   },
+   {
+    "recheck_id": "K33",
+    "R1": "ambiguous",
+    "R3": "exists"
+   },
+   {
+    "recheck_id": "K39",
+    "R1": "ambiguous",
+    "R3": "exists"
+   }
+  ]
+ },
+ "R1-R2": {
+  "n": 40,
+  "raw": 0.875,
+  "pabak": 0.8125,
+  "ac1": 0.8525345622119815,
+  "kappa": 0.5934959349593496,
+  "table": [
+   [
+    30,
+    0,
+    4
+   ],
+   [
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    0,
+    5
+   ]
+  ],
+  "raw_ci": [
+   0.775,
+   0.9736842105263158
+  ],
+  "pabak_ci": [
+   0.6625000000000001,
+   0.9605263157894737
+  ],
+  "ac1_ci": [
+   0.7286136185097899,
+   0.9699754366370231
+  ],
+  "kappa_ci": [
+   0.19706399895724713,
+   0.875009498480243
+  ],
+  "n_papers": 35,
+  "role": "intra-rater",
+  "disagreements": [
+   {
+    "recheck_id": "K03",
+    "R1": "exists",
+    "R2": "ambiguous"
+   },
+   {
+    "recheck_id": "K10",
+    "R1": "exists",
+    "R2": "ambiguous"
+   },
+   {
+    "recheck_id": "K15",
+    "R1": "exists",
+    "R2": "ambiguous"
+   },
+   {
+    "recheck_id": "K21",
+    "R1": "exists",
+    "R2": "ambiguous"
+   },
+   {
+    "recheck_id": "K39",
+    "R1": "ambiguous",
+    "R2": "exists"
+   }
+  ]
+ },
+ "R2-R3": {
+  "n": 20,
+  "raw": 0.8,
+  "pabak": 0.7000000000000002,
+  "ac1": 0.7707736389684814,
+  "kappa": 0.27272727272727293,
+  "table": [
+   [
+    15,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0
+   ],
+   [
+    4,
+    0,
+    1
+   ]
+  ],
+  "raw_ci": [
+   0.6,
+   0.95
+  ],
+  "pabak_ci": [
+   0.3999999999999999,
+   0.9249999999999998
+  ],
+  "ac1_ci": [
+   0.5238095238095237,
+   0.948750800768738
+  ],
+  "kappa_ci": [
+   0.0,
+   0.7727272727272725
+  ],
+  "n_papers": 20,
+  "role": "inter-rater",
+  "disagreements": [
+   {
+    "recheck_id": "K21",
+    "R2": "ambiguous",
+    "R3": "exists"
+   },
+   {
+    "recheck_id": "K25",
+    "R2": "ambiguous",
+    "R3": "exists"
+   },
+   {
+    "recheck_id": "K29",
+    "R2": "ambiguous",
+    "R3": "exists"
+   },
+   {
+    "recheck_id": "K33",
+    "R2": "ambiguous",
+    "R3": "exists"
+   }
+  ]
+ },
+ "AC1 three raters": {
+  "n": 20,
+  "ac1": 0.8039856256125448,
+  "ac1_ci": [
+   0.620253164556962,
+   0.9300087489063866
+  ],
+  "unanimous": 15
+ },
+ "PASS": false,
+ "rows": [
+  {
+   "recheck_id": "K01",
+   "stratum": "E",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": NaN
+  },
+  {
+   "recheck_id": "K02",
+   "stratum": "E",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": NaN
+  },
+  {
+   "recheck_id": "K03",
+   "stratum": "N",
+   "R1": "exists",
+   "R2": "ambiguous",
+   "R3": NaN
+  },
+  {
+   "recheck_id": "K04",
+   "stratum": "E",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": NaN
+  },
+  {
+   "recheck_id": "K05",
+   "stratum": "E",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": NaN
+  },
+  {
+   "recheck_id": "K06",
+   "stratum": "E",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": NaN
+  },
+  {
+   "recheck_id": "K07",
+   "stratum": "N",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": NaN
+  },
+  {
+   "recheck_id": "K08",
+   "stratum": "E",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": NaN
+  },
+  {
+   "recheck_id": "K09",
+   "stratum": "N",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": NaN
+  },
+  {
+   "recheck_id": "K10",
+   "stratum": "E",
+   "R1": "exists",
+   "R2": "ambiguous",
+   "R3": NaN
+  },
+  {
+   "recheck_id": "K11",
+   "stratum": "N",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": NaN
+  },
+  {
+   "recheck_id": "K12",
+   "stratum": "N",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": NaN
+  },
+  {
+   "recheck_id": "K13",
+   "stratum": "N",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": NaN
+  },
+  {
+   "recheck_id": "K14",
+   "stratum": "N",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": NaN
+  },
+  {
+   "recheck_id": "K15",
+   "stratum": "E",
+   "R1": "exists",
+   "R2": "ambiguous",
+   "R3": NaN
+  },
+  {
+   "recheck_id": "K16",
+   "stratum": "N",
+   "R1": "ambiguous",
+   "R2": "ambiguous",
+   "R3": NaN
+  },
+  {
+   "recheck_id": "K17",
+   "stratum": "N",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": NaN
+  },
+  {
+   "recheck_id": "K18",
+   "stratum": "N",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": NaN
+  },
+  {
+   "recheck_id": "K19",
+   "stratum": "E",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": NaN
+  },
+  {
+   "recheck_id": "K20",
+   "stratum": "E",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": NaN
+  },
+  {
+   "recheck_id": "K21",
+   "stratum": "N",
+   "R1": "exists",
+   "R2": "ambiguous",
+   "R3": "exists"
+  },
+  {
+   "recheck_id": "K22",
+   "stratum": "E",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": "exists"
+  },
+  {
+   "recheck_id": "K23",
+   "stratum": "N",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": "exists"
+  },
+  {
+   "recheck_id": "K24",
+   "stratum": "E",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": "exists"
+  },
+  {
+   "recheck_id": "K25",
+   "stratum": "N",
+   "R1": "ambiguous",
+   "R2": "ambiguous",
+   "R3": "exists"
+  },
+  {
+   "recheck_id": "K26",
+   "stratum": "E",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": "exists"
+  },
+  {
+   "recheck_id": "K27",
+   "stratum": "N",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": "exists"
+  },
+  {
+   "recheck_id": "K28",
+   "stratum": "E",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": "exists"
+  },
+  {
+   "recheck_id": "K29",
+   "stratum": "N",
+   "R1": "ambiguous",
+   "R2": "ambiguous",
+   "R3": "exists"
+  },
+  {
+   "recheck_id": "K30",
+   "stratum": "E",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": "exists"
+  },
+  {
+   "recheck_id": "K31",
+   "stratum": "E",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": "exists"
+  },
+  {
+   "recheck_id": "K32",
+   "stratum": "N",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": "exists"
+  },
+  {
+   "recheck_id": "K33",
+   "stratum": "N",
+   "R1": "ambiguous",
+   "R2": "ambiguous",
+   "R3": "exists"
+  },
+  {
+   "recheck_id": "K34",
+   "stratum": "N",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": "exists"
+  },
+  {
+   "recheck_id": "K35",
+   "stratum": "E",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": "exists"
+  },
+  {
+   "recheck_id": "K36",
+   "stratum": "E",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": "exists"
+  },
+  {
+   "recheck_id": "K37",
+   "stratum": "E",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": "exists"
+  },
+  {
+   "recheck_id": "K38",
+   "stratum": "N",
+   "R1": "ambiguous",
+   "R2": "ambiguous",
+   "R3": "ambiguous"
+  },
+  {
+   "recheck_id": "K39",
+   "stratum": "N",
+   "R1": "ambiguous",
+   "R2": "exists",
+   "R3": "exists"
+  },
+  {
+   "recheck_id": "K40",
+   "stratum": "E",
+   "R1": "exists",
+   "R2": "exists",
+   "R3": "exists"
+  }
+ ]
+}

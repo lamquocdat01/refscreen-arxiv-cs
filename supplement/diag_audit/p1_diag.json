@@ -1,0 +1,208 @@
+{
+ "seed": 42,
+ "label": "diagnostic, exploratory; round 1 replayed from cache (no network)",
+ "replay_check": {
+  "prellm/J": {
+   "replay": [
+    388,
+    3700
+   ],
+   "round1_json": [
+    389,
+    3700
+   ]
+  },
+  "prellm/C": {
+   "replay": [
+    890,
+    5691
+   ],
+   "round1_json": [
+    894,
+    5691
+   ]
+  },
+  "prellm/P": {
+   "replay": [
+    100,
+    1576
+   ],
+   "round1_json": [
+    100,
+    1574
+   ]
+  },
+  "pilot/J": {
+   "replay": [
+    2059,
+    14426
+   ],
+   "round1_json": [
+    2059,
+    14426
+   ]
+  },
+  "pilot/C": {
+   "replay": [
+    3631,
+    17069
+   ],
+   "round1_json": [
+    3634,
+    17069
+   ]
+  },
+  "pilot/P": {
+   "replay": [
+    785,
+    10858
+   ],
+   "round1_json": [
+    783,
+    10842
+   ]
+  }
+ },
+ "unresolved_jc": {
+  "n": 6968,
+  "by_set_tier": {
+   "pilot/C": 3631,
+   "pilot/J": 2059,
+   "prellm/C": 890,
+   "prellm/J": 388
+  },
+  "s2_pending": 6757,
+  "sim_band": {
+   "<0.5": 3526,
+   "0.5-0.7": 2373,
+   "0.7-0.8": 612,
+   "0.8-0.9": 457
+  },
+  "patterns": {
+   "token-subset": 1265,
+   "contained": 546,
+   "non-ascii-in-registry": 319,
+   "prefix (subtitle missing/extra)": 229,
+   "latex-residue-in-bib": 147
+  },
+  "no_candidates": 0
+ },
+ "tier_P_split": {
+  "pilot": {
+   "arxiv-id": {
+    "k": 709,
+    "n": 10239,
+    "u": 0.0692,
+    "wilson95": [
+     0.0645,
+     0.0743
+    ],
+    "n_total": 10414,
+    "no_title": 17,
+    "rate_limited": 158,
+    "certified_real": 9873,
+    "hit_by": {
+     "arxiv": 3909,
+     "crossref": 3315,
+     "s2": 2306,
+     "": 884
+    }
+   },
+   "doi-only": {
+    "k": 10,
+    "n": 157,
+    "u": 0.0637,
+    "wilson95": [
+     0.035,
+     0.1133
+    ],
+    "n_total": 157,
+    "no_title": 0,
+    "rate_limited": 0,
+    "certified_real": 147,
+    "hit_by": {
+     "crossref": 138,
+     "": 10,
+     "arxiv": 6,
+     "s2": 3
+    }
+   },
+   "no-id": {
+    "k": 66,
+    "n": 462,
+    "u": 0.1429,
+    "wilson95": [
+     0.1139,
+     0.1777
+    ],
+    "n_total": 468,
+    "no_title": 3,
+    "rate_limited": 3,
+    "certified_real": 0,
+    "hit_by": {
+     "arxiv": 160,
+     "crossref": 153,
+     "s2": 83,
+     "": 72
+    }
+   }
+  },
+  "prellm": {
+   "arxiv-id": {
+    "k": 97,
+    "n": 1460,
+    "u": 0.0664,
+    "wilson95": [
+     0.0548,
+     0.0804
+    ],
+    "n_total": 1479,
+    "no_title": 11,
+    "rate_limited": 8,
+    "certified_real": 1366,
+    "hit_by": {
+     "arxiv": 476,
+     "crossref": 468,
+     "s2": 418,
+     "": 116,
+     "openalex": 1
+    }
+   },
+   "doi-only": {
+    "k": 0,
+    "n": 15,
+    "u": 0.0,
+    "wilson95": [
+     0.0,
+     0.2039
+    ],
+    "n_total": 15,
+    "no_title": 0,
+    "rate_limited": 0,
+    "certified_real": 14,
+    "hit_by": {
+     "crossref": 15
+    }
+   },
+   "no-id": {
+    "k": 3,
+    "n": 101,
+    "u": 0.0297,
+    "wilson95": [
+     0.0102,
+     0.0837
+    ],
+    "n_total": 101,
+    "no_title": 0,
+    "rate_limited": 0,
+    "certified_real": 0,
+    "hit_by": {
+     "crossref": 41,
+     "arxiv": 34,
+     "s2": 23,
+     "": 3
+    }
+   }
+  }
+ }
+}
