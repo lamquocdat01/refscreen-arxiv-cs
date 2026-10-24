@@ -1,0 +1,5 @@
+recheck_id,sample_id,origin,label_R1,label_R2,label_R3,label_adjudicated,changes_pass1,rule
+K25,M079,P1,ambiguous,ambiguous,exists,ambiguous,False,majority of R1/R2/R3 (Amendment 5 (f'))
+K29,M144,P1,ambiguous,ambiguous,exists,ambiguous,False,majority of R1/R2/R3 (Amendment 5 (f'))
+K33,M163,P1,ambiguous,ambiguous,exists,ambiguous,False,majority of R1/R2/R3 (Amendment 5 (f'))
+K39,R043,P2,ambiguous,exists,exists,exists,True,majority of R1/R2/R3 (Amendment 5 (f'))

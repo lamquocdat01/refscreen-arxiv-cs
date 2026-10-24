@@ -13,7 +13,9 @@ read this way); they are used for H4 on the render set ("H4-render", descriptive
 each tier among the render refs without identifier, minus FP_certified of the same cell; paper bootstrap over the 100
 render papers (B = 1000, seed 42), resampling manual and certified refs of the drawn papers together.
 Outputs: results/p2_render_manual_fp.csv, results/p2_render_manual_fp.json
-Usage: python p2_render_manual_fp.py --seed 42
+P3 (PREREG_AMENDMENT_5 (f')): --adjudicated replaces pass-1 labels by the majority labels of
+results/p3_adjudication.csv (FP_manual only) and writes results/p2_render_manual_fp_adjudicated.{csv,json}.
+Usage: python p2_render_manual_fp.py --seed 42 [--adjudicated]
 """
 import argparse
 import json
@@ -34,8 +36,15 @@ SCREENS = {"crossref": "flag_crossref", "union": "flag_union"}
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--seed", type=int, default=42)
+    ap.add_argument("--adjudicated", action="store_true")
     args = ap.parse_args()
     ms = pd.read_csv(ROOT / "results" / "p2_manual_sample.csv", dtype=str, keep_default_na=False)
+    sfx = ""
+    if args.adjudicated:
+        adj = pd.read_csv(ROOT / "results" / "p3_adjudication.csv", dtype=str, keep_default_na=False)
+        lab = dict(zip(adj.sample_id, adj.label_adjudicated))
+        ms["exists"] = [lab.get(s, e) for s, e in zip(ms.sample_id, ms.exists)]
+        sfx = "_adjudicated"
     ex = ms[ms.exists == "exists"][["sample_id", "paper_id", "key", "tier"]]
     cols = ["arxiv_id", "style", "variant", "parser", "key"] + list(SCREENS.values())
     sr = pd.read_csv(DATA / "_derived" / "43" / "screen_p1" / "screen_refs.csv", dtype=str, keep_default_na=False,
@@ -65,7 +74,7 @@ def main():
                                      cert_ci_hi=None if c is None else float(c.ci_hi),
                                      seed=args.seed, interim=False))
     out = pd.DataFrame(rows)
-    out.to_csv(ROOT / "results" / "p2_render_manual_fp.csv", index=False)
+    out.to_csv(ROOT / "results" / f"p2_render_manual_fp{sfx}.csv", index=False)
     by_tier = []
     g = m[(m["style"] == "IEEEtran") & (m.variant == "strip") & (m.parser == "grobid")]
     for t, x in g.groupby("tier"):
@@ -129,7 +138,8 @@ def main():
                 h3_check_grobid=h3, h3_reading="uninformative for H3 by design: 0 of the 60 refs carries a DOI or "
                 "arXiv id (decision LQD 21-10-2026)", by_tier_IEEEtran_strip_grobid=by_tier,
                 h4_render=dict(style="IEEEtran orig, GROBID", weights_noid_tier_share=w, boot=1000, **h4))
-    (ROOT / "results" / "p2_render_manual_fp.json").write_text(json.dumps(meta, indent=1, default=float),
+    meta["labels"] = "adjudicated (Amendment 5 (f'))" if sfx else "pass 1 (as registered)"
+    (ROOT / "results" / f"p2_render_manual_fp{sfx}.json").write_text(json.dumps(meta, indent=1, default=float),
                                                                encoding="utf-8")
     print(out[["style", "variant", "parser", "screen", "k_manual", "n_manual", "fp_manual", "k_cert", "n_cert",
                "fp_cert"]].to_string())

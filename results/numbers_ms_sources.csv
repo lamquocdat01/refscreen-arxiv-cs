@@ -1,0 +1,852 @@
+key,value,source,field
+dblpDump,18-10-2026,results/p2_backend_table_retry.json,dblp_dump
+nJPre,"3,697",results/p2_backend_table_retry.json,2019-21/J/n
+npJPre,289,results/p2_backend_table_retry.json,2019-21/J/n_papers
+uJPrecrossref,18.4,results/p2_backend_table_retry.json,2019-21/J/u_crossref
+kJPrecrossref,682,results/p2_backend_table_retry.json,2019-21/J/k_crossref
+ciJPrecrossref,"[16.0, 21.2]",results/p2_backend_table_retry.json,2019-21/J/boot_crossref
+uJPrearxiv,18.4,results/p2_backend_table_retry.json,2019-21/J/u_arxiv
+kJPrearxiv,682,results/p2_backend_table_retry.json,2019-21/J/k_arxiv
+ciJPrearxiv,"[16.0, 21.2]",results/p2_backend_table_retry.json,2019-21/J/boot_arxiv
+uJPredblp,6.82,results/p2_backend_table_retry.json,2019-21/J/u_dblp
+kJPredblp,252,results/p2_backend_table_retry.json,2019-21/J/k_dblp
+ciJPredblp,"[5.30, 8.68]",results/p2_backend_table_retry.json,2019-21/J/boot_dblp
+uJPreopenalex,6.19,results/p2_backend_table_retry.json,2019-21/J/u_openalex
+kJPreopenalex,229,results/p2_backend_table_retry.json,2019-21/J/k_openalex
+ciJPreopenalex,"[4.77, 8.01]",results/p2_backend_table_retry.json,2019-21/J/boot_openalex
+uJPres2,3.73,results/p2_backend_table_retry.json,2019-21/J/u_s2
+kJPres2,138,results/p2_backend_table_retry.json,2019-21/J/k_s2
+ciJPres2,"[2.80, 4.91]",results/p2_backend_table_retry.json,2019-21/J/boot_s2
+rlJPre,0,results/p2_backend_table_retry.json,2019-21/J/n_rate_limited
+ntJPre,4,results/p2_backend_table_retry.json,2019-21/J/n_no_title
+nCPre,"5,692",results/p2_backend_table_retry.json,2019-21/C/n
+npCPre,287,results/p2_backend_table_retry.json,2019-21/C/n_papers
+uCPrecrossref,27.7,results/p2_backend_table_retry.json,2019-21/C/u_crossref
+kCPrecrossref,"1,575",results/p2_backend_table_retry.json,2019-21/C/k_crossref
+ciCPrecrossref,"[25.3, 30.0]",results/p2_backend_table_retry.json,2019-21/C/boot_crossref
+uCPrearxiv,27.7,results/p2_backend_table_retry.json,2019-21/C/u_arxiv
+kCPrearxiv,"1,575",results/p2_backend_table_retry.json,2019-21/C/k_arxiv
+ciCPrearxiv,"[25.3, 30.0]",results/p2_backend_table_retry.json,2019-21/C/boot_arxiv
+uCPredblp,2.95,results/p2_backend_table_retry.json,2019-21/C/u_dblp
+kCPredblp,168,results/p2_backend_table_retry.json,2019-21/C/k_dblp
+ciCPredblp,"[2.39, 3.53]",results/p2_backend_table_retry.json,2019-21/C/boot_dblp
+uCPreopenalex,2.62,results/p2_backend_table_retry.json,2019-21/C/u_openalex
+kCPreopenalex,149,results/p2_backend_table_retry.json,2019-21/C/k_openalex
+ciCPreopenalex,"[2.12, 3.18]",results/p2_backend_table_retry.json,2019-21/C/boot_openalex
+uCPres2,1.35,results/p2_backend_table_retry.json,2019-21/C/u_s2
+kCPres2,77,results/p2_backend_table_retry.json,2019-21/C/k_s2
+ciCPres2,"[0.94, 1.82]",results/p2_backend_table_retry.json,2019-21/C/boot_s2
+rlCPre,0,results/p2_backend_table_retry.json,2019-21/C/n_rate_limited
+ntCPre,3,results/p2_backend_table_retry.json,2019-21/C/n_no_title
+nPPre,"1,584",results/p2_backend_table_retry.json,2019-21/P/n
+npPPre,229,results/p2_backend_table_retry.json,2019-21/P/n_papers
+uPPrecrossref,66.9,results/p2_backend_table_retry.json,2019-21/P/u_crossref
+kPPrecrossref,"1,060",results/p2_backend_table_retry.json,2019-21/P/k_crossref
+ciPPrecrossref,"[62.5, 71.4]",results/p2_backend_table_retry.json,2019-21/P/boot_crossref
+uPPrearxiv,8.46,results/p2_backend_table_retry.json,2019-21/P/u_arxiv
+kPPrearxiv,134,results/p2_backend_table_retry.json,2019-21/P/k_arxiv
+ciPPrearxiv,"[6.67, 10.4]",results/p2_backend_table_retry.json,2019-21/P/boot_arxiv
+uPPredblp,1.39,results/p2_backend_table_retry.json,2019-21/P/u_dblp
+kPPredblp,22,results/p2_backend_table_retry.json,2019-21/P/k_dblp
+ciPPredblp,"[0.61, 2.43]",results/p2_backend_table_retry.json,2019-21/P/boot_dblp
+uPPreopenalex,1.39,results/p2_backend_table_retry.json,2019-21/P/u_openalex
+kPPreopenalex,22,results/p2_backend_table_retry.json,2019-21/P/k_openalex
+ciPPreopenalex,"[0.61, 2.43]",results/p2_backend_table_retry.json,2019-21/P/boot_openalex
+uPPres2,1.01,results/p2_backend_table_retry.json,2019-21/P/u_s2
+kPPres2,16,results/p2_backend_table_retry.json,2019-21/P/k_s2
+ciPPres2,"[0.30, 2.04]",results/p2_backend_table_retry.json,2019-21/P/boot_s2
+rlPPre,0,results/p2_backend_table_retry.json,2019-21/P/n_rate_limited
+ntPPre,11,results/p2_backend_table_retry.json,2019-21/P/n_no_title
+nBPre,391,results/p2_backend_table_retry.json,2019-21/B/n
+npBPre,155,results/p2_backend_table_retry.json,2019-21/B/n_papers
+uBPrecrossref,60.4,results/p2_backend_table_retry.json,2019-21/B/u_crossref
+kBPrecrossref,236,results/p2_backend_table_retry.json,2019-21/B/k_crossref
+ciBPrecrossref,"[54.6, 66.0]",results/p2_backend_table_retry.json,2019-21/B/boot_crossref
+uBPrearxiv,60.4,results/p2_backend_table_retry.json,2019-21/B/u_arxiv
+kBPrearxiv,236,results/p2_backend_table_retry.json,2019-21/B/k_arxiv
+ciBPrearxiv,"[54.6, 66.0]",results/p2_backend_table_retry.json,2019-21/B/boot_arxiv
+uBPredblp,34.5,results/p2_backend_table_retry.json,2019-21/B/u_dblp
+kBPredblp,135,results/p2_backend_table_retry.json,2019-21/B/k_dblp
+ciBPredblp,"[28.4, 40.9]",results/p2_backend_table_retry.json,2019-21/B/boot_dblp
+uBPreopenalex,30.2,results/p2_backend_table_retry.json,2019-21/B/u_openalex
+kBPreopenalex,118,results/p2_backend_table_retry.json,2019-21/B/k_openalex
+ciBPreopenalex,"[24.1, 36.6]",results/p2_backend_table_retry.json,2019-21/B/boot_openalex
+uBPres2,16.4,results/p2_backend_table_retry.json,2019-21/B/u_s2
+kBPres2,64,results/p2_backend_table_retry.json,2019-21/B/k_s2
+ciBPres2,"[11.3, 21.7]",results/p2_backend_table_retry.json,2019-21/B/boot_s2
+rlBPre,0,results/p2_backend_table_retry.json,2019-21/B/n_rate_limited
+ntBPre,2,results/p2_backend_table_retry.json,2019-21/B/n_no_title
+nSPre,61,results/p2_backend_table_retry.json,2019-21/S/n
+npSPre,33,results/p2_backend_table_retry.json,2019-21/S/n_papers
+uSPrecrossref,98.4,results/p2_backend_table_retry.json,2019-21/S/u_crossref
+kSPrecrossref,60,results/p2_backend_table_retry.json,2019-21/S/k_crossref
+ciSPrecrossref,"[94.4, 100.0]",results/p2_backend_table_retry.json,2019-21/S/boot_crossref
+uSPrearxiv,98.4,results/p2_backend_table_retry.json,2019-21/S/u_arxiv
+kSPrearxiv,60,results/p2_backend_table_retry.json,2019-21/S/k_arxiv
+ciSPrearxiv,"[94.4, 100.0]",results/p2_backend_table_retry.json,2019-21/S/boot_arxiv
+uSPredblp,98.4,results/p2_backend_table_retry.json,2019-21/S/u_dblp
+kSPredblp,60,results/p2_backend_table_retry.json,2019-21/S/k_dblp
+ciSPredblp,"[94.4, 100.0]",results/p2_backend_table_retry.json,2019-21/S/boot_dblp
+uSPreopenalex,98.4,results/p2_backend_table_retry.json,2019-21/S/u_openalex
+kSPreopenalex,60,results/p2_backend_table_retry.json,2019-21/S/k_openalex
+ciSPreopenalex,"[94.4, 100.0]",results/p2_backend_table_retry.json,2019-21/S/boot_openalex
+uSPres2,98.4,results/p2_backend_table_retry.json,2019-21/S/u_s2
+kSPres2,60,results/p2_backend_table_retry.json,2019-21/S/k_s2
+ciSPres2,"[94.4, 100.0]",results/p2_backend_table_retry.json,2019-21/S/boot_s2
+rlSPre,0,results/p2_backend_table_retry.json,2019-21/S/n_rate_limited
+ntSPre,16,results/p2_backend_table_retry.json,2019-21/S/n_no_title
+nWPre,"1,175",results/p2_backend_table_retry.json,2019-21/W/n
+npWPre,210,results/p2_backend_table_retry.json,2019-21/W/n_papers
+uWPrecrossref,78.8,results/p2_backend_table_retry.json,2019-21/W/u_crossref
+kWPrecrossref,926,results/p2_backend_table_retry.json,2019-21/W/k_crossref
+ciWPrecrossref,"[73.7, 83.9]",results/p2_backend_table_retry.json,2019-21/W/boot_crossref
+uWPrearxiv,78.8,results/p2_backend_table_retry.json,2019-21/W/u_arxiv
+kWPrearxiv,926,results/p2_backend_table_retry.json,2019-21/W/k_arxiv
+ciWPrearxiv,"[73.7, 83.9]",results/p2_backend_table_retry.json,2019-21/W/boot_arxiv
+uWPredblp,71.8,results/p2_backend_table_retry.json,2019-21/W/u_dblp
+kWPredblp,844,results/p2_backend_table_retry.json,2019-21/W/k_dblp
+ciWPredblp,"[65.7, 77.4]",results/p2_backend_table_retry.json,2019-21/W/boot_dblp
+uWPreopenalex,69.6,results/p2_backend_table_retry.json,2019-21/W/u_openalex
+kWPreopenalex,818,results/p2_backend_table_retry.json,2019-21/W/k_openalex
+ciWPreopenalex,"[63.3, 75.5]",results/p2_backend_table_retry.json,2019-21/W/boot_openalex
+uWPres2,61.8,results/p2_backend_table_retry.json,2019-21/W/u_s2
+kWPres2,726,results/p2_backend_table_retry.json,2019-21/W/k_s2
+ciWPres2,"[54.9, 67.8]",results/p2_backend_table_retry.json,2019-21/W/boot_s2
+rlWPre,0,results/p2_backend_table_retry.json,2019-21/W/n_rate_limited
+ntWPre,115,results/p2_backend_table_retry.json,2019-21/W/n_no_title
+nAPre,"10,973",results/p2_backend_table_retry.json,2019-21/A/n
+npAPre,297,results/p2_backend_table_retry.json,2019-21/A/n_papers
+uAPrecrossref,30.2,results/p2_backend_table_retry.json,2019-21/A/u_crossref
+kAPrecrossref,"3,317",results/p2_backend_table_retry.json,2019-21/A/k_crossref
+ciAPrecrossref,"[27.7, 32.6]",results/p2_backend_table_retry.json,2019-21/A/boot_crossref
+uAPrearxiv,21.8,results/p2_backend_table_retry.json,2019-21/A/u_arxiv
+kAPrearxiv,"2,391",results/p2_backend_table_retry.json,2019-21/A/k_arxiv
+ciAPrearxiv,"[20.1, 23.5]",results/p2_backend_table_retry.json,2019-21/A/boot_arxiv
+uAPredblp,4.03,results/p2_backend_table_retry.json,2019-21/A/u_dblp
+kAPredblp,442,results/p2_backend_table_retry.json,2019-21/A/k_dblp
+ciAPredblp,"[3.38, 4.75]",results/p2_backend_table_retry.json,2019-21/A/boot_dblp
+uAPreopenalex,3.65,results/p2_backend_table_retry.json,2019-21/A/u_openalex
+kAPreopenalex,400,results/p2_backend_table_retry.json,2019-21/A/k_openalex
+ciAPreopenalex,"[3.03, 4.35]",results/p2_backend_table_retry.json,2019-21/A/boot_openalex
+uAPres2,2.11,results/p2_backend_table_retry.json,2019-21/A/u_s2
+kAPres2,231,results/p2_backend_table_retry.json,2019-21/A/k_s2
+ciAPres2,"[1.64, 2.58]",results/p2_backend_table_retry.json,2019-21/A/boot_s2
+rlAPre,0,results/p2_backend_table_retry.json,2019-21/A/n_rate_limited
+ntAPre,18,results/p2_backend_table_retry.json,2019-21/A/n_no_title
+nCertPre,"2,337",results/p2_backend_table_retry.json,2019-21/certified_real/n
+npCertPre,245,results/p2_backend_table_retry.json,2019-21/certified_real/n_papers
+uCertPrecrossref,40.8,results/p2_backend_table_retry.json,2019-21/certified_real/u_crossref
+kCertPrecrossref,953,results/p2_backend_table_retry.json,2019-21/certified_real/k_crossref
+ciCertPrecrossref,"[36.0, 46.1]",results/p2_backend_table_retry.json,2019-21/certified_real/boot_crossref
+uCertPrearxiv,3.47,results/p2_backend_table_retry.json,2019-21/certified_real/u_arxiv
+kCertPrearxiv,81,results/p2_backend_table_retry.json,2019-21/certified_real/k_arxiv
+ciCertPrearxiv,"[2.65, 4.35]",results/p2_backend_table_retry.json,2019-21/certified_real/boot_arxiv
+uCertPredblp,0.39,results/p2_backend_table_retry.json,2019-21/certified_real/u_dblp
+kCertPredblp,9,results/p2_backend_table_retry.json,2019-21/certified_real/k_dblp
+ciCertPredblp,"[0.15, 0.67]",results/p2_backend_table_retry.json,2019-21/certified_real/boot_dblp
+uCertPreopenalex,0.34,results/p2_backend_table_retry.json,2019-21/certified_real/u_openalex
+kCertPreopenalex,8,results/p2_backend_table_retry.json,2019-21/certified_real/k_openalex
+ciCertPreopenalex,"[0.12, 0.58]",results/p2_backend_table_retry.json,2019-21/certified_real/boot_openalex
+uCertPres2,0.13,results/p2_backend_table_retry.json,2019-21/certified_real/u_s2
+kCertPres2,3,results/p2_backend_table_retry.json,2019-21/certified_real/k_s2
+ciCertPres2,"[0.00, 0.29]",results/p2_backend_table_retry.json,2019-21/certified_real/boot_s2
+rlCertPre,0,results/p2_backend_table_retry.json,2019-21/certified_real/n_rate_limited
+ntCertPre,0,results/p2_backend_table_retry.json,2019-21/certified_real/n_no_title
+nPnoidPre,101,results/p2_backend_table_retry.json,2019-21/P/no-id/n
+npPnoidPre,36,results/p2_backend_table_retry.json,2019-21/P/no-id/n_papers
+uPnoidPrecrossref,59.4,results/p2_backend_table_retry.json,2019-21/P/no-id/u_crossref
+kPnoidPrecrossref,60,results/p2_backend_table_retry.json,2019-21/P/no-id/k_crossref
+ciPnoidPrecrossref,"[39.8, 77.5]",results/p2_backend_table_retry.json,2019-21/P/no-id/boot_crossref
+uPnoidPrearxiv,6.93,results/p2_backend_table_retry.json,2019-21/P/no-id/u_arxiv
+kPnoidPrearxiv,7,results/p2_backend_table_retry.json,2019-21/P/no-id/k_arxiv
+ciPnoidPrearxiv,"[2.17, 13.3]",results/p2_backend_table_retry.json,2019-21/P/no-id/boot_arxiv
+uPnoidPredblp,1.98,results/p2_backend_table_retry.json,2019-21/P/no-id/u_dblp
+kPnoidPredblp,2,results/p2_backend_table_retry.json,2019-21/P/no-id/k_dblp
+ciPnoidPredblp,"[0.00, 6.03]",results/p2_backend_table_retry.json,2019-21/P/no-id/boot_dblp
+uPnoidPreopenalex,1.98,results/p2_backend_table_retry.json,2019-21/P/no-id/u_openalex
+kPnoidPreopenalex,2,results/p2_backend_table_retry.json,2019-21/P/no-id/k_openalex
+ciPnoidPreopenalex,"[0.00, 6.03]",results/p2_backend_table_retry.json,2019-21/P/no-id/boot_openalex
+uPnoidPres2,0.00,results/p2_backend_table_retry.json,2019-21/P/no-id/u_s2
+kPnoidPres2,0,results/p2_backend_table_retry.json,2019-21/P/no-id/k_s2
+ciPnoidPres2,"[0.00, 0.00]",results/p2_backend_table_retry.json,2019-21/P/no-id/boot_s2
+rlPnoidPre,0,results/p2_backend_table_retry.json,2019-21/P/no-id/n_rate_limited
+ntPnoidPre,0,results/p2_backend_table_retry.json,2019-21/P/no-id/n_no_title
+nPidPre,"1,483",results/p2_backend_table_retry.json,2019-21/P/with-id/n
+npPidPre,224,results/p2_backend_table_retry.json,2019-21/P/with-id/n_papers
+uPidPrecrossref,67.4,results/p2_backend_table_retry.json,2019-21/P/with-id/u_crossref
+kPidPrecrossref,"1,000",results/p2_backend_table_retry.json,2019-21/P/with-id/k_crossref
+ciPidPrecrossref,"[62.8, 71.7]",results/p2_backend_table_retry.json,2019-21/P/with-id/boot_crossref
+uPidPrearxiv,8.56,results/p2_backend_table_retry.json,2019-21/P/with-id/u_arxiv
+kPidPrearxiv,127,results/p2_backend_table_retry.json,2019-21/P/with-id/k_arxiv
+ciPidPrearxiv,"[6.79, 10.6]",results/p2_backend_table_retry.json,2019-21/P/with-id/boot_arxiv
+uPidPredblp,1.35,results/p2_backend_table_retry.json,2019-21/P/with-id/u_dblp
+kPidPredblp,20,results/p2_backend_table_retry.json,2019-21/P/with-id/k_dblp
+ciPidPredblp,"[0.56, 2.50]",results/p2_backend_table_retry.json,2019-21/P/with-id/boot_dblp
+uPidPreopenalex,1.35,results/p2_backend_table_retry.json,2019-21/P/with-id/u_openalex
+kPidPreopenalex,20,results/p2_backend_table_retry.json,2019-21/P/with-id/k_openalex
+ciPidPreopenalex,"[0.56, 2.50]",results/p2_backend_table_retry.json,2019-21/P/with-id/boot_openalex
+uPidPres2,1.08,results/p2_backend_table_retry.json,2019-21/P/with-id/u_s2
+kPidPres2,16,results/p2_backend_table_retry.json,2019-21/P/with-id/k_s2
+ciPidPres2,"[0.34, 2.19]",results/p2_backend_table_retry.json,2019-21/P/with-id/boot_s2
+rlPidPre,0,results/p2_backend_table_retry.json,2019-21/P/with-id/n_rate_limited
+ntPidPre,11,results/p2_backend_table_retry.json,2019-21/P/with-id/n_no_title
+nAllPre,"12,600",results/p2_backend_table_retry.json,2019-21/all/n
+npAllPre,299,results/p2_backend_table_retry.json,2019-21/all/n_papers
+uAllPrecrossref,36.0,results/p2_backend_table_retry.json,2019-21/all/u_crossref
+kAllPrecrossref,"4,539",results/p2_backend_table_retry.json,2019-21/all/k_crossref
+ciAllPrecrossref,"[33.6, 38.5]",results/p2_backend_table_retry.json,2019-21/all/boot_crossref
+uAllPrearxiv,28.7,results/p2_backend_table_retry.json,2019-21/all/u_arxiv
+kAllPrearxiv,"3,613",results/p2_backend_table_retry.json,2019-21/all/k_arxiv
+ciAllPrearxiv,"[26.6, 30.6]",results/p2_backend_table_retry.json,2019-21/all/boot_arxiv
+uAllPredblp,11.8,results/p2_backend_table_retry.json,2019-21/all/u_dblp
+kAllPredblp,"1,481",results/p2_backend_table_retry.json,2019-21/all/k_dblp
+ciAllPredblp,"[10.1, 13.3]",results/p2_backend_table_retry.json,2019-21/all/boot_dblp
+uAllPreopenalex,11.1,results/p2_backend_table_retry.json,2019-21/all/u_openalex
+kAllPreopenalex,"1,396",results/p2_backend_table_retry.json,2019-21/all/k_openalex
+ciAllPreopenalex,"[9.43, 12.7]",results/p2_backend_table_retry.json,2019-21/all/boot_openalex
+uAllPres2,8.58,results/p2_backend_table_retry.json,2019-21/all/u_s2
+kAllPres2,"1,081",results/p2_backend_table_retry.json,2019-21/all/k_s2
+ciAllPres2,"[7.12, 9.98]",results/p2_backend_table_retry.json,2019-21/all/boot_s2
+rlAllPre,0,results/p2_backend_table_retry.json,2019-21/all/n_rate_limited
+ntAllPre,151,results/p2_backend_table_retry.json,2019-21/all/n_no_title
+nJPost,"14,422",results/p2_backend_table_retry.json,2024-26/J/n
+npJPost,969,results/p2_backend_table_retry.json,2024-26/J/n_papers
+uJPostcrossref,18.2,results/p2_backend_table_retry.json,2024-26/J/u_crossref
+kJPostcrossref,"2,625",results/p2_backend_table_retry.json,2024-26/J/k_crossref
+ciJPostcrossref,"[16.9, 19.7]",results/p2_backend_table_retry.json,2024-26/J/boot_crossref
+uJPostarxiv,18.1,results/p2_backend_table_retry.json,2024-26/J/u_arxiv
+kJPostarxiv,"2,605",results/p2_backend_table_retry.json,2024-26/J/k_arxiv
+ciJPostarxiv,"[16.8, 19.5]",results/p2_backend_table_retry.json,2024-26/J/boot_arxiv
+uJPostdblp,5.82,results/p2_backend_table_retry.json,2024-26/J/u_dblp
+kJPostdblp,839,results/p2_backend_table_retry.json,2024-26/J/k_dblp
+ciJPostdblp,"[5.16, 6.55]",results/p2_backend_table_retry.json,2024-26/J/boot_dblp
+uJPostopenalex,5.76,results/p2_backend_table_retry.json,2024-26/J/u_openalex
+kJPostopenalex,830,results/p2_backend_table_retry.json,2024-26/J/k_openalex
+ciJPostopenalex,"[5.10, 6.48]",results/p2_backend_table_retry.json,2024-26/J/boot_openalex
+uJPosts2,3.13,results/p2_backend_table_retry.json,2024-26/J/u_s2
+kJPosts2,451,results/p2_backend_table_retry.json,2024-26/J/k_s2
+ciJPosts2,"[2.62, 3.75]",results/p2_backend_table_retry.json,2024-26/J/boot_s2
+rlJPost,1,results/p2_backend_table_retry.json,2024-26/J/n_rate_limited
+ntJPost,19,results/p2_backend_table_retry.json,2024-26/J/n_no_title
+nCPost,"17,064",results/p2_backend_table_retry.json,2024-26/C/n
+npCPost,972,results/p2_backend_table_retry.json,2024-26/C/n_papers
+uCPostcrossref,27.6,results/p2_backend_table_retry.json,2024-26/C/u_crossref
+kCPostcrossref,"4,713",results/p2_backend_table_retry.json,2024-26/C/k_crossref
+ciCPostcrossref,"[26.2, 29.1]",results/p2_backend_table_retry.json,2024-26/C/boot_crossref
+uCPostarxiv,27.6,results/p2_backend_table_retry.json,2024-26/C/u_arxiv
+kCPostarxiv,"4,713",results/p2_backend_table_retry.json,2024-26/C/k_arxiv
+ciCPostarxiv,"[26.2, 29.1]",results/p2_backend_table_retry.json,2024-26/C/boot_arxiv
+uCPostdblp,2.67,results/p2_backend_table_retry.json,2024-26/C/u_dblp
+kCPostdblp,455,results/p2_backend_table_retry.json,2024-26/C/k_dblp
+ciCPostdblp,"[2.34, 3.04]",results/p2_backend_table_retry.json,2024-26/C/boot_dblp
+uCPostopenalex,2.50,results/p2_backend_table_retry.json,2024-26/C/u_openalex
+kCPostopenalex,426,results/p2_backend_table_retry.json,2024-26/C/k_openalex
+ciCPostopenalex,"[2.16, 2.86]",results/p2_backend_table_retry.json,2024-26/C/boot_openalex
+uCPosts2,1.64,results/p2_backend_table_retry.json,2024-26/C/u_s2
+kCPosts2,279,results/p2_backend_table_retry.json,2024-26/C/k_s2
+ciCPosts2,"[1.36, 1.94]",results/p2_backend_table_retry.json,2024-26/C/boot_s2
+rlCPost,2,results/p2_backend_table_retry.json,2024-26/C/n_rate_limited
+ntCPost,10,results/p2_backend_table_retry.json,2024-26/C/n_no_title
+nPPost,"11,019",results/p2_backend_table_retry.json,2024-26/P/n
+npPPost,869,results/p2_backend_table_retry.json,2024-26/P/n_papers
+uPPostcrossref,67.2,results/p2_backend_table_retry.json,2024-26/P/u_crossref
+kPPostcrossref,"7,406",results/p2_backend_table_retry.json,2024-26/P/k_crossref
+ciPPostcrossref,"[65.7, 68.8]",results/p2_backend_table_retry.json,2024-26/P/boot_crossref
+uPPostarxiv,8.35,results/p2_backend_table_retry.json,2024-26/P/u_arxiv
+kPPostarxiv,920,results/p2_backend_table_retry.json,2024-26/P/k_arxiv
+ciPPostarxiv,"[7.73, 8.98]",results/p2_backend_table_retry.json,2024-26/P/boot_arxiv
+uPPostdblp,1.62,results/p2_backend_table_retry.json,2024-26/P/u_dblp
+kPPostdblp,179,results/p2_backend_table_retry.json,2024-26/P/k_dblp
+ciPPostdblp,"[1.23, 2.06]",results/p2_backend_table_retry.json,2024-26/P/boot_dblp
+uPPostopenalex,1.62,results/p2_backend_table_retry.json,2024-26/P/u_openalex
+kPPostopenalex,179,results/p2_backend_table_retry.json,2024-26/P/k_openalex
+ciPPostopenalex,"[1.23, 2.06]",results/p2_backend_table_retry.json,2024-26/P/boot_openalex
+uPPosts2,1.47,results/p2_backend_table_retry.json,2024-26/P/u_s2
+kPPosts2,162,results/p2_backend_table_retry.json,2024-26/P/k_s2
+ciPPosts2,"[1.10, 1.90]",results/p2_backend_table_retry.json,2024-26/P/boot_s2
+rlPPost,0,results/p2_backend_table_retry.json,2024-26/P/n_rate_limited
+ntPPost,20,results/p2_backend_table_retry.json,2024-26/P/n_no_title
+nBPost,"1,143",results/p2_backend_table_retry.json,2024-26/B/n
+npBPost,412,results/p2_backend_table_retry.json,2024-26/B/n_papers
+uBPostcrossref,60.8,results/p2_backend_table_retry.json,2024-26/B/u_crossref
+kBPostcrossref,695,results/p2_backend_table_retry.json,2024-26/B/k_crossref
+ciBPostcrossref,"[56.5, 63.8]",results/p2_backend_table_retry.json,2024-26/B/boot_crossref
+uBPostarxiv,60.8,results/p2_backend_table_retry.json,2024-26/B/u_arxiv
+kBPostarxiv,695,results/p2_backend_table_retry.json,2024-26/B/k_arxiv
+ciBPostarxiv,"[56.5, 63.8]",results/p2_backend_table_retry.json,2024-26/B/boot_arxiv
+uBPostdblp,44.9,results/p2_backend_table_retry.json,2024-26/B/u_dblp
+kBPostdblp,513,results/p2_backend_table_retry.json,2024-26/B/k_dblp
+ciBPostdblp,"[37.7, 51.7]",results/p2_backend_table_retry.json,2024-26/B/boot_dblp
+uBPostopenalex,44.5,results/p2_backend_table_retry.json,2024-26/B/u_openalex
+kBPostopenalex,509,results/p2_backend_table_retry.json,2024-26/B/k_openalex
+ciBPostopenalex,"[37.3, 51.4]",results/p2_backend_table_retry.json,2024-26/B/boot_openalex
+uBPosts2,26.2,results/p2_backend_table_retry.json,2024-26/B/u_s2
+kBPosts2,299,results/p2_backend_table_retry.json,2024-26/B/k_s2
+ciBPosts2,"[18.5, 33.7]",results/p2_backend_table_retry.json,2024-26/B/boot_s2
+rlBPost,3,results/p2_backend_table_retry.json,2024-26/B/n_rate_limited
+ntBPost,28,results/p2_backend_table_retry.json,2024-26/B/n_no_title
+nSPost,625,results/p2_backend_table_retry.json,2024-26/S/n
+npSPost,301,results/p2_backend_table_retry.json,2024-26/S/n_papers
+uSPostcrossref,97.9,results/p2_backend_table_retry.json,2024-26/S/u_crossref
+kSPostcrossref,612,results/p2_backend_table_retry.json,2024-26/S/k_crossref
+ciSPostcrossref,"[96.8, 99.0]",results/p2_backend_table_retry.json,2024-26/S/boot_crossref
+uSPostarxiv,97.9,results/p2_backend_table_retry.json,2024-26/S/u_arxiv
+kSPostarxiv,612,results/p2_backend_table_retry.json,2024-26/S/k_arxiv
+ciSPostarxiv,"[96.8, 99.0]",results/p2_backend_table_retry.json,2024-26/S/boot_arxiv
+uSPostdblp,96.2,results/p2_backend_table_retry.json,2024-26/S/u_dblp
+kSPostdblp,601,results/p2_backend_table_retry.json,2024-26/S/k_dblp
+ciSPostdblp,"[94.6, 97.6]",results/p2_backend_table_retry.json,2024-26/S/boot_dblp
+uSPostopenalex,96.2,results/p2_backend_table_retry.json,2024-26/S/u_openalex
+kSPostopenalex,601,results/p2_backend_table_retry.json,2024-26/S/k_openalex
+ciSPostopenalex,"[94.6, 97.6]",results/p2_backend_table_retry.json,2024-26/S/boot_openalex
+uSPosts2,95.5,results/p2_backend_table_retry.json,2024-26/S/u_s2
+kSPosts2,597,results/p2_backend_table_retry.json,2024-26/S/k_s2
+ciSPosts2,"[93.9, 97.1]",results/p2_backend_table_retry.json,2024-26/S/boot_s2
+rlSPost,3,results/p2_backend_table_retry.json,2024-26/S/n_rate_limited
+ntSPost,92,results/p2_backend_table_retry.json,2024-26/S/n_no_title
+nWPost,"3,479",results/p2_backend_table_retry.json,2024-26/W/n
+npWPost,637,results/p2_backend_table_retry.json,2024-26/W/n_papers
+uWPostcrossref,83.0,results/p2_backend_table_retry.json,2024-26/W/u_crossref
+kWPostcrossref,"2,888",results/p2_backend_table_retry.json,2024-26/W/k_crossref
+ciWPostcrossref,"[79.4, 86.2]",results/p2_backend_table_retry.json,2024-26/W/boot_crossref
+uWPostarxiv,83.0,results/p2_backend_table_retry.json,2024-26/W/u_arxiv
+kWPostarxiv,"2,888",results/p2_backend_table_retry.json,2024-26/W/k_arxiv
+ciWPostarxiv,"[79.4, 86.2]",results/p2_backend_table_retry.json,2024-26/W/boot_arxiv
+uWPostdblp,75.6,results/p2_backend_table_retry.json,2024-26/W/u_dblp
+kWPostdblp,"2,630",results/p2_backend_table_retry.json,2024-26/W/k_dblp
+ciWPostdblp,"[71.5, 79.5]",results/p2_backend_table_retry.json,2024-26/W/boot_dblp
+uWPostopenalex,75.0,results/p2_backend_table_retry.json,2024-26/W/u_openalex
+kWPostopenalex,"2,609",results/p2_backend_table_retry.json,2024-26/W/k_openalex
+ciWPostopenalex,"[70.9, 79.0]",results/p2_backend_table_retry.json,2024-26/W/boot_openalex
+uWPosts2,70.6,results/p2_backend_table_retry.json,2024-26/W/u_s2
+kWPosts2,"2,456",results/p2_backend_table_retry.json,2024-26/W/k_s2
+ciWPosts2,"[66.4, 74.8]",results/p2_backend_table_retry.json,2024-26/W/boot_s2
+rlWPost,11,results/p2_backend_table_retry.json,2024-26/W/n_rate_limited
+ntWPost,292,results/p2_backend_table_retry.json,2024-26/W/n_no_title
+nAPost,"42,505",results/p2_backend_table_retry.json,2024-26/A/n
+npAPost,998,results/p2_backend_table_retry.json,2024-26/A/n_papers
+uAPostcrossref,34.7,results/p2_backend_table_retry.json,2024-26/A/u_crossref
+kAPostcrossref,"14,744",results/p2_backend_table_retry.json,2024-26/A/k_crossref
+ciAPostcrossref,"[33.0, 36.2]",results/p2_backend_table_retry.json,2024-26/A/boot_crossref
+uAPostarxiv,19.4,results/p2_backend_table_retry.json,2024-26/A/u_arxiv
+kAPostarxiv,"8,238",results/p2_backend_table_retry.json,2024-26/A/k_arxiv
+ciAPostarxiv,"[18.5, 20.2]",results/p2_backend_table_retry.json,2024-26/A/boot_arxiv
+uAPostdblp,3.47,results/p2_backend_table_retry.json,2024-26/A/u_dblp
+kAPostdblp,"1,473",results/p2_backend_table_retry.json,2024-26/A/k_dblp
+ciAPostdblp,"[3.16, 3.80]",results/p2_backend_table_retry.json,2024-26/A/boot_dblp
+uAPostopenalex,3.38,results/p2_backend_table_retry.json,2024-26/A/u_openalex
+kAPostopenalex,"1,435",results/p2_backend_table_retry.json,2024-26/A/k_openalex
+ciAPostopenalex,"[3.07, 3.70]",results/p2_backend_table_retry.json,2024-26/A/boot_openalex
+uAPosts2,2.10,results/p2_backend_table_retry.json,2024-26/A/u_s2
+kAPosts2,892,results/p2_backend_table_retry.json,2024-26/A/k_s2
+ciAPosts2,"[1.85, 2.37]",results/p2_backend_table_retry.json,2024-26/A/boot_s2
+rlAPost,3,results/p2_backend_table_retry.json,2024-26/A/n_rate_limited
+ntAPost,49,results/p2_backend_table_retry.json,2024-26/A/n_no_title
+nCertPost,"16,271",results/p2_backend_table_retry.json,2024-26/certified_real/n
+npCertPost,940,results/p2_backend_table_retry.json,2024-26/certified_real/n_papers
+uCertPostcrossref,42.8,results/p2_backend_table_retry.json,2024-26/certified_real/u_crossref
+kCertPostcrossref,"6,969",results/p2_backend_table_retry.json,2024-26/certified_real/k_crossref
+ciCertPostcrossref,"[40.2, 45.5]",results/p2_backend_table_retry.json,2024-26/certified_real/boot_crossref
+uCertPostarxiv,4.33,results/p2_backend_table_retry.json,2024-26/certified_real/u_arxiv
+kCertPostarxiv,705,results/p2_backend_table_retry.json,2024-26/certified_real/k_arxiv
+ciCertPostarxiv,"[3.92, 4.75]",results/p2_backend_table_retry.json,2024-26/certified_real/boot_arxiv
+uCertPostdblp,0.78,results/p2_backend_table_retry.json,2024-26/certified_real/u_dblp
+kCertPostdblp,127,results/p2_backend_table_retry.json,2024-26/certified_real/k_dblp
+ciCertPostdblp,"[0.61, 0.96]",results/p2_backend_table_retry.json,2024-26/certified_real/boot_dblp
+uCertPostopenalex,0.78,results/p2_backend_table_retry.json,2024-26/certified_real/u_openalex
+kCertPostopenalex,127,results/p2_backend_table_retry.json,2024-26/certified_real/k_openalex
+ciCertPostopenalex,"[0.61, 0.96]",results/p2_backend_table_retry.json,2024-26/certified_real/boot_openalex
+uCertPosts2,0.32,results/p2_backend_table_retry.json,2024-26/certified_real/u_s2
+kCertPosts2,52,results/p2_backend_table_retry.json,2024-26/certified_real/k_s2
+ciCertPosts2,"[0.23, 0.43]",results/p2_backend_table_retry.json,2024-26/certified_real/boot_s2
+rlCertPost,1,results/p2_backend_table_retry.json,2024-26/certified_real/n_rate_limited
+ntCertPost,20,results/p2_backend_table_retry.json,2024-26/certified_real/n_no_title
+nPnoidPost,465,results/p2_backend_table_retry.json,2024-26/P/no-id/n
+npPnoidPost,156,results/p2_backend_table_retry.json,2024-26/P/no-id/n_papers
+uPnoidPostcrossref,67.1,results/p2_backend_table_retry.json,2024-26/P/no-id/u_crossref
+kPnoidPostcrossref,312,results/p2_backend_table_retry.json,2024-26/P/no-id/k_crossref
+ciPnoidPostcrossref,"[62.2, 72.8]",results/p2_backend_table_retry.json,2024-26/P/no-id/boot_crossref
+uPnoidPostarxiv,16.1,results/p2_backend_table_retry.json,2024-26/P/no-id/u_arxiv
+kPnoidPostarxiv,75,results/p2_backend_table_retry.json,2024-26/P/no-id/k_arxiv
+ciPnoidPostarxiv,"[11.4, 21.7]",results/p2_backend_table_retry.json,2024-26/P/no-id/boot_arxiv
+uPnoidPostdblp,6.24,results/p2_backend_table_retry.json,2024-26/P/no-id/u_dblp
+kPnoidPostdblp,29,results/p2_backend_table_retry.json,2024-26/P/no-id/k_dblp
+ciPnoidPostdblp,"[3.21, 10.5]",results/p2_backend_table_retry.json,2024-26/P/no-id/boot_dblp
+uPnoidPostopenalex,6.24,results/p2_backend_table_retry.json,2024-26/P/no-id/u_openalex
+kPnoidPostopenalex,29,results/p2_backend_table_retry.json,2024-26/P/no-id/k_openalex
+ciPnoidPostopenalex,"[3.21, 10.5]",results/p2_backend_table_retry.json,2024-26/P/no-id/boot_openalex
+uPnoidPosts2,5.81,results/p2_backend_table_retry.json,2024-26/P/no-id/u_s2
+kPnoidPosts2,27,results/p2_backend_table_retry.json,2024-26/P/no-id/k_s2
+ciPnoidPosts2,"[2.80, 9.90]",results/p2_backend_table_retry.json,2024-26/P/no-id/boot_s2
+rlPnoidPost,0,results/p2_backend_table_retry.json,2024-26/P/no-id/n_rate_limited
+ntPnoidPost,3,results/p2_backend_table_retry.json,2024-26/P/no-id/n_no_title
+nPidPost,"10,554",results/p2_backend_table_retry.json,2024-26/P/with-id/n
+npPidPost,860,results/p2_backend_table_retry.json,2024-26/P/with-id/n_papers
+uPidPostcrossref,67.2,results/p2_backend_table_retry.json,2024-26/P/with-id/u_crossref
+kPidPostcrossref,"7,094",results/p2_backend_table_retry.json,2024-26/P/with-id/k_crossref
+ciPidPostcrossref,"[65.8, 68.8]",results/p2_backend_table_retry.json,2024-26/P/with-id/boot_crossref
+uPidPostarxiv,8.01,results/p2_backend_table_retry.json,2024-26/P/with-id/u_arxiv
+kPidPostarxiv,845,results/p2_backend_table_retry.json,2024-26/P/with-id/k_arxiv
+ciPidPostarxiv,"[7.35, 8.64]",results/p2_backend_table_retry.json,2024-26/P/with-id/boot_arxiv
+uPidPostdblp,1.42,results/p2_backend_table_retry.json,2024-26/P/with-id/u_dblp
+kPidPostdblp,150,results/p2_backend_table_retry.json,2024-26/P/with-id/k_dblp
+ciPidPostdblp,"[1.04, 1.87]",results/p2_backend_table_retry.json,2024-26/P/with-id/boot_dblp
+uPidPostopenalex,1.42,results/p2_backend_table_retry.json,2024-26/P/with-id/u_openalex
+kPidPostopenalex,150,results/p2_backend_table_retry.json,2024-26/P/with-id/k_openalex
+ciPidPostopenalex,"[1.04, 1.87]",results/p2_backend_table_retry.json,2024-26/P/with-id/boot_openalex
+uPidPosts2,1.28,results/p2_backend_table_retry.json,2024-26/P/with-id/u_s2
+kPidPosts2,135,results/p2_backend_table_retry.json,2024-26/P/with-id/k_s2
+ciPidPosts2,"[0.91, 1.72]",results/p2_backend_table_retry.json,2024-26/P/with-id/boot_s2
+rlPidPost,0,results/p2_backend_table_retry.json,2024-26/P/with-id/n_rate_limited
+ntPidPost,17,results/p2_backend_table_retry.json,2024-26/P/with-id/n_no_title
+nAllPost,"47,752",results/p2_backend_table_retry.json,2024-26/all/n
+npAllPost,999,results/p2_backend_table_retry.json,2024-26/all/n_papers
+uAllPostcrossref,39.7,results/p2_backend_table_retry.json,2024-26/all/u_crossref
+kAllPostcrossref,"18,939",results/p2_backend_table_retry.json,2024-26/all/k_crossref
+ciAllPostcrossref,"[38.1, 41.1]",results/p2_backend_table_retry.json,2024-26/all/boot_crossref
+uAllPostarxiv,26.0,results/p2_backend_table_retry.json,2024-26/all/u_arxiv
+kAllPostarxiv,"12,433",results/p2_backend_table_retry.json,2024-26/all/k_arxiv
+ciAllPostarxiv,"[24.9, 27.1]",results/p2_backend_table_retry.json,2024-26/all/boot_arxiv
+uAllPostdblp,10.9,results/p2_backend_table_retry.json,2024-26/all/u_dblp
+kAllPostdblp,"5,217",results/p2_backend_table_retry.json,2024-26/all/k_dblp
+ciAllPostdblp,"[9.99, 12.0]",results/p2_backend_table_retry.json,2024-26/all/boot_dblp
+uAllPostopenalex,10.8,results/p2_backend_table_retry.json,2024-26/all/u_openalex
+kAllPostopenalex,"5,154",results/p2_backend_table_retry.json,2024-26/all/k_openalex
+ciAllPostopenalex,"[9.86, 11.9]",results/p2_backend_table_retry.json,2024-26/all/boot_openalex
+uAllPosts2,8.89,results/p2_backend_table_retry.json,2024-26/all/u_s2
+kAllPosts2,"4,244",results/p2_backend_table_retry.json,2024-26/all/k_s2
+ciAllPosts2,"[8.03, 9.87]",results/p2_backend_table_retry.json,2024-26/all/boot_s2
+rlAllPost,20,results/p2_backend_table_retry.json,2024-26/all/n_rate_limited
+ntAllPost,461,results/p2_backend_table_retry.json,2024-26/all/n_no_title
+foldAPre,14,results/p2_backend_table_retry.json,2019-21/A u_crossref/u_s2
+foldAPost,17,results/p2_backend_table_retry.json,2024-26/A u_crossref/u_s2
+hOneUcrossref,30.2,results/p1_hypotheses_h1h2.json,crossref/H1/u_A
+hOneKcrossref,"3,317",results/p1_hypotheses_h1h2.json,crossref/H1/k
+hOneNcrossref,"10,973",results/p1_hypotheses_h1h2.json,crossref/H1/n
+hOneCicrossref,"[27.7, 32.9]",results/p1_hypotheses_h1h2.json,crossref/H1/paper_bootstrap95
+hOnePasscrossref,FAIL,results/p1_hypotheses_h1h2.json,crossref/H1/PASS
+hTwoRatiocrossref,2.6,results/p1_hypotheses_h1h2.json,crossref/H2/ratio
+hTwoCicrossref,"[2.3, 2.9]",results/p1_hypotheses_h1h2.json,crossref/H2/ratio_paper_bootstrap95
+hTwoPasscrossref,FAIL,results/p1_hypotheses_h1h2.json,crossref/H2/PASS
+hTwoUWcrossref,78.8,results/p1_hypotheses_h1h2.json,crossref/H2/u_W
+hOneUdblp,4.03,results/p1_hypotheses_h1h2.json,dblp/H1/u_A
+hOneKdblp,442,results/p1_hypotheses_h1h2.json,dblp/H1/k
+hOneNdblp,"10,973",results/p1_hypotheses_h1h2.json,dblp/H1/n
+hOneCidblp,"[3.43, 4.70]",results/p1_hypotheses_h1h2.json,dblp/H1/paper_bootstrap95
+hOnePassdblp,PASS,results/p1_hypotheses_h1h2.json,dblp/H1/PASS
+hTwoRatiodblp,17.8,results/p1_hypotheses_h1h2.json,dblp/H2/ratio
+hTwoCidblp,"[15.0, 21.3]",results/p1_hypotheses_h1h2.json,dblp/H2/ratio_paper_bootstrap95
+hTwoPassdblp,PASS,results/p1_hypotheses_h1h2.json,dblp/H2/PASS
+hTwoUWdblp,71.8,results/p1_hypotheses_h1h2.json,dblp/H2/u_W
+hOneUs2,2.11,results/p1_hypotheses_h1h2.json,s2/H1/u_A
+hOneKs2,231,results/p1_hypotheses_h1h2.json,s2/H1/k
+hOneNs2,"10,973",results/p1_hypotheses_h1h2.json,s2/H1/n
+hOneCis2,"[1.68, 2.60]",results/p1_hypotheses_h1h2.json,s2/H1/paper_bootstrap95
+hOnePasss2,PASS,results/p1_hypotheses_h1h2.json,s2/H1/PASS
+hTwoRatios2,29.3,results/p1_hypotheses_h1h2.json,s2/H2/ratio
+hTwoCis2,"[23.1, 37.4]",results/p1_hypotheses_h1h2.json,s2/H2/ratio_paper_bootstrap95
+hTwoPasss2,PASS,results/p1_hypotheses_h1h2.json,s2/H2/PASS
+hTwoUWs2,61.8,results/p1_hypotheses_h1h2.json,s2/H2/u_W
+nPapersPre,299,results/p1_hypotheses_h1h2.json,s2/H1/n_papers
+perUPrecrossrefonly,30.229,results/p1_period_compare.json,Crossref-only/u_2019-21
+perUPostcrossrefonly,34.669,results/p1_period_compare.json,Crossref-only/u_2024-26
+perDiffcrossrefonly,+4.44,results/p1_period_compare.json,Crossref-only/diff_pp
+perDiffCicrossrefonly,"[+1.67, +7.24]",results/p1_period_compare.json,Crossref-only/diff_boot_pp
+perRatiocrossrefonly,1.15,results/p1_period_compare.json,Crossref-only/ratio
+perRatioCicrossrefonly,"[1.05, 1.26]",results/p1_period_compare.json,Crossref-only/ratio_boot
+perUPrearxiv,21.790,results/p1_period_compare.json,+arXiv/u_2019-21
+perUPostarxiv,19.358,results/p1_period_compare.json,+arXiv/u_2024-26
+perDiffarxiv,-2.43,results/p1_period_compare.json,+arXiv/diff_pp
+perDiffCiarxiv,"[-4.49, -0.57]",results/p1_period_compare.json,+arXiv/diff_boot_pp
+perRatioarxiv,0.89,results/p1_period_compare.json,+arXiv/ratio
+perRatioCiarxiv,"[0.81, 0.97]",results/p1_period_compare.json,+arXiv/ratio_boot
+perUPredblpdump18102026,4.028,results/p1_period_compare.json,+DBLP (dump 18-10-2026)/u_2019-21
+perUPostdblpdump18102026,3.438,results/p1_period_compare.json,+DBLP (dump 18-10-2026)/u_2024-26
+perDiffdblpdump18102026,-0.59,results/p1_period_compare.json,+DBLP (dump 18-10-2026)/diff_pp
+perDiffCidblpdump18102026,"[-1.36, +0.09]",results/p1_period_compare.json,+DBLP (dump 18-10-2026)/diff_boot_pp
+perRatiodblpdump18102026,0.85,results/p1_period_compare.json,+DBLP (dump 18-10-2026)/ratio
+perRatioCidblpdump18102026,"[0.71, 1.02]",results/p1_period_compare.json,+DBLP (dump 18-10-2026)/ratio_boot
+perUPreopenalex,3.645,results/p1_period_compare.json,+OpenAlex/u_2019-21
+perUPostopenalex,3.349,results/p1_period_compare.json,+OpenAlex/u_2024-26
+perDiffopenalex,-0.30,results/p1_period_compare.json,+OpenAlex/diff_pp
+perDiffCiopenalex,"[-1.04, +0.43]",results/p1_period_compare.json,+OpenAlex/diff_boot_pp
+perRatioopenalex,0.92,results/p1_period_compare.json,+OpenAlex/ratio
+perRatioCiopenalex,"[0.76, 1.14]",results/p1_period_compare.json,+OpenAlex/ratio_boot
+perUPres2,2.105,results/p1_period_compare.json,+S2/u_2019-21
+perUPosts2,2.080,results/p1_period_compare.json,+S2/u_2024-26
+perDiffs2,-0.03,results/p1_period_compare.json,+S2/diff_pp
+perDiffCis2,"[-0.56, +0.47]",results/p1_period_compare.json,+S2/diff_boot_pp
+perRatios2,0.99,results/p1_period_compare.json,+S2/ratio
+perRatioCis2,"[0.78, 1.27]",results/p1_period_compare.json,+S2/ratio_boot
+refyearOldPre,3.24,results/p1_u_by_refyear.csv,2019-21/>10/u
+refyearRestLoPre,1.3,results/p1_u_by_refyear.csv,2019-21/min u other lags
+refyearRestHiPre,2.8,results/p1_u_by_refyear.csv,2019-21/max u other lags
+refyearOldPost,3.44,results/p1_u_by_refyear.csv,2024-26/>10/u
+refyearRestLoPost,1.5,results/p1_u_by_refyear.csv,2024-26/min u other lags
+refyearRestHiPost,2.4,results/p1_u_by_refyear.csv,2024-26/max u other lags
+nRenderPapers,100,results/p1_screen_fp.json,n_render_papers
+nRenderedRefs,"46,032",results/p1_screen_fp.json,n_rendered_refs
+nUniqueStrings,"21,793",results/p1_screen_fp.json,n_unique_strings
+hThreeFpAunion,0.26,results/p1_screen_fp.json,H3/fp_a
+hThreeFpBunion,0.043,results/p1_screen_fp.json,H3/fp_b
+hThreeKAunion,6,results/p1_screen_fp.json,H3/k_a
+hThreeNAunion,"2,316",results/p1_screen_fp.json,H3/n_a
+hThreeKBunion,1,results/p1_screen_fp.json,H3/k_b
+hThreeNBunion,"2,323",results/p1_screen_fp.json,H3/n_b
+hThreeRatiounion,6.02,results/p1_screen_fp.json,H3/ratio
+hThreeRatioLounion,2.01,results/p1_screen_fp.json,H3/ratio_ci[0]
+hThreeNPapers,97,results/p1_screen_fp.json,H3/n_papers
+hThreeFpAcrossref,8.13,results/p1_screen_fp.json,H3_crossref_only/fp_a
+hThreeFpBcrossref,1.55,results/p1_screen_fp.json,H3_crossref_only/fp_b
+hThreeKAcrossref,189,results/p1_screen_fp.json,H3_crossref_only/k_a
+hThreeNAcrossref,"2,325",results/p1_screen_fp.json,H3_crossref_only/n_a
+hThreeKBcrossref,36,results/p1_screen_fp.json,H3_crossref_only/k_b
+hThreeNBcrossref,"2,325",results/p1_screen_fp.json,H3_crossref_only/n_b
+hThreeRatiocrossref,5.25,results/p1_screen_fp.json,H3_crossref_only/ratio
+hThreeRatioLocrossref,2.79,results/p1_screen_fp.json,H3_crossref_only/ratio_ci[0]
+hThreeNPapers,97,results/p1_screen_fp.json,H3_crossref_only/n_papers
+hThreeFpAdblp,0.69,results/p1_screen_fp.json,H3_plus_dblp/fp_a
+hThreeFpBdblp,0.13,results/p1_screen_fp.json,H3_plus_dblp/fp_b
+hThreeKAdblp,16,results/p1_screen_fp.json,H3_plus_dblp/k_a
+hThreeNAdblp,"2,325",results/p1_screen_fp.json,H3_plus_dblp/n_a
+hThreeKBdblp,3,results/p1_screen_fp.json,H3_plus_dblp/k_b
+hThreeNBdblp,"2,325",results/p1_screen_fp.json,H3_plus_dblp/n_b
+hThreeRatiodblp,5.33,results/p1_screen_fp.json,H3_plus_dblp/ratio
+hThreeRatioLodblp,2.33,results/p1_screen_fp.json,H3_plus_dblp/ratio_ci[0]
+hThreeNPapers,97,results/p1_screen_fp.json,H3_plus_dblp/n_papers
+renderRawMissK,207,results/p1_screen_fp.json,render_missing/IEEEtran_doi_raw/orig/k
+renderRawMissN,"5,754",results/p1_screen_fp.json,render_missing/IEEEtran_doi_raw/orig/n
+renderRawMissPapers,5,results/p1_screen_fp.json,render_missing/IEEEtran_doi_raw/orig/n_papers
+renderDoiMissK,0,results/p1_screen_fp.json,render_missing/IEEEtran_doi/orig/k
+idonlyIEEEtran,26.0,results/p1_screen_fp.csv,IEEEtran/orig/idonly/fp
+idonlyIEEEtrandoi,3.2,results/p1_screen_fp.csv,IEEEtran_doi/orig/idonly/fp
+idonlyIEEEtranStrip,42.7,results/p1_screen_fp.csv,IEEEtran/strip/idonly/fp
+bibTitleFpcrossref,47.48,results/p1_screen_fp.csv,bib-title/crossref/fp
+bibTitleFpunion,0.34,results/p1_screen_fp.csv,bib-title/union/fp
+uId,0.26,results/p1_screen_fp.json,"H3/fp_a (u_id, Prop. 3.1)"
+hFourMancrossref,41.1,results/p1_h4_bias.json,H4/crossref/fp_manual_weighted
+hFourKMancrossref,108,results/p1_h4_bias.json,H4/crossref/k_manual
+hFourNMancrossref,189,results/p1_h4_bias.json,H4/crossref/n_manual
+hFourCertcrossref,40.78,results/p1_h4_bias.json,H4/crossref/fp_certified
+hFourKCertcrossref,953,results/p1_h4_bias.json,H4/crossref/k_certified
+hFourNCertcrossref,"2,337",results/p1_h4_bias.json,H4/crossref/n_certified
+hFourDiffcrossref,+0.4,results/p1_h4_bias.json,H4/crossref/diff
+hFourDiffCicrossref,"[-10.6, +11.1]",results/p1_h4_bias.json,H4/crossref/diff_ci
+hFourPasscrossref,FAIL,results/p1_h4_bias.json,H4/crossref/PASS
+hFourNPaperscrossref,264,results/p1_h4_bias.json,H4/crossref/n_papers
+hFourTierBcrossref,23/34,results/p1_h4_bias.json,H4/crossref/manual_by_tier/B
+hFourTierCcrossref,17/37,results/p1_h4_bias.json,H4/crossref/manual_by_tier/C
+hFourTierJcrossref,7/36,results/p1_h4_bias.json,H4/crossref/manual_by_tier/J
+hFourTierPcrossref,20/32,results/p1_h4_bias.json,H4/crossref/manual_by_tier/P
+hFourTierScrossref,22/22,results/p1_h4_bias.json,H4/crossref/manual_by_tier/S
+hFourTierWcrossref,19/28,results/p1_h4_bias.json,H4/crossref/manual_by_tier/W
+hFourMandblp,17.5,results/p1_h4_bias.json,H4/dblp/fp_manual_weighted
+hFourKMandblp,59,results/p1_h4_bias.json,H4/dblp/k_manual
+hFourNMandblp,189,results/p1_h4_bias.json,H4/dblp/n_manual
+hFourCertdblp,0.39,results/p1_h4_bias.json,H4/dblp/fp_certified
+hFourKCertdblp,9,results/p1_h4_bias.json,H4/dblp/k_certified
+hFourNCertdblp,"2,337",results/p1_h4_bias.json,H4/dblp/n_certified
+hFourDiffdblp,+17.2,results/p1_h4_bias.json,H4/dblp/diff
+hFourDiffCidblp,"[+11.3, +23.2]",results/p1_h4_bias.json,H4/dblp/diff_ci
+hFourPassdblp,PASS,results/p1_h4_bias.json,H4/dblp/PASS
+hFourNPapersdblp,264,results/p1_h4_bias.json,H4/dblp/n_papers
+hFourTierBdblp,13/34,results/p1_h4_bias.json,H4/dblp/manual_by_tier/B
+hFourTierCdblp,4/37,results/p1_h4_bias.json,H4/dblp/manual_by_tier/C
+hFourTierJdblp,4/36,results/p1_h4_bias.json,H4/dblp/manual_by_tier/J
+hFourTierPdblp,0/32,results/p1_h4_bias.json,H4/dblp/manual_by_tier/P
+hFourTierSdblp,22/22,results/p1_h4_bias.json,H4/dblp/manual_by_tier/S
+hFourTierWdblp,16/28,results/p1_h4_bias.json,H4/dblp/manual_by_tier/W
+hFourManunion,12.2,results/p1_h4_bias.json,H4/union/fp_manual_weighted
+hFourKManunion,48,results/p1_h4_bias.json,H4/union/k_manual
+hFourNManunion,189,results/p1_h4_bias.json,H4/union/n_manual
+hFourCertunion,0.13,results/p1_h4_bias.json,H4/union/fp_certified
+hFourKCertunion,3,results/p1_h4_bias.json,H4/union/k_certified
+hFourNCertunion,"2,337",results/p1_h4_bias.json,H4/union/n_certified
+hFourDiffunion,+12.1,results/p1_h4_bias.json,H4/union/diff
+hFourDiffCiunion,"[+7.1, +16.9]",results/p1_h4_bias.json,H4/union/diff_ci
+hFourPassunion,PASS,results/p1_h4_bias.json,H4/union/PASS
+hFourNPapersunion,264,results/p1_h4_bias.json,H4/union/n_papers
+hFourTierBunion,6/34,results/p1_h4_bias.json,H4/union/manual_by_tier/B
+hFourTierCunion,2/37,results/p1_h4_bias.json,H4/union/manual_by_tier/C
+hFourTierJunion,2/36,results/p1_h4_bias.json,H4/union/manual_by_tier/J
+hFourTierPunion,0/32,results/p1_h4_bias.json,H4/union/manual_by_tier/P
+hFourTierSunion,22/22,results/p1_h4_bias.json,H4/union/manual_by_tier/S
+hFourTierWunion,16/28,results/p1_h4_bias.json,H4/union/manual_by_tier/W
+rmExistsPone,58,results/p2_render_manual_fp.json,outcomes/exists
+rmAmbPone,2,results/p2_render_manual_fp.json,outcomes/ambiguous
+rmPoneMancrossref,29.0,results/p2_render_manual_fp.json,h4_render/crossref/fp_manual_weighted
+rmPoneKcrossref,27/58,results/p2_render_manual_fp.json,"h4_render/crossref/k_manual,n_manual"
+rmPoneCertcrossref,2.11,results/p2_render_manual_fp.json,h4_render/crossref/fp_certified
+rmPoneKCertcrossref,"49/2,325",results/p2_render_manual_fp.json,h4_render/crossref/k_certified
+rmPoneDiffcrossref,+26.9,results/p2_render_manual_fp.json,h4_render/crossref/diff
+rmPoneDiffCicrossref,"[+10.0, +40.3]",results/p2_render_manual_fp.json,h4_render/crossref/diff_ci
+rmPoneManunion,9.3,results/p2_render_manual_fp.json,h4_render/union/fp_manual_weighted
+rmPoneKunion,15/56,results/p2_render_manual_fp.json,"h4_render/union/k_manual,n_manual"
+rmPoneCertunion,0.22,results/p2_render_manual_fp.json,h4_render/union/fp_certified
+rmPoneKCertunion,"5/2,323",results/p2_render_manual_fp.json,h4_render/union/k_certified
+rmPoneDiffunion,+9.1,results/p2_render_manual_fp.json,h4_render/union/diff
+rmPoneDiffCiunion,"[+4.9, +12.2]",results/p2_render_manual_fp.json,h4_render/union/diff_ci
+rmExistsAdj,59,results/p2_render_manual_fp_adjudicated.json,outcomes/exists
+rmAmbAdj,1,results/p2_render_manual_fp_adjudicated.json,outcomes/ambiguous
+rmAdjMancrossref,29.0,results/p2_render_manual_fp_adjudicated.json,h4_render/crossref/fp_manual_weighted
+rmAdjKcrossref,28/59,results/p2_render_manual_fp_adjudicated.json,"h4_render/crossref/k_manual,n_manual"
+rmAdjCertcrossref,2.11,results/p2_render_manual_fp_adjudicated.json,h4_render/crossref/fp_certified
+rmAdjKCertcrossref,"49/2,325",results/p2_render_manual_fp_adjudicated.json,h4_render/crossref/k_certified
+rmAdjDiffcrossref,+26.9,results/p2_render_manual_fp_adjudicated.json,h4_render/crossref/diff
+rmAdjDiffCicrossref,"[+10.0, +40.3]",results/p2_render_manual_fp_adjudicated.json,h4_render/crossref/diff_ci
+rmAdjManunion,9.1,results/p2_render_manual_fp_adjudicated.json,h4_render/union/fp_manual_weighted
+rmAdjKunion,15/57,results/p2_render_manual_fp_adjudicated.json,"h4_render/union/k_manual,n_manual"
+rmAdjCertunion,0.22,results/p2_render_manual_fp_adjudicated.json,h4_render/union/fp_certified
+rmAdjKCertunion,"5/2,323",results/p2_render_manual_fp_adjudicated.json,h4_render/union/k_certified
+rmAdjDiffunion,+8.9,results/p2_render_manual_fp_adjudicated.json,h4_render/union/diff
+rmAdjDiffCiunion,"[+4.5, +11.9]",results/p2_render_manual_fp_adjudicated.json,h4_render/union/diff_ci
+rmTierBcrossref,5/10,results/p2_render_manual_fp.json,by_tier_IEEEtran_strip_grobid/B/crossref
+rmTierBunion,1/9,results/p2_render_manual_fp.json,by_tier_IEEEtran_strip_grobid/B/union
+rmTierCcrossref,3/10,results/p2_render_manual_fp.json,by_tier_IEEEtran_strip_grobid/C/crossref
+rmTierCunion,0/10,results/p2_render_manual_fp.json,by_tier_IEEEtran_strip_grobid/C/union
+rmTierJcrossref,1/10,results/p2_render_manual_fp.json,by_tier_IEEEtran_strip_grobid/J/crossref
+rmTierJunion,0/10,results/p2_render_manual_fp.json,by_tier_IEEEtran_strip_grobid/J/union
+rmTierPcrossref,1/9,results/p2_render_manual_fp.json,by_tier_IEEEtran_strip_grobid/P/crossref
+rmTierPunion,0/9,results/p2_render_manual_fp.json,by_tier_IEEEtran_strip_grobid/P/union
+rmTierScrossref,8/9,results/p2_render_manual_fp.json,by_tier_IEEEtran_strip_grobid/S/crossref
+rmTierSunion,7/8,results/p2_render_manual_fp.json,by_tier_IEEEtran_strip_grobid/S/union
+rmTierWcrossref,8/10,results/p2_render_manual_fp.json,by_tier_IEEEtran_strip_grobid/W/crossref
+rmTierWunion,6/9,results/p2_render_manual_fp.json,by_tier_IEEEtran_strip_grobid/W/union
+adjChanged,1,results/p3_adjudication.csv,changes_pass1
+recgptzerohallucinated1crossref,94.9,results/p2_recall_audited.csv,gptzero/hallucinated/def1/crossref/share_flagged
+recgptzerohallucinated1crossrefK,94/99,results/p2_recall_audited.csv,"gptzero/hallucinated/def1/crossref/k,n"
+recgptzerohallucinated1dblp,85.9,results/p2_recall_audited.csv,gptzero/hallucinated/def1/+dblp/share_flagged
+recgptzerohallucinated1dblpK,85/99,results/p2_recall_audited.csv,"gptzero/hallucinated/def1/+dblp/k,n"
+recgptzerohallucinated1s2,85.1,results/p2_recall_audited.csv,gptzero/hallucinated/def1/+s2/share_flagged
+recgptzerohallucinated1s2K,80/94,results/p2_recall_audited.csv,"gptzero/hallucinated/def1/+s2/k,n"
+recgptzerohallucinated2crossref,100.0,results/p2_recall_audited.csv,gptzero/hallucinated/def2/crossref/share_flagged
+recgptzerohallucinated2crossrefK,99/99,results/p2_recall_audited.csv,"gptzero/hallucinated/def2/crossref/k,n"
+recgptzerohallucinated2dblp,96.0,results/p2_recall_audited.csv,gptzero/hallucinated/def2/+dblp/share_flagged
+recgptzerohallucinated2dblpK,95/99,results/p2_recall_audited.csv,"gptzero/hallucinated/def2/+dblp/k,n"
+recgptzerohallucinated2s2,95.7,results/p2_recall_audited.csv,gptzero/hallucinated/def2/+s2/share_flagged
+recgptzerohallucinated2s2K,90/94,results/p2_recall_audited.csv,"gptzero/hallucinated/def2/+s2/k,n"
+recgenbfabricated1crossref,25.0,results/p2_recall.csv,gen_b/fabricated/def1/crossref/share_flagged
+recgenbfabricated1crossrefK,25/100,results/p2_recall.csv,"gen_b/fabricated/def1/crossref/k,n"
+recgenbfabricated1dblp,0.0,results/p2_recall.csv,gen_b/fabricated/def1/+dblp/share_flagged
+recgenbfabricated1dblpK,0/100,results/p2_recall.csv,"gen_b/fabricated/def1/+dblp/k,n"
+recgenbfabricated1s2,0.0,results/p2_recall.csv,gen_b/fabricated/def1/+s2/share_flagged
+recgenbfabricated1s2K,0/100,results/p2_recall.csv,"gen_b/fabricated/def1/+s2/k,n"
+recgenbfabricated2crossref,100.0,results/p2_recall.csv,gen_b/fabricated/def2/crossref/share_flagged
+recgenbfabricated2crossrefK,100/100,results/p2_recall.csv,"gen_b/fabricated/def2/crossref/k,n"
+recgenbfabricated2dblp,100.0,results/p2_recall.csv,gen_b/fabricated/def2/+dblp/share_flagged
+recgenbfabricated2dblpK,100/100,results/p2_recall.csv,"gen_b/fabricated/def2/+dblp/k,n"
+recgenbfabricated2s2,100.0,results/p2_recall.csv,gen_b/fabricated/def2/+s2/share_flagged
+recgenbfabricated2s2K,89/89,results/p2_recall.csv,"gen_b/fabricated/def2/+s2/k,n"
+recgencfabricated1crossref,26.0,results/p2_recall.csv,gen_c/fabricated/def1/crossref/share_flagged
+recgencfabricated1crossrefK,26/100,results/p2_recall.csv,"gen_c/fabricated/def1/crossref/k,n"
+recgencfabricated1dblp,2.0,results/p2_recall.csv,gen_c/fabricated/def1/+dblp/share_flagged
+recgencfabricated1dblpK,2/100,results/p2_recall.csv,"gen_c/fabricated/def1/+dblp/k,n"
+recgencfabricated1s2,0.0,results/p2_recall.csv,gen_c/fabricated/def1/+s2/share_flagged
+recgencfabricated1s2K,0/100,results/p2_recall.csv,"gen_c/fabricated/def1/+s2/k,n"
+recgencfabricated2crossref,26.0,results/p2_recall.csv,gen_c/fabricated/def2/crossref/share_flagged
+recgencfabricated2crossrefK,26/100,results/p2_recall.csv,"gen_c/fabricated/def2/crossref/k,n"
+recgencfabricated2dblp,2.0,results/p2_recall.csv,gen_c/fabricated/def2/+dblp/share_flagged
+recgencfabricated2dblpK,2/100,results/p2_recall.csv,"gen_c/fabricated/def2/+dblp/k,n"
+recgencfabricated2s2,0.0,results/p2_recall.csv,gen_c/fabricated/def2/+s2/share_flagged
+recgencfabricated2s2K,0/100,results/p2_recall.csv,"gen_c/fabricated/def2/+s2/k,n"
+recbadalovaproblematic1crossref,84.8,results/p2_recall_audited.csv,badalova/problematic/def1/crossref/share_flagged
+recbadalovaproblematic1crossrefK,28/33,results/p2_recall_audited.csv,"badalova/problematic/def1/crossref/k,n"
+recbadalovaproblematic1dblp,69.7,results/p2_recall_audited.csv,badalova/problematic/def1/+dblp/share_flagged
+recbadalovaproblematic1dblpK,23/33,results/p2_recall_audited.csv,"badalova/problematic/def1/+dblp/k,n"
+recbadalovaproblematic1s2,67.7,results/p2_recall_audited.csv,badalova/problematic/def1/+s2/share_flagged
+recbadalovaproblematic1s2K,21/31,results/p2_recall_audited.csv,"badalova/problematic/def1/+s2/k,n"
+recbadalovaproblematic2crossref,84.8,results/p2_recall_audited.csv,badalova/problematic/def2/crossref/share_flagged
+recbadalovaproblematic2crossrefK,28/33,results/p2_recall_audited.csv,"badalova/problematic/def2/crossref/k,n"
+recbadalovaproblematic2dblp,72.7,results/p2_recall_audited.csv,badalova/problematic/def2/+dblp/share_flagged
+recbadalovaproblematic2dblpK,24/33,results/p2_recall_audited.csv,"badalova/problematic/def2/+dblp/k,n"
+recbadalovaproblematic2s2,71.0,results/p2_recall_audited.csv,badalova/problematic/def2/+s2/share_flagged
+recbadalovaproblematic2s2K,22/31,results/p2_recall_audited.csv,"badalova/problematic/def2/+s2/k,n"
+recbadalovaverified1crossref,56.5,results/p2_recall.csv,badalova/verified/def1/crossref/share_flagged
+recbadalovaverified1crossrefK,35/62,results/p2_recall.csv,"badalova/verified/def1/crossref/k,n"
+recbadalovaverified1dblp,14.5,results/p2_recall.csv,badalova/verified/def1/+dblp/share_flagged
+recbadalovaverified1dblpK,9/62,results/p2_recall.csv,"badalova/verified/def1/+dblp/k,n"
+recbadalovaverified1s2,14.5,results/p2_recall.csv,badalova/verified/def1/+s2/share_flagged
+recbadalovaverified1s2K,9/62,results/p2_recall.csv,"badalova/verified/def1/+s2/k,n"
+recbadalovaverified2crossref,61.3,results/p2_recall.csv,badalova/verified/def2/crossref/share_flagged
+recbadalovaverified2crossrefK,38/62,results/p2_recall.csv,"badalova/verified/def2/crossref/k,n"
+recbadalovaverified2dblp,19.4,results/p2_recall.csv,badalova/verified/def2/+dblp/share_flagged
+recbadalovaverified2dblpK,12/62,results/p2_recall.csv,"badalova/verified/def2/+dblp/k,n"
+recbadalovaverified2s2,19.4,results/p2_recall.csv,badalova/verified/def2/+s2/share_flagged
+recbadalovaverified2s2K,12/62,results/p2_recall.csv,"badalova/verified/def2/+s2/k,n"
+auditN,15,results/p2_recall_audit.json,n_audited
+auditPartial,13,results/p2_recall_drop_audit.csv,audit_label=PARTIAL
+auditFalseMatch,1,results/p2_recall_drop_audit.csv,audit_label=FALSE_MATCH
+auditLabelWrong,1,results/p2_recall_drop_audit.csv,audit_label=LABEL_WRONG
+auditTotal,15,results/p2_recall_drop_audit.csv,rows
+strictPlusDiff,+0.19,results/p2_def2_strict.json,certified_plus_2024-26/diff
+strictPlusDiffCi,"[+0.08, +0.31]",results/p2_def2_strict.json,certified_plus_2024-26/ci/diff
+strictPlusFpAny,0.61,results/p2_def2_strict.json,certified_plus_2024-26/fp_anywhere
+strictPlusFpStrict,0.80,results/p2_def2_strict.json,certified_plus_2024-26/fp_strict
+strictPlusN,"6,238",results/p2_def2_strict.json,certified_plus_2024-26/n_refs
+hallFpstrip,0.51,results/p2_tool_hallucinator.csv,IEEEtran_strip/certified/share_flagged
+hallKstrip,2/390,results/p2_tool_hallucinator.csv,"IEEEtran_strip/certified/k,n_evaluated"
+hallCistrip,"[0.00, 1.62]",results/p2_tool_hallucinator.csv,IEEEtran_strip/certified/ci
+hallAllFpstrip,0.84,results/p2_tool_hallucinator.csv,IEEEtran_strip/all/share_flagged
+hallAllKstrip,8/953,results/p2_tool_hallucinator.csv,"IEEEtran_strip/all/k,n_evaluated"
+hallFpdoi,0.00,results/p2_tool_hallucinator.csv,IEEEtran_doi_orig/certified/share_flagged
+hallKdoi,0/384,results/p2_tool_hallucinator.csv,"IEEEtran_doi_orig/certified/k,n_evaluated"
+hallCidoi,"[0.00, 0.00]",results/p2_tool_hallucinator.csv,IEEEtran_doi_orig/certified/ci
+hallAllFpdoi,0.74,results/p2_tool_hallucinator.csv,IEEEtran_doi_orig/all/share_flagged
+hallAllKdoi,7/945,results/p2_tool_hallucinator.csv,"IEEEtran_doi_orig/all/k,n_evaluated"
+hallPairs,15,results/p2_tool_hallucinator.csv,n_pairs
+hallHours,2.43,results/p2_tool_hallucinator.csv,hours_cumulative
+cieRuns,3,results/p2_checkifexist.json,n_runs
+cieRefs,49,results/p2_checkifexist.json,n_refs
+cieChanged,0,results/p2_checkifexist.json,n_refs_changed
+ppvCr039,1.3,results/p2_theory_final.csv,ppv_headline/crossref_only/0.39%
+ppvCr039Ci,"[1.2, 1.4]",results/p2_theory_final.csv,ppv_headline/crossref_only/0.39%/ci
+ppvCr05,1.6,results/p2_theory_final.csv,ppv_headline/crossref_only/0.5%
+ppvCr05Ci,"[1.5, 1.8]",results/p2_theory_final.csv,ppv_headline/crossref_only/0.5%/ci
+ppvFull039,15.7,results/p2_theory_final.csv,ppv_headline/full/0.39%
+ppvFull039Ci,"[13.2, 19.3]",results/p2_theory_final.csv,ppv_headline/full/0.39%/ci
+ppvFull05,19.2,results/p2_theory_final.csv,ppv_headline/full/0.5%
+ppvFull05Ci,"[16.3, 23.5]",results/p2_theory_final.csv,ppv_headline/full/0.5%/ci
+dispCrPb,5.55,results/p2_theory_final.csv,dispersion/crossref_only/sum (N-lambda)^2 / sum V0 (Poisson-binomial)
+dispCrBb,0.66,results/p2_theory_final.csv,"dispersion/crossref_only/sum (N-lambda)^2 / sum V (beta-binomial, Cauchy-Schwarz)"
+dispFullPb,3.30,results/p2_theory_final.csv,dispersion/full/sum (N-lambda)^2 / sum V0 (Poisson-binomial)
+dispFullBb,0.55,results/p2_theory_final.csv,"dispersion/full/sum (N-lambda)^2 / sum V (beta-binomial, Cauchy-Schwarz)"
+ppvOneInCr,78,results/p2_theory_final.csv,ppv_headline/crossref_only/0.39%/1/value
+ppvOneInFull,6,results/p2_theory_final.csv,ppv_headline/full/0.39%/1/value
+ruleCrR105K,38/299,results/p2_theory_final.csv,rule_check/crossref_only/R1/0.05/k_rejected
+ruleCrR105Pct,12.7,results/p2_theory_final.csv,rule_check/crossref_only/R1/0.05
+ruleCrR105Mc,10.7,results/p2_theory_final.csv,rule_check/crossref_only/R1/0.05/mc_mean
+ruleCrR205K,0/299,results/p2_theory_final.csv,rule_check/crossref_only/R2/0.05/k_rejected
+ruleCrR205Pct,0.0,results/p2_theory_final.csv,rule_check/crossref_only/R2/0.05
+ruleCrR205Mc,0.00,results/p2_theory_final.csv,rule_check/crossref_only/R2/0.05/mc_mean
+ruleCrR305K,0/299,results/p2_theory_final.csv,rule_check/crossref_only/R3/0.05/k_rejected
+ruleCrR305Pct,0.0,results/p2_theory_final.csv,rule_check/crossref_only/R3/0.05
+ruleCrR305Mc,0.00,results/p2_theory_final.csv,rule_check/crossref_only/R3/0.05/mc_mean
+ruleCrR101K,21/299,results/p2_theory_final.csv,rule_check/crossref_only/R1/0.01/k_rejected
+ruleCrR101Pct,7.0,results/p2_theory_final.csv,rule_check/crossref_only/R1/0.01
+ruleCrR101Mc,5.7,results/p2_theory_final.csv,rule_check/crossref_only/R1/0.01/mc_mean
+ruleCrR201K,0/299,results/p2_theory_final.csv,rule_check/crossref_only/R2/0.01/k_rejected
+ruleCrR201Pct,0.0,results/p2_theory_final.csv,rule_check/crossref_only/R2/0.01
+ruleCrR201Mc,0.00,results/p2_theory_final.csv,rule_check/crossref_only/R2/0.01/mc_mean
+ruleCrR301K,0/299,results/p2_theory_final.csv,rule_check/crossref_only/R3/0.01/k_rejected
+ruleCrR301Pct,0.0,results/p2_theory_final.csv,rule_check/crossref_only/R3/0.01
+ruleCrR301Mc,0.00,results/p2_theory_final.csv,rule_check/crossref_only/R3/0.01/mc_mean
+ruleFullR105K,19/299,results/p2_theory_final.csv,rule_check/full/R1/0.05/k_rejected
+ruleFullR105Pct,6.4,results/p2_theory_final.csv,rule_check/full/R1/0.05
+ruleFullR105Mc,5.2,results/p2_theory_final.csv,rule_check/full/R1/0.05/mc_mean
+ruleFullR205K,0/299,results/p2_theory_final.csv,rule_check/full/R2/0.05/k_rejected
+ruleFullR205Pct,0.0,results/p2_theory_final.csv,rule_check/full/R2/0.05
+ruleFullR205Mc,0.00,results/p2_theory_final.csv,rule_check/full/R2/0.05/mc_mean
+ruleFullR305K,1/299,results/p2_theory_final.csv,rule_check/full/R3/0.05/k_rejected
+ruleFullR305Pct,0.3,results/p2_theory_final.csv,rule_check/full/R3/0.05
+ruleFullR305Mc,0.03,results/p2_theory_final.csv,rule_check/full/R3/0.05/mc_mean
+ruleFullR101K,12/299,results/p2_theory_final.csv,rule_check/full/R1/0.01/k_rejected
+ruleFullR101Pct,4.0,results/p2_theory_final.csv,rule_check/full/R1/0.01
+ruleFullR101Mc,2.5,results/p2_theory_final.csv,rule_check/full/R1/0.01/mc_mean
+ruleFullR201K,0/299,results/p2_theory_final.csv,rule_check/full/R2/0.01/k_rejected
+ruleFullR201Pct,0.0,results/p2_theory_final.csv,rule_check/full/R2/0.01
+ruleFullR201Mc,0.00,results/p2_theory_final.csv,rule_check/full/R2/0.01/mc_mean
+ruleFullR301K,0/299,results/p2_theory_final.csv,rule_check/full/R3/0.01/k_rejected
+ruleFullR301Pct,0.0,results/p2_theory_final.csv,rule_check/full/R3/0.01
+ruleFullR301Mc,0.00,results/p2_theory_final.csv,rule_check/full/R3/0.01/mc_mean
+flagFullk1,198/299,results/p1_alpha_rules.csv,full/all/flag_k1_k
+flagFullk1Pct,66.2,results/p1_alpha_rules.csv,full/all/flag_k1_share
+flagFullk2,142/299,results/p1_alpha_rules.csv,full/all/flag_k2_k
+flagFullk2Pct,47.5,results/p1_alpha_rules.csv,full/all/flag_k2_share
+flagCrk1,298/299,results/p1_alpha_rules.csv,crossref_only/all/flag_k1_k
+flagCrk1Pct,99.7,results/p1_alpha_rules.csv,crossref_only/all/flag_k1_share
+flagCrk2,286/299,results/p1_alpha_rules.csv,crossref_only/all/flag_k2_k
+flagCrk2Pct,95.7,results/p1_alpha_rules.csv,crossref_only/all/flag_k2_share
+flagDblpk1,249/299,results/p1_alpha_rules.csv,plus_dblp/all/flag_k1_k
+flagDblpk1Pct,83.3,results/p1_alpha_rules.csv,plus_dblp/all/flag_k1_share
+flagDblpk2,199/299,results/p1_alpha_rules.csv,plus_dblp/all/flag_k2_k
+flagDblpk2Pct,66.6,results/p1_alpha_rules.csv,plus_dblp/all/flag_k2_share
+flagFullkTwoCL,25.0,results/p1_alpha_rules.csv,full/cs.CL/flag_k2_share
+flagFullkTwoCR,74.6,results/p1_alpha_rules.csv,full/cs.CR/flag_k2_share
+flagFullkTwoCV,21.7,results/p1_alpha_rules.csv,full/cs.CV/flag_k2_share
+flagFullkTwoLG,48.3,results/p1_alpha_rules.csv,full/cs.LG/flag_k2_share
+flagFullkTwoNI,68.3,results/p1_alpha_rules.csv,full/cs.NI/flag_k2_share
+nAMed,32,results/p2_theory_final.csv,k_typical/n_A (median paper)
+kMedR1,5,results/p2_theory_final.csv,k_typical/full/0.05/R1/n_A=32
+kMedR2,19,results/p2_theory_final.csv,k_typical/full/0.05/R2/n_A=32
+kMedR3,15,results/p2_theory_final.csv,k_typical/full/0.05/R3/n_A=32
+kIdMedR2,11,results/p2_theory_final.csv,k_identifier/0.05/R2/n_A=32
+kIdMedR3,6,results/p2_theory_final.csv,k_identifier/0.05/R3/n_A=32
+pTwoIdMed,0.32,results/p2_theory_final.csv,p_two_flags_identifier/n_A=32
+pTwoIdMedHi,1.6,results/p2_theory_final.csv,p_two_flags_identifier/n_A=32/hi
+hFiveObsFullT1,0.400,results/p1_h5.csv,full/T1/obs
+hFiveCiFullT1,"[0.309, 0.498]",results/p1_h5.csv,full/T1/wilson
+hFivePredFullT1,0.421,results/p1_h5.csv,full/T1/pred_mean
+hFiveNFullT1,18,results/p1_h5.csv,full/T1/n_refs_median
+hFiveObsFullT2,0.515,results/p1_h5.csv,full/T2/obs
+hFiveCiFullT2,"[0.418, 0.611]",results/p1_h5.csv,full/T2/wilson
+hFivePredFullT2,0.630,results/p1_h5.csv,full/T2/pred_mean
+hFiveNFullT2,36,results/p1_h5.csv,full/T2/n_refs_median
+hFiveObsFullT3,0.510,results/p1_h5.csv,full/T3/obs
+hFiveCiFullT3,"[0.413, 0.606]",results/p1_h5.csv,full/T3/wilson
+hFivePredFullT3,0.763,results/p1_h5.csv,full/T3/pred_mean
+hFiveNFullT3,60,results/p1_h5.csv,full/T3/n_refs_median
+hFiveObscrossref_onlyT1,0.900,results/p1_h5.csv,crossref_only/T1/obs
+hFiveCicrossref_onlyT1,"[0.826, 0.945]",results/p1_h5.csv,crossref_only/T1/wilson
+hFivePredcrossref_onlyT1,0.946,results/p1_h5.csv,crossref_only/T1/pred_mean
+hFiveNcrossref_onlyT1,18,results/p1_h5.csv,crossref_only/T1/n_refs_median
+hFiveObscrossref_onlyT2,0.970,results/p1_h5.csv,crossref_only/T2/obs
+hFiveCicrossref_onlyT2,"[0.915, 0.990]",results/p1_h5.csv,crossref_only/T2/wilson
+hFivePredcrossref_onlyT2,1.000,results/p1_h5.csv,crossref_only/T2/pred_mean
+hFiveNcrossref_onlyT2,36,results/p1_h5.csv,crossref_only/T2/n_refs_median
+hFiveObscrossref_onlyT3,1.000,results/p1_h5.csv,crossref_only/T3/obs
+hFiveCicrossref_onlyT3,"[0.963, 1.000]",results/p1_h5.csv,crossref_only/T3/wilson
+hFivePredcrossref_onlyT3,1.000,results/p1_h5.csv,crossref_only/T3/pred_mean
+hFiveNcrossref_onlyT3,60,results/p1_h5.csv,crossref_only/T3/n_refs_median
+hFiveObsplus_dblpT1,0.550,results/p1_h5.csv,plus_dblp/T1/obs
+hFiveCiplus_dblpT1,"[0.452, 0.644]",results/p1_h5.csv,plus_dblp/T1/wilson
+hFivePredplus_dblpT1,0.552,results/p1_h5.csv,plus_dblp/T1/pred_mean
+hFiveNplus_dblpT1,18,results/p1_h5.csv,plus_dblp/T1/n_refs_median
+hFiveObsplus_dblpT2,0.646,results/p1_h5.csv,plus_dblp/T2/obs
+hFiveCiplus_dblpT2,"[0.548, 0.734]",results/p1_h5.csv,plus_dblp/T2/wilson
+hFivePredplus_dblpT2,0.791,results/p1_h5.csv,plus_dblp/T2/pred_mean
+hFiveNplus_dblpT2,36,results/p1_h5.csv,plus_dblp/T2/n_refs_median
+hFiveObsplus_dblpT3,0.800,results/p1_h5.csv,plus_dblp/T3/obs
+hFiveCiplus_dblpT3,"[0.711, 0.867]",results/p1_h5.csv,plus_dblp/T3/wilson
+hFivePredplus_dblpT3,0.903,results/p1_h5.csv,plus_dblp/T3/pred_mean
+hFiveNplus_dblpT3,60,results/p1_h5.csv,plus_dblp/T3/n_refs_median
+pOneRaw,97.5,results/p1_kappa.json,raw
+agrR1R3N,20,results/p2_kappa_pairs.json,R1-R3/n
+agrR1R3Pabak,0.70,results/p2_kappa_pairs.json,R1-R3/pabak
+agrR1R3PabakCi,"[0.40, 0.92]",results/p2_kappa_pairs.json,R1-R3/pabak_ci
+agrR1R3Ac,0.77,results/p2_kappa_pairs.json,R1-R3/ac1
+agrR1R3Kappa,0.27,results/p2_kappa_pairs.json,R1-R3/kappa
+agrR1R3Raw,80.0,results/p2_kappa_pairs.json,R1-R3/raw
+agrR1R2N,40,results/p2_kappa_pairs.json,R1-R2/n
+agrR1R2Pabak,0.81,results/p2_kappa_pairs.json,R1-R2/pabak
+agrR1R2PabakCi,"[0.66, 0.96]",results/p2_kappa_pairs.json,R1-R2/pabak_ci
+agrR1R2Ac,0.85,results/p2_kappa_pairs.json,R1-R2/ac1
+agrR1R2Kappa,0.59,results/p2_kappa_pairs.json,R1-R2/kappa
+agrR1R2Raw,87.5,results/p2_kappa_pairs.json,R1-R2/raw
+agrR2R3N,20,results/p2_kappa_pairs.json,R2-R3/n
+agrR2R3Pabak,0.70,results/p2_kappa_pairs.json,R2-R3/pabak
+agrR2R3PabakCi,"[0.40, 0.92]",results/p2_kappa_pairs.json,R2-R3/pabak_ci
+agrR2R3Ac,0.77,results/p2_kappa_pairs.json,R2-R3/ac1
+agrR2R3Kappa,0.27,results/p2_kappa_pairs.json,R2-R3/kappa
+agrR2R3Raw,80.0,results/p2_kappa_pairs.json,R2-R3/raw
+agrThreeAc,0.80,results/p2_kappa_pairs.json,AC1 three raters/ac1
+agrThreeAcCi,"[0.62, 0.93]",results/p2_kappa_pairs.json,AC1 three raters/ac1_ci
+agrThreeUnan,15/20,results/p2_kappa_pairs.json,AC1 three raters/unanimous
+agrNotFoundDisagree,0,results/p2_kappa_pairs.json,disagreements with not-found
+agrPooledPabak,0.74,results/p2_kappa.json,pooled/pabak
+agrPooledPabakCi,"[0.55, 0.91]",results/p2_kappa.json,pooled/pabak_ci
+agrPooledN,40,results/p2_kappa.json,pooled/n
+pThreeStatus,pending,results/p3_kappa.json,missing (R3 not returned yet)
+hashPrereg,38378e74,results/prereg_hash.txt,PREREG_43.md
+hashProtocol,9ab6c684,results/prereg_hash.txt,manual_protocol.md
+hashAmOne,f9137b5f,results/prereg_hash.txt,PREREG_AMENDMENT_1.md
+hashAmTwo,bc53f7d0,results/prereg_hash.txt,PREREG_AMENDMENT_2.md
+hashAmThree,27b60150,results/prereg_hash.txt,PREREG_AMENDMENT_3.md
+hashAmFour,593e64b5,results/prereg_hash.txt,PREREG_AMENDMENT_4.md
+hashAmFive,64e192ad,results/prereg_hash.txt,PREREG_AMENDMENT_5.md
+nKept,"1,300",data_manifest/manifest_src_version.csv,rows
+nLaterVersion,469,data_manifest/manifest_src_version.csv,src_version != v1
+nVenues,29,results/p2_policy_survey.csv,rows
+nVenuesConfirmed,27,results/p2_policy_survey.csv,verify_status=confirmed
+nVenuesPolicy,23,results/p2_policy_survey.csv,policy_exists starts with yes
+nVenuesToolNamed,4,results/p2_policy_survey.csv,tool_named disclosed
+nVenuesAppeal,3,results/p2_policy_survey.csv,appeal_process stated

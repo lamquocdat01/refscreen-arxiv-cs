@@ -1,0 +1,200 @@
+{
+ "interim": false,
+ "seed": 42,
+ "n_sample": 60,
+ "outcomes": {
+  "exists": 59,
+  "ambiguous": 1
+ },
+ "n_exists": 59,
+ "n_papers": 36,
+ "label": "descriptive (PREREG_AMENDMENT_4 (f))",
+ "h3_check_grobid": {
+  "crossref": {
+   "k_a": 27,
+   "n_a": 59,
+   "k_b": 28,
+   "n_b": 59,
+   "ratio": 0.9642857142857143,
+   "ratio_note": "",
+   "reverses_h3": true
+  },
+  "union": {
+   "k_a": 14,
+   "n_a": 56,
+   "k_b": 15,
+   "n_b": 57,
+   "ratio": 0.9500000000000001,
+   "ratio_note": "",
+   "reverses_h3": true
+  }
+ },
+ "h3_reading": "uninformative for H3 by design: 0 of the 60 refs carries a DOI or arXiv id (decision LQD 21-10-2026)",
+ "by_tier_IEEEtran_strip_grobid": [
+  {
+   "tier": "B",
+   "screen": "crossref",
+   "k": 5,
+   "n": 10
+  },
+  {
+   "tier": "B",
+   "screen": "union",
+   "k": 1,
+   "n": 9
+  },
+  {
+   "tier": "C",
+   "screen": "crossref",
+   "k": 3,
+   "n": 10
+  },
+  {
+   "tier": "C",
+   "screen": "union",
+   "k": 0,
+   "n": 10
+  },
+  {
+   "tier": "J",
+   "screen": "crossref",
+   "k": 1,
+   "n": 10
+  },
+  {
+   "tier": "J",
+   "screen": "union",
+   "k": 0,
+   "n": 10
+  },
+  {
+   "tier": "P",
+   "screen": "crossref",
+   "k": 1,
+   "n": 9
+  },
+  {
+   "tier": "P",
+   "screen": "union",
+   "k": 0,
+   "n": 9
+  },
+  {
+   "tier": "S",
+   "screen": "crossref",
+   "k": 9,
+   "n": 10
+  },
+  {
+   "tier": "S",
+   "screen": "union",
+   "k": 7,
+   "n": 9
+  },
+  {
+   "tier": "W",
+   "screen": "crossref",
+   "k": 8,
+   "n": 10
+  },
+  {
+   "tier": "W",
+   "screen": "union",
+   "k": 6,
+   "n": 9
+  }
+ ],
+ "h4_render": {
+  "style": "IEEEtran orig, GROBID",
+  "weights_noid_tier_share": {
+   "C": 0.4423949198669489,
+   "J": 0.382824312065316,
+   "W": 0.1025098276383429,
+   "B": 0.027819776232234653,
+   "P": 0.02388872089507106,
+   "S": 0.020562443302086484
+  },
+  "boot": 1000,
+  "crossref": {
+   "fp_manual_weighted": 0.29013540301716895,
+   "k_manual": 28,
+   "n_manual": 59,
+   "fp_certified": 0.021075268817204302,
+   "k_certified": 49,
+   "n_certified": 2325,
+   "diff": 0.26906013419996466,
+   "diff_ci": [
+    0.09987161718927616,
+    0.4028210748666131
+   ],
+   "above_zero": true,
+   "manual_by_tier": {
+    "B": [
+     5,
+     10
+    ],
+    "C": [
+     3,
+     10
+    ],
+    "J": [
+     1,
+     10
+    ],
+    "P": [
+     1,
+     9
+    ],
+    "S": [
+     10,
+     10
+    ],
+    "W": [
+     8,
+     10
+    ]
+   }
+  },
+  "union": {
+   "fp_manual_weighted": 0.09084097705204447,
+   "k_manual": 15,
+   "n_manual": 57,
+   "fp_certified": 0.002152389151958674,
+   "k_certified": 5,
+   "n_certified": 2323,
+   "diff": 0.0886885879000858,
+   "diff_ci": [
+    0.04485610843063001,
+    0.11895697545809203
+   ],
+   "above_zero": true,
+   "manual_by_tier": {
+    "B": [
+     1,
+     9
+    ],
+    "C": [
+     0,
+     10
+    ],
+    "J": [
+     0,
+     10
+    ],
+    "P": [
+     0,
+     9
+    ],
+    "S": [
+     7,
+     9
+    ],
+    "W": [
+     7,
+     10
+    ]
+   }
+  }
+ },
+ "labels": "adjudicated (Amendment 5 (f'))"
+}
