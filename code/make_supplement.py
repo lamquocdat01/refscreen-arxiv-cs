@@ -843,7 +843,7 @@ def sanitize(tex):
     tex = tex.replace("file a result file of the repository exists", "file exists")
     # whole \texttt{...} tokens that name a local data path or a response cache, then bare occurrences
     tex = re.sub(r"\\texttt\{(?:[^{}]|\{\})*?(?:THS\\_DATASETS|\\_derived/43|cache(?:\\_p3[ef])?/)(?:[^{}]|\{\})*\}",
-                 lambda m: "the stored responses (not redistributed)" if "cache" in m.group(0) else "a derived data file (release v1.0.1)", tex)
+                 lambda m: "the stored responses (not redistributed)" if "cache" in m.group(0) else "a derived data file (release v1.0.2)", tex)
     tex = re.sub(r"\\?\$THS\\_DATASETS/\\_derived/43/", "the data directory/", tex)
     tex = re.sub(r"(?:the data directory/|\\_derived/43/)?cache\\_p3[ef]/(?:\\textless\{\}source\\textgreater\{\}/|[a-z]+/)?",
                  "the response cache of the revision", tex)
@@ -934,7 +934,7 @@ def s13_p3h():
         f"{nv['evPlantConfK']} (Clopper--Pearson {nv['evPlantConfCi']}\\%), and the search returned no page for any of them. "
         f"Found by the deep search or confirmed: {nv['evNewF']} of {nv['evRealN']}. Every row below gives the one URL "
         "released for it, the rule state and the author's decision (y, n, ?; blank: not asked). The capture time and the "
-        "sha256 of every captured page are in a result file of the repository (release v1.0.1).")
+        "sha256 of every captured page are in a result file of the repository (release v1.0.2).")
     sc = pd.read_csv(RES / "p3h_evidence_score.csv", dtype=str, keep_default_na=False)
     rows = []
     for r in sc.itertuples():
