@@ -1,7 +1,7 @@
 # refscreen-arxiv-cs
 
 Code and derived data for "Which Data Source Decides? False Positives of Reference-Existence Checks on arXiv
-Computer-Science Bibliographies" (submitted to *Scientometrics*). The study measures how often reference-existence
+Computer-Science Bibliographies" (manuscript under submission). The study measures how often reference-existence
 screens flag legitimate references, on 1,298 arXiv computer-science papers (cs.CV/LG/CL/NI/CR; citing papers 2019–21
 and 2024–26), and bounds what any screen can achieve.
 
@@ -20,7 +20,7 @@ and 2024–26), and bounds what any screen can achieve.
 - `supplement/`: copies of the pre-registration documents and the diagnostic and audit tables, with `SHA256SUMS`.
 
 ## Reproduce the reported numbers (no network, no API key)
-1. Download `refscreen-derived-v1.0.0.zip` from the GitHub release `v1.0.0` of this repository and unzip it into a
+1. Download `refscreen-derived-v1.0.0.zip` from the GitHub release `v1.0.2` of this repository and unzip it into a
    folder `<data>`, so that the files sit at `<data>/_derived/43/` (`p1_groundtruth_refs_full.csv`,
    `p2_groundtruth_refs_full.csv`, `p3e_groundtruth_refs_full.csv`, `p2_retry_ratelimited.csv`,
    `screen_p1/screen_refs.csv`, `fake/`, `cache_p3h/`). Set `THS_DATASETS=<data>`.

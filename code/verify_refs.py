@@ -11,7 +11,7 @@ nothing is re-queried when a cache file exists.
 Usage:
   python verify_refs.py                      # verify all entries, write lit/refs.bib + lit/refs_verify.csv
   python verify_refs.py --limit 5            # only first 5 entries (no files written unless --write)
-  python verify_refs.py --search "query" [--container "Scientometrics"] [--from 2023] [--rows 10]
+  python verify_refs.py --search "query" [--container "<journal title>"] [--from 2023] [--rows 10]
   python verify_refs.py --arxiv-search "ti:hallucinator"
 """
 from __future__ import annotations
