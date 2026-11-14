@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this code or data, please cite the article and this repository."
-title: "Which Backend Decides? False Positives of Reference-Existence Screens on Legitimate Computer-Science Bibliographies: code and derived data"
+title: "Which Data Source Decides? False Positives of Reference-Existence Checks on arXiv Computer-Science Bibliographies: code and derived data"
 type: software
 authors:
   - family-names: "Lam Quoc"
@@ -14,4 +14,5 @@ keywords:
   - bibliographic databases
   - data coverage
   - false positives
-# repository-code, doi and date-released are filled at release (CP-B3)
+repository-code: "https://github.com/lamquocdat01/refscreen-arxiv-cs"
+date-released: "2026-11-14"

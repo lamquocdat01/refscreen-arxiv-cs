@@ -1,0 +1,265 @@
+=== URL: https://arxiv.org/abs/1602.04951
+STATUS: ok
+ROBOTS: * group allows /abs
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: Q($\lambda$) with Off-Policy Corrections
+DISPLAYED_AUTHORS: Anna Harutyunyan ; Marc G. Bellemare ; Tom Stepleton ; Remi Munos
+YEAR: 2016
+NOTE: Meta tags not visible to fetch tool; submitted 16 Feb 2016
+
+=== URL: https://arxiv.org/abs/1710.04833v3
+STATUS: ok
+ROBOTS: * group allows /abs
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: Machine Learning by Two-Dimensional Hierarchical Tensor Networks: A Quantum Information Theoretic Perspective on Deep Architectures
+DISPLAYED_AUTHORS: Ding Liu ; Shi-Ju Ran ; Peter Wittek ; Cheng Peng ; Raul Blázquez García ; Gang Su ; Maciej Lewenstein
+YEAR: 2017
+NOTE: Meta tags not visible; submitted 13 Oct 2017
+
+=== URL: https://arxiv.org/abs/1707.04131
+STATUS: ok
+ROBOTS: * group allows /abs
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: Foolbox: A Python toolbox to benchmark the robustness of machine learning models
+DISPLAYED_AUTHORS: Jonas Rauber ; Wieland Brendel ; Matthias Bethge
+YEAR: 2017
+NOTE: Meta tags not visible; submitted 13 Jul 2017, v3 2018
+
+=== URL: https://www.frontiersin.org/articles/10.3389/fcomp.2020.00009/full
+STATUS: ok
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: A Review of Generalizable Transfer Learning in Automatic Emotion Recognition
+DISPLAYED_AUTHORS: Kexin Feng ; Theodora Chaspari
+YEAR: 2020
+NOTE: Meta tags not visible; published 28 February 2020
+
+=== URL: https://pure.fh-ooe.at/en/publications/a-cost-optimized-data-acquisition-system-for-predictive-maintenan/
+STATUS: ok
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: A Cost Optimized Data Acquisition System For Predictive Maintenance
+DISPLAYED_AUTHORS: Erik Strumpf ; Florian Christian Holzinger ; Florian Eibensteiner ; Josef Langer
+YEAR: 2019
+NOTE: Meta tags not visible to fetch tool
+
+=== URL: https://reports.weforum.org/global-information-technology-report-2015/
+STATUS: blocked
+ROBOTS: robots.txt unavailable
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: 302 to www.weforum.org/publications/..., which returned 403
+
+=== URL: https://epthinktank.eu/2015/01/27/ten-technologies-which-could-change-our-lives/
+STATUS: error
+ROBOTS: robots.txt unavailable
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: 301 to eprs.europarl.europa.eu same path, which returned 404
+
+=== URL: https://d7qzviu3xw2xc.cloudfront.net/alexa/alexaprize/assets/pdf/2018/Gunrock.pdf
+STATUS: ok
+ROBOTS: robots.txt unavailable
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: PDF fetched but text compressed; first page unreadable by tool
+
+=== URL: https://find.library.upatras.gr/Record/80591/Description?lng=en
+STATUS: error
+ROBOTS: robots.txt unavailable
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: Connection refused (ECONNREFUSED)
+
+=== URL: https://www.mitre.org/news-insights/publication/trusted-automated-exchange-indicator-information-taxiitm
+STATUS: blocked
+ROBOTS: robots.txt unavailable
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: HTTP 403 on robots.txt and page
+
+=== URL: https://yann.lecun.com/exdb/mnist
+STATUS: error
+ROBOTS: robots.txt unavailable
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: Connection refused (ECONNREFUSED)
+
+=== URL: https://catalog.ldc.upenn.edu/LDC2013T19
+STATUS: ok
+ROBOTS: robots.txt unavailable
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: OntoNotes Release 5.0
+DISPLAYED_AUTHORS: Ralph Weischedel ; Martha Palmer ; Mitchell Marcus ; Eduard Hovy ; Sameer Pradhan ; Lance Ramshaw ; Nianwen Xue ; Ann Taylor ; Jeff Kaufman ; Michelle Franchini ; Mohammed El-Bachouti ; Robert Belvin ; Ann Houston
+YEAR: 2013
+NOTE: Release Date: October 16, 2013
+
+=== URL: https://openai.com/index/better-language-models/
+STATUS: blocked
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: HTTP 403 Forbidden
+
+=== URL: https://icscsi.org/library/Documents/Cyber_Events/E-ISAC%20-%20Analysis%20of%20the%20Cyber%20Attack%20on%20the%20Ukrainian%20Power%20Grid.pdf
+STATUS: robots
+ROBOTS: User-agent: ClaudeBot / Disallow: /
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: Not fetched; * group also disallows /library/
+
+=== URL: https://hunhoffe.github.io/publications/
+STATUS: ok
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: publications | Erika Hunhoff
+DISPLAYED_AUTHORS: Erika Hunhoff
+YEAR:
+NOTE: Publication list page of six works, no single main work
+
+=== URL: https://library.kab.ac.ug/Record/doaj-art-3cc63a78382d49549646712e538e8b93
+STATUS: error
+ROBOTS: robots.txt unavailable
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: Connection reset (ECONNRESET)
+
+=== URL: https://www.corelan.be/index.php/2011/12/31/exploit-writing-tutorial-part-11-heap-spraying-demystified/
+STATUS: error
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: Socket hang up on page fetch
+
+=== URL: https://nsarchive.gwu.edu/document/17281-air-university-c4isr-dark-webs
+STATUS: ok
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: Air University, C4ISR via Dark Webs: An Alternative Concept for Protecting Critical Information in Contested Cyberspace Environments, Dec 2016
+DISPLAYED_AUTHORS:
+YEAR: 2016
+NOTE: No authors displayed; date Dec 1, 2016
+
+=== URL: https://researchprofiles.ku.dk/da/publications/bandit-based-power-control-in-full-duplex-cooperative-relay-netwo/
+STATUS: ok
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: Bandit-Based Power Control in Full-Duplex Cooperative Relay Networks with Strict-Sense Stationary and Non-Stationary Wireless Communication Channels
+DISPLAYED_AUTHORS: Nikolaos Nomikos ; Mohammad Sadegh Talebi ; Themistoklis Charalambous ; Risto Wichman
+YEAR: 2022
+NOTE: Meta tags not visible to fetch tool

@@ -6,9 +6,12 @@ Run it in a fresh clone (the scripts write to <clone>/results/): it snapshots th
   p1_backend_table.py, p1_hypotheses.py, p1_h5_betabinom.py --boot 200, p2_render_manual_fp.py, p2_theory_final.py,
   p2_merge_retry.py + p1_backend_table.py --name p2_backend_table_retry (P2 main table after the night retry),
   p2_render_manual_fp.py --adjudicated (H4-render with the Amendment-5 adjudication),
-  p3_recheck.py stats --seed 43 (post-hoc recheck statistics from results/p3_recheck_merged.csv)
+  p3_recheck.py stats --seed 43 (post-hoc recheck statistics from results/p3_recheck_merged.csv),
+  p3d_theory_fix.py --seed 42 (erratum: R2, R3, k*, identifier tables; runs right after p2_theory_final.py),
+  p3e_recompute.py (completed cascade, *_p3e) and the P3F chain (deep-search states from cache_p3f, bounds, tier check,
+  numbers.json *_p3f; offline)
 (all --seed 42; no network). Inputs: results/ plus three derived files under $THS_DATASETS/_derived/43/
-(p1_groundtruth_refs_full.csv, p2_retry_ratelimited.csv, screen_p1/screen_refs.csv; Zenodo deposit). Then it compares
+(p1_groundtruth_refs_full.csv, p2_retry_ratelimited.csv, screen_p1/screen_refs.csv; GitHub release asset). Then it compares
   results/numbers.json        key by key (numbers: |a - b| <= 1e-9 * max(1, |a|); other values: equal)
   the CSV outputs             cell by cell as text, after dropping the `interim` column (the P1 stamp)
 and exits 1 on any difference. The render/screen and ground-truth stages need the arXiv sources and are not rerun.
@@ -29,13 +32,37 @@ STEPS = [["p1_backend_table.py", "--seed", "42"], ["p1_hypotheses.py", "--seed",
          ["p1_h5_betabinom.py", "--seed", "42", "--boot", "200"], ["p2_render_manual_fp.py", "--seed", "42"],
          ["p2_render_manual_fp.py", "--seed", "42", "--adjudicated"],
          ["p3_recheck.py", "stats", "--seed", "43"],
-         ["p2_theory_final.py", "--seed", "42"], ["p2_merge_retry.py"],
+         ["p2_theory_final.py", "--seed", "42"], ["p3d_theory_fix.py", "--seed", "42"], ["p2_merge_retry.py"],
          ["p1_backend_table.py", "--seed", "42", "--input", "{DERIVED}/p2_groundtruth_refs_full.csv",
-          "--name", "p2_backend_table_retry"]]
+          "--name", "p2_backend_table_retry"],
+         # P3E (Amendment 7): the whole chain again on the completed ground truth (derived file
+         # p3e_groundtruth_refs_full.csv), outputs with the suffix _p3e and numbers.json keys *_p3e
+         ["p3e_recompute.py"],
+         # P3F (Amendment 8): deep-search states from the stored answers (cache_p3f, offline), bounds, tier-rule check,
+         # POST-HOC profile, numbers.json keys *_p3f (results/p3f_rB_vs_gt3.json is an input: it needs the sheet key)
+         ["p3f_deep_search.py", "--evaluate"], ["p3f_bounds.py"], ["p3f_tier_validation.py"],
+         ["p3f_notfound_profile.py"], ["p3f_numbers.py"],
+         # P3G (POSTHOC_NOTE_P3G.md, post hoc, offline): branch split, both ends, bounds/decoys/families/periods,
+         # policy coding, numbers.json keys *_p3g
+         ["p3g_branch_split.py"], ["p3g_two_ends.py"], ["p3g_bounds.py"], ["p3g_policy_coding.py"], ["p3g_numbers.py"],
+         # P3H (Amendment 9 and the closure check, post hoc, offline): periods by branch, rule check of the stored web
+         # captures (cache_p3h), score with the released key and the author's file, numbers.json keys *_p3h
+         ["p3h_period_standardised.py"], ["p3h_evidence_check.py"], ["p3h_evidence_score.py"], ["p3h_numbers.py"]]
+NEEDS = {"p3f_deep_search.py --evaluate": ["_derived/43/cache_p3f", "arxiv_src_43/src"]}
 CSVS = ["p1_backend_table.csv", "p1_h5_betabinom.csv", "p2_render_manual_fp.csv", "p2_theory_final.csv",
-        "p2_backend_table_retry.csv", "p2_render_manual_fp_adjudicated.csv"]
+        "p2_backend_table_retry.csv", "p2_render_manual_fp_adjudicated.csv", "p3d_theory_fix.csv",
+        "p2_backend_table_retry_p3e.csv", "p1_h5_betabinom_p3e.csv", "p2_theory_final_p3e.csv", "p3d_theory_fix_p3e.csv",
+        "p1_h4_bias_p3e.csv", "p1_theory_tables_p3e.csv", "p1_period_compare_p3e.csv", "p3e_exploratory_p3e.csv",
+        "p3f_deep_search.csv", "p3f_tier_validation.csv",
+        "p3g_branch_split.csv", "p3g_two_ends.csv", "p3g_fake_gt3rule.csv", "p3g_notfound_split.csv", "p3g_policy_coding.csv",
+        "p3h_period_standardised.csv", "p3h_evidence_checked.csv", "p3h_evidence_score.csv", "p3h_two_ends.csv"]
 JSONS = ["numbers.json", "p1_hypotheses_h1h2.json", "p1_h5_betabinom.json", "p2_render_manual_fp.json",
-         "p2_render_manual_fp_adjudicated.json", "p3_recheck_stats.json"]
+         "p2_render_manual_fp_adjudicated.json", "p3_recheck_stats.json", "p3d_theory_fix.json",
+         "p2_backend_table_retry_p3e.json", "p1_hypotheses_h1h2_p3e.json", "p1_h5_betabinom_p3e.json",
+         "p3d_theory_fix_p3e.json", "p3_revision_checks_p3e.json", "p1_h4_bias_p3e.json", "p3e_exploratory_p3e.json",
+         "p3f_gt3_summary.json", "p3f_tier_validation.json", "p3f_posthoc.json", "p3f_notfound_profile.json",
+         "p3g_branch_split.json", "p3g_two_ends.json", "p3g_bounds.json", "p3g_policy_coding.json",
+         "p3h_period_standardised.json", "p3h_evidence_score.json", "p3h_two_ends.json"]
 
 
 def flat(d, pre=""):
@@ -51,7 +78,7 @@ def flat(d, pre=""):
 
 def same(a, b):
     if isinstance(a, (int, float)) and isinstance(b, (int, float)) and not isinstance(a, bool):
-        if a != a and b != b:  # both NaN
+        if (a != a and b != b) or a == b:  # both NaN, or equal (also +inf == +inf, where a - b is NaN)
             return True
         return abs(a - b) <= 1e-9 * max(1.0, abs(a))
     return a == b
@@ -61,9 +88,18 @@ def main():
     snap = Path(tempfile.mkdtemp(prefix="refscreen_snap_"))
     for f in CSVS + JSONS:
         shutil.copy2(RES / f, snap / f)
+    data = Path(__import__("os").environ.get("THS_DATASETS", r"D:\Datasets"))
+    skipped = []
     for step in STEPS:
         print(">>", " ".join(step), flush=True)
-        derived = Path(__import__("os").environ.get("THS_DATASETS", r"D:\Datasets")) / "_derived" / "43"
+        derived = data / "_derived" / "43"
+        # P4: inputs that are not redistributed (stored backend responses, arXiv sources). Without them the step is
+        # skipped and its committed output is used downstream and in the comparison.
+        missing = [n for n in NEEDS.get(" ".join(step), []) if not (data / n).exists()]
+        if missing:
+            print("   skipped: needs", ", ".join(missing), "(not redistributed); committed output kept", flush=True)
+            skipped.append(step[0])
+            continue
         r = subprocess.run([sys.executable, str(HERE / step[0])] + [a.replace("{DERIVED}", str(derived))
                                                                        for a in step[1:]], cwd=HERE,
                            env={**__import__("os").environ, "PYTHONIOENCODING": "utf-8"},
@@ -94,6 +130,8 @@ def main():
         n = int(dn.values.sum() + dt.values.sum())
         print(f"{f}: {a.size} cells, {n} differ")
         bad += n
+    if skipped:
+        print("skipped steps (inputs not redistributed):", ", ".join(skipped))
     print("REPRODUCED: all checked numbers identical" if not bad else f"DIFFERENCES: {bad}")
     sys.exit(1 if bad else 0)
 

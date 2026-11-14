@@ -1,0 +1,30 @@
+{
+ "label": "POST-HOC, descriptive (LQD 2026-11-09, extended 2026-11-12); acad1921 not found; not used for inference",
+ "gt3_file_sha256": "b1c99663c7c7ace4cb4318018b6b46d0e6937ada4ec09a1adf50103e006ad13e",
+ "n": 163,
+ "by_source": {
+  ".bib": 72,
+  ".bbl (GROBID)": 91
+ },
+ "extract_sign": {
+  ".bib": 1,
+  ".bbl (GROBID)": 26
+ },
+ "extract_sign_total": 27,
+ "by_sign": {
+  "title carries quote marks or a trailing 'in <venue>'": 9,
+  "title carries layout residue (1em plus, minus)": 0,
+  "title is a document identifier (Internet-Draft, RFC, draft-)": 1,
+  "venue field is a month or repeats the title": 17,
+  "title holds volume/page residue (vol., pp., no.)": 0
+ },
+ "by_tier": {
+  "J": 107,
+  "C": 50,
+  "P": 6
+ },
+ "cited_before_2000": 16,
+ "no_year": 9,
+ "title_le5_words": 48,
+ "median_words": 8.0
+}

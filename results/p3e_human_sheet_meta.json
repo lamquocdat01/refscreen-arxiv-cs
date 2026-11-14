@@ -1,0 +1,25 @@
+{
+ "provisional": false,
+ "seed_draw": 47,
+ "seed_shuffle": 45,
+ "pool_unresolved_2019_21_academic": 211,
+ "excluded_as_v_title": 0,
+ "pool_after": 211,
+ "avail": {
+  "J": 126,
+  "C": 69,
+  "P": 16
+ },
+ "alloc": {
+  "J": 16,
+  "C": 16,
+  "P": 16
+ },
+ "n_u": 48,
+ "n_v": 20,
+ "n": 68,
+ "u_with_pass1": 1,
+ "key_sha256": "b4bba6e0f361bc56b203fea1339fbad6c038eefbb327aced8fd563f204266fd7",
+ "sheet_sha256": "b97720564dadc7bd7a6756c6fafbdc15a52df0da2cf16e0ef2d9bc3479977b8d",
+ "rules_sha256": "63e4b101f36f91f3e9a9f56c033e780341fa3c7258984f951190af7794deed73"
+}

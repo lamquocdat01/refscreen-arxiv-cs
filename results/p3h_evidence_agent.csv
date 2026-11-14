@@ -1,0 +1,101 @@
+ID,url,url_class,note
+E001,,,no page found
+E002,,,"no page found; only related GitHub project VoIS-Net, authors unconfirmed"
+E003,https://misc0110.net/files/drama_wp.pdf,4,"author site thesis PDF; search snippet shows title/author, PDF text unreadable"
+E004,,,no WSJ page found
+E005,,,no page found
+E006,https://dblp.uni-trier.de/rec/conf/sigir/ManevitzY00.html,3,DBLP SIGIR 2000; different title (only positive examples); not fetched
+E007,,,no page found
+E008,,,no page found; only Swimmer VB2008 slides with another title
+E009,https://www.frontiersin.org/articles/10.3389/fcomp.2020.00009/full,1,"publisher page; actual title ""A Review of Generalizable Transfer Learning...""; not fetched"
+E010,https://libcat.library.tamu.edu/Record/in00000323069,3,"library catalogue; actual title says ""flow"", not ""fluid""; not fetched"
+E011,https://www.smartgrid.gov/document/arizona_southern_california_outages_september_8_2011_causes_and_recommendations,1,smartgrid.gov report page; not fetched
+E012,,,only Scribd copy via proxy mirror; no journal page found
+E013,https://pure.fh-ooe.at/en/publications/a-cost-optimized-data-acquisition-system-for-predictive-maintenan/,2,FH Upper Austria repository; authors not in snippet; not fetched
+E014,https://www.cs.ucdavis.edu/~rogaway/papers/siv.pdf,4,"Rogaway's UC Davis page, SIV spec PDF; not fetched"
+E015,https://lilianweng.github.io/posts/2020-01-29-curriculum-rl/,1,author blog post; URL taken from tag page
+E016,https://www.theguardian.com/cities/datablog/2017/feb/13/most-polluted-cities-world-listed-region,1,"Guardian URL from search; byline ""Guardian Staff""; not fetched (blocked)"
+E017,,,no page found
+E018,https://projectzero.google/2015/03/exploiting-dram-rowhammer-bug-to-gain.html,1,"Project Zero blog post by Seaborn and Dullien, not fetched"
+E019,,,no page found; only the U-Net MICCAI paper turned up
+E020,https://arxiv.org/abs/1602.04951,2,arXiv record; title written with Q($\lambda$)
+E021,,,no English-titled page found; German original 1894 only
+E022,,,BBC History page not found; bbc.co.uk not accessible to search
+E023,https://reports.weforum.org/global-information-technology-report-2015/,1,"WEF report page, not fetched"
+E024,https://www.nongnu.org/lwip/2_1_x/,1,"lwIP project docs; page title ""lwIP 2.1.0"", may fail title check"
+E025,https://openaccess.thecvf.com/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html,1,CVF open access page; full title longer than cited
+E026,https://epthinktank.eu/2015/01/27/ten-technologies-which-could-change-our-lives/,1,"EPRS think tank page, not fetched"
+E027,https://www.wiley-vch.de/en/areas-interest/mathematics-statistics/statistical-learning-theory-978-0-471-03003-4,1,"Wiley book page, not fetched"
+E028,https://owasp.org/www-project-top-ten/2017/Top_10,1,"OWASP Top Ten 2017 page, not fetched"
+E029,,,no page found
+E030,,,no page found
+E031,,,no page found; only the 1986 JCM paper turned up
+E032,https://d7qzviu3xw2xc.cloudfront.net/alexa/alexaprize/assets/pdf/2018/Gunrock.pdf,1,"Alexa Prize 2018 proceedings PDF, not fetched"
+E033,,,blog post not found in results; only encyclopedia entries
+E034,https://infocondb.org/con/black-hat/black-hat-usa-2012/the-info-leak-era-on-software-exploitation,3,"InfoconDB Black Hat 2012 talk record, not fetched"
+E035,,,no page found
+E036,https://www.aminer.cn/pub/619b95d61c45e57ce9dd7c5e/metrics-framework-of-cyber-operations-on-command-and-control,3,AMiner record (ECIW 2012); fetch showed no title or authors
+E037,,,no page found
+E038,,,no page found; only cited in other works
+E039,https://find.library.upatras.gr/Record/80591/Description?lng=en,3,"catalogue record for the 1979 book only, chapter not shown; not fetched"
+E040,https://www.blackhat.com/docs/us-16/materials/us-16-Weston-Windows-10-Mitigation-Improvements.pdf,1,Black Hat USA 2016 slides (Weston); not fetched
+E041,,,no page found
+E042,,,no page found
+E043,,,no page found
+E044,https://netdevconf.org/2.2/papers/brakmo-tcpbpf-talk.pdf,1,netdev 2.2 paper PDF; not fetched
+E045,https://www.mitre.org/news-insights/publication/trusted-automated-exchange-indicator-information-taxiitm,1,MITRE publication page; not fetched
+E046,https://crackedlabs.org/en/data-against-people,1,Cracked Labs project page; not fetched
+E047,,,no page found
+E048,https://www.rfc-editor.org/info/rfc3917,1,RFC Editor info page; not fetched
+E049,,,no page found
+E050,https://yann.lecun.com/exdb/mnist,1,official MNIST page; page title wording differs; not fetched
+E051,https://arxiv.org/abs/1710.04833v3,2,arXiv record; not fetched
+E052,,,no page found; closest are different titles by other authors
+E053,,,no page found; closest are different titles by other authors
+E054,https://people.maths.ox.ac.uk/nanda/perseus/index.html,4,"author's project page, title and Nanda confirmed"
+E055,https://www.intel.com/content/www/us/en/content-details/338023.html,1,"Intel datasheet page Vol 1 of 2, not fetched"
+E056,https://catalog.ldc.upenn.edu/LDC2013T19,3,"LDC catalogue entry, not fetched"
+E057,https://wiki.owasp.org/index.php/Top_10_2013,1,OWASP wiki page; Wichers not named on page
+E058,,,no page found; closest is a 2011 Leblanc et al. paper
+E059,,,no page found
+E060,https://sites.tufts.edu/eeseniordesignhandbook/?p=2439,4,"Tufts project ""Beamforming Phased Array for GPS Spoofing"", title differs"
+E061,https://openai.com/index/better-language-models/,1,"OpenAI blog post, not fetched (403)"
+E062,https://www.nokia.com/bell-labs/publications-and-media/publications/energy-efficiency-analysis-of-the-reference-systems-areas-of-improvements-and-target-breakdown/,4,"Nokia Bell Labs entry, not fetched (403)"
+E063,https://www.indrastra.com/2017/09/Military-Applications-of-Blockchain-Technology-003-09-2017-0005.html,1,"IndraStra article by Kulshrestha, not fetched"
+E064,https://icscsi.org/library/Documents/Cyber_Events/E-ISAC%20-%20Analysis%20of%20the%20Cyber%20Attack%20on%20the%20Ukrainian%20Power%20Grid.pdf,1,"PDF of the E-ISAC/SANS report on a third-party library, not fetched"
+E065,https://www.uni-due.de/imperia/md/content/srs/forschung/veroeffentlichungen/09380554.pdf,4,"author group PDF; title lacks ""current"", not fetched"
+E066,,,"only third-party mirror found, no vox.com page"
+E067,https://www.kaggle.com/code/cdeotte/triple-stratified-kfold-with-tfrecords,1,"Kaggle notebook by Deotte, not fetched"
+E068,,,no page found
+E069,,,no page found; only a different 1974/1977 Mockus title exists
+E070,https://hunhoffe.github.io/publications/,4,"author publications page, poster entry with NSDI 2020"
+E071,,,no page found
+E072,,,no page found; only related Akter et al. papers seen
+E073,https://www.computing.co.uk/analysis/2235886/case-study-the-google-sdn-wan,1,"Computing article page, not fetched (403)"
+E074,,,no page found
+E075,https://www.cs.ucdavis.edu/~rogaway/papers/keywrap.html,4,"author page; longer full title, EUROCRYPT 2006 key-wrap paper"
+E076,https://dl.packetstormsecurity.net/defcon10/dc10-endler-idefense/dc10-iDEFENSESessionIDs.pdf,1,Packet Storm PDF copy; title not confirmed in fetch
+E077,https://library.kab.ac.ug/Record/doaj-art-3cc63a78382d49549646712e538e8b93,3,"library catalogue (DOAJ) record, fetch returned 404"
+E078,https://yann.lecun.com/exdb/mnist,1,"official MNIST page, not fetched (connection refused)"
+E079,,,no page found
+E080,https://orbi.uliege.be/handle/2268/245268,2,"ORBi repository record, not fetched"
+E081,https://repository.tudelft.nl/record/uuid:60b241e8-8b92-4dff-a7e7-e5ad40b62ee1,2,"TU Delft repository, MSc thesis record"
+E082,,,no page found
+E083,https://www.corelan.be/index.php/2011/12/31/exploit-writing-tutorial-part-11-heap-spraying-demystified/,1,"Corelan blog post, title has ""Exploit writing tutorial part 11"" prefix"
+E084,,,no page found
+E085,https://www.thieme-connect.com/products/ejournals/html/10.1055/s-0038-1627819,1,"Thieme publisher page, not fetched (bot check)"
+E086,https://www.ic.unicamp.br/~fkm/software/cplex/Cplex121-Manual.pdf,4,"V12.1 manual PDF on university page, not fetched"
+E087,https://www.theguardian.com/news/2018/mar/17/cambridge-analytica-facebook-influence-us-election,1,"Guardian article from search, not fetched (fetch refused)"
+E088,https://arxiv.org/abs/1707.04131,2,arXiv record of Foolbox paper; v0.8.0 is earlier title
+E089,https://nsarchive.gwu.edu/document/17281-air-university-c4isr-dark-webs,2,"NSArchive copy; title matches, author name not on page"
+E090,,,no page found
+E091,,,no page found; thesis only cited elsewhere
+E092,https://proceedings.mlr.press/v119/zhang20d.html,1,"PMLR page; full title spells out ""Generative Adversarial Imitation Learning"""
+E093,,,no page found
+E094,https://sia.tech/whitepaper.pdf,1,"Sia whitepaper from search, not fetched"
+E095,https://researchprofiles.ku.dk/da/publications/bandit-based-power-control-in-full-duplex-cooperative-relay-netwo/,4,"closest found: 2022 OJCOMS journal paper, longer title; no ICC 2021 found"
+E096,,,no page found
+E097,,,no page found
+E098,,,no page found
+E099,https://cdn.gurobi.com/documentation/8.0/refman/index.html,1,"Gurobi reference manual (v8.0), not fetched"
+E100,,,no page found

@@ -5,6 +5,8 @@ Every sentence of submission_package/latex/main.tex that prints a number through
 the sentence with the values filled in, the keys, and for each key its source file and field
 (results/numbers_ms_sources.csv). A row is marked has_interval when the sentence prints an interval key (ci*, *Ci*)
 or a k/n count; rows in the abstract, introduction and conclusion are marked headline.
+A sentence affected by the erratum carries its item number in erratum_ref (P3D/ERRATUM_43.md); sentences that state an
+erratum point without printing a number are kept as rows too.
 Output: submission_package/claims.csv
 Usage: python make_claims.py
 """
@@ -17,12 +19,28 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from ground_truth import ROOT  # noqa: E402
 
 TEX = ROOT / "submission_package" / "latex" / "main.tex"
+ERR_KEYS = [(r"^(scenId|kIdOnly|pTwoIdOnly)", "E1"), (r"^kMedR2|^ruleFull R2|^ruleCrR2", "E2"), (r"^kIdMed|^pTwoIdMed", "E2 E6"),
+            (r"^kMedR3|^ruleCrR3|^ruleFullR3", "E3"), (r"^rule(Full|Cr)R1", "E4")]
+ERR_TEXT = [(r"recall guarantee|guarantee on recall|false rejects", "E1"), (r"in.sample", "E4"), (r"not demonstrate|consistent with", "E4"),
+            (r"sufficient|only route|under \$B_0\$|conditional on \$B_0\$", "E7"), (r"nearly tautological|tautolog", "E12")]
+
+
+def erratum_ref(keys, text):
+    hit = set()
+    for pat, item in ERR_KEYS:
+        if any(re.search(pat, k) for k in keys):
+            hit.update(item.split())
+    for pat, item in ERR_TEXT:
+        if re.search(pat, text):
+            hit.update(item.split())
+    return " ".join(sorted(hit, key=lambda s: int(s[1:])))
 
 
 def main():
     src = {r["key"]: r for r in csv.DictReader((ROOT / "results" / "numbers_ms_sources.csv").open(encoding="utf-8"))}
     t = TEX.read_text(encoding="utf-8")
-    t = t[t.index("\\abstract{"):t.index("\\begin{appendices}")]
+    end = "\\begin{appendices}" if "\\begin{appendices}" in t else "\\backmatter"  # P4: the appendix moved to S1
+    t = t[t.index("\\abstract{"):t.index(end)]
     rows, section = [], "Abstract"
     for para in re.split(r"\n\s*\n", t):
         m = re.search(r"\\(?:sub)?section\{([^}]*)\}", para)
@@ -32,7 +50,7 @@ def main():
             section = "Back matter"
         for sent in re.split(r"(?<=[.;])\s+(?=[A-Z\\(])", para):
             keys = re.findall(r"\\nv\{([^}]+)\}", sent)
-            if not keys:
+            if not keys and not erratum_ref([], sent):
                 continue
             text = re.sub(r"\\nv\{([^}]+)\}", lambda k: src[k.group(1)]["value"], sent)
             text = " ".join(re.sub(r"\\(cite[pt]?|label|ref)\{[^}]*\}", "", text).split())
@@ -41,7 +59,8 @@ def main():
                 claim=text[:400], keys=" ".join(keys),
                 sources=" | ".join(sorted({src[k]["source"] for k in keys})),
                 fields=" | ".join(f"{k}={src[k]['field']}" for k in keys),
-                has_interval=any(re.search(r"(^ci|Ci|CiHi|CiLo)", k) for k in keys) or bool(re.search(r"\d+/\d", text))))
+                has_interval=any(re.search(r"(^ci|Ci|CiHi|CiLo)", k) for k in keys) or bool(re.search(r"\d+/\d", text)),
+                erratum_ref=erratum_ref(keys, sent)))
     out = ROOT / "submission_package" / "claims.csv"
     with out.open("w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=list(rows[0]))

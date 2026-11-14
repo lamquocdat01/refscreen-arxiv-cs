@@ -1,0 +1,429 @@
+{
+ "label": "cascade completion (Amendment 7 (a))",
+ "n_targets": 6181,
+ "passes": [
+  {
+   "pass": 1,
+   "start": "2026-11-07T10:25:12Z",
+   "end": "2026-11-07T11:33:05Z",
+   "asked": 6181,
+   "completed_in_pass": 65,
+   "openalex_refused": true,
+   "requests": {
+    "openalex": 1,
+    "s2": 461
+   },
+   "refusals": {
+    "openalex": 1,
+    "s2": 434
+   },
+   "first_refusal": {
+    "openalex": "2026-11-07T10:25:13Z HTTP 429",
+    "s2": "2026-11-07T10:29:22Z HTTP 429"
+   }
+  },
+  {
+   "pass": 2,
+   "start": "2026-11-07T12:33:11Z",
+   "end": "2026-11-07T13:28:22Z",
+   "asked": 6116,
+   "completed_in_pass": 0,
+   "openalex_refused": true,
+   "requests": {
+    "openalex": 1,
+    "s2": 388
+   },
+   "refusals": {
+    "openalex": 1,
+    "s2": 372
+   },
+   "first_refusal": {
+    "openalex": "2026-11-07T12:33:11Z HTTP 429",
+    "s2": "2026-11-07T12:34:39Z HTTP 429"
+   }
+  },
+  {
+   "pass": 3,
+   "start": "2026-11-08T03:45:38Z",
+   "end": "2026-11-08T03:47:01Z",
+   "asked": 262,
+   "completed_in_pass": 81,
+   "openalex_refused": false,
+   "requests": {
+    "openalex": 79
+   },
+   "refusals": {},
+   "first_refusal": {},
+   "addendum": "A",
+   "scope": "2019-21 academic (J/C/P)",
+   "reached": 81,
+   "stop_reason": "budget (header)",
+   "free_ram_gb_start": 11.2,
+   "openalex_budget": {
+    "remaining_first": 830,
+    "remaining": 40,
+    "credits_per_call": 10,
+    "limit": 1000,
+    "reserve": 50,
+    "stop_time": "2026-11-08T03:47:01Z"
+   }
+  },
+  {
+   "pass": 4,
+   "start": "2026-11-08T04:18:19Z",
+   "end": "2026-11-08T04:35:18Z",
+   "asked": 1579,
+   "completed_in_pass": 990,
+   "openalex_refused": false,
+   "requests": {
+    "openalex": 950
+   },
+   "refusals": {},
+   "first_refusal": {},
+   "addendum": "2",
+   "openalex_key": true,
+   "scope": "academic (J/C/P), 2019-21 first, then 2024-26",
+   "reached": 990,
+   "not_asked_after_deadline": 0,
+   "stop_reason": "budget (header)",
+   "free_ram_gb_start": 6.4,
+   "openalex_budget": {
+    "remaining_first": 9990,
+    "remaining": 490,
+    "credits_per_call": 10,
+    "limit": 10000,
+    "reserve": 500,
+    "stop_time": "2026-11-08T04:35:18Z"
+   }
+  },
+  {
+   "pass": 5,
+   "start": "2026-11-09T09:05:14Z",
+   "end": "2026-11-09T09:22:36Z",
+   "asked": 562,
+   "completed_in_pass": 561,
+   "openalex_refused": false,
+   "requests": {
+    "openalex": 526,
+    "s2": 63
+   },
+   "refusals": {
+    "s2": 59
+   },
+   "first_refusal": {
+    "s2": "2026-11-09T09:06:26Z HTTP 429"
+   },
+   "addendum": "2",
+   "openalex_key": true,
+   "scope": "academic (J/C/P), 2019-21 first, then 2024-26",
+   "reached": 562,
+   "not_asked_after_deadline": 0,
+   "stop_reason": "all reached",
+   "free_ram_gb_start": 5.8,
+   "openalex_budget": {
+    "remaining_first": 10000,
+    "remaining": 4740,
+    "credits_per_call": 10,
+    "limit": 10000,
+    "reserve": 500,
+    "stop_time": null
+   }
+  },
+  {
+   "pass": 6,
+   "start": "2026-11-10T00:10:00Z",
+   "end": "2026-11-10T00:10:18Z",
+   "asked": 1,
+   "completed_in_pass": 0,
+   "openalex_refused": false,
+   "requests": {
+    "s2": 2
+   },
+   "refusals": {
+    "s2": 2
+   },
+   "first_refusal": {
+    "s2": "2026-11-10T00:10:01Z HTTP 429"
+   },
+   "addendum": "2",
+   "openalex_key": true,
+   "scope": "academic (J/C/P), 2019-21 first, then 2024-26",
+   "reached": 1,
+   "not_asked_after_deadline": 0,
+   "stop_reason": "all reached",
+   "free_ram_gb_start": 11.4,
+   "openalex_budget": {
+    "remaining_first": null,
+    "remaining": null,
+    "credits_per_call": null,
+    "limit": null,
+    "reserve": null,
+    "stop_time": null
+   }
+  }
+ ],
+ "finished": true,
+ "by_period_tier_state": [
+  {
+   "period": "2019-21",
+   "tier": "B",
+   "state_before": "resolved",
+   "n": 54,
+   "left": 0
+  },
+  {
+   "period": "2019-21",
+   "tier": "B",
+   "state_before": "unresolved",
+   "n": 42,
+   "left": 0
+  },
+  {
+   "period": "2019-21",
+   "tier": "C",
+   "state_before": "resolved",
+   "n": 62,
+   "left": 0
+  },
+  {
+   "period": "2019-21",
+   "tier": "C",
+   "state_before": "unresolved",
+   "n": 43,
+   "left": 0
+  },
+  {
+   "period": "2019-21",
+   "tier": "J",
+   "state_before": "resolved",
+   "n": 70,
+   "left": 0
+  },
+  {
+   "period": "2019-21",
+   "tier": "J",
+   "state_before": "unresolved",
+   "n": 98,
+   "left": 0
+  },
+  {
+   "period": "2019-21",
+   "tier": "P",
+   "state_before": "resolved",
+   "n": 5,
+   "left": 0
+  },
+  {
+   "period": "2019-21",
+   "tier": "P",
+   "state_before": "unresolved",
+   "n": 13,
+   "left": 0
+  },
+  {
+   "period": "2019-21",
+   "tier": "S",
+   "state_before": "unresolved",
+   "n": 50,
+   "left": 0
+  },
+  {
+   "period": "2019-21",
+   "tier": "W",
+   "state_before": "resolved",
+   "n": 70,
+   "left": 0
+  },
+  {
+   "period": "2019-21",
+   "tier": "W",
+   "state_before": "unresolved",
+   "n": 555,
+   "left": 0
+  },
+  {
+   "period": "2024-26",
+   "tier": "B",
+   "state_before": "rate-limited",
+   "n": 3,
+   "left": 3
+  },
+  {
+   "period": "2024-26",
+   "tier": "B",
+   "state_before": "resolved",
+   "n": 210,
+   "left": 203
+  },
+  {
+   "period": "2024-26",
+   "tier": "B",
+   "state_before": "unresolved",
+   "n": 299,
+   "left": 299
+  },
+  {
+   "period": "2024-26",
+   "tier": "C",
+   "state_before": "rate-limited",
+   "n": 2,
+   "left": 1
+  },
+  {
+   "period": "2024-26",
+   "tier": "C",
+   "state_before": "resolved",
+   "n": 143,
+   "left": 0
+  },
+  {
+   "period": "2024-26",
+   "tier": "C",
+   "state_before": "unresolved",
+   "n": 279,
+   "left": 0
+  },
+  {
+   "period": "2024-26",
+   "tier": "J",
+   "state_before": "rate-limited",
+   "n": 1,
+   "left": 0
+  },
+  {
+   "period": "2024-26",
+   "tier": "J",
+   "state_before": "resolved",
+   "n": 362,
+   "left": 0
+  },
+  {
+   "period": "2024-26",
+   "tier": "J",
+   "state_before": "unresolved",
+   "n": 446,
+   "left": 0
+  },
+  {
+   "period": "2024-26",
+   "tier": "P",
+   "state_before": "resolved",
+   "n": 17,
+   "left": 0
+  },
+  {
+   "period": "2024-26",
+   "tier": "P",
+   "state_before": "unresolved",
+   "n": 162,
+   "left": 0
+  },
+  {
+   "period": "2024-26",
+   "tier": "S",
+   "state_before": "rate-limited",
+   "n": 3,
+   "left": 3
+  },
+  {
+   "period": "2024-26",
+   "tier": "S",
+   "state_before": "resolved",
+   "n": 4,
+   "left": 4
+  },
+  {
+   "period": "2024-26",
+   "tier": "S",
+   "state_before": "unresolved",
+   "n": 596,
+   "left": 578
+  },
+  {
+   "period": "2024-26",
+   "tier": "W",
+   "state_before": "rate-limited",
+   "n": 11,
+   "left": 11
+  },
+  {
+   "period": "2024-26",
+   "tier": "W",
+   "state_before": "resolved",
+   "n": 135,
+   "left": 118
+  },
+  {
+   "period": "2024-26",
+   "tier": "W",
+   "state_before": "unresolved",
+   "n": 2446,
+   "left": 2398
+  }
+ ],
+ "academic_2019-21": {
+  "targets": 291,
+  "unresolved_before": 154,
+  "unresolved_left": 0,
+  "resolved_by_completion": 16,
+  "left_any": 0
+ },
+ "academic_2024-26": {
+  "targets": 1412,
+  "unresolved_before": 887,
+  "unresolved_left": 0,
+  "resolved_by_completion": 66,
+  "left_any": 1
+ },
+ "by_backend": {
+  "openalex": {
+   "before": 6181,
+   "left": 3617
+  },
+  "s2": {
+   "before": 20,
+   "left": 8
+  },
+  "dblp": {
+   "before": 0,
+   "left": 0
+  }
+ },
+ "state_change": [
+  [
+   "rate-limited",
+   "rate-limited",
+   8
+  ],
+  [
+   "rate-limited",
+   "resolved",
+   3
+  ],
+  [
+   "rate-limited",
+   "unresolved",
+   9
+  ],
+  [
+   "resolved",
+   "resolved",
+   1132
+  ],
+  [
+   "unresolved",
+   "resolved",
+   104
+  ],
+  [
+   "unresolved",
+   "unresolved",
+   4925
+  ]
+ ],
+ "cache_p3e_fetched": [
+  "2026-11-07",
+  "2026-11-10"
+ ],
+ "cache_last_date": "2026-11-10"
+}

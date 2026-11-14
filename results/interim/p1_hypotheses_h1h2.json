@@ -1,0 +1,110 @@
+{
+ "seed": 42,
+ "boot": 1000,
+ "period": "2019-21",
+ "definition": "def 1",
+ "columns": {
+  "crossref": {
+   "label": "Crossref-only",
+   "primary": false,
+   "H1": {
+    "k": 3317,
+    "n": 10973,
+    "n_papers": 299,
+    "u_A": 0.30228743278957443,
+    "paper_bootstrap95": [
+     0.2769483745588982,
+     0.32865301994554647
+    ],
+    "wilson95": [
+     0.29376491358447815,
+     0.3109483401806122
+    ],
+    "PASS": false,
+    "strong": false
+   },
+   "H2": {
+    "k_W": 926,
+    "n_W": 1175,
+    "u_W": 0.7880851063829787,
+    "u_A": 0.30228743278957443,
+    "ratio": 2.6070720145735375,
+    "ratio_paper_bootstrap95": [
+     2.315100480546034,
+     2.9040280332738893
+    ],
+    "PASS": false,
+    "strong": false
+   }
+  },
+  "dblp": {
+   "label": "+DBLP",
+   "primary": false,
+   "H1": {
+    "k": 442,
+    "n": 10973,
+    "n_papers": 299,
+    "u_A": 0.04028068896382029,
+    "paper_bootstrap95": [
+     0.0343360983424499,
+     0.04700146071966904
+    ],
+    "wilson95": [
+     0.036759839354461914,
+     0.044123317418065446
+    ],
+    "PASS": true,
+    "strong": true
+   },
+   "H2": {
+    "k_W": 844,
+    "n_W": 1175,
+    "u_W": 0.7182978723404255,
+    "u_A": 0.04028068896382029,
+    "ratio": 17.832313468759025,
+    "ratio_paper_bootstrap95": [
+     15.006120238317102,
+     21.262162472524782
+    ],
+    "PASS": true,
+    "strong": true
+   }
+  },
+  "s2": {
+   "label": "+S2 PROVISIONAL (chưa hoàn tất, n_pending=17)",
+   "primary": false,
+   "H1": {
+    "k": 233,
+    "n": 10973,
+    "n_papers": 299,
+    "u_A": 0.021233937847443724,
+    "paper_bootstrap95": [
+     0.01703081932089615,
+     0.026194948520292975
+    ],
+    "wilson95": [
+     0.018699348183082717,
+     0.02410363806024614
+    ],
+    "PASS": true,
+    "strong": true
+   },
+   "H2": {
+    "k_W": 727,
+    "n_W": 1175,
+    "u_W": 0.6187234042553191,
+    "u_A": 0.021233937847443724,
+    "ratio": 29.138420235594925,
+    "ratio_paper_bootstrap95": [
+     22.89567095124652,
+     37.086126897960185
+    ],
+    "PASS": true,
+    "strong": true
+   }
+  }
+ },
+ "interim": true,
+ "s2_pending": 17,
+ "interim_note": "INTERIM: Crossref-only and +DBLP exact; +S2 provisional"
+}

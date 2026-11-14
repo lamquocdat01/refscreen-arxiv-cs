@@ -1,0 +1,360 @@
+{
+ "label": "POST HOC (POSTHOC_NOTE_P3G.md P4-P8, P10, P12); offline",
+ "seed": 42,
+ "B": 1000,
+ "P4_decoys": {
+  "build": {
+   "pool": 9508,
+   "skipped": {
+    "same_paper": 2,
+    "A_no_surname_or_year": 2,
+    "sim_ge_080": 0
+   },
+   "n_dsplice": 200,
+   "source": "P3F/P3F_LOG.md 2026-11-08T09:13:06Z (build log)"
+  },
+  "note": "every kept decoy has sim < 0.80 with both source titles by construction; the only record sharing its surnames and year is source A, which the rule cannot match",
+  "unanswered_as_not_found": {
+   "k": 0,
+   "n": 200,
+   "f": 0.0,
+   "f_hi": 0.018275340355136237,
+   "fp_lower_A": 0.0039054016915547785
+  },
+  "unanswered_as_found": {
+   "k": 4,
+   "n": 200,
+   "f": 0.02,
+   "f_hi": 0.05041360908989634,
+   "fp_lower_A": 0.003374444360676609
+  }
+ },
+ "P6_url": {
+  "B": {
+   "title source": 6
+  },
+  "S": {
+   "2xx": 41,
+   "3xx": 12,
+   "wayback": 3
+  },
+  "W": {
+   "3xx": 267,
+   "2xx": 177,
+   "wayback": 81,
+   "title source": 14
+  },
+  "codes_3xx": {
+   "http 301": 209,
+   "http 302": 59,
+   "http 308": 2,
+   "http 307": 1,
+   "http 303": 1
+  },
+  "unit": "rows"
+ },
+ "P7_periods": {
+  "rn|J": {
+   "pre": 0.030024344062753585,
+   "post": 0.025029466823823062,
+   "k_pre": 111,
+   "n_pre": 3697,
+   "k_post": 361,
+   "n_post": 14423,
+   "diff": -0.004994877238930523,
+   "ci": [
+    -0.016519267070675386,
+    0.0050505358517338415
+   ],
+   "se": 0.005355183742344803
+  },
+  "fu_counts|J": {
+   "2019-21": {
+    "F": 17,
+    "U": 128
+   },
+   "2024-26": {
+    "F": 45,
+    "U": 406
+   }
+  },
+  "rn|C": {
+   "pre": 0.009135628952916374,
+   "post": 0.010665104014063873,
+   "k_pre": 52,
+   "n_pre": 5692,
+   "k_post": 182,
+   "n_post": 17065,
+   "diff": 0.0015294750611474991,
+   "ci": [
+    -0.002830456110072556,
+    0.00612019530841252
+   ],
+   "se": 0.0022377545998292646
+  },
+  "fu_counts|C": {
+   "2019-21": {
+    "F": 19,
+    "U": 71
+   },
+   "2024-26": {
+    "F": 79,
+    "U": 261
+   }
+  },
+  "rn|P": {
+   "pre": 0.003787878787878788,
+   "post": 0.00934749069788547,
+   "k_pre": 6,
+   "n_pre": 1584,
+   "k_post": 103,
+   "n_post": 11019,
+   "diff": 0.005559611910006682,
+   "ci": [
+    0.0003801676144595291,
+    0.01035974811760449
+   ],
+   "se": 0.0025983275200259955
+  },
+  "fu_counts|P": {
+   "2019-21": {
+    "F": 10,
+    "U": 16
+   },
+   "2024-26": {
+    "F": 57,
+    "U": 160
+   }
+  },
+  "rn|A": {
+   "pre": 0.015401439897931286,
+   "post": 0.01519749688286635,
+   "k_pre": 169,
+   "n_pre": 10973,
+   "k_post": 646,
+   "n_post": 42507,
+   "diff": -0.00020394301506493524,
+   "ci": [
+    -0.004641277365586343,
+    0.004140173275809569
+   ],
+   "se": 0.0022298509146611465
+  },
+  "fu_counts|A": {
+   "2019-21": {
+    "F": 46,
+    "U": 215
+   },
+   "2024-26": {
+    "F": 181,
+    "U": 827
+   }
+  },
+  "un|P_noid": {
+   "pre": 0.0,
+   "post": 0.05591397849462366,
+   "k_pre": 0,
+   "n_pre": 101,
+   "k_post": 26,
+   "n_post": 465,
+   "diff": 0.05591397849462366,
+   "ci": [
+    0.025814354210368595,
+    0.09587015557396666
+   ],
+   "se": 0.01862249511692811
+  },
+  "rn|P_noid": {
+   "pre": 0.0,
+   "post": 0.047311827956989246,
+   "k_pre": 0,
+   "n_pre": 101,
+   "k_post": 22,
+   "n_post": 465,
+   "diff": 0.047311827956989246,
+   "ci": [
+    0.01848392257082799,
+    0.08737494393383051
+   ],
+   "se": 0.017839774054588864
+  },
+  "power_rn_A_039": {
+   "se": 0.0022298509146611465,
+   "delta": 0.0039,
+   "power": 0.4165460586578091
+  },
+  "rn_notfound_only|A": {
+   "pre": 0.014945775995625627,
+   "post": 0.014774037217399488,
+   "k_pre": 164,
+   "n_pre": 10973,
+   "k_post": 628,
+   "n_post": 42507,
+   "diff": -0.00017173877822613919,
+   "ci": [
+    -0.00457125089194718,
+    0.00408834089617381
+   ],
+   "se": 0.002191318471842851
+  },
+  "why_same_ci": "both use the same bootstrap draws (seed 42, same papers); the two numerators differ only by the 5 and 18 unanswered rows, so the quantiles differ in the third decimal"
+ },
+ "P10_tier_binary": {
+  "n": 54468,
+  "binary_agreement": 0.9215502680472938,
+  "precision_academic": 0.9413724438998239,
+  "precision_nonacademic": 0.459375,
+  "rule_academic_record_nonacademic": 3062,
+  "rule_nonacademic_record_academic": 1211,
+  "rule_W": 1280,
+  "rule_W_record_JCP": 920,
+  "rule_W_record_JCP_share": 0.71875,
+  "scope": "resolved references only; record type of the matched registry record"
+ },
+ "P12_h4_auto": {
+  "weights": {
+   "J": 0.38143846063592635,
+   "C": 0.6067112519066057,
+   "P": 0.011850287457468028
+  },
+  "fp_certified": 0.0008557980316645272,
+  "fp_nonid_lower": 0.0035196704745253755,
+  "fp_nonid_upper": 0.02240994954828112,
+  "diff_lower": 0.002663872442860848,
+  "diff_upper": 0.021554151516616594,
+  "diff_lower_ci": [
+   0.0005414048800869751,
+   0.0047290368701224175
+  ],
+  "diff_upper_ci": [
+   0.016474344099295078,
+   0.027721016640908633
+  ],
+  "verdict": "supports",
+  "label": "H4-auto (exploratory, Amendment 8 (J))",
+  "n_nonid_academic": 8523,
+  "n_certified": 2337,
+  "effect_lower_end_points": 0.2663872442860848,
+  "effect_upper_end_points": 2.1554151516616593
+ },
+ "P8_notfound_split": {
+  "unit_rows": {
+   "a_best_060_080": 78,
+   "a_best_below_060": 76,
+   "b_candidate_fails_author_year": 10
+  },
+  "by_branch_rows": {
+   "bbl": {
+    "a_best_060_080": 44,
+    "a_best_below_060": 41,
+    "b_candidate_fails_author_year": 7
+   },
+   "bib": {
+    "a_best_060_080": 34,
+    "a_best_below_060": 35,
+    "b_candidate_fails_author_year": 3
+   }
+  },
+  "distinct": {
+   "a_best_060_080": 77,
+   "a_best_below_060": 76,
+   "b_candidate_fails_author_year": 10
+  },
+  "n_rows": 164,
+  "n_distinct": 163
+ },
+ "P5_fake_families": {
+  "badalova_problematic": {
+   "n_items": 33,
+   "n_with_stored_answer": 33,
+   "n_with_author_candidates": 33,
+   "found": 9,
+   "f": 0.2727272727272727,
+   "cp95": [
+    0.13299638871081487,
+    0.4552384277607818
+   ],
+   "by_source": {
+    "crossref": 5,
+    "arxiv": 4
+   },
+   "no_surname_or_year": 33
+  },
+  "badalova_verified": {
+   "n_items": 71,
+   "n_with_stored_answer": 62,
+   "n_with_author_candidates": 62,
+   "found": 51,
+   "f": 0.8225806451612904,
+   "cp95": [
+    0.7046866785293487,
+    0.9079616040820472
+   ],
+   "by_source": {
+    "crossref": 24,
+    "arxiv": 20,
+    "dblp": 7
+   },
+   "no_surname_or_year": 71
+  },
+  "gen_a": {
+   "n_items": 100,
+   "n_with_stored_answer": 100,
+   "n_with_author_candidates": 100,
+   "found": 0,
+   "f": 0.0,
+   "cp95": [
+    0.0,
+    0.03621669264517641
+   ],
+   "by_source": {},
+   "no_surname_or_year": 0
+  },
+  "gen_b": {
+   "n_items": 100,
+   "n_with_stored_answer": 100,
+   "n_with_author_candidates": 100,
+   "found": 0,
+   "f": 0.0,
+   "cp95": [
+    0.0,
+    0.03621669264517641
+   ],
+   "by_source": {},
+   "no_surname_or_year": 100
+  },
+  "gen_c": {
+   "n_items": 100,
+   "n_with_stored_answer": 100,
+   "n_with_author_candidates": 100,
+   "found": 12,
+   "f": 0.12,
+   "cp95": [
+    0.06356890256115931,
+    0.20023568361996877
+   ],
+   "by_source": {
+    "dblp": 5,
+    "crossref": 4,
+    "arxiv": 3
+   },
+   "no_surname_or_year": 0
+  },
+  "gptzero": {
+   "n_items": 100,
+   "n_with_stored_answer": 100,
+   "n_with_author_candidates": 100,
+   "found": 5,
+   "f": 0.05,
+   "cp95": [
+    0.016431879182052158,
+    0.11283491110546275
+   ],
+   "by_source": {
+    "arxiv": 4,
+    "dblp": 1
+   },
+   "no_surname_or_year": 100
+  }
+ }
+}

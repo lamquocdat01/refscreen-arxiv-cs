@@ -1,0 +1,50 @@
+M151: GET api.github.com/repos/floodlight/ivs -> found.
+M152: WebFetch github.com/luigirizzo/netmap/tree/master/apps/pkt-gen (live, no dates); Wayback CDX <=20200330 none; GitHub commits API path=apps/pkt-gen/pkt-gen.c until 2019-10-25 -> commits 2019-07.
+M153: WebFetch github.com/snabbco/snabb/issues/1430 -> found, opened 2019-07-08.
+M154: Wayback (WebFetch blocked) -> curl CDX: cited URL 404 in 2019-07; GitHub commits API path=docs/interop/vhost-user.txt -> renamed to .rst 2019-03-15; raw txt at parent commit heading 'Vhost-user Protocol'; raw rst v4.2.0 same heading.
+M155: GitHub API osxfuse/osxfuse (moved), osxfuse/osxfuse.github.com; Wayback CDX osxfuse.github.io -> snapshot 20200601211650 'FUSE for macOS'.
+M156: GitHub API wso2/siddhi -> redirect siddhi-io/siddhi (2014); Wayback 20180611005553 github.com/wso2/siddhi title confirms.
+M157: GitHub API libfuse/libfuse -> found.
+M158: GitHub API nccgroup/gitpwnd -> found.
+M159: GitHub API (moved to openwallet-foundation/acapy, created 2019-06); Wayback 20191118092624 hyperledger/aries-cloudagent-python.
+M160: Wayback CDX + snapshot 20191118090500 aries-rfcs 0005-didcomm -> 'DID Communication', Daniel Hardman.
+M161: GitHub API miker83z/testingIPFS -> created 2020-04-10.
+M162: Wayback CDX ibotpeaches.github.io/Apktool/ -> snapshot 20150321031412: Apktool, authors Tumbleson, Wisniewski.
+M163: GitHub API kaysudheera/iot_network_traffic (created 2020-05-11); raw README (cites DEFT paper, no lab); WebFetch repo page (no NUS/Singtel); WebSearch DEFT + NUS-Singtel lab; WebSearch Kushan Sudheera NUS-Singtel -> no link to lab.
+M164: Wayback CDX (only 2021-03 capture, after cite date); live page + _history page -> kcc commits Jan 2016; api.github.com/users/kcc -> Kostya Serebryany.
+M165: GitHub API BLAKE3-team/BLAKE3 (2019-11-10); raw README master + tag 0.3.7 -> authors.
+M166: entry URL 'https://https://github.com/mlpack/models/tree/master/Kaggle' malformed; GitHub API mlpack/models; commits path=Kaggle -> 'Digit recognizer' by Eugene Freyman 2018-01; Kaggle dir 404 at 45c10b1c30 (2020-08 removal); source header '@author Eugene Freyman'.
+M167: Wayback CDX w3c-ccg.github.io/credential-handler-api/ -> snapshot 20190719081637 title 'Credential Handler API', respec editors Longley, Sporny.
+M168: Wayback CDX ll.mit.edu/ideval/docs/index.html (captures 2015-2017); snapshot 20170623202243 'MIT Lincoln Laboratory: DARPA Intrusion Detection Evaluation', Data Sets section.
+M169: WebSearch "Chain Interoperability" Buterin R3 -> r3.com/chain-interoperability (WebFetch 403); Wayback 20241010 of page (dated Sep 01 2016) -> PDF link; curl PDF p1 'Chain Interoperability, Vitalik Buterin'.
+M170: DBLP API (curl + WebFetch) blocked by Anubis; GS not tried (blocks); WebSearch exact title -> KAIST dspace 10203/244148, dblp1 rec conf/icra/KimCK18.
+M171: WebSearch exact title + APSys -> madsys.cs.tsinghua.edu.cn pub page, EasyChair preprint 7Z1V.
+M172: WebSearch title + authors -> current chapter 12 PDF (2025); Wayback CDX prefix research.cs.wisc.edu/mist/SoftwareSecurityCourse/ -> 3_3-Directory-Traversal.pdf snapshot 20181126; PDF p1 checked.
+M173: Wayback CDX openvswitch.org (<=20190813) -> snapshot 20190805155226; page 'Open vSwitch', Linux Foundation project.
+M174: WebSearch exact title + authors -> NUS PDF (Ooi homepage), BIT Pure record (TKDE 27(7) 2015).
+M175: WebFetch papers.nips.cc 2015 abstract page -> verified.
+M176: Wayback CDX of cited Verge URL -> snapshot 20191017072632 title/date verified.
+M177: DBLP blocked; WebFetch arxiv.org/abs/1205.4839 -> Degris/White/Sutton 2012.
+M178: Wayback CDX yann.lecun.com/exdb/mnist/ -> snapshot 20191112094552.
+M179: WebFetch aclanthology.org/D18-1088 -> verified.
+M180: Wayback CDX cited Lenovo URL -> snapshot 20191020140847 title verified.
+M181: Wayback CDX crypten.ai (<=20200326) -> snapshot 20191223131825 title + 'Copyright 2019 Facebook'.
+M182: DBLP blocked; WebSearch x3 (exact title + Axelsson/Chalmers; + 99-15; + pdf) -> only TR 98-17 'Research in IDS: A Survey' and scinapse (bot-blocked); Wayback CDX prefix www.ce.chalmers.se/staff/sax/ -> taxonomy.ps 20000820; PS text 'Intrusion Detection Systems: A Survey and Taxonomy, Stefan Axelsson, Chalmers', 2000.
+M183: Wayback snapshot 20180919082322 w3c-ccg.github.io/did-method-registry/ verified.
+M184: Wayback snapshot 20170425171309 w3c-dvcg.github.io/ld-signatures/ -> title + respec author names.
+M185: WebSearch exact title + authors -> TUM/Holy Cross catalogue records, Springer DOI.
+M186: Wayback CDX cited URL -> snapshot 20191117151524 title verified.
+M187: Wayback CDX svms.org/tutorials/Berwick2003.pdf -> 20191021034411, PDF p1 verified.
+M188: Wayback CDX cited WSJ URL (<=20210128) -> snapshot 20210126090402 title/author/date verified.
+M189: Wayback CDX box.com (<=20210312) -> snapshot 20210312043049 title verified.
+M190: Wayback CDX identity.foundation/presentation-exchange/ (<=20210423) -> snapshot 20210421015727 title + editors.
+M191: WebSearch exact title + Spanjer -> army-/naval-technology white paper (SMART HRS); WebFetch army-technology page (no author/date); WebSearch Spanjer + citeseerx/pdf; WebSearch "Esther Spanjer"; WebFetch naval-technology ?p=3370; WebSearch site:citeseerx -> no author match.
+M192: Wayback CDX cited NPM URL -> snapshot 20191106194746.
+M193: Wayback CDX cited Medium URL -> snapshot 20190716150444.
+M194: WebFetch rfc-editor.org/info/rfc1035.
+M195: Wayback CDX cited Arista URL (<=20211011) -> snapshot 20210815075447.
+M196: Wayback CDX cited IBTA URL -> snapshot 20210302003509 PDF p1 'Annex A17: RoCEv2'.
+M197: Wayback CDX cited ieee802 URL -> snapshot 20210927184751.
+M198: WebSearch exact title + authors + report -> DTIC ADA164453 PDF and NTRL record.
+M199: WebSearch ETSI GS MEC 022 V2.1.1 + title -> ETSI deliver PDF (GR MEC 022 V2.1.1 2018-09), standict record.
+M200: Wayback CDX cited justice.gov URL (<=20211106) -> snapshot 20211023080241.

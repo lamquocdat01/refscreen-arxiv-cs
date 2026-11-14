@@ -1,0 +1,50 @@
+M001: GS exact title (OK); DBLP API tried - blocked by Anubis bot check
+M002: GS exact title
+M003: GS exact title
+M004: GS exact title
+M005: GS exact title
+M006: GS exact title
+M007: GS -> CAPTCHA; WebSearch title+Keenan+BTTJ -> only citing ref lists (hal-lara, hal-enac); WebSearch Keenan Motley -> nothing; WebSearch extended title+Keenan Motley 1990 -> S2 web catalogue page w/ abstract; scispace journal page fetch 405
+M008: GS exact title -> CAPTCHA; WebSearch exact title + Amadeo -> iris.unirc/iris.unime records (fetch 403)
+M009: GS -> CAPTCHA; WebSearch exact title + Jiang -> tdp.cat abstract + PMC3883117
+M010: GS -> CAPTCHA; WebSearch exact title -> IEEE Xplore 7429688, DOAJ
+M011: GS -> CAPTCHA; WebSearch exact title + Miyato -> arXiv, Preferred Networks page
+M012: GS -> CAPTCHA; WebSearch exact title -> citation w/ DOI 10.1145/3134671; dl.acm.org fetch 403
+M013: WebSearch exact title + Klaine -> eprints.gla.ac.uk/144139
+M014: WebSearch title+Makani -> no hit; title+Makani Reddy Procedia -> no hit; extended exact title -> ScienceDirect S1877050918308652 (fetch 403); '"Makani" "Taxonomy of machine leaning"' -> same page w/ authors Makani, Reddy; GS -> CAPTCHA
+M015: WebSearch full title (from entry_text) + Ozgur Erdem -> peerj.com/preprints/1954
+M016: WebSearch title+authors+venue -> mlanthology, author PDFs
+M017: WebSearch title+Makhoul -> nayuki.io scanned PDF + ref lists; nayuki PDF fetch = image only; doi.org redirect -> ieeexplore 1163351 (page empty on fetch); domain-restricted search -> catalogue page Makhoul 1980
+M018: WebSearch title+authors -> VroniPlag source + Cambridge Crossref listing; ScienceDirect fetch 403; domain-restricted search -> ScienceDirect abs page
+M019: WebSearch exact title -> uwaterloo, wrap.warwick, vldb.org, doi 10.14778/2809974.2809978
+M020: entry URL is ONF homepage only; WebSearch exact title + ONF -> CNRS-hosted PDF, Scribd, SlideShare copies of ONF white paper
+M021: fetched rfc-editor.org/rfc/rfc4364
+M022: WebSearch title+authors+TPAMI -> CUHK SRCNN page, NTU Pure record
+M023: WebSearch exact title -> PMC, Springer s41597-019-0055-0, figshare
+M024: WebSearch exact title + Vassil -> CaltechAUTHORS, TTU digibase, doi 10.1016/j.giq.2016.06.007
+M025: WebSearch exact title + Baltrusaitis -> arXiv abs/pdf
+M026: WebSearch title+Kumar+venue (std) -> no hit; extended exact title + Sanjeev Kumar -> ScienceDirect S0167404805001926, ACM DL, ResearchGate, author pub list
+M027: WebSearch title+Roark -> ACL Anthology J01-2004, arXiv cs/0105016
+M028: WebSearch exact title -> arXiv 1707.07074, core.ac.uk, datalearner journal record
+M029: WebSearch title+authors -> Princeton portal, ResearchGate PDF
+M030: WebSearch title+authors+Cognition -> Stanford PDF
+M031: WebSearch exact title + authors -> arXiv 1902.10265, Oulu repository
+M032: WebSearch exact title + authors -> RePEc, pubsonline.informs.org, dspace.mit.edu
+M033: WebSearch exact title + authors -> DOI 10.1007/s11416-008-0084-2 (unpaywall), citing works
+M034: WebSearch title+Dalgkitsis (std) -> no exact hit (DBLP pid page only); extended title+all authors+T-ITS -> zenodo 3992050, ACM DL TOC 22/7, Mekikis & Antonopoulos pub pages
+M035: WebSearch title (log restored) + authors -> SIAM epubs, eprint.iacr.org/2018/227
+M036: WebSearch exact title + Mallya ECCV -> CVF, ECVA, arXiv 1801.06519
+M037: WebSearch exact title + Bilge NDSS -> ndss-symposium.org, EURECOM
+M038: WebSearch exact title + authors -> eprint.iacr.org/2006/309, MSR, Stony Brook
+M039: WebSearch full title (from entry) + Tian -> springerprofessional abstract w/o authors (fetch blocked); extended title+authors+CF 2017 -> ACM DL 10.1145/3075564.3075572, researchr, ResearchGate
+M040: WebSearch exact title + Dong NSDI -> usenix.org, arXiv 1409.7092
+M041: fetched entry URL aclanthology.org/W19-4821
+M042: WebSearch exact title + authors -> FIU discovery, FIU-hosted PDF
+M043: WebSearch exact title + Deng CVPR -> IEEE Xplore 5206848, CSDL, Princeton portal
+M044: WebSearch exact title + authors -> icml.cc 2011 PDF + bib, mlanthology
+M045: WebSearch exact title + authors -> wiki.hh.se CAISR record (links DiVA diva2:1303420)
+M046: entry URL openreview B1ecYsqSuN -> browser check; WebSearch exact title -> arXiv 2004.02071 (Apr 2020, after citing date), mlanthology ICLRW 2019 (fetched, links same OpenReview id)
+M047: WebSearch exact title + authors -> Monash, Canberra research profiles, infona IEEE record 5596456
+M048: WebSearch exact title + authors -> torontomu author PDF, DOI 10.1109/cisda.2009.5356528
+M049: WebSearch title+Yin ICAIBD -> only citing works; Xplore 8396200 fetch empty; extended exact title -> IEEE Xplore 8396200, ResearchGate record
+M050: WebSearch exact title + Croft Caesar -> usenix.org page + PDF

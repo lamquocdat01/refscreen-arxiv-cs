@@ -1,0 +1,26 @@
+{
+ "provisional": true,
+ "seed_draw": 47,
+ "seed_shuffle": 45,
+ "pool_unresolved_2019_21_academic": 218,
+ "excluded_as_v_title": 0,
+ "pool_after": 218,
+ "avail": {
+  "J": 131,
+  "C": 71,
+  "P": 16
+ },
+ "alloc": {
+  "J": 16,
+  "C": 16,
+  "P": 16
+ },
+ "n_u": 48,
+ "n_v": 20,
+ "n": 68,
+ "u_with_pass1": 1,
+ "key_sha256": "88b53b85af4ff1e951ac8052975e2076c58595819c73fa8df3e232402c84f622",
+ "sheet_sha256": "6229a7d98b4150fe3b5e9f319447141b0e8c4b574273ac66385e21be07872d31",
+ "rules_sha256": "63e4b101f36f91f3e9a9f56c033e780341fa3c7258984f951190af7794deed73",
+ "banner": "PROVISIONAL: interim flag set (cascade not complete); NOT for raters; rebuilt when done"
+}

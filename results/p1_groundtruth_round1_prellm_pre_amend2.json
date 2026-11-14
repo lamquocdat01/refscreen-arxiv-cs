@@ -1,0 +1,611 @@
+{
+ "seed": 42,
+ "generated": "2026-10-18T16:11:41Z",
+ "prereg_sha256": "38378e7453d67fed42fcabd26d6f65a0a4fd6cbbc333a10272873de8918ccfb5",
+ "backends": {
+  "cascade": "PREREG_AMENDMENT_1: round 1 crossref > s2 (stored answers) > arxiv (arXiv id or tier P) > openalex (keyless until refused); round 2 live s2 for non-resolved refs",
+  "openalex_key": false,
+  "s2_key": false,
+  "openalex_refused": true
+ },
+ "corpus": {
+  "prellm": {
+   "papers_kept": 300,
+   "papers_used": 299,
+   "source_bib": 198,
+   "source_bbl": 101,
+   "refs": 12751
+  }
+ },
+ "exclusions": {
+  "prellm": {
+   "cite-keys-missing-in-bib-no-bbl": [
+    "2102.03933"
+   ]
+  }
+ },
+ "tiers": {
+  "prellm": {
+   "B": 393,
+   "C": 5694,
+   "J": 3704,
+   "P": 1595,
+   "S": 77,
+   "W": 1288
+  }
+ },
+ "u": {
+  "all": {
+   "2019-21": {
+    "def1": {
+     "J": {
+      "k": 389,
+      "n": 3700,
+      "n_papers": 289,
+      "u": 0.1051,
+      "wilson95": [
+       0.0957,
+       0.1154
+      ],
+      "paper_bootstrap95": [
+       0.0887,
+       0.1258
+      ],
+      "n_rate_limited": 0
+     },
+     "C": {
+      "k": 894,
+      "n": 5691,
+      "n_papers": 287,
+      "u": 0.1571,
+      "wilson95": [
+       0.1479,
+       0.1668
+      ],
+      "paper_bootstrap95": [
+       0.1342,
+       0.1801
+      ],
+      "n_rate_limited": 0
+     },
+     "P": {
+      "k": 100,
+      "n": 1574,
+      "n_papers": 228,
+      "u": 0.0635,
+      "wilson95": [
+       0.0525,
+       0.0767
+      ],
+      "paper_bootstrap95": [
+       0.049,
+       0.079
+      ],
+      "n_rate_limited": 10
+     },
+     "B": {
+      "k": 143,
+      "n": 391,
+      "n_papers": 155,
+      "u": 0.3657,
+      "wilson95": [
+       0.3195,
+       0.4146
+      ],
+      "paper_bootstrap95": [
+       0.303,
+       0.4346
+      ],
+      "n_rate_limited": 0
+     },
+     "S": {
+      "k": 60,
+      "n": 61,
+      "n_papers": 33,
+      "u": 0.9836,
+      "wilson95": [
+       0.9128,
+       0.9971
+      ],
+      "paper_bootstrap95": [
+       0.9444,
+       1.0
+      ],
+      "n_rate_limited": 0
+     },
+     "W": {
+      "k": 818,
+      "n": 1173,
+      "n_papers": 210,
+      "u": 0.6974,
+      "wilson95": [
+       0.6705,
+       0.723
+      ],
+      "paper_bootstrap95": [
+       0.6335,
+       0.7539
+      ],
+      "n_rate_limited": 0
+     },
+     "A": {
+      "k": 1383,
+      "n": 10965,
+      "n_papers": 297,
+      "u": 0.1261,
+      "wilson95": [
+       0.12,
+       0.1325
+      ],
+      "paper_bootstrap95": [
+       0.1108,
+       0.1408
+      ],
+      "n_rate_limited": 10
+     },
+     "all": {
+      "k": 2404,
+      "n": 12590,
+      "n_papers": 299,
+      "u": 0.1909,
+      "wilson95": [
+       0.1842,
+       0.1979
+      ],
+      "paper_bootstrap95": [
+       0.172,
+       0.2091
+      ],
+      "n_rate_limited": 10
+     },
+     "certified_real": {
+      "k": 55,
+      "n": 2306,
+      "n_papers": 244,
+      "u": 0.0239,
+      "wilson95": [
+       0.0184,
+       0.0309
+      ],
+      "paper_bootstrap95": [
+       0.0173,
+       0.0311
+      ],
+      "n_rate_limited": 10
+     },
+     "n_s2_pending": 1950,
+     "n_oa_skipped": 2354
+    },
+    "def2": {
+     "J": {
+      "k": 523,
+      "n": 3547,
+      "n_papers": 287,
+      "u": 0.1474,
+      "wilson95": [
+       0.1362,
+       0.1595
+      ],
+      "paper_bootstrap95": [
+       0.1276,
+       0.1708
+      ],
+      "n_rate_limited": 93
+     },
+     "C": {
+      "k": 1059,
+      "n": 5422,
+      "n_papers": 287,
+      "u": 0.1953,
+      "wilson95": [
+       0.185,
+       0.2061
+      ],
+      "paper_bootstrap95": [
+       0.1722,
+       0.2205
+      ],
+      "n_rate_limited": 249
+     },
+     "P": {
+      "k": 141,
+      "n": 1407,
+      "n_papers": 219,
+      "u": 0.1002,
+      "wilson95": [
+       0.0856,
+       0.117
+      ],
+      "paper_bootstrap95": [
+       0.0798,
+       0.1214
+      ],
+      "n_rate_limited": 168
+     },
+     "B": {
+      "k": 191,
+      "n": 337,
+      "n_papers": 147,
+      "u": 0.5668,
+      "wilson95": [
+       0.5134,
+       0.6186
+      ],
+      "paper_bootstrap95": [
+       0.5096,
+       0.6234
+      ],
+      "n_rate_limited": 20
+     },
+     "S": {
+      "k": 61,
+      "n": 61,
+      "n_papers": 33,
+      "u": 1.0,
+      "wilson95": [
+       0.9408,
+       1.0
+      ],
+      "paper_bootstrap95": [
+       1.0,
+       1.0
+      ],
+      "n_rate_limited": 0
+     },
+     "W": {
+      "k": 845,
+      "n": 1072,
+      "n_papers": 204,
+      "u": 0.7882,
+      "wilson95": [
+       0.7628,
+       0.8117
+      ],
+      "paper_bootstrap95": [
+       0.7276,
+       0.8366
+      ],
+      "n_rate_limited": 40
+     },
+     "A": {
+      "k": 1723,
+      "n": 10376,
+      "n_papers": 295,
+      "u": 0.1661,
+      "wilson95": [
+       0.159,
+       0.1733
+      ],
+      "paper_bootstrap95": [
+       0.1509,
+       0.1832
+      ],
+      "n_rate_limited": 510
+     },
+     "all": {
+      "k": 2820,
+      "n": 11846,
+      "n_papers": 299,
+      "u": 0.2381,
+      "wilson95": [
+       0.2305,
+       0.2458
+      ],
+      "paper_bootstrap95": [
+       0.2177,
+       0.2575
+      ],
+      "n_rate_limited": 570
+     },
+     "certified_real": {
+      "k": 111,
+      "n": 2128,
+      "n_papers": 233,
+      "u": 0.0522,
+      "wilson95": [
+       0.0435,
+       0.0624
+      ],
+      "paper_bootstrap95": [
+       0.0415,
+       0.0645
+      ],
+      "n_rate_limited": 147
+     },
+     "n_s2_pending": 1950,
+     "n_oa_skipped": 2354,
+     "n_excluded_no_author": 90,
+     "n_excluded_no_registry_authors": 94
+    },
+    "n_no_title": 151
+   }
+  },
+  "without_p0": {
+   "2019-21": {
+    "def1": {
+     "J": {
+      "k": 380,
+      "n": 3411,
+      "n_papers": 259,
+      "u": 0.1114,
+      "wilson95": [
+       0.1013,
+       0.1224
+      ],
+      "paper_bootstrap95": [
+       0.0948,
+       0.1314
+      ],
+      "n_rate_limited": 0
+     },
+     "C": {
+      "k": 888,
+      "n": 5160,
+      "n_papers": 257,
+      "u": 0.1721,
+      "wilson95": [
+       0.162,
+       0.1826
+      ],
+      "paper_bootstrap95": [
+       0.1495,
+       0.1959
+      ],
+      "n_rate_limited": 0
+     },
+     "P": {
+      "k": 94,
+      "n": 1378,
+      "n_papers": 203,
+      "u": 0.0682,
+      "wilson95": [
+       0.0561,
+       0.0828
+      ],
+      "paper_bootstrap95": [
+       0.0506,
+       0.0858
+      ],
+      "n_rate_limited": 10
+     },
+     "B": {
+      "k": 140,
+      "n": 352,
+      "n_papers": 143,
+      "u": 0.3977,
+      "wilson95": [
+       0.348,
+       0.4497
+      ],
+      "paper_bootstrap95": [
+       0.3303,
+       0.4595
+      ],
+      "n_rate_limited": 0
+     },
+     "S": {
+      "k": 55,
+      "n": 56,
+      "n_papers": 28,
+      "u": 0.9821,
+      "wilson95": [
+       0.9055,
+       0.9968
+      ],
+      "paper_bootstrap95": [
+       0.9384,
+       1.0
+      ],
+      "n_rate_limited": 0
+     },
+     "W": {
+      "k": 759,
+      "n": 1072,
+      "n_papers": 187,
+      "u": 0.708,
+      "wilson95": [
+       0.6801,
+       0.7345
+      ],
+      "paper_bootstrap95": [
+       0.6385,
+       0.7677
+      ],
+      "n_rate_limited": 0
+     },
+     "A": {
+      "k": 1362,
+      "n": 9949,
+      "n_papers": 267,
+      "u": 0.1369,
+      "wilson95": [
+       0.1303,
+       0.1438
+      ],
+      "paper_bootstrap95": [
+       0.1212,
+       0.1533
+      ],
+      "n_rate_limited": 10
+     },
+     "all": {
+      "k": 2316,
+      "n": 11429,
+      "n_papers": 269,
+      "u": 0.2026,
+      "wilson95": [
+       0.1954,
+       0.2101
+      ],
+      "paper_bootstrap95": [
+       0.1809,
+       0.2222
+      ],
+      "n_rate_limited": 10
+     },
+     "certified_real": {
+      "k": 53,
+      "n": 2055,
+      "n_papers": 216,
+      "u": 0.0258,
+      "wilson95": [
+       0.0198,
+       0.0336
+      ],
+      "paper_bootstrap95": [
+       0.0182,
+       0.0342
+      ],
+      "n_rate_limited": 10
+     },
+     "n_s2_pending": 1945,
+     "n_oa_skipped": 2266
+    },
+    "def2": {
+     "J": {
+      "k": 501,
+      "n": 3270,
+      "n_papers": 257,
+      "u": 0.1532,
+      "wilson95": [
+       0.1413,
+       0.166
+      ],
+      "paper_bootstrap95": [
+       0.1312,
+       0.1776
+      ],
+      "n_rate_limited": 83
+     },
+     "C": {
+      "k": 1036,
+      "n": 4920,
+      "n_papers": 257,
+      "u": 0.2106,
+      "wilson95": [
+       0.1994,
+       0.2222
+      ],
+      "paper_bootstrap95": [
+       0.1873,
+       0.2351
+      ],
+      "n_rate_limited": 221
+     },
+     "P": {
+      "k": 131,
+      "n": 1244,
+      "n_papers": 194,
+      "u": 0.1053,
+      "wilson95": [
+       0.0894,
+       0.1236
+      ],
+      "paper_bootstrap95": [
+       0.0846,
+       0.1295
+      ],
+      "n_rate_limited": 135
+     },
+     "B": {
+      "k": 178,
+      "n": 303,
+      "n_papers": 135,
+      "u": 0.5875,
+      "wilson95": [
+       0.5313,
+       0.6415
+      ],
+      "paper_bootstrap95": [
+       0.5238,
+       0.645
+      ],
+      "n_rate_limited": 18
+     },
+     "S": {
+      "k": 56,
+      "n": 56,
+      "n_papers": 28,
+      "u": 1.0,
+      "wilson95": [
+       0.9358,
+       1.0
+      ],
+      "paper_bootstrap95": [
+       1.0,
+       1.0
+      ],
+      "n_rate_limited": 0
+     },
+     "W": {
+      "k": 782,
+      "n": 981,
+      "n_papers": 183,
+      "u": 0.7971,
+      "wilson95": [
+       0.7708,
+       0.8211
+      ],
+      "paper_bootstrap95": [
+       0.7357,
+       0.8429
+      ],
+      "n_rate_limited": 34
+     },
+     "A": {
+      "k": 1668,
+      "n": 9434,
+      "n_papers": 265,
+      "u": 0.1768,
+      "wilson95": [
+       0.1692,
+       0.1846
+      ],
+      "paper_bootstrap95": [
+       0.1592,
+       0.1945
+      ],
+      "n_rate_limited": 439
+     },
+     "all": {
+      "k": 2684,
+      "n": 10774,
+      "n_papers": 269,
+      "u": 0.2491,
+      "wilson95": [
+       0.241,
+       0.2574
+      ],
+      "paper_bootstrap95": [
+       0.2262,
+       0.269
+      ],
+      "n_rate_limited": 491
+     },
+     "certified_real": {
+      "k": 105,
+      "n": 1905,
+      "n_papers": 206,
+      "u": 0.0551,
+      "wilson95": [
+       0.0457,
+       0.0663
+      ],
+      "paper_bootstrap95": [
+       0.043,
+       0.0679
+      ],
+      "n_rate_limited": 120
+     },
+     "n_s2_pending": 1945,
+     "n_oa_skipped": 2266,
+     "n_excluded_no_author": 88,
+     "n_excluded_no_registry_authors": 86
+    },
+    "n_no_title": 148
+   }
+  }
+ },
+ "label": "round 1, before S2 (provisional; PREREG_AMENDMENT_1)",
+ "limit": 0
+}

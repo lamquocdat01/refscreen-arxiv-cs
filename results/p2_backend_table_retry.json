@@ -1,7 +1,7 @@
 {
  "seed": 42,
  "boot": 1000,
- "input": "D:/Datasets/_derived/43/p2_groundtruth_refs_full.csv",
+ "input": "D:\\Datasets\\_derived\\43/p2_groundtruth_refs_full.csv",
  "columns": [
   "Crossref-only",
   "+arXiv",

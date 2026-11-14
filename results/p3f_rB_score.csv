@@ -1,0 +1,11 @@
+metric,family,k,n,rate,cp95_lo,cp95_hi
+negative_recall (not-exists or ambiguous),gen_a,5,5,1.0,0.47817624989501856,1.0
+not-exists alone,gen_a,5,5,1.0,0.47817624989501856,1.0
+negative_recall (not-exists or ambiguous),gen_c,0,5,0.0,0.0,0.5218237501049814
+not-exists alone,gen_c,0,5,0.0,0.0,0.5218237501049814
+"negative_recall (not-exists or ambiguous), pooled as in Amendment 6",gen_a+gen_c,5,10,0.5,0.18708602844739855,0.8129139715526015
+gen_c rows whose evidence_note reports the venue/year mismatch (coded by CC),gen_c,5,5,1.0,0.47817624989501856,1.0
+exists,real V rows,10,10,1.0,0.6915028921812392,1.0
+exists,flagged rows,47,48,0.9791666666666666,0.8893038394068478,0.9994726847465769
+ambiguous,flagged rows,1,48,0.020833333333333332,0.0005273152534231205,0.11069616059315224
+not-exists,flagged rows,0,48,0.0,0.0,0.0739727853472802

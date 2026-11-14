@@ -85,7 +85,7 @@ def f1(seed):
     ax.set_ylabel("Unresolved legitimate academic refs, u_A (%)")
     ax.set_ylim(0, 40)
     ax.legend(loc="upper right", fontsize=8)
-    ax.set_title("Same references, four verdicts: u_A by cumulative backend set (def 1, 95 % paper-bootstrap CI)",
+    ax.set_title("Same references, five backend sets: u_A by cumulative backend set (def 1, 95 % paper-bootstrap CI)",
                  fontsize=9, loc="left", color=INK)
     save(fig, "F1_four_verdicts", ["p2_backend_table_retry.csv"], seed)
 
@@ -116,36 +116,36 @@ def f2(seed, audited=True):
             ("gen_b", "fabricated", "real title, swapped authors (gen, n = 100)", C3, "^")]
     # P3: one panel only. The horizontal axis is the def-1 false-positive rate, so only def-1 recall is paired with
     # it (the def-2 panel of P2 plotted def-2 recall against the def-1 FP); def-2 recall is in Table 6 of the article.
-    fig, ax0 = plt.subplots(1, 1, figsize=(6.2, 3.9))
-    fig.subplots_adjust(bottom=0.27)
+    # R2 Q18: readable at print width (the figure is set at \linewidth, about 5.3 in): no text below 7.5 pt, backend
+    # names on a top axis instead of rotated point labels, the explanatory note moved to the caption
+    fig, ax0 = plt.subplots(1, 1, figsize=(5.4, 4.0))
+    fig.subplots_adjust(bottom=0.30, top=0.84, left=0.12, right=0.97)
     axes = [ax0]
     for ax, d in zip(axes, (1,)):
         for st, lab, name, col, mk in fams:
             g = rc[(rc["set"] == st) & (rc.label == lab) & (rc.definition == d)].set_index("screen").loc[keys]
             xs = [fp[k] for k in keys]
             ys = g.share_flagged.values * 100
-            ax.plot(xs, ys, color=col, marker=mk, markersize=5, linewidth=1.5, label=name)
+            ax.plot(xs, ys, color=col, marker=mk, markersize=6, linewidth=1.6, label=name)
             lo, hi = g.bound_lo.values * 100, g.bound_hi.values * 100
             ax.errorbar(xs, ys, yerr=[np.clip(ys - lo, 0, None), np.clip(hi - ys, 0, None)], fmt="none", ecolor=col,
-                        elinewidth=0.8, capsize=2)
-        for k, labl in zip(keys, [lab for _, lab in COLS]):
-            if k == "+openalex":
-                continue  # 0.4 points left of +DBLP: labelled together
-            labl = "+DBLP / +OpenAlex" if k == "+dblp" else labl
-            ax.annotate(labl, (fp[k], 104), fontsize=6, color=MUTED, rotation=60, ha="left", va="bottom",
-                        annotation_clip=False)
-        ax.set_xscale("log")
-        ax.set_xticks([2, 3, 5, 10, 20, 30], ["2", "3", "5", "10", "20", "30"])
+                        elinewidth=0.9, capsize=2.5)
+        ax.set_xscale("log")  # before the secondary axis: setting the scale afterwards resets its ticks
+        ax.set_xticks([2, 3, 5, 10, 20, 30], ["2", "3", "5", "10", "20", "30"], fontsize=8.5)
         ax.minorticks_off()
-        ax.set_xlabel("False-positive rate: def-1 u_A of legitimate academic refs, 2019-21 (%, log)")
-        ax.set_title("recall vs false-positive rate, def 1 (title only)", fontsize=9, loc="left", pad=62)
+        top = ax.secondary_xaxis("top")
+        tk = [(fp[k], {"crossref": "Crossref", "+arxiv": "+arXiv", "+dblp": "+DBLP\n+OpenAlex", "+s2": "+S2"}[k])
+              for k in keys if k != "+openalex"]  # +OpenAlex sits 0.4 points left of +DBLP: labelled together
+        top.set_xticks([t for t, _ in tk], [s for _, s in tk], fontsize=8, color=INK)
+        top.xaxis.set_minor_locator(matplotlib.ticker.NullLocator())
+        top.tick_params(length=3)
+        ax.tick_params(axis="y", labelsize=8.5)
+        ax.set_xlabel("False-positive rate: unresolved legitimate academic refs, 2019-21 (%, log scale)",
+                      fontsize=8.5)
         ax.set_ylim(-3, 103)
-    axes[0].set_ylabel("Recall on fabricated items (%)")
-    fig.legend(*axes[0].get_legend_handles_labels(), loc="lower center", ncol=3, fontsize=7,
-               bbox_to_anchor=(0.5, -0.02))
-    fig.text(0.01, -0.06, "Each point is one cumulative backend set (left to right: +S2 ... Crossref-only). Bars: "
-             "bounds with items excluded for a failed backend counted as not flagged / flagged.", fontsize=6.5,
-             color=MUTED)
+    axes[0].set_ylabel("Recall on fabricated items (%)", fontsize=8.5)
+    fig.legend(*axes[0].get_legend_handles_labels(), loc="lower center", ncol=1, fontsize=8,
+               bbox_to_anchor=(0.55, 0.0))
     if audited:
         save(fig, "F2_roc_backend", ["p2_recall.csv", "p2_recall_audited.csv", "p2_recall_drop_audit.csv",
                                      "p2_backend_table_retry.csv"], seed)
@@ -167,7 +167,7 @@ def f3(seed):
     ax.set_xlabel("Share of web references in the bibliography, w_W (%)")
     ax.set_ylabel("PPV ceiling (%, log)")
     ax.legend(fontsize=7, loc="upper right")
-    ax.set_title("Thm 1': ceiling on the share of flags that are fabrications", fontsize=9, loc="left")
+    ax.set_title("Prop. 1: ceiling on the share of flags that are fabrications", fontsize=9, loc="left")
     save(fig, "F3_ppv_ceiling", ["p1_theory_tables.csv"], seed)
 
 
@@ -179,7 +179,7 @@ def f4(seed):
     fig, ax = plt.subplots(figsize=(5.2, 3.1))
     for f, col, mk in [("cs.CV", C1, "o"), ("cs.NI", C2, "s"), ("cs.CL", C3, "^")]:
         g = t[t.field == f].sort_values("n")
-        ax.plot(g.n, g.exact * 100, color=col, marker=mk, markersize=4, linewidth=1.6, label=f"Thm 2', {f} mix")
+        ax.plot(g.n, g.exact * 100, color=col, marker=mk, markersize=4, linewidth=1.6, label=f"Prop. 2(a), {f} mix")
     ax.errorbar(h.n_refs_median, h.obs * 100, yerr=[(h.obs - h.wilson_lo) * 100, (h.wilson_hi - h.obs) * 100],
                 fmt="D", color=INK, markersize=5, capsize=2, label="observed, all fields (tertiles, Wilson)")
     ax.set_xlim(0, 160)
@@ -187,7 +187,7 @@ def f4(seed):
     ax.set_ylabel("P(legitimate paper flagged, k = 2) (%)")
     ax.set_ylim(0, 105)
     ax.legend(fontsize=7, loc="lower right")
-    ax.set_title("Thm 2' (independence) over-predicts flags on long papers (H5 FAIL)", fontsize=9, loc="left")
+    ax.set_title("Prop. 2(a) (independence) over-predicts flags on long papers (H5 FAIL)", fontsize=9, loc="left")
     save(fig, "F4_pff_vs_n", ["p1_theory_tables.csv", "p1_h5.csv"], seed)
 
 
@@ -200,7 +200,7 @@ def f5(seed):
     ax.bar(x - 0.18, m.fp_cert * 100, width=0.34, color=C1, edgecolor="white",
            label=f"certified-real (n ~ {int(m.n_cert.median()):,} refs, 97 papers)")
     ax.bar(x + 0.18, m.fp_manual * 100, width=0.34, color=C2, edgecolor="white",
-           label=f"manually verified, no identifier (n = {int(m.n_manual.min())}-{int(m.n_manual.max())} refs)")
+           label=f"AI-agent-verified, no identifier (n = {int(m.n_manual.min())}-{int(m.n_manual.max())} refs)")
     ax.errorbar(x + 0.18, m.fp_manual * 100, yerr=[(m.fp_manual - m.wilson_lo) * 100, (m.wilson_hi - m.fp_manual) * 100],
                 fmt="none", ecolor=INK, elinewidth=0.8, capsize=2)
     for xi, a, top, bb in zip(x, m.fp_cert * 100, m.wilson_hi * 100, m.fp_manual * 100):
@@ -210,7 +210,7 @@ def f5(seed):
     ax.set_ylabel("FP of the full-cascade screen (%)")
     ax.legend(fontsize=7, loc="upper center", ncol=2, bbox_to_anchor=(0.5, 1.0))
     ax.set_ylim(0, 52)
-    ax.set_title("FP by style: certified-real vs manually verified render refs (GROBID, union)", fontsize=9, loc="left")
+    ax.set_title("FP by style: certified-real vs AI-agent-verified render refs (GROBID, union)", fontsize=9, loc="left")
     save(fig, "F5_fp_style", ["p2_render_manual_fp.csv"], seed)
 
 

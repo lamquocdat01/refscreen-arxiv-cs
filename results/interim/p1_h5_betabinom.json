@@ -1,0 +1,614 @@
+{
+ "label": "EXPLORATORY — not preregistered, does not replace H5 (PREREG §5)",
+ "seed": 42,
+ "boot": 200,
+ "limit": 0,
+ "period": "2019-21",
+ "definition": "def 1",
+ "interim": true,
+ "model": "Thm 2″ draft (THEORY_43_v2 §7): tiers independent given the paper, BetaBin per tier",
+ "scenarios": {
+  "crossref_only": {
+   "per_paper_u_A_quantiles": {
+    "0.1": 0.0962,
+    "0.25": 0.1667,
+    "0.5": 0.2632,
+    "0.75": 0.4068,
+    "0.9": 0.5207
+   },
+   "n_papers": 299,
+   "tiers": {
+    "J": {
+     "n_papers": 289,
+     "k": 682,
+     "n": 3697,
+     "u_pooled": 0.18447389775493644,
+     "mu": 0.21540265320353824,
+     "rho_icc": 0.08624028977598079,
+     "rho_boot95": [
+      0.06130238853148353,
+      0.11706114181921501
+     ],
+     "nbar": 12.792387543252595,
+     "phi": 2.01697891888077,
+     "lr_stat": 128.3934182735934,
+     "p_lr_rho0": 4.603022365541924e-30
+    },
+    "C": {
+     "n_papers": 287,
+     "k": 1575,
+     "n": 5692,
+     "u_pooled": 0.2767041461700632,
+     "mu": 0.2755917104326694,
+     "rho_icc": 0.11371504973681906,
+     "rho_boot95": [
+      0.08065717361606627,
+      0.14914555736645774
+     ],
+     "nbar": 19.83275261324042,
+     "phi": 3.1415674000958433,
+     "lr_stat": 347.5532713822413,
+     "p_lr_rho0": 7.226444934828387e-78
+    },
+    "P": {
+     "n_papers": 229,
+     "k": 1060,
+     "n": 1584,
+     "u_pooled": 0.6691919191919192,
+     "mu": 0.6708925928771672,
+     "rho_icc": 0.14250091145615698,
+     "rho_boot95": [
+      0.08913595444384605,
+      0.18065137105106543
+     ],
+     "nbar": 6.91703056768559,
+     "phi": 1.8431822490091385,
+     "lr_stat": 102.23323704367135,
+     "p_lr_rho0": 2.4677420880763034e-24
+    },
+    "B": {
+     "n_papers": 155,
+     "k": 236,
+     "n": 391,
+     "u_pooled": 0.6035805626598465,
+     "mu": 0.6074913908996549,
+     "rho_icc": 0.09576647080884511,
+     "rho_boot95": [
+      0.00178667513528018,
+      0.1977278291998047
+     ],
+     "nbar": 2.52258064516129,
+     "phi": 1.1458121749089512,
+     "lr_stat": 5.405575496687618,
+     "p_lr_rho0": 0.010036264730611194
+    },
+    "S": {
+     "n_papers": 33,
+     "k": 60,
+     "n": 61,
+     "u_pooled": 0.9836065573770492,
+     "mu": 0.9836079665608267,
+     "rho_icc": 1e-06,
+     "rho_boot95": [
+      0.0,
+      0.06503099008977427
+     ],
+     "nbar": 1.8484848484848484,
+     "phi": 1.0000008484848484,
+     "lr_stat": 2.2489947681947342e-07,
+     "p_lr_rho0": 0.49981080734488026
+    },
+    "W": {
+     "n_papers": 210,
+     "k": 926,
+     "n": 1175,
+     "u_pooled": 0.7880851063829787,
+     "mu": 0.7832729881231919,
+     "rho_icc": 0.21149773862486185,
+     "rho_boot95": [
+      0.13824109967410728,
+      0.2726371719643716
+     ],
+     "nbar": 5.595238095238095,
+     "phi": 1.9718824655856746,
+     "lr_stat": 152.30510190475775,
+     "p_lr_rho0": 2.7171527769788293e-35
+    }
+   },
+   "tertiles": [
+    {
+     "scenario": "crossref_only",
+     "k": 1,
+     "tertile": "T1",
+     "n_papers": 100,
+     "n_refs_median": 18.0,
+     "k_flagged": 99,
+     "obs": 0.99,
+     "wilson_lo": 0.9455124752390653,
+     "wilson_hi": 0.9982326134344526,
+     "pred_binomial": 0.9862027943782636,
+     "pred_betabinom": 0.9807154911915096,
+     "pred_bb_boot95": [
+      0.9779605183367385,
+      0.9832164525431384
+     ],
+     "bin_in_ci": true,
+     "bb_in_ci": true
+    },
+    {
+     "scenario": "crossref_only",
+     "k": 1,
+     "tertile": "T2",
+     "n_papers": 99,
+     "n_refs_median": 36.0,
+     "k_flagged": 99,
+     "obs": 1.0,
+     "wilson_lo": 0.9626454664260378,
+     "wilson_hi": 1.0,
+     "pred_binomial": 0.999982110155859,
+     "pred_betabinom": 0.9994602431162277,
+     "pred_bb_boot95": [
+      0.9992425029265669,
+      0.9996456089562191
+     ],
+     "bin_in_ci": true,
+     "bb_in_ci": true
+    },
+    {
+     "scenario": "crossref_only",
+     "k": 1,
+     "tertile": "T3",
+     "n_papers": 100,
+     "n_refs_median": 60.5,
+     "k_flagged": 100,
+     "obs": 1.0,
+     "wilson_lo": 0.9630051925239981,
+     "wilson_hi": 0.9999999999999999,
+     "pred_binomial": 0.9999999034342341,
+     "pred_betabinom": 0.9999314194480624,
+     "pred_bb_boot95": [
+      0.9998707583430333,
+      0.9999688753717196
+     ],
+     "bin_in_ci": true,
+     "bb_in_ci": true
+    },
+    {
+     "scenario": "crossref_only",
+     "k": 2,
+     "tertile": "T1",
+     "n_papers": 100,
+     "n_refs_median": 18.0,
+     "k_flagged": 90,
+     "obs": 0.9,
+     "wilson_lo": 0.8256326956323347,
+     "wilson_hi": 0.9447714583868639,
+     "pred_binomial": 0.9461200393215187,
+     "pred_betabinom": 0.9323035953506507,
+     "pred_bb_boot95": [
+      0.9241808973146367,
+      0.9391918165284585
+     ],
+     "bin_in_ci": false,
+     "bb_in_ci": true
+    },
+    {
+     "scenario": "crossref_only",
+     "k": 2,
+     "tertile": "T2",
+     "n_papers": 99,
+     "n_refs_median": 36.0,
+     "k_flagged": 96,
+     "obs": 0.9696969696969697,
+     "wilson_lo": 0.9146617688347427,
+     "wilson_hi": 0.9896415481109291,
+     "pred_binomial": 0.99982567291622,
+     "pred_betabinom": 0.9975307746626029,
+     "pred_bb_boot95": [
+      0.9967284298264192,
+      0.9982698169322765
+     ],
+     "bin_in_ci": false,
+     "bb_in_ci": false
+    },
+    {
+     "scenario": "crossref_only",
+     "k": 2,
+     "tertile": "T3",
+     "n_papers": 100,
+     "n_refs_median": 60.5,
+     "k_flagged": 100,
+     "obs": 1.0,
+     "wilson_lo": 0.9630051925239981,
+     "wilson_hi": 0.9999999999999999,
+     "pred_binomial": 0.999998442846221,
+     "pred_betabinom": 0.9995776672508455,
+     "pred_bb_boot95": [
+      0.9992838148352148,
+      0.9997807705111584
+     ],
+     "bin_in_ci": true,
+     "bb_in_ci": true
+    },
+    {
+     "scenario": "crossref_only",
+     "k": 3,
+     "tertile": "T1",
+     "n_papers": 100,
+     "n_refs_median": 18.0,
+     "k_flagged": 82,
+     "obs": 0.82,
+     "wilson_lo": 0.7333246397578691,
+     "wilson_hi": 0.8829986834574896,
+     "pred_binomial": 0.8765021838926643,
+     "pred_betabinom": 0.8588757410828548,
+     "pred_bb_boot95": [
+      0.8455214092647259,
+      0.8708345384977849
+     ],
+     "bin_in_ci": true,
+     "bb_in_ci": true
+    },
+    {
+     "scenario": "crossref_only",
+     "k": 3,
+     "tertile": "T2",
+     "n_papers": 99,
+     "n_refs_median": 36.0,
+     "k_flagged": 96,
+     "obs": 0.9696969696969697,
+     "wilson_lo": 0.9146617688347427,
+     "wilson_hi": 0.9896415481109291,
+     "pred_binomial": 0.9991143289120331,
+     "pred_betabinom": 0.9928112780711826,
+     "pred_bb_boot95": [
+      0.9907197874990564,
+      0.9947588432367808
+     ],
+     "bin_in_ci": false,
+     "bb_in_ci": false
+    },
+    {
+     "scenario": "crossref_only",
+     "k": 3,
+     "tertile": "T3",
+     "n_papers": 100,
+     "n_refs_median": 60.5,
+     "k_flagged": 100,
+     "obs": 1.0,
+     "wilson_lo": 0.9630051925239981,
+     "wilson_hi": 0.9999999999999999,
+     "pred_binomial": 0.9999876419066355,
+     "pred_betabinom": 0.9985983915056965,
+     "pred_bb_boot95": [
+      0.9977939468144361,
+      0.999198036963411
+     ],
+     "bin_in_ci": true,
+     "bb_in_ci": true
+    }
+   ],
+   "verdict": {
+    "k1": {
+     "monotone": true,
+     "bb_all_in_ci": true,
+     "PASS_exploratory": true,
+     "binomial_all_in_ci": true
+    },
+    "k2": {
+     "monotone": true,
+     "bb_all_in_ci": false,
+     "PASS_exploratory": false,
+     "binomial_all_in_ci": false
+    },
+    "k3": {
+     "monotone": true,
+     "bb_all_in_ci": false,
+     "PASS_exploratory": false,
+     "binomial_all_in_ci": false
+    }
+   }
+  },
+  "plus_dblp": {
+   "per_paper_u_A_quantiles": {
+    "0.1": 0.0,
+    "0.25": 0.0,
+    "0.5": 0.025,
+    "0.75": 0.0667,
+    "0.9": 0.1256
+   },
+   "n_papers": 299,
+   "tiers": {
+    "J": {
+     "n_papers": 289,
+     "k": 252,
+     "n": 3697,
+     "u_pooled": 0.06816337571003517,
+     "mu": 0.08070138452268504,
+     "rho_icc": 0.09232296047650963,
+     "rho_boot95": [
+      0.04547750027329547,
+      0.14415685722462854
+     ],
+     "nbar": 12.792387543252595,
+     "phi": 2.088708129079394,
+     "lr_stat": 120.5584657372442,
+     "p_lr_rho0": 2.3869452575082425e-28
+    },
+    "C": {
+     "n_papers": 287,
+     "k": 168,
+     "n": 5692,
+     "u_pooled": 0.029515108924806747,
+     "mu": 0.030836899556275513,
+     "rho_icc": 0.024880642996787408,
+     "rho_boot95": [
+      0.010986451277262537,
+      0.040741423971014636
+     ],
+     "nbar": 19.83275261324042,
+     "phi": 1.46857099441685,
+     "lr_stat": 26.01047726175409,
+     "p_lr_rho0": 1.697847635617037e-07
+    },
+    "P": {
+     "n_papers": 229,
+     "k": 22,
+     "n": 1584,
+     "u_pooled": 0.013888888888888888,
+     "mu": 0.013832241821511517,
+     "rho_icc": 0.05461262170931079,
+     "rho_boot95": [
+      1e-06,
+      0.14100745430284148
+     ],
+     "nbar": 6.91703056768559,
+     "phi": 1.3231445520354415,
+     "lr_stat": 18.711279890921688,
+     "p_lr_rho0": 7.604009333714297e-06
+    },
+    "B": {
+     "n_papers": 155,
+     "k": 135,
+     "n": 391,
+     "u_pooled": 0.3452685421994885,
+     "mu": 0.3551274496298562,
+     "rho_icc": 0.2032250083244796,
+     "rho_boot95": [
+      0.08816011085975538,
+      0.32313992374085715
+     ],
+     "nbar": 2.52258064516129,
+     "phi": 1.3094264642875948,
+     "lr_stat": 19.735869622418363,
+     "p_lr_rho0": 4.445834247367746e-06
+    },
+    "S": {
+     "n_papers": 33,
+     "k": 60,
+     "n": 61,
+     "u_pooled": 0.9836065573770492,
+     "mu": 0.9836079665608267,
+     "rho_icc": 1e-06,
+     "rho_boot95": [
+      0.0,
+      0.06503099008977427
+     ],
+     "nbar": 1.8484848484848484,
+     "phi": 1.0000008484848484,
+     "lr_stat": 2.2489947681947342e-07,
+     "p_lr_rho0": 0.49981080734488026
+    },
+    "W": {
+     "n_papers": 210,
+     "k": 844,
+     "n": 1175,
+     "u_pooled": 0.7182978723404255,
+     "mu": 0.6958822240093826,
+     "rho_icc": 0.2763409710588311,
+     "rho_boot95": [
+      0.20553349588324896,
+      0.33972658916517434
+     ],
+     "nbar": 5.595238095238095,
+     "phi": 2.2698525574846284,
+     "lr_stat": 210.9306249640606,
+     "p_lr_rho0": 4.303302830930274e-48
+    }
+   },
+   "tertiles": [
+    {
+     "scenario": "plus_dblp",
+     "k": 1,
+     "tertile": "T1",
+     "n_papers": 100,
+     "n_refs_median": 18.0,
+     "k_flagged": 75,
+     "obs": 0.75,
+     "wilson_lo": 0.6569535362992417,
+     "wilson_hi": 0.8245490599627573,
+     "pred_binomial": 0.7907450812214684,
+     "pred_betabinom": 0.7685249338855874,
+     "pred_bb_boot95": [
+      0.7507995677471664,
+      0.785673129491373
+     ],
+     "bin_in_ci": true,
+     "bb_in_ci": true
+    },
+    {
+     "scenario": "plus_dblp",
+     "k": 1,
+     "tertile": "T2",
+     "n_papers": 99,
+     "n_refs_median": 36.0,
+     "k_flagged": 81,
+     "obs": 0.8181818181818182,
+     "wilson_lo": 0.7308102684012943,
+     "wilson_hi": 0.8817823011425481,
+     "pred_binomial": 0.9316572451452586,
+     "pred_betabinom": 0.905395617435373,
+     "pred_bb_boot95": [
+      0.8901003402729764,
+      0.9179962103045778
+     ],
+     "bin_in_ci": false,
+     "bb_in_ci": false
+    },
+    {
+     "scenario": "plus_dblp",
+     "k": 1,
+     "tertile": "T3",
+     "n_papers": 100,
+     "n_refs_median": 60.5,
+     "k_flagged": 93,
+     "obs": 0.93,
+     "wilson_lo": 0.8625032899347025,
+     "wilson_hi": 0.965681175635936,
+     "pred_binomial": 0.9742649093238797,
+     "pred_betabinom": 0.9526661587911961,
+     "pred_bb_boot95": [
+      0.9427546243348676,
+      0.9614817099687477
+     ],
+     "bin_in_ci": false,
+     "bb_in_ci": true
+    },
+    {
+     "scenario": "plus_dblp",
+     "k": 2,
+     "tertile": "T1",
+     "n_papers": 100,
+     "n_refs_median": 18.0,
+     "k_flagged": 55,
+     "obs": 0.55,
+     "wilson_lo": 0.45244427031643447,
+     "wilson_hi": 0.6438562489359654,
+     "pred_binomial": 0.5521604625579574,
+     "pred_betabinom": 0.5401825953083534,
+     "pred_bb_boot95": [
+      0.513726030920741,
+      0.563431335313196
+     ],
+     "bin_in_ci": true,
+     "bb_in_ci": true
+    },
+    {
+     "scenario": "plus_dblp",
+     "k": 2,
+     "tertile": "T2",
+     "n_papers": 99,
+     "n_refs_median": 36.0,
+     "k_flagged": 64,
+     "obs": 0.6464646464646465,
+     "wilson_lo": 0.5484341356971444,
+     "wilson_hi": 0.7335529201246244,
+     "pred_binomial": 0.7921054202463952,
+     "pred_betabinom": 0.7616410326787937,
+     "pred_bb_boot95": [
+      0.7375981559337251,
+      0.7857629633256454
+     ],
+     "bin_in_ci": false,
+     "bb_in_ci": false
+    },
+    {
+     "scenario": "plus_dblp",
+     "k": 2,
+     "tertile": "T3",
+     "n_papers": 100,
+     "n_refs_median": 60.5,
+     "k_flagged": 80,
+     "obs": 0.8,
+     "wilson_lo": 0.7111690380734977,
+     "wilson_hi": 0.8666340774409013,
+     "pred_binomial": 0.902682440598011,
+     "pred_betabinom": 0.8657605524006052,
+     "pred_bb_boot95": [
+      0.8448892234527294,
+      0.8844878537622548
+     ],
+     "bin_in_ci": false,
+     "bb_in_ci": true
+    },
+    {
+     "scenario": "plus_dblp",
+     "k": 3,
+     "tertile": "T1",
+     "n_papers": 100,
+     "n_refs_median": 18.0,
+     "k_flagged": 36,
+     "obs": 0.36,
+     "wilson_lo": 0.2727107459049014,
+     "wilson_hi": 0.45764780018837914,
+     "pred_binomial": 0.367609619071064,
+     "pred_betabinom": 0.37202848043522396,
+     "pred_bb_boot95": [
+      0.3467339790311952,
+      0.396644156399139
+     ],
+     "bin_in_ci": true,
+     "bb_in_ci": true
+    },
+    {
+     "scenario": "plus_dblp",
+     "k": 3,
+     "tertile": "T2",
+     "n_papers": 99,
+     "n_refs_median": 36.0,
+     "k_flagged": 54,
+     "obs": 0.5454545454545454,
+     "wilson_lo": 0.44750518311955134,
+     "wilson_hi": 0.6400080411009974,
+     "pred_binomial": 0.6307820012636927,
+     "pred_betabinom": 0.6153027032268319,
+     "pred_bb_boot95": [
+      0.5853202073057141,
+      0.6411955801153625
+     ],
+     "bin_in_ci": true,
+     "bb_in_ci": true
+    },
+    {
+     "scenario": "plus_dblp",
+     "k": 3,
+     "tertile": "T3",
+     "n_papers": 100,
+     "n_refs_median": 60.5,
+     "k_flagged": 62,
+     "obs": 0.62,
+     "wilson_lo": 0.5220957382071033,
+     "wilson_hi": 0.7090255079986562,
+     "pred_binomial": 0.7935153186877203,
+     "pred_betabinom": 0.7595888490917992,
+     "pred_bb_boot95": [
+      0.7318883774824854,
+      0.7866674270326207
+     ],
+     "bin_in_ci": false,
+     "bb_in_ci": false
+    }
+   ],
+   "verdict": {
+    "k1": {
+     "monotone": true,
+     "bb_all_in_ci": false,
+     "PASS_exploratory": false,
+     "binomial_all_in_ci": false
+    },
+    "k2": {
+     "monotone": true,
+     "bb_all_in_ci": false,
+     "PASS_exploratory": false,
+     "binomial_all_in_ci": false
+    },
+    "k3": {
+     "monotone": true,
+     "bb_all_in_ci": false,
+     "PASS_exploratory": false,
+     "binomial_all_in_ci": false
+    }
+   }
+  }
+ }
+}

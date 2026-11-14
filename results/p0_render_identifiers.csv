@@ -1,0 +1,7 @@
+style,variant,n_refs,n_papers,pct_text_found,pct_printed_doi,pct_printed_arxiv,pct_printed_resolvable_id,pct_bib_has_doi,n_refs_with_bib_doi,pct_bib_doi_printed,seed
+IEEEtran,orig,2664,30,99.77,1.46,42.27,43.73,7.21,192,20.31,42
+IEEEtran,strip,2664,30,99.66,0.0,39.68,39.68,7.21,192,0.0,42
+IEEEtran_doi,orig,2664,30,95.91,5.48,42.27,47.64,7.21,192,74.48,42
+IEEEtran_doi,strip,2664,30,99.66,0.0,39.68,39.68,7.21,192,0.0,42
+elsarticle-num,orig,2664,30,100.0,7.32,42.61,49.74,7.21,192,100.0,42
+elsarticle-num,strip,2664,30,99.81,0.0,39.64,39.64,7.21,192,0.0,42

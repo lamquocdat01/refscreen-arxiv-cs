@@ -1,0 +1,257 @@
+{
+  "seed": 42,
+  "mc_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "mc_max_abs_err_over_se": 2.68,
+  "params": {
+    "pi_zhao_arxiv_aug2025": {
+      "value": 0.0039,
+      "source": "zhao2026wild p.4: hallucinated-citation rate (excess unmatched over pre-LLM baseline) Aug 2025 - arXiv"
+    },
+    "u_zhao_stage3": {
+      "value": 0.0154,
+      "source": "zhao2026wild p.3: unmatched rate after refined title extraction (before Google Scholar step) (pooled 2020-2025, NOT a pre-LLM baseline; upper proxy for u)"
+    },
+    "u_phantom_iclr2023_implied": {
+      "value": 0.0030183599577714437,
+      "source": "derived (ours) from russinovich2026phantom p.8-9 (Fig. 12): pooled >=1-flag share 0.1653 of ICLR 2023 papers, mean n=59.8 (ICLR 2025 refs/paper), k=1 binomial inversion; biased low by Jensen (n varies)"
+    },
+    "pi_phantom_iclr2025_excess": {
+      "value": 0.0007816400422285563,
+      "source": "derived (ours): ICLR 2025 flagged-ref rate 0.0038 (russinovich2026phantom p.6) minus implied pre-LLM u"
+    }
+  },
+  "headlines": [
+    {
+      "name": "PPV ceiling, pi = Zhao arXiv Aug-2025, u = u_zhao_stage3",
+      "pi": 0.0039,
+      "u": 0.0154,
+      "ppv_ceiling": 0.2027033348336845
+    },
+    {
+      "name": "P(false flag) survey n=150, k=2, u = u_zhao_stage3",
+      "n": 150,
+      "k": 2,
+      "u": 0.0154,
+      "p_false_flag": 0.6737747458324301
+    },
+    {
+      "name": "PPV ceiling, pi = Zhao arXiv Aug-2025, u = u_phantom_iclr2023_implied",
+      "pi": 0.0039,
+      "u": 0.0030183599577714437,
+      "ppv_ceiling": 0.5646782173976461
+    },
+    {
+      "name": "P(false flag) survey n=150, k=2, u = u_phantom_iclr2023_implied",
+      "n": 150,
+      "k": 2,
+      "u": 0.0030183599577714437,
+      "p_false_flag": 0.07599196950280536
+    },
+    {
+      "name": "PPV ceiling, Phantom ICLR (derived pi, implied u)",
+      "pi": 0.0007816400422285563,
+      "u": 0.0030183599577714437,
+      "ppv_ceiling": 0.20582253509677778
+    },
+    {
+      "name": "PLAN illustration pi=0.5%, u=1.5%",
+      "pi": 0.005,
+      "u": 0.015,
+      "ppv_ceiling": 0.25094102885821834,
+      "p_ff_n50_k1": 0.5303097717969985,
+      "p_ff_n50_k2": 0.17267761834293657,
+      "p_ff_n150_k2": 0.6596916313310535
+    },
+    {
+      "name": "MEASURED u0 def1_title_only (point), pi zhao_arxiv_0.39%",
+      "u0_def": "def1_title_only",
+      "u_variant": "point",
+      "u": 0.0718,
+      "u0_n_refs": 1142,
+      "u0_n_papers": 29,
+      "pi": 0.0039,
+      "ppv_ceiling": 0.051710435351481135,
+      "p_ff_n50_k1": 0.975896605764449,
+      "p_ff_n50_k2": 0.882671885547224,
+      "p_ff_n150_k2": 0.999823513256184,
+      "k_alpha_n150_a0.05": 17,
+      "k_alpha_n150_a0.01": 20
+    },
+    {
+      "name": "MEASURED u0 def1_title_only (point), pi phantom_0.5%",
+      "u0_def": "def1_title_only",
+      "u_variant": "point",
+      "u": 0.0718,
+      "u0_n_refs": 1142,
+      "u0_n_papers": 29,
+      "pi": 0.005,
+      "ppv_ceiling": 0.06540992399366831,
+      "p_ff_n50_k1": 0.975896605764449,
+      "p_ff_n50_k2": 0.882671885547224,
+      "p_ff_n150_k2": 0.999823513256184,
+      "k_alpha_n150_a0.05": 17,
+      "k_alpha_n150_a0.01": 20
+    },
+    {
+      "name": "MEASURED u0 def1_title_only (wilson_lo), pi zhao_arxiv_0.39%",
+      "u0_def": "def1_title_only",
+      "u_variant": "wilson_lo",
+      "u": 0.0582,
+      "u0_n_refs": 1142,
+      "u0_n_papers": 29,
+      "pi": 0.0039,
+      "ppv_ceiling": 0.0630323200645451,
+      "p_ff_n50_k1": 0.9501190971869662,
+      "p_ff_n50_k2": 0.795995687560795,
+      "p_ff_n150_k2": 0.9987254656718099,
+      "k_alpha_n150_a0.05": 15,
+      "k_alpha_n150_a0.01": 17
+    },
+    {
+      "name": "MEASURED u0 def1_title_only (wilson_lo), pi phantom_0.5%",
+      "u0_def": "def1_title_only",
+      "u_variant": "wilson_lo",
+      "u": 0.0582,
+      "u0_n_refs": 1142,
+      "u0_n_papers": 29,
+      "pi": 0.005,
+      "ppv_ceiling": 0.07947988364145034,
+      "p_ff_n50_k1": 0.9501190971869662,
+      "p_ff_n50_k2": 0.795995687560795,
+      "p_ff_n150_k2": 0.9987254656718099,
+      "k_alpha_n150_a0.05": 15,
+      "k_alpha_n150_a0.01": 17
+    },
+    {
+      "name": "MEASURED u0 def1_title_only (wilson_hi), pi zhao_arxiv_0.39%",
+      "u0_def": "def1_title_only",
+      "u_variant": "wilson_hi",
+      "u": 0.0883,
+      "u0_n_refs": 1142,
+      "u0_n_papers": 29,
+      "pi": 0.0039,
+      "ppv_ceiling": 0.04245793099454001,
+      "p_ff_n50_k1": 0.990168999006741,
+      "p_ff_n50_k2": 0.942561376559403,
+      "p_ff_n150_k2": 0.999985246220313,
+      "k_alpha_n150_a0.05": 20,
+      "k_alpha_n150_a0.01": 23
+    },
+    {
+      "name": "MEASURED u0 def1_title_only (wilson_hi), pi phantom_0.5%",
+      "u0_def": "def1_title_only",
+      "u_variant": "wilson_hi",
+      "u": 0.0883,
+      "u0_n_refs": 1142,
+      "u0_n_papers": 29,
+      "pi": 0.005,
+      "ppv_ceiling": 0.053845366875407204,
+      "p_ff_n50_k1": 0.990168999006741,
+      "p_ff_n50_k2": 0.942561376559403,
+      "p_ff_n150_k2": 0.999985246220313,
+      "k_alpha_n150_a0.05": 20,
+      "k_alpha_n150_a0.01": 23
+    },
+    {
+      "name": "MEASURED u0 def2_title_author (point), pi zhao_arxiv_0.39%",
+      "u0_def": "def2_title_author",
+      "u_variant": "point",
+      "u": 0.1391,
+      "u0_n_refs": 827,
+      "u0_n_papers": 28,
+      "pi": 0.0039,
+      "ppv_ceiling": 0.027376584077596192,
+      "p_ff_n50_k1": 0.9994407121421451,
+      "p_ff_n50_k2": 0.9949223626806742,
+      "p_ff_n150_k2": 0.9999999955849945,
+      "k_alpha_n150_a0.05": 29,
+      "k_alpha_n150_a0.01": 32
+    },
+    {
+      "name": "MEASURED u0 def2_title_author (point), pi phantom_0.5%",
+      "u0_def": "def2_title_author",
+      "u_variant": "point",
+      "u": 0.1391,
+      "u0_n_refs": 827,
+      "u0_n_papers": 28,
+      "pi": 0.005,
+      "ppv_ceiling": 0.034866409352565644,
+      "p_ff_n50_k1": 0.9994407121421451,
+      "p_ff_n50_k2": 0.9949223626806742,
+      "p_ff_n150_k2": 0.9999999955849945,
+      "k_alpha_n150_a0.05": 29,
+      "k_alpha_n150_a0.01": 32
+    },
+    {
+      "name": "MEASURED u0 def2_title_author (wilson_lo), pi zhao_arxiv_0.39%",
+      "u0_def": "def2_title_author",
+      "u_variant": "wilson_lo",
+      "u": 0.1171,
+      "u0_n_refs": 827,
+      "u0_n_papers": 28,
+      "pi": 0.0039,
+      "ppv_ceiling": 0.032353516756757385,
+      "p_ff_n50_k1": 0.9980249602489744,
+      "p_ff_n50_k2": 0.9849273753104139,
+      "p_ff_n150_k2": 0.999999839023329,
+      "k_alpha_n150_a0.05": 25,
+      "k_alpha_n150_a0.01": 28
+    },
+    {
+      "name": "MEASURED u0 def2_title_author (wilson_lo), pi phantom_0.5%",
+      "u0_def": "def2_title_author",
+      "u_variant": "wilson_lo",
+      "u": 0.1171,
+      "u0_n_refs": 827,
+      "u0_n_papers": 28,
+      "pi": 0.005,
+      "ppv_ceiling": 0.04114735278505857,
+      "p_ff_n50_k1": 0.9980249602489744,
+      "p_ff_n50_k2": 0.9849273753104139,
+      "p_ff_n150_k2": 0.999999839023329,
+      "k_alpha_n150_a0.05": 25,
+      "k_alpha_n150_a0.01": 28
+    },
+    {
+      "name": "MEASURED u0 def2_title_author (wilson_hi), pi zhao_arxiv_0.39%",
+      "u0_def": "def2_title_author",
+      "u_variant": "wilson_hi",
+      "u": 0.1643,
+      "u0_n_refs": 827,
+      "u0_n_papers": 28,
+      "pi": 0.0039,
+      "ppv_ceiling": 0.02327535164729511,
+      "p_ff_n50_k1": 0.9998733748104855,
+      "p_ff_n50_k2": 0.9986286387426844,
+      "p_ff_n150_k2": 0.9999999999380956,
+      "k_alpha_n150_a0.05": 33,
+      "k_alpha_n150_a0.01": 37
+    },
+    {
+      "name": "MEASURED u0 def2_title_author (wilson_hi), pi phantom_0.5%",
+      "u0_def": "def2_title_author",
+      "u_variant": "wilson_hi",
+      "u": 0.1643,
+      "u0_n_refs": 827,
+      "u0_n_papers": 28,
+      "pi": 0.005,
+      "ppv_ceiling": 0.029677377232109736,
+      "p_ff_n50_k1": 0.9998733748104855,
+      "p_ff_n50_k2": 0.9986286387426844,
+      "p_ff_n150_k2": 0.9999999999380956,
+      "k_alpha_n150_a0.05": 33,
+      "k_alpha_n150_a0.01": 37
+    }
+  ],
+  "u0_source": {
+    "file": "p0_groundtruth.json",
+    "smoke_test": false,
+    "seed": 42
+  }
+}

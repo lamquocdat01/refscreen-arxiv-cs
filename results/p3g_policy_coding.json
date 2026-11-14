@@ -1,0 +1,22 @@
+{
+ "label": "POST HOC (POSTHOC_NOTE_P3G.md P11); coded by Claude Code from stored text; descriptive",
+ "n": 26,
+ "counts": {
+  "confirm": 10,
+  "no_confirm": 9,
+  "no_rule": 7
+ },
+ "numeric_thresholds": 3,
+ "numeric_with_confirmation": 3,
+ "no_confirm_venues": [
+  "ACL Rolling Review (ARR)",
+  "ACM ASIACCS 2027",
+  "ACM CCS 2026",
+  "AISTATS 2027",
+  "CVPR 2026",
+  "ECCV 2026",
+  "IEEE CSF 2027",
+  "ISCA 2027",
+  "USENIX Security 2027"
+ ]
+}

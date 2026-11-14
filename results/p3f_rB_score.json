@@ -1,0 +1,107 @@
+{
+ "label": "R_B (AI sub-agent) characterisation, Amendment 8 (B); Supplement only; descriptive; no inference",
+ "rater_file": "p3e_human_rB.csv",
+ "rater_file_sha256": "722c1e94855fb294d0e490c08f12362bc45272491fb79cd57b3499c81a2ee763",
+ "key_plaintext_sha256_checked": "b4bba6e0f361bc56b203fea1339fbad6c038eefbb327aced8fd563f204266fd7",
+ "metrics": [
+  {
+   "metric": "negative_recall (not-exists or ambiguous)",
+   "family": "gen_a",
+   "k": 5,
+   "n": 5,
+   "rate": 1.0,
+   "cp95_lo": 0.47817624989501856,
+   "cp95_hi": 1.0
+  },
+  {
+   "metric": "not-exists alone",
+   "family": "gen_a",
+   "k": 5,
+   "n": 5,
+   "rate": 1.0,
+   "cp95_lo": 0.47817624989501856,
+   "cp95_hi": 1.0
+  },
+  {
+   "metric": "negative_recall (not-exists or ambiguous)",
+   "family": "gen_c",
+   "k": 0,
+   "n": 5,
+   "rate": 0.0,
+   "cp95_lo": 0.0,
+   "cp95_hi": 0.5218237501049814
+  },
+  {
+   "metric": "not-exists alone",
+   "family": "gen_c",
+   "k": 0,
+   "n": 5,
+   "rate": 0.0,
+   "cp95_lo": 0.0,
+   "cp95_hi": 0.5218237501049814
+  },
+  {
+   "metric": "negative_recall (not-exists or ambiguous), pooled as in Amendment 6",
+   "family": "gen_a+gen_c",
+   "k": 5,
+   "n": 10,
+   "rate": 0.5,
+   "cp95_lo": 0.18708602844739855,
+   "cp95_hi": 0.8129139715526015
+  },
+  {
+   "metric": "gen_c rows whose evidence_note reports the venue/year mismatch (coded by CC)",
+   "family": "gen_c",
+   "k": 5,
+   "n": 5,
+   "rate": 1.0,
+   "cp95_lo": 0.47817624989501856,
+   "cp95_hi": 1.0
+  },
+  {
+   "metric": "exists",
+   "family": "real V rows",
+   "k": 10,
+   "n": 10,
+   "rate": 1.0,
+   "cp95_lo": 0.6915028921812392,
+   "cp95_hi": 1.0
+  },
+  {
+   "metric": "exists",
+   "family": "flagged rows",
+   "k": 47,
+   "n": 48,
+   "rate": 0.9791666666666666,
+   "cp95_lo": 0.8893038394068478,
+   "cp95_hi": 0.9994726847465769
+  },
+  {
+   "metric": "ambiguous",
+   "family": "flagged rows",
+   "k": 1,
+   "n": 48,
+   "rate": 0.020833333333333332,
+   "cp95_lo": 0.0005273152534231205,
+   "cp95_hi": 0.11069616059315224
+  },
+  {
+   "metric": "not-exists",
+   "family": "flagged rows",
+   "k": 0,
+   "n": 48,
+   "rate": 0.0,
+   "cp95_lo": 0.0,
+   "cp95_hi": 0.0739727853472802
+  }
+ ],
+ "earlier_ai_labels_V01_V20": "not available (no earlier AI label file of V01-V20 on disk)",
+ "n_rows": 68,
+ "n_lenient_notes": 0,
+ "lenient_rows": [],
+ "n_dblp_blocked_notes": 2,
+ "limits": [
+  "DBLP was behind a bot wall during rating (Crossref and web search were used instead)",
+  "the brief quotes 'three rows rated leniently'; the word does not occur in R_B's notes. Rows whose note reports a title variant beyond a dropped subtitle: H40 (suffix variant), H50 (truncated title), H54 (truncated by 1 word). Which three the brief meant is not verifiable from the file"
+ ]
+}

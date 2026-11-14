@@ -1,12 +1,11 @@
 {
- "interim": false,
  "seed": 42,
  "boot": 1000,
  "input": "D:\\Datasets\\_derived\\43\\p1_groundtruth_refs_full.csv",
  "columns": [
   "Crossref-only",
   "+arXiv",
-  "+DBLP (dump 18-10-2026)",
+  "+DBLP (dump 2026-10-19 release (server last-modified 2026-10-18 23:39 UTC))",
   "+OpenAlex",
   "+S2"
  ],

@@ -1,0 +1,571 @@
+{
+  "seed": 42,
+  "generated": "2026-10-17T22:51:31Z",
+  "smoke_test": false,
+  "limit": 0,
+  "title_only_sets": "prellm,render30",
+  "backends_used": {
+    "identifier": "Crossref works/<doi> > OpenAlex works/doi (free) > DataCite; arXiv id_list",
+    "title_only": "Crossref query.bibliographic + Semantic Scholar search/match (keyless, 1.1 s/req) + arXiv ti: search fallback",
+    "openalex_search": false,
+    "openalex_api_key_present": false
+  },
+  "definitions": {
+    "certified_real": "identifier (DOI or arXiv id) resolves in Crossref/OpenAlex/DataCite/arXiv AND title similarity >= 0.9 (max of normalised Levenshtein, token Jaccard)",
+    "u0": "share of pre-LLM (2019-2021) cited .bib references with a usable title (>= 10 chars) that are NOT resolved by title-only search (Crossref query.bibliographic + Semantic Scholar match, arXiv title search as fallback; similarity >= 0.9)"
+  },
+  "papers": {
+    "pilot": {
+      "kept": 100,
+      "with_bib": 91,
+      "bbl_only": 9,
+      "refs_labelled": 6014
+    },
+    "prellm": {
+      "kept": 30,
+      "with_bib": 24,
+      "bbl_only": 6,
+      "refs_labelled": 1145
+    }
+  },
+  "strata": [
+    {
+      "set": "pilot",
+      "field": "cs.CL",
+      "year": 2024,
+      "n_papers": 7,
+      "n_refs": 371,
+      "pct_doi": 2.7,
+      "pct_arxiv_only": 57.1,
+      "pct_certified_real": 55.5,
+      "pct_mismatch": 4.3
+    },
+    {
+      "set": "pilot",
+      "field": "cs.CL",
+      "year": 2025,
+      "n_papers": 7,
+      "n_refs": 309,
+      "pct_doi": 19.4,
+      "pct_arxiv_only": 35.0,
+      "pct_certified_real": 54.0,
+      "pct_mismatch": 0.3
+    },
+    {
+      "set": "pilot",
+      "field": "cs.CL",
+      "year": 2026,
+      "n_papers": 6,
+      "n_refs": 254,
+      "pct_doi": 10.2,
+      "pct_arxiv_only": 35.0,
+      "pct_certified_real": 44.1,
+      "pct_mismatch": 1.2
+    },
+    {
+      "set": "pilot",
+      "field": "cs.CR",
+      "year": 2024,
+      "n_papers": 7,
+      "n_refs": 294,
+      "pct_doi": 27.6,
+      "pct_arxiv_only": 3.1,
+      "pct_certified_real": 28.9,
+      "pct_mismatch": 1.4
+    },
+    {
+      "set": "pilot",
+      "field": "cs.CR",
+      "year": 2025,
+      "n_papers": 7,
+      "n_refs": 1259,
+      "pct_doi": 7.5,
+      "pct_arxiv_only": 48.5,
+      "pct_certified_real": 52.3,
+      "pct_mismatch": 3.7
+    },
+    {
+      "set": "pilot",
+      "field": "cs.CR",
+      "year": 2026,
+      "n_papers": 6,
+      "n_refs": 484,
+      "pct_doi": 4.5,
+      "pct_arxiv_only": 16.1,
+      "pct_certified_real": 19.4,
+      "pct_mismatch": 1.2
+    },
+    {
+      "set": "pilot",
+      "field": "cs.CV",
+      "year": 2024,
+      "n_papers": 7,
+      "n_refs": 318,
+      "pct_doi": 0.9,
+      "pct_arxiv_only": 12.6,
+      "pct_certified_real": 12.6,
+      "pct_mismatch": 0.9
+    },
+    {
+      "set": "pilot",
+      "field": "cs.CV",
+      "year": 2025,
+      "n_papers": 7,
+      "n_refs": 784,
+      "pct_doi": 4.1,
+      "pct_arxiv_only": 42.0,
+      "pct_certified_real": 44.6,
+      "pct_mismatch": 1.4
+    },
+    {
+      "set": "pilot",
+      "field": "cs.CV",
+      "year": 2026,
+      "n_papers": 6,
+      "n_refs": 295,
+      "pct_doi": 5.1,
+      "pct_arxiv_only": 15.3,
+      "pct_certified_real": 19.0,
+      "pct_mismatch": 1.4
+    },
+    {
+      "set": "pilot",
+      "field": "cs.LG",
+      "year": 2024,
+      "n_papers": 7,
+      "n_refs": 411,
+      "pct_doi": 9.5,
+      "pct_arxiv_only": 17.8,
+      "pct_certified_real": 26.3,
+      "pct_mismatch": 1.0
+    },
+    {
+      "set": "pilot",
+      "field": "cs.LG",
+      "year": 2025,
+      "n_papers": 7,
+      "n_refs": 389,
+      "pct_doi": 9.5,
+      "pct_arxiv_only": 16.5,
+      "pct_certified_real": 24.7,
+      "pct_mismatch": 1.0
+    },
+    {
+      "set": "pilot",
+      "field": "cs.LG",
+      "year": 2026,
+      "n_papers": 6,
+      "n_refs": 223,
+      "pct_doi": 6.7,
+      "pct_arxiv_only": 30.5,
+      "pct_certified_real": 36.8,
+      "pct_mismatch": 0.4
+    },
+    {
+      "set": "pilot",
+      "field": "cs.NI",
+      "year": 2024,
+      "n_papers": 7,
+      "n_refs": 274,
+      "pct_doi": 39.1,
+      "pct_arxiv_only": 13.5,
+      "pct_certified_real": 51.8,
+      "pct_mismatch": 0.4
+    },
+    {
+      "set": "pilot",
+      "field": "cs.NI",
+      "year": 2025,
+      "n_papers": 7,
+      "n_refs": 181,
+      "pct_doi": 65.7,
+      "pct_arxiv_only": 8.3,
+      "pct_certified_real": 69.6,
+      "pct_mismatch": 4.4
+    },
+    {
+      "set": "pilot",
+      "field": "cs.NI",
+      "year": 2026,
+      "n_papers": 6,
+      "n_refs": 168,
+      "pct_doi": 29.2,
+      "pct_arxiv_only": 15.5,
+      "pct_certified_real": 43.5,
+      "pct_mismatch": 1.2
+    },
+    {
+      "set": "prellm",
+      "field": "cs.CL",
+      "year": 2019,
+      "n_papers": 2,
+      "n_refs": 46,
+      "pct_doi": 0.0,
+      "pct_arxiv_only": 15.2,
+      "pct_certified_real": 13.0,
+      "pct_mismatch": 2.2
+    },
+    {
+      "set": "prellm",
+      "field": "cs.CL",
+      "year": 2020,
+      "n_papers": 2,
+      "n_refs": 77,
+      "pct_doi": 0.0,
+      "pct_arxiv_only": 20.8,
+      "pct_certified_real": 20.8,
+      "pct_mismatch": 0.0
+    },
+    {
+      "set": "prellm",
+      "field": "cs.CL",
+      "year": 2021,
+      "n_papers": 2,
+      "n_refs": 101,
+      "pct_doi": 24.8,
+      "pct_arxiv_only": 13.9,
+      "pct_certified_real": 36.6,
+      "pct_mismatch": 1.0
+    },
+    {
+      "set": "prellm",
+      "field": "cs.CR",
+      "year": 2019,
+      "n_papers": 2,
+      "n_refs": 96,
+      "pct_doi": 18.8,
+      "pct_arxiv_only": 32.3,
+      "pct_certified_real": 40.6,
+      "pct_mismatch": 1.0
+    },
+    {
+      "set": "prellm",
+      "field": "cs.CR",
+      "year": 2020,
+      "n_papers": 2,
+      "n_refs": 105,
+      "pct_doi": 0.0,
+      "pct_arxiv_only": 14.3,
+      "pct_certified_real": 12.4,
+      "pct_mismatch": 1.9
+    },
+    {
+      "set": "prellm",
+      "field": "cs.CR",
+      "year": 2021,
+      "n_papers": 2,
+      "n_refs": 52,
+      "pct_doi": 0.0,
+      "pct_arxiv_only": 3.8,
+      "pct_certified_real": 1.9,
+      "pct_mismatch": 1.9
+    },
+    {
+      "set": "prellm",
+      "field": "cs.CV",
+      "year": 2019,
+      "n_papers": 2,
+      "n_refs": 44,
+      "pct_doi": 4.5,
+      "pct_arxiv_only": 9.1,
+      "pct_certified_real": 9.1,
+      "pct_mismatch": 4.5
+    },
+    {
+      "set": "prellm",
+      "field": "cs.CV",
+      "year": 2020,
+      "n_papers": 1,
+      "n_refs": 40,
+      "pct_doi": 0.0,
+      "pct_arxiv_only": 10.0,
+      "pct_certified_real": 10.0,
+      "pct_mismatch": 0.0
+    },
+    {
+      "set": "prellm",
+      "field": "cs.CV",
+      "year": 2021,
+      "n_papers": 2,
+      "n_refs": 150,
+      "pct_doi": 0.7,
+      "pct_arxiv_only": 19.3,
+      "pct_certified_real": 16.0,
+      "pct_mismatch": 4.0
+    },
+    {
+      "set": "prellm",
+      "field": "cs.LG",
+      "year": 2019,
+      "n_papers": 2,
+      "n_refs": 98,
+      "pct_doi": 4.1,
+      "pct_arxiv_only": 21.4,
+      "pct_certified_real": 25.5,
+      "pct_mismatch": 0.0
+    },
+    {
+      "set": "prellm",
+      "field": "cs.LG",
+      "year": 2020,
+      "n_papers": 2,
+      "n_refs": 63,
+      "pct_doi": 0.0,
+      "pct_arxiv_only": 25.4,
+      "pct_certified_real": 25.4,
+      "pct_mismatch": 0.0
+    },
+    {
+      "set": "prellm",
+      "field": "cs.LG",
+      "year": 2021,
+      "n_papers": 2,
+      "n_refs": 63,
+      "pct_doi": 11.1,
+      "pct_arxiv_only": 6.3,
+      "pct_certified_real": 17.5,
+      "pct_mismatch": 0.0
+    },
+    {
+      "set": "prellm",
+      "field": "cs.NI",
+      "year": 2019,
+      "n_papers": 2,
+      "n_refs": 74,
+      "pct_doi": 29.7,
+      "pct_arxiv_only": 1.4,
+      "pct_certified_real": 31.1,
+      "pct_mismatch": 0.0
+    },
+    {
+      "set": "prellm",
+      "field": "cs.NI",
+      "year": 2020,
+      "n_papers": 2,
+      "n_refs": 69,
+      "pct_doi": 20.3,
+      "pct_arxiv_only": 17.4,
+      "pct_certified_real": 34.8,
+      "pct_mismatch": 1.4
+    },
+    {
+      "set": "prellm",
+      "field": "cs.NI",
+      "year": 2021,
+      "n_papers": 2,
+      "n_refs": 67,
+      "pct_doi": 0.0,
+      "pct_arxiv_only": 9.0,
+      "pct_certified_real": 7.5,
+      "pct_mismatch": 1.5
+    }
+  ],
+  "u0": {
+    "all_titled_refs": {
+      "k_unresolved": 82,
+      "n": 1142,
+      "n_papers": 29,
+      "u0": 0.0718,
+      "wilson95": [
+        0.0582,
+        0.0883
+      ],
+      "paper_bootstrap95": [
+        0.0435,
+        0.1075
+      ]
+    },
+    "certified_real_only": {
+      "k_unresolved": 2,
+      "n": 248,
+      "u0": 0.0081,
+      "wilson95": [
+        0.0022,
+        0.0289
+      ]
+    },
+    "backend_crossref_only": {
+      "n": 1142,
+      "u0": 0.3879
+    },
+    "backend_s2_only": {
+      "n": 468,
+      "u0": 0.1966
+    },
+    "n_query_errors": 0,
+    "source_bbl-grobid": {
+      "k_unresolved": 19,
+      "n": 277,
+      "n_papers": 6,
+      "u0": 0.0686,
+      "wilson95": [
+        0.0443,
+        0.1046
+      ]
+    },
+    "source_bib": {
+      "k_unresolved": 63,
+      "n": 865,
+      "n_papers": 23,
+      "u0": 0.0728,
+      "wilson95": [
+        0.0573,
+        0.0921
+      ]
+    },
+    "by_field": {
+      "cs.CL": {
+        "k": 14,
+        "n": 223,
+        "n_papers": 6,
+        "u0": 0.0628
+      },
+      "cs.CR": {
+        "k": 32,
+        "n": 251,
+        "n_papers": 6,
+        "u0": 0.1275
+      },
+      "cs.CV": {
+        "k": 7,
+        "n": 234,
+        "n_papers": 5,
+        "u0": 0.0299
+      },
+      "cs.LG": {
+        "k": 10,
+        "n": 224,
+        "n_papers": 6,
+        "u0": 0.0446
+      },
+      "cs.NI": {
+        "k": 19,
+        "n": 210,
+        "n_papers": 6,
+        "u0": 0.0905
+      }
+    },
+    "def1_title_only": {
+      "k_unresolved": 82,
+      "n": 1142,
+      "n_papers": 29,
+      "u0": 0.0718,
+      "wilson95": [
+        0.0582,
+        0.0883
+      ],
+      "paper_bootstrap95": [
+        0.0435,
+        0.1075
+      ],
+      "definition": "title-only search does not resolve (sim >= 0.9)"
+    },
+    "def2_title_author": {
+      "definition": "title-only search does not resolve, OR it resolves but the first .bib author surname is not in the matched registry record's authors; refs with no .bib author or no registry author list are excluded",
+      "k_unmatched": 115,
+      "n": 827,
+      "n_papers": 28,
+      "u0": 0.1391,
+      "wilson95": [
+        0.1171,
+        0.1643
+      ],
+      "paper_bootstrap95": [
+        0.0941,
+        0.2012
+      ],
+      "k_author_mismatch_only": 33,
+      "n_excluded_no_bib_author": 259,
+      "n_excluded_no_registry_authors": 56
+    },
+    "n_title_only_error_excluded": 0
+  },
+  "overall_pilot": {
+    "n_papers": 100,
+    "n_refs": 6014,
+    "pct_doi": 11.79,
+    "pct_arxiv_only": 29.98,
+    "pct_no_identifier": 58.23,
+    "pct_certified_real": 39.82,
+    "pct_mismatch": 1.9,
+    "pct_id_not_found": 0.05
+  },
+  "overall_prellm": {
+    "n_papers": 29,
+    "n_refs": 1145,
+    "pct_doi": 8.12,
+    "pct_arxiv_only": 15.9,
+    "pct_no_identifier": 75.98,
+    "pct_certified_real": 21.66,
+    "pct_mismatch": 1.4,
+    "pct_id_not_found": 0.96
+  },
+  "certified_real_bias": {
+    "pilot": {
+      "n_refs": 6014,
+      "n_certified": 2395,
+      "pct_certified": 39.82,
+      "pct_doi_all": 11.79,
+      "pct_doi_cert": 28.77,
+      "pct_arxiv_only_all": 29.98,
+      "pct_arxiv_only_cert": 71.23,
+      "pct_article_all": 49.19,
+      "pct_article_cert": 70.61,
+      "field_share_all": {
+        "cs.CR": 0.339,
+        "cs.CV": 0.232,
+        "cs.LG": 0.17,
+        "cs.CL": 0.155,
+        "cs.NI": 0.104
+      },
+      "field_share_cert": {
+        "cs.CR": 0.349,
+        "cs.CL": 0.203,
+        "cs.CV": 0.186,
+        "cs.NI": 0.142,
+        "cs.LG": 0.119
+      },
+      "title_only_unresolved_all": {
+        "k": 207,
+        "n": 2651
+      },
+      "title_only_unresolved_cert": {
+        "k": 13,
+        "n": 1259
+      }
+    },
+    "prellm": {
+      "n_refs": 1145,
+      "n_certified": 248,
+      "pct_certified": 21.66,
+      "pct_doi_all": 8.12,
+      "pct_doi_cert": 32.26,
+      "pct_arxiv_only_all": 15.9,
+      "pct_arxiv_only_cert": 67.74,
+      "pct_article_all": 30.13,
+      "pct_article_cert": 52.02,
+      "field_share_all": {
+        "cs.CR": 0.221,
+        "cs.CV": 0.204,
+        "cs.LG": 0.196,
+        "cs.CL": 0.196,
+        "cs.NI": 0.183
+      },
+      "field_share_cert": {
+        "cs.CL": 0.238,
+        "cs.CR": 0.214,
+        "cs.LG": 0.21,
+        "cs.NI": 0.21,
+        "cs.CV": 0.129
+      },
+      "title_only_unresolved_all": {
+        "k": 82,
+        "n": 1142
+      },
+      "title_only_unresolved_cert": {
+        "k": 2,
+        "n": 248
+      }
+    }
+  }
+}

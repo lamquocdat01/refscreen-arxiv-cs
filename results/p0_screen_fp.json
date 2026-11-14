@@ -1,0 +1,297 @@
+{
+  "seed": 42,
+  "boot": 1000,
+  "threshold": 0.9,
+  "n_rendered": 15984,
+  "n_unique_strings": 6221,
+  "query_errors": {
+    "crossref": 0,
+    "s2": 1
+  },
+  "render_missing": {
+    "IEEEtran/orig": {
+      "k": 6,
+      "n": 2664,
+      "n_papers": 2
+    },
+    "IEEEtran/strip": {
+      "k": 9,
+      "n": 2664,
+      "n_papers": 3
+    },
+    "IEEEtran_doi/orig": {
+      "k": 109,
+      "n": 2664,
+      "n_papers": 2
+    },
+    "IEEEtran_doi/strip": {
+      "k": 9,
+      "n": 2664,
+      "n_papers": 3
+    },
+    "elsarticle-num/orig": {
+      "k": 0,
+      "n": 2664,
+      "n_papers": 0
+    },
+    "elsarticle-num/strip": {
+      "k": 5,
+      "n": 2664,
+      "n_papers": 2
+    }
+  },
+  "cpb0_ratio_vs_doi_style": [
+    {
+      "variant": "orig",
+      "backend": "crossref",
+      "style": "IEEEtran",
+      "fp_style": 0.011119936457505957,
+      "fp_doi_style": 0.008935824532900082,
+      "ratio": 1.2444219799263483,
+      "ratio_ci": [
+        0.9168140788304805,
+        1.713879195296578
+      ],
+      "n_refs": 1259,
+      "n_papers": 28
+    },
+    {
+      "variant": "orig",
+      "backend": "crossref",
+      "style": "elsarticle-num",
+      "fp_style": 0.004761904761904762,
+      "fp_doi_style": 0.008935824532900082,
+      "ratio": 0.5329004329004329,
+      "ratio_ci": [
+        0.0,
+        0.9460087303387
+      ],
+      "n_refs": 1260,
+      "n_papers": 28
+    },
+    {
+      "variant": "orig",
+      "backend": "crossref",
+      "style": "bib-title",
+      "fp_style": 0.5544082605242255,
+      "fp_doi_style": 0.008935824532900082,
+      "ratio": 62.04332442775651,
+      "ratio_ci": [
+        30.422143258652536,
+        128.884823181044
+      ],
+      "n_refs": 1259,
+      "n_papers": 28
+    },
+    {
+      "variant": "orig",
+      "backend": "s2",
+      "style": "IEEEtran",
+      "fp_style": 0.011119936457505957,
+      "fp_doi_style": 0.003249390739236393,
+      "ratio": 3.4221604447974583,
+      "ratio_ci": [
+        1.616517489711934,
+        NaN
+      ],
+      "n_refs": 1259,
+      "n_papers": 28
+    },
+    {
+      "variant": "orig",
+      "backend": "s2",
+      "style": "elsarticle-num",
+      "fp_style": 0.009523809523809525,
+      "fp_doi_style": 0.003249390739236393,
+      "ratio": 2.930952380952381,
+      "ratio_ci": [
+        1.438655032345419,
+        NaN
+      ],
+      "n_refs": 1260,
+      "n_papers": 28
+    },
+    {
+      "variant": "orig",
+      "backend": "s2",
+      "style": "bib-title",
+      "fp_style": NaN,
+      "fp_doi_style": 0.003249390739236393,
+      "ratio": NaN,
+      "ratio_ci": [
+        0.0,
+        NaN
+      ],
+      "n_refs": 0,
+      "n_papers": 28
+    },
+    {
+      "variant": "orig",
+      "backend": "union",
+      "style": "IEEEtran",
+      "fp_style": 0.0023828435266084196,
+      "fp_doi_style": 0.0016246953696181965,
+      "ratio": 1.4666401906274824,
+      "ratio_ci": [
+        0.9199854368932039,
+        NaN
+      ],
+      "n_refs": 1259,
+      "n_papers": 28
+    },
+    {
+      "variant": "orig",
+      "backend": "union",
+      "style": "elsarticle-num",
+      "fp_style": 0.003968253968253968,
+      "fp_doi_style": 0.0016246953696181965,
+      "ratio": 2.442460317460317,
+      "ratio_ci": [
+        0.9380174586033119,
+        NaN
+      ],
+      "n_refs": 1260,
+      "n_papers": 28
+    },
+    {
+      "variant": "orig",
+      "backend": "union",
+      "style": "bib-title",
+      "fp_style": 0.010325655281969817,
+      "fp_doi_style": 0.0016246953696181965,
+      "ratio": 6.355440826052423,
+      "ratio_ci": [
+        1.4071786305958602,
+        NaN
+      ],
+      "n_refs": 1259,
+      "n_papers": 28
+    },
+    {
+      "variant": "strip",
+      "backend": "crossref",
+      "style": "IEEEtran",
+      "fp_style": 0.04226475279106858,
+      "fp_doi_style": 0.04226475279106858,
+      "ratio": 1.0,
+      "ratio_ci": [
+        1.0,
+        1.0
+      ],
+      "n_refs": 1254,
+      "n_papers": 28
+    },
+    {
+      "variant": "strip",
+      "backend": "crossref",
+      "style": "elsarticle-num",
+      "fp_style": 0.03898170246618934,
+      "fp_doi_style": 0.04226475279106858,
+      "ratio": 0.922321790426442,
+      "ratio_ci": [
+        0.8573778723499154,
+        0.9985234326455228
+      ],
+      "n_refs": 1257,
+      "n_papers": 28
+    },
+    {
+      "variant": "strip",
+      "backend": "crossref",
+      "style": "bib-title",
+      "fp_style": 0.5544082605242255,
+      "fp_doi_style": 0.04226475279106858,
+      "ratio": 13.117508654667525,
+      "ratio_ci": [
+        4.382099162543628,
+        24.77964480874317
+      ],
+      "n_refs": 1259,
+      "n_papers": 28
+    },
+    {
+      "variant": "strip",
+      "backend": "s2",
+      "style": "IEEEtran",
+      "fp_style": 0.015151515151515152,
+      "fp_doi_style": 0.015151515151515152,
+      "ratio": 1.0,
+      "ratio_ci": [
+        1.0,
+        1.0
+      ],
+      "n_refs": 1254,
+      "n_papers": 28
+    },
+    {
+      "variant": "strip",
+      "backend": "s2",
+      "style": "elsarticle-num",
+      "fp_style": 0.03898170246618934,
+      "fp_doi_style": 0.015151515151515152,
+      "ratio": 2.5727923627684963,
+      "ratio_ci": [
+        1.6476054595531013,
+        4.892695615609836
+      ],
+      "n_refs": 1257,
+      "n_papers": 28
+    },
+    {
+      "variant": "strip",
+      "backend": "s2",
+      "style": "bib-title",
+      "fp_style": NaN,
+      "fp_doi_style": 0.015151515151515152,
+      "ratio": NaN,
+      "ratio_ci": [
+        0.0,
+        0.0
+      ],
+      "n_refs": 0,
+      "n_papers": 28
+    },
+    {
+      "variant": "strip",
+      "backend": "union",
+      "style": "IEEEtran",
+      "fp_style": 0.003987240829346092,
+      "fp_doi_style": 0.003987240829346092,
+      "ratio": 1.0,
+      "ratio_ci": [
+        1.0,
+        1.0
+      ],
+      "n_refs": 1254,
+      "n_papers": 28
+    },
+    {
+      "variant": "strip",
+      "backend": "union",
+      "style": "elsarticle-num",
+      "fp_style": 0.015910898965791568,
+      "fp_doi_style": 0.003987240829346092,
+      "ratio": 3.9904534606205257,
+      "ratio_ci": [
+        1.7911304014393898,
+        11.670488903275627
+      ],
+      "n_refs": 1257,
+      "n_papers": 28
+    },
+    {
+      "variant": "strip",
+      "backend": "union",
+      "style": "bib-title",
+      "fp_style": 0.010325655281969817,
+      "fp_doi_style": 0.003987240829346092,
+      "ratio": 2.58967434471803,
+      "ratio_ci": [
+        0.7967745442845573,
+        9.002887867136097
+      ],
+      "n_refs": 1259,
+      "n_papers": 28
+    }
+  ]
+}

@@ -1,0 +1,611 @@
+{
+ "seed": 42,
+ "generated": "2026-10-18T23:52:44Z",
+ "prereg_sha256": "38378e7453d67fed42fcabd26d6f65a0a4fd6cbbc333a10272873de8918ccfb5",
+ "backends": {
+  "cascade": "PREREG_AMENDMENT_1: round 1 crossref > s2 (stored answers) > arxiv (arXiv id or tier P) > openalex (keyless until refused); round 2 live s2 for non-resolved refs",
+  "openalex_key": false,
+  "s2_key": false,
+  "openalex_refused": true
+ },
+ "corpus": {
+  "pilot": {
+   "papers_kept": 1000,
+   "papers_used": 999,
+   "source_bib": 881,
+   "source_bbl": 119,
+   "refs": 48233
+  }
+ },
+ "exclusions": {
+  "pilot": {
+   "bbl-without-items": [
+    "2407.11389"
+   ]
+  }
+ },
+ "tiers": {
+  "pilot": {
+   "B": 1176,
+   "C": 17079,
+   "J": 14445,
+   "P": 11039,
+   "S": 718,
+   "W": 3776
+  }
+ },
+ "u": {
+  "all": {
+   "2024-26": {
+    "def1": {
+     "J": {
+      "k": 2059,
+      "n": 14426,
+      "n_papers": 969,
+      "u": 0.1427,
+      "wilson95": [
+       0.1371,
+       0.1485
+      ],
+      "paper_bootstrap95": [
+       0.1314,
+       0.1544
+      ],
+      "n_rate_limited": 0
+     },
+     "C": {
+      "k": 3634,
+      "n": 17069,
+      "n_papers": 972,
+      "u": 0.2129,
+      "wilson95": [
+       0.2068,
+       0.2191
+      ],
+      "paper_bootstrap95": [
+       0.1994,
+       0.2268
+      ],
+      "n_rate_limited": 0
+     },
+     "P": {
+      "k": 783,
+      "n": 10842,
+      "n_papers": 866,
+      "u": 0.0722,
+      "wilson95": [
+       0.0675,
+       0.0772
+      ],
+      "paper_bootstrap95": [
+       0.0655,
+       0.0788
+      ],
+      "n_rate_limited": 177
+     },
+     "B": {
+      "k": 628,
+      "n": 1148,
+      "n_papers": 412,
+      "u": 0.547,
+      "wilson95": [
+       0.5181,
+       0.5756
+      ],
+      "paper_bootstrap95": [
+       0.4909,
+       0.591
+      ],
+      "n_rate_limited": 0
+     },
+     "S": {
+      "k": 610,
+      "n": 625,
+      "n_papers": 300,
+      "u": 0.976,
+      "wilson95": [
+       0.9608,
+       0.9854
+      ],
+      "paper_bootstrap95": [
+       0.9643,
+       0.9868
+      ],
+      "n_rate_limited": 0
+     },
+     "W": {
+      "k": 2804,
+      "n": 3490,
+      "n_papers": 638,
+      "u": 0.8034,
+      "wilson95": [
+       0.7899,
+       0.8163
+      ],
+      "paper_bootstrap95": [
+       0.7676,
+       0.8363
+      ],
+      "n_rate_limited": 0
+     },
+     "A": {
+      "k": 6476,
+      "n": 42337,
+      "n_papers": 997,
+      "u": 0.153,
+      "wilson95": [
+       0.1496,
+       0.1564
+      ],
+      "paper_bootstrap95": [
+       0.1439,
+       0.1624
+      ],
+      "n_rate_limited": 177
+     },
+     "all": {
+      "k": 10518,
+      "n": 47600,
+      "n_papers": 999,
+      "u": 0.221,
+      "wilson95": [
+       0.2173,
+       0.2247
+      ],
+      "paper_bootstrap95": [
+       0.2092,
+       0.233
+      ],
+      "n_rate_limited": 177
+     },
+     "certified_real": {
+      "k": 580,
+      "n": 16008,
+      "n_papers": 937,
+      "u": 0.0362,
+      "wilson95": [
+       0.0334,
+       0.0392
+      ],
+      "paper_bootstrap95": [
+       0.0324,
+       0.0401
+      ],
+      "n_rate_limited": 152
+     },
+     "n_s2_pending": 10304,
+     "n_oa_skipped": 10695
+    },
+    "def2": {
+     "J": {
+      "k": 2574,
+      "n": 13863,
+      "n_papers": 965,
+      "u": 0.1857,
+      "wilson95": [
+       0.1793,
+       0.1922
+      ],
+      "paper_bootstrap95": [
+       0.1712,
+       0.201
+      ],
+      "n_rate_limited": 412
+     },
+     "C": {
+      "k": 3960,
+      "n": 16216,
+      "n_papers": 971,
+      "u": 0.2442,
+      "wilson95": [
+       0.2377,
+       0.2509
+      ],
+      "paper_bootstrap95": [
+       0.2296,
+       0.2588
+      ],
+      "n_rate_limited": 816
+     },
+     "P": {
+      "k": 899,
+      "n": 8635,
+      "n_papers": 854,
+      "u": 0.1041,
+      "wilson95": [
+       0.0978,
+       0.1107
+      ],
+      "paper_bootstrap95": [
+       0.0958,
+       0.1137
+      ],
+      "n_rate_limited": 2310
+     },
+     "B": {
+      "k": 747,
+      "n": 1025,
+      "n_papers": 388,
+      "u": 0.7288,
+      "wilson95": [
+       0.7007,
+       0.7551
+      ],
+      "paper_bootstrap95": [
+       0.6595,
+       0.7952
+      ],
+      "n_rate_limited": 22
+     },
+     "S": {
+      "k": 615,
+      "n": 619,
+      "n_papers": 298,
+      "u": 0.9935,
+      "wilson95": [
+       0.9835,
+       0.9975
+      ],
+      "paper_bootstrap95": [
+       0.9873,
+       0.9985
+      ],
+      "n_rate_limited": 2
+     },
+     "W": {
+      "k": 2854,
+      "n": 3282,
+      "n_papers": 631,
+      "u": 0.8696,
+      "wilson95": [
+       0.8576,
+       0.8807
+      ],
+      "paper_bootstrap95": [
+       0.8495,
+       0.8898
+      ],
+      "n_rate_limited": 52
+     },
+     "A": {
+      "k": 7433,
+      "n": 38714,
+      "n_papers": 996,
+      "u": 0.192,
+      "wilson95": [
+       0.1881,
+       0.196
+      ],
+      "paper_bootstrap95": [
+       0.1822,
+       0.2021
+      ],
+      "n_rate_limited": 3538
+     },
+     "all": {
+      "k": 11649,
+      "n": 43640,
+      "n_papers": 999,
+      "u": 0.2669,
+      "wilson95": [
+       0.2628,
+       0.2711
+      ],
+      "paper_bootstrap95": [
+       0.2545,
+       0.281
+      ],
+      "n_rate_limited": 3614
+     },
+     "certified_real": {
+      "k": 791,
+      "n": 13750,
+      "n_papers": 931,
+      "u": 0.0575,
+      "wilson95": [
+       0.0538,
+       0.0615
+      ],
+      "paper_bootstrap95": [
+       0.0527,
+       0.0631
+      ],
+      "n_rate_limited": 2210
+     },
+     "n_s2_pending": 10304,
+     "n_oa_skipped": 10695,
+     "n_excluded_no_author": 206,
+     "n_excluded_no_registry_authors": 317
+    },
+    "n_no_title": 456
+   }
+  },
+  "without_p0": {
+   "2024-26": {
+    "def1": {
+     "J": {
+      "k": 1886,
+      "n": 12865,
+      "n_papers": 876,
+      "u": 0.1466,
+      "wilson95": [
+       0.1406,
+       0.1528
+      ],
+      "paper_bootstrap95": [
+       0.1351,
+       0.1575
+      ],
+      "n_rate_limited": 0
+     },
+     "C": {
+      "k": 3331,
+      "n": 15090,
+      "n_papers": 875,
+      "u": 0.2207,
+      "wilson95": [
+       0.2142,
+       0.2274
+      ],
+      "paper_bootstrap95": [
+       0.2078,
+       0.2353
+      ],
+      "n_rate_limited": 0
+     },
+     "P": {
+      "k": 678,
+      "n": 8957,
+      "n_papers": 780,
+      "u": 0.0757,
+      "wilson95": [
+       0.0704,
+       0.0814
+      ],
+      "paper_bootstrap95": [
+       0.0694,
+       0.0829
+      ],
+      "n_rate_limited": 168
+     },
+     "B": {
+      "k": 595,
+      "n": 1053,
+      "n_papers": 366,
+      "u": 0.5651,
+      "wilson95": [
+       0.5349,
+       0.5947
+      ],
+      "paper_bootstrap95": [
+       0.5072,
+       0.6101
+      ],
+      "n_rate_limited": 0
+     },
+     "S": {
+      "k": 540,
+      "n": 553,
+      "n_papers": 264,
+      "u": 0.9765,
+      "wilson95": [
+       0.9602,
+       0.9862
+      ],
+      "paper_bootstrap95": [
+       0.9637,
+       0.9875
+      ],
+      "n_rate_limited": 0
+     },
+     "W": {
+      "k": 2526,
+      "n": 3112,
+      "n_papers": 578,
+      "u": 0.8117,
+      "wilson95": [
+       0.7976,
+       0.825
+      ],
+      "paper_bootstrap95": [
+       0.7704,
+       0.8466
+      ],
+      "n_rate_limited": 0
+     },
+     "A": {
+      "k": 5895,
+      "n": 36912,
+      "n_papers": 897,
+      "u": 0.1597,
+      "wilson95": [
+       0.156,
+       0.1635
+      ],
+      "paper_bootstrap95": [
+       0.1518,
+       0.1682
+      ],
+      "n_rate_limited": 168
+     },
+     "all": {
+      "k": 9556,
+      "n": 41630,
+      "n_papers": 899,
+      "u": 0.2295,
+      "wilson95": [
+       0.2255,
+       0.2336
+      ],
+      "paper_bootstrap95": [
+       0.2191,
+       0.2409
+      ],
+      "n_rate_limited": 168
+     },
+     "certified_real": {
+      "k": 527,
+      "n": 13623,
+      "n_papers": 843,
+      "u": 0.0387,
+      "wilson95": [
+       0.0356,
+       0.0421
+      ],
+      "paper_bootstrap95": [
+       0.0349,
+       0.0428
+      ],
+      "n_rate_limited": 145
+     },
+     "n_s2_pending": 9573,
+     "n_oa_skipped": 9724
+    },
+    "def2": {
+     "J": {
+      "k": 2357,
+      "n": 12459,
+      "n_papers": 874,
+      "u": 0.1892,
+      "wilson95": [
+       0.1824,
+       0.1962
+      ],
+      "paper_bootstrap95": [
+       0.1741,
+       0.2071
+      ],
+      "n_rate_limited": 286
+     },
+     "C": {
+      "k": 3626,
+      "n": 14448,
+      "n_papers": 875,
+      "u": 0.251,
+      "wilson95": [
+       0.244,
+       0.2581
+      ],
+      "paper_bootstrap95": [
+       0.2362,
+       0.267
+      ],
+      "n_rate_limited": 608
+     },
+     "P": {
+      "k": 771,
+      "n": 7584,
+      "n_papers": 770,
+      "u": 0.1017,
+      "wilson95": [
+       0.0951,
+       0.1087
+      ],
+      "paper_bootstrap95": [
+       0.0934,
+       0.1112
+      ],
+      "n_rate_limited": 1468
+     },
+     "B": {
+      "k": 708,
+      "n": 955,
+      "n_papers": 351,
+      "u": 0.7414,
+      "wilson95": [
+       0.7127,
+       0.7681
+      ],
+      "paper_bootstrap95": [
+       0.6667,
+       0.8106
+      ],
+      "n_rate_limited": 9
+     },
+     "S": {
+      "k": 545,
+      "n": 548,
+      "n_papers": 263,
+      "u": 0.9945,
+      "wilson95": [
+       0.984,
+       0.9981
+      ],
+      "paper_bootstrap95": [
+       0.9886,
+       1.0
+      ],
+      "n_rate_limited": 1
+     },
+     "W": {
+      "k": 2565,
+      "n": 2925,
+      "n_papers": 571,
+      "u": 0.8769,
+      "wilson95": [
+       0.8645,
+       0.8883
+      ],
+      "paper_bootstrap95": [
+       0.8541,
+       0.8988
+      ],
+      "n_rate_limited": 39
+     },
+     "A": {
+      "k": 6754,
+      "n": 34491,
+      "n_papers": 896,
+      "u": 0.1958,
+      "wilson95": [
+       0.1917,
+       0.2
+      ],
+      "paper_bootstrap95": [
+       0.1854,
+       0.2077
+      ],
+      "n_rate_limited": 2362
+     },
+     "all": {
+      "k": 10572,
+      "n": 38919,
+      "n_papers": 899,
+      "u": 0.2716,
+      "wilson95": [
+       0.2672,
+       0.2761
+      ],
+      "paper_bootstrap95": [
+       0.2591,
+       0.2853
+      ],
+      "n_rate_limited": 2411
+     },
+     "certified_real": {
+      "k": 705,
+      "n": 12178,
+      "n_papers": 837,
+      "u": 0.0579,
+      "wilson95": [
+       0.0539,
+       0.0622
+      ],
+      "paper_bootstrap95": [
+       0.0527,
+       0.0634
+      ],
+      "n_rate_limited": 1405
+     },
+     "n_s2_pending": 9573,
+     "n_oa_skipped": 9724,
+     "n_excluded_no_author": 201,
+     "n_excluded_no_registry_authors": 267
+    },
+    "n_no_title": 421
+   }
+  }
+ },
+ "label": "round 1, before S2 (provisional; PREREG_AMENDMENT_1)",
+ "limit": 0
+}

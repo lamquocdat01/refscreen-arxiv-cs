@@ -1,8 +1,11 @@
 """Topic 43 / P2 / T10e (E5): re-verified venue policy table = P0 results/policy_survey.csv + verify_* columns
 (2026-10-21; sources fetched by a CC agent, quotes via WebFetch summaries). Writes results/p2_policy_survey.csv."""
+from pathlib import Path
+
 import pandas as pd
-src = r'results/policy_survey.csv'
-out = r'results/p2_policy_survey.csv'
+RES = Path(__file__).resolve().parents[1] / "results"  # P4: relative paths (no local folder in the repository)
+src = RES / 'policy_survey.csv'
+out = RES / 'p2_policy_survey.csv'
 df = pd.read_csv(src, dtype=str, keep_default_na=False)
 D = '2026-10-21'
 V = {

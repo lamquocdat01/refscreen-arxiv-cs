@@ -1,0 +1,113 @@
+subset,source,style,variant,backend,n_refs,n_papers,k_flagged,fp,ci_lo,ci_hi,seed,boot
+certified-real,bib-title,bib-title,orig,idonly,1259,28,1259,1.0000,1.0000,1.0000,42,1000
+certified-real,bib-title,bib-title,orig,crossref,1259,28,698,0.5544,0.3619,0.6229,42,1000
+certified-real,bib-title,bib-title,orig,s2,0,0,0,,,,42,1000
+certified-real,bib-title,bib-title,orig,union,1259,28,13,0.0103,0.0049,0.0188,42,1000
+certified-real,render:IEEEtran,IEEEtran,orig,idonly,1259,28,167,0.1326,0.0443,0.4176,42,1000
+certified-real,render:IEEEtran,IEEEtran,orig,crossref,1259,28,14,0.0111,0.0054,0.0163,42,1000
+certified-real,render:IEEEtran,IEEEtran,orig,s2,1259,28,14,0.0111,0.0026,0.0410,42,1000
+certified-real,render:IEEEtran,IEEEtran,orig,union,1259,28,3,0.0024,0.0000,0.0067,42,1000
+certified-real,render:IEEEtran,IEEEtran,strip,idonly,1254,28,261,0.2081,0.0937,0.5700,42,1000
+certified-real,render:IEEEtran,IEEEtran,strip,crossref,1254,28,53,0.0423,0.0230,0.1019,42,1000
+certified-real,render:IEEEtran,IEEEtran,strip,s2,1254,28,19,0.0152,0.0049,0.0503,42,1000
+certified-real,render:IEEEtran,IEEEtran,strip,union,1254,28,5,0.0040,0.0014,0.0113,42,1000
+certified-real,render:IEEEtran_doi,IEEEtran_doi,orig,idonly,1231,28,31,0.0252,0.0080,0.0847,42,1000
+certified-real,render:IEEEtran_doi,IEEEtran_doi,orig,crossref,1231,28,11,0.0089,0.0038,0.0147,42,1000
+certified-real,render:IEEEtran_doi,IEEEtran_doi,orig,s2,1231,28,4,0.0032,0.0000,0.0105,42,1000
+certified-real,render:IEEEtran_doi,IEEEtran_doi,orig,union,1231,28,2,0.0016,0.0000,0.0050,42,1000
+certified-real,render:IEEEtran_doi,IEEEtran_doi,strip,idonly,1254,28,261,0.2081,0.0937,0.5700,42,1000
+certified-real,render:IEEEtran_doi,IEEEtran_doi,strip,crossref,1254,28,53,0.0423,0.0230,0.1019,42,1000
+certified-real,render:IEEEtran_doi,IEEEtran_doi,strip,s2,1254,28,19,0.0152,0.0049,0.0503,42,1000
+certified-real,render:IEEEtran_doi,IEEEtran_doi,strip,union,1254,28,5,0.0040,0.0014,0.0113,42,1000
+certified-real,render:elsarticle-num,elsarticle-num,orig,idonly,1260,28,43,0.0341,0.0106,0.1108,42,1000
+certified-real,render:elsarticle-num,elsarticle-num,orig,crossref,1260,28,6,0.0048,0.0000,0.0107,42,1000
+certified-real,render:elsarticle-num,elsarticle-num,orig,s2,1260,28,12,0.0095,0.0023,0.0312,42,1000
+certified-real,render:elsarticle-num,elsarticle-num,orig,union,1260,28,5,0.0040,0.0000,0.0104,42,1000
+certified-real,render:elsarticle-num,elsarticle-num,strip,idonly,1257,28,263,0.2092,0.0920,0.5715,42,1000
+certified-real,render:elsarticle-num,elsarticle-num,strip,crossref,1257,28,49,0.0390,0.0214,0.0966,42,1000
+certified-real,render:elsarticle-num,elsarticle-num,strip,s2,1257,28,49,0.0390,0.0154,0.1165,42,1000
+certified-real,render:elsarticle-num,elsarticle-num,strip,union,1257,28,20,0.0159,0.0073,0.0452,42,1000
+certified-real & bib DOI,bib-title,bib-title,orig,idonly,185,17,185,1.0000,1.0000,1.0000,42,1000
+certified-real & bib DOI,bib-title,bib-title,orig,crossref,185,17,14,0.0757,0.0103,0.1223,42,1000
+certified-real & bib DOI,bib-title,bib-title,orig,s2,0,0,0,,,,42,1000
+certified-real & bib DOI,bib-title,bib-title,orig,union,185,17,2,0.0108,0.0000,0.0204,42,1000
+certified-real & bib DOI,render:IEEEtran,IEEEtran,orig,idonly,185,18,152,0.8216,0.4749,0.9882,42,1000
+certified-real & bib DOI,render:IEEEtran,IEEEtran,orig,crossref,185,18,2,0.0108,0.0000,0.0318,42,1000
+certified-real & bib DOI,render:IEEEtran,IEEEtran,orig,s2,185,18,13,0.0703,0.0185,0.1235,42,1000
+certified-real & bib DOI,render:IEEEtran,IEEEtran,orig,union,185,18,2,0.0108,0.0000,0.0318,42,1000
+certified-real & bib DOI,render:IEEEtran,IEEEtran,strip,idonly,180,18,180,1.0000,1.0000,1.0000,42,1000
+certified-real & bib DOI,render:IEEEtran,IEEEtran,strip,crossref,180,18,3,0.0167,0.0000,0.0390,42,1000
+certified-real & bib DOI,render:IEEEtran,IEEEtran,strip,s2,180,18,16,0.0889,0.0385,0.1429,42,1000
+certified-real & bib DOI,render:IEEEtran,IEEEtran,strip,union,180,18,3,0.0167,0.0000,0.0390,42,1000
+certified-real & bib DOI,render:IEEEtran_doi,IEEEtran_doi,orig,idonly,159,18,18,0.1132,0.0000,0.2255,42,1000
+certified-real & bib DOI,render:IEEEtran_doi,IEEEtran_doi,orig,crossref,159,18,1,0.0063,0.0000,0.0370,42,1000
+certified-real & bib DOI,render:IEEEtran_doi,IEEEtran_doi,orig,s2,159,18,3,0.0189,0.0000,0.0431,42,1000
+certified-real & bib DOI,render:IEEEtran_doi,IEEEtran_doi,orig,union,159,18,1,0.0063,0.0000,0.0370,42,1000
+certified-real & bib DOI,render:IEEEtran_doi,IEEEtran_doi,strip,idonly,180,18,180,1.0000,1.0000,1.0000,42,1000
+certified-real & bib DOI,render:IEEEtran_doi,IEEEtran_doi,strip,crossref,180,18,3,0.0167,0.0000,0.0390,42,1000
+certified-real & bib DOI,render:IEEEtran_doi,IEEEtran_doi,strip,s2,180,18,16,0.0889,0.0385,0.1429,42,1000
+certified-real & bib DOI,render:IEEEtran_doi,IEEEtran_doi,strip,union,180,18,3,0.0167,0.0000,0.0390,42,1000
+certified-real & bib DOI,render:elsarticle-num,elsarticle-num,orig,idonly,186,18,38,0.2043,0.0890,0.2775,42,1000
+certified-real & bib DOI,render:elsarticle-num,elsarticle-num,orig,crossref,186,18,1,0.0054,0.0000,0.0289,42,1000
+certified-real & bib DOI,render:elsarticle-num,elsarticle-num,orig,s2,186,18,8,0.0430,0.0000,0.0856,42,1000
+certified-real & bib DOI,render:elsarticle-num,elsarticle-num,orig,union,186,18,1,0.0054,0.0000,0.0289,42,1000
+certified-real & bib DOI,render:elsarticle-num,elsarticle-num,strip,idonly,186,18,186,1.0000,1.0000,1.0000,42,1000
+certified-real & bib DOI,render:elsarticle-num,elsarticle-num,strip,crossref,186,18,2,0.0108,0.0000,0.0370,42,1000
+certified-real & bib DOI,render:elsarticle-num,elsarticle-num,strip,s2,186,18,22,0.1183,0.0320,0.2093,42,1000
+certified-real & bib DOI,render:elsarticle-num,elsarticle-num,strip,union,186,18,2,0.0108,0.0000,0.0370,42,1000
+certified-real & arXiv-only,bib-title,bib-title,orig,idonly,1074,27,1074,1.0000,1.0000,1.0000,42,1000
+certified-real & arXiv-only,bib-title,bib-title,orig,crossref,1074,27,684,0.6369,0.5826,0.7074,42,1000
+certified-real & arXiv-only,bib-title,bib-title,orig,s2,0,0,0,,,,42,1000
+certified-real & arXiv-only,bib-title,bib-title,orig,union,1074,27,11,0.0102,0.0030,0.0209,42,1000
+certified-real & arXiv-only,render:IEEEtran,IEEEtran,orig,idonly,1074,27,15,0.0140,0.0045,0.0328,42,1000
+certified-real & arXiv-only,render:IEEEtran,IEEEtran,orig,crossref,1074,27,12,0.0112,0.0030,0.0178,42,1000
+certified-real & arXiv-only,render:IEEEtran,IEEEtran,orig,s2,1074,27,1,0.0009,0.0000,0.0016,42,1000
+certified-real & arXiv-only,render:IEEEtran,IEEEtran,orig,union,1074,27,1,0.0009,0.0000,0.0016,42,1000
+certified-real & arXiv-only,render:IEEEtran,IEEEtran,strip,idonly,1074,27,81,0.0754,0.0369,0.2548,42,1000
+certified-real & arXiv-only,render:IEEEtran,IEEEtran,strip,crossref,1074,27,50,0.0466,0.0231,0.1542,42,1000
+certified-real & arXiv-only,render:IEEEtran,IEEEtran,strip,s2,1074,27,3,0.0028,0.0000,0.0103,42,1000
+certified-real & arXiv-only,render:IEEEtran,IEEEtran,strip,union,1074,27,2,0.0019,0.0000,0.0061,42,1000
+certified-real & arXiv-only,render:IEEEtran_doi,IEEEtran_doi,orig,idonly,1072,27,13,0.0121,0.0046,0.0329,42,1000
+certified-real & arXiv-only,render:IEEEtran_doi,IEEEtran_doi,orig,crossref,1072,27,10,0.0093,0.0031,0.0170,42,1000
+certified-real & arXiv-only,render:IEEEtran_doi,IEEEtran_doi,orig,s2,1072,27,1,0.0009,0.0000,0.0016,42,1000
+certified-real & arXiv-only,render:IEEEtran_doi,IEEEtran_doi,orig,union,1072,27,1,0.0009,0.0000,0.0016,42,1000
+certified-real & arXiv-only,render:IEEEtran_doi,IEEEtran_doi,strip,idonly,1074,27,81,0.0754,0.0369,0.2548,42,1000
+certified-real & arXiv-only,render:IEEEtran_doi,IEEEtran_doi,strip,crossref,1074,27,50,0.0466,0.0231,0.1542,42,1000
+certified-real & arXiv-only,render:IEEEtran_doi,IEEEtran_doi,strip,s2,1074,27,3,0.0028,0.0000,0.0103,42,1000
+certified-real & arXiv-only,render:IEEEtran_doi,IEEEtran_doi,strip,union,1074,27,2,0.0019,0.0000,0.0061,42,1000
+certified-real & arXiv-only,render:elsarticle-num,elsarticle-num,orig,idonly,1074,27,5,0.0047,0.0000,0.0125,42,1000
+certified-real & arXiv-only,render:elsarticle-num,elsarticle-num,orig,crossref,1074,27,5,0.0047,0.0000,0.0125,42,1000
+certified-real & arXiv-only,render:elsarticle-num,elsarticle-num,orig,s2,1074,27,4,0.0037,0.0000,0.0120,42,1000
+certified-real & arXiv-only,render:elsarticle-num,elsarticle-num,orig,union,1074,27,4,0.0037,0.0000,0.0120,42,1000
+certified-real & arXiv-only,render:elsarticle-num,elsarticle-num,strip,idonly,1071,27,77,0.0719,0.0361,0.2395,42,1000
+certified-real & arXiv-only,render:elsarticle-num,elsarticle-num,strip,crossref,1071,27,47,0.0439,0.0222,0.1444,42,1000
+certified-real & arXiv-only,render:elsarticle-num,elsarticle-num,strip,s2,1071,27,27,0.0252,0.0095,0.0948,42,1000
+certified-real & arXiv-only,render:elsarticle-num,elsarticle-num,strip,union,1071,27,18,0.0168,0.0068,0.0617,42,1000
+all refs (not certified),bib-title,bib-title,orig,idonly,2651,30,2651,1.0000,1.0000,1.0000,42,1000
+all refs (not certified),bib-title,bib-title,orig,crossref,2651,30,1247,0.4704,0.3528,0.5243,42,1000
+all refs (not certified),bib-title,bib-title,orig,s2,0,0,0,,,,42,1000
+all refs (not certified),bib-title,bib-title,orig,union,2651,30,207,0.0781,0.0487,0.1303,42,1000
+all refs (not certified),render:IEEEtran,IEEEtran,orig,idonly,2658,30,1543,0.5805,0.4952,0.7759,42,1000
+all refs (not certified),render:IEEEtran,IEEEtran,orig,crossref,2658,30,480,0.1806,0.1427,0.2402,42,1000
+all refs (not certified),render:IEEEtran,IEEEtran,orig,s2,2658,30,283,0.1065,0.0807,0.1774,42,1000
+all refs (not certified),render:IEEEtran,IEEEtran,orig,union,2658,30,202,0.0760,0.0414,0.1386,42,1000
+all refs (not certified),render:IEEEtran,IEEEtran,strip,idonly,2655,30,1640,0.6177,0.5206,0.8342,42,1000
+all refs (not certified),render:IEEEtran,IEEEtran,strip,crossref,2655,30,512,0.1928,0.1560,0.2556,42,1000
+all refs (not certified),render:IEEEtran,IEEEtran,strip,s2,2655,30,288,0.1085,0.0821,0.1797,42,1000
+all refs (not certified),render:IEEEtran,IEEEtran,strip,union,2655,30,200,0.0753,0.0419,0.1340,42,1000
+all refs (not certified),render:IEEEtran_doi,IEEEtran_doi,orig,idonly,2555,30,1332,0.5213,0.4598,0.6889,42,1000
+all refs (not certified),render:IEEEtran_doi,IEEEtran_doi,orig,crossref,2555,30,414,0.1620,0.1318,0.1869,42,1000
+all refs (not certified),render:IEEEtran_doi,IEEEtran_doi,orig,s2,2555,30,217,0.0849,0.0749,0.0990,42,1000
+all refs (not certified),render:IEEEtran_doi,IEEEtran_doi,orig,union,2555,30,146,0.0571,0.0367,0.0701,42,1000
+all refs (not certified),render:IEEEtran_doi,IEEEtran_doi,strip,idonly,2655,30,1640,0.6177,0.5206,0.8342,42,1000
+all refs (not certified),render:IEEEtran_doi,IEEEtran_doi,strip,crossref,2655,30,512,0.1928,0.1560,0.2556,42,1000
+all refs (not certified),render:IEEEtran_doi,IEEEtran_doi,strip,s2,2655,30,288,0.1085,0.0821,0.1797,42,1000
+all refs (not certified),render:IEEEtran_doi,IEEEtran_doi,strip,union,2655,30,200,0.0753,0.0419,0.1340,42,1000
+all refs (not certified),render:elsarticle-num,elsarticle-num,orig,idonly,2664,30,1425,0.5349,0.4687,0.6967,42,1000
+all refs (not certified),render:elsarticle-num,elsarticle-num,orig,crossref,2664,30,472,0.1772,0.1393,0.2377,42,1000
+all refs (not certified),render:elsarticle-num,elsarticle-num,orig,s2,2664,30,316,0.1186,0.0860,0.2069,42,1000
+all refs (not certified),render:elsarticle-num,elsarticle-num,orig,union,2664,30,223,0.0837,0.0455,0.1510,42,1000
+all refs (not certified),render:elsarticle-num,elsarticle-num,strip,idonly,2659,30,1643,0.6179,0.5197,0.8351,42,1000
+all refs (not certified),render:elsarticle-num,elsarticle-num,strip,crossref,2659,30,510,0.1918,0.1553,0.2544,42,1000
+all refs (not certified),render:elsarticle-num,elsarticle-num,strip,s2,2659,30,348,0.1309,0.0942,0.2315,42,1000
+all refs (not certified),render:elsarticle-num,elsarticle-num,strip,union,2659,30,232,0.0873,0.0524,0.1512,42,1000

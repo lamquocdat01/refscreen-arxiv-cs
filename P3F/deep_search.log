@@ -1,0 +1,245 @@
+2026-11-08T09:13:06Z decoys built: {'pool': 9508, 'skipped': {'same_paper': 2, 'A_no_surname_or_year': 2, 'sim_ge_080': 0}, 'n_dsplice': 200, 'n_gen_a': 5}; sha256 72e4f8125ffd489789f48fcf126cee3a55336957e51afe8367ad802974f9bd0a
+2026-11-08T09:13:06Z === set decoy: 205 refs; OpenAlex not asked in this pass; S2 keyless; free RAM 10.5 GB
+2026-11-08T09:13:06Z decoy/url: 0 references with a URL
+2026-11-08T09:13:06Z decoy/crossref: start, 205 requests, free RAM 10.5 GB
+2026-11-08T09:17:19Z decoy/crossref: 100/205; requests {'crossref': 100}
+2026-11-08T09:21:09Z decoy/crossref: 200/205; requests {'crossref': 200}
+2026-11-08T09:21:20Z decoy/crossref: end; requests {'crossref': 205}; refusals {}; first refusal {}; free RAM 6.2 GB
+2026-11-08T09:21:21Z dblp: 205 titles to match (RAM 6.2 GB)
+2026-11-08T09:23:43Z dblp: {'written': 205, 'pairs': 8527594}
+2026-11-08T09:23:44Z decoy/arxiv: start, 205 requests, free RAM 6.2 GB
+2026-11-08T09:29:56Z decoy/arxiv: 100/205; requests {'crossref': 205, 'arxiv': 100}
+2026-11-08T09:36:28Z decoy/arxiv: 200/205; requests {'crossref': 205, 'arxiv': 204}
+2026-11-08T09:36:43Z decoy/arxiv: end; requests {'crossref': 205, 'arxiv': 209}; refusals {'arxiv': 6}; first refusal {'arxiv': '2026-11-08T09:31:44Z HTTP 429'}; free RAM 6.2 GB
+2026-11-08T10:51:50Z decoy/s2: start, 205 requests, free RAM 10.2 GB
+2026-11-08T11:48:31Z decoy/s2: 100/205; requests {'crossref': 205, 'arxiv': 209, 's2': 281}
+2026-11-08T12:45:53Z decoy/s2: 200/205; requests {'crossref': 205, 'arxiv': 209, 's2': 569}
+2026-11-08T12:48:35Z decoy/s2: end; requests {'crossref': 205, 'arxiv': 209, 's2': 583}; refusals {'arxiv': 6, 's2': 550}; first refusal {'arxiv': '2026-11-08T09:31:44Z HTTP 429', 's2': '2026-11-08T10:51:51Z HTTP 429'}; free RAM 7.5 GB
+2026-11-08T12:49:22Z evaluate: 1355 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921']; {('acad1921', 'unanswered'): 211, ('decoy', 'unanswered'): 205, ('nonacad1921', 'unanswered'): 839, ('posctl', 'unanswered'): 100}
+2026-11-08T12:49:54Z === set posctl: 100 refs; OpenAlex not asked in this pass; S2 keyless; free RAM 7.3 GB
+2026-11-08T12:49:54Z posctl/url: 0 references with a URL
+2026-11-08T12:49:54Z posctl/crossref: start, 100 requests, free RAM 7.3 GB
+2026-11-08T12:53:16Z posctl/crossref: 100/100; requests {'crossref': 100}
+2026-11-08T12:53:16Z posctl/crossref: end; requests {'crossref': 100}; refusals {}; first refusal {}; free RAM 7.4 GB
+2026-11-08T12:53:18Z dblp: 49 titles to match (RAM 7.4 GB)
+2026-11-08T12:54:51Z dblp: {'written': 48, 'pairs': 4225491}
+2026-11-08T12:54:51Z posctl/arxiv: start, 4 requests, free RAM 7.6 GB
+2026-11-08T12:55:02Z posctl/arxiv: end; requests {'crossref': 100, 'arxiv': 4}; refusals {}; first refusal {}; free RAM 7.6 GB
+2026-11-08T12:55:04Z posctl/s2: start, 3 requests, free RAM 7.6 GB
+2026-11-08T12:56:57Z posctl/s2: end; requests {'crossref': 100, 'arxiv': 4, 's2': 9}; refusals {'s2': 9}; first refusal {'s2': '2026-11-08T12:55:05Z HTTP 429'}; free RAM 7.5 GB
+2026-11-08T12:57:50Z evaluate: 1355 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921']; {('acad1921', 'unanswered'): 211, ('decoy', 'unanswered'): 205, ('nonacad1921', 'unanswered'): 839, ('posctl', 'found'): 97, ('posctl', 'unanswered'): 3}
+2026-11-08T12:58:18Z === set acad1921: 211 refs; OpenAlex not asked in this pass; S2 keyless; free RAM 12.8 GB
+2026-11-08T12:58:18Z acad1921/url: 0 references with a URL
+2026-11-08T12:58:18Z acad1921/crossref: start, 211 requests, free RAM 12.8 GB
+2026-11-08T13:02:05Z acad1921/crossref: 100/211; requests {'crossref': 100}
+2026-11-08T13:05:52Z acad1921/crossref: 200/211; requests {'crossref': 200}
+2026-11-08T13:06:15Z acad1921/crossref: end; requests {'crossref': 211}; refusals {}; first refusal {}; free RAM 7.5 GB
+2026-11-08T13:06:17Z dblp: 187 titles to match (RAM 7.5 GB)
+2026-11-08T13:08:27Z dblp: {'written': 181, 'pairs': 11278286}
+2026-11-08T13:08:28Z acad1921/arxiv: start, 174 requests, free RAM 7.5 GB
+2026-11-08T13:17:39Z acad1921/arxiv: 100/174; requests {'crossref': 211, 'arxiv': 113}
+2026-11-08T13:21:18Z acad1921/arxiv: end; requests {'crossref': 211, 'arxiv': 183}; refusals {'arxiv': 22}; first refusal {'arxiv': '2026-11-08T13:12:33Z HTTP 429'}; free RAM 7.3 GB
+2026-11-08T13:21:35Z acad1921/s2: start, 174 requests, free RAM 7.3 GB
+2026-11-08T14:20:26Z acad1921/s2: 100/174; requests {'crossref': 211, 'arxiv': 183, 's2': 288}
+2026-11-08T15:00:43Z acad1921/s2: end; requests {'crossref': 211, 'arxiv': 183, 's2': 495}; refusals {'arxiv': 22, 's2': 469}; first refusal {'arxiv': '2026-11-08T13:12:33Z HTTP 429', 's2': '2026-11-08T13:21:36Z HTTP 429'}; free RAM 7.5 GB
+2026-11-08T15:02:13Z evaluate: 1355 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921']; {('acad1921', 'found'): 37, ('acad1921', 'unanswered'): 174, ('decoy', 'unanswered'): 205, ('nonacad1921', 'unanswered'): 839, ('posctl', 'found'): 97, ('posctl', 'unanswered'): 3}
+2026-11-08T15:03:07Z === set nonacad1921: 839 refs; OpenAlex not asked in this pass; S2 keyless; free RAM 11.7 GB
+2026-11-08T15:03:07Z nonacad1921/url: 601 references with a URL
+2026-11-08T15:06:39Z nonacad1921/url: 100/601
+2026-11-08T15:10:45Z nonacad1921/url: 200/601
+2026-11-08T15:14:47Z nonacad1921/url: 300/601
+2026-11-08T15:21:00Z nonacad1921/url: 400/601
+2026-11-08T15:25:53Z nonacad1921/url: 500/601
+2026-11-08T15:30:02Z nonacad1921/url: 600/601
+2026-11-08T15:30:02Z nonacad1921/crossref: start, 238 requests, free RAM 7.0 GB
+2026-11-08T15:34:16Z nonacad1921/crossref: 100/238; requests {'other': 106, 'crossref': 100}
+2026-11-08T15:38:31Z nonacad1921/crossref: 200/238; requests {'other': 106, 'crossref': 200}
+2026-11-08T15:40:11Z nonacad1921/crossref: end; requests {'other': 106, 'crossref': 237}; refusals {}; first refusal {}; free RAM 7.2 GB
+2026-11-08T15:40:15Z dblp: 224 titles to match (RAM 7.2 GB)
+2026-11-08T15:42:24Z dblp: {'written': 223, 'pairs': 8439226}
+2026-11-08T15:42:26Z nonacad1921/arxiv: start, 220 requests, free RAM 7.1 GB
+2026-11-08T15:47:35Z nonacad1921/arxiv: 100/220; requests {'other': 106, 'crossref': 237, 'arxiv': 100}
+2026-11-08T15:56:17Z nonacad1921/arxiv: 200/220; requests {'other': 106, 'crossref': 237, 'arxiv': 213}
+2026-11-08T15:57:16Z nonacad1921/arxiv: end; requests {'other': 106, 'crossref': 237, 'arxiv': 232}; refusals {'arxiv': 19}; first refusal {'arxiv': '2026-11-08T15:48:46Z HTTP 429'}; free RAM 7.2 GB
+2026-11-08T15:57:40Z nonacad1921/s2: start, 221 requests, free RAM 12.5 GB
+2026-11-08T16:54:03Z nonacad1921/s2: 100/221; requests {'other': 106, 'crossref': 237, 'arxiv': 232, 's2': 281}
+2026-11-08T17:24:31Z nonacad1921/s2: 25 consecutive failures at 149/221; pass stops
+2026-11-08T17:24:31Z nonacad1921/s2: end; requests {'other': 106, 'crossref': 237, 'arxiv': 232, 's2': 427}; refusals {'arxiv': 19, 's2': 410}; first refusal {'arxiv': '2026-11-08T15:48:46Z HTTP 429', 's2': '2026-11-08T15:57:41Z HTTP 429'}; free RAM 4.1 GB
+2026-11-08T17:26:59Z evaluate: 1355 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921']; {('acad1921', 'found'): 37, ('acad1921', 'unanswered'): 174, ('decoy', 'unanswered'): 205, ('nonacad1921', 'found'): 599, ('nonacad1921', 'not found'): 19, ('nonacad1921', 'unanswered'): 221, ('posctl', 'found'): 97, ('posctl', 'unanswered'): 3}
+2026-11-09T07:19:45Z === S2 only, with key: set decoy: 205 refs
+2026-11-09T07:20:14Z decoy/s2: start, 171 requests, free RAM 7.7 GB
+2026-11-09T07:34:42Z decoy/s2: 100/171; requests {'s2': 172}
+2026-11-09T07:43:41Z decoy/s2: end; requests {'s2': 293}; refusals {'s2': 136}; first refusal {'s2': '2026-11-09T07:20:18Z HTTP 429'}; free RAM 7.7 GB
+2026-11-09T07:44:24Z === S2 only, with key: set posctl: 100 refs
+2026-11-09T07:44:28Z posctl/s2: start, 3 requests, free RAM 7.5 GB
+2026-11-09T07:44:37Z posctl/s2: end; requests {'s2': 4}; refusals {'s2': 1}; first refusal {'s2': '2026-11-09T07:44:29Z HTTP 429'}; free RAM 7.6 GB
+2026-11-09T07:44:43Z === S2 only, with key: set acad1921: 211 refs
+2026-11-09T07:45:04Z acad1921/s2: start, 145 requests, free RAM 7.5 GB
+2026-11-09T07:59:06Z acad1921/s2: 100/145; requests {'s2': 171}
+2026-11-09T08:08:15Z acad1921/s2: end; requests {'s2': 255}; refusals {'s2': 131}; first refusal {'s2': '2026-11-09T07:45:05Z HTTP 429'}; free RAM 5.2 GB
+2026-11-09T08:09:03Z === S2 only, with key: set nonacad1921: 839 refs
+2026-11-09T08:09:48Z nonacad1921/s2: start, 204 requests, free RAM 5.6 GB
+2026-11-09T08:28:35Z nonacad1921/s2: 100/204; requests {'s2': 187}
+2026-11-09T08:45:54Z === S2 only, with key, 1.5 s: set nonacad1921: 839 refs
+2026-11-09T08:46:08Z nonacad1921/s2: start, 87 requests, free RAM 4.7 GB
+2026-11-09T08:59:16Z nonacad1921/s2: end; requests {'s2': 150}; refusals {'s2': 72}; first refusal {'s2': '2026-11-09T08:46:09Z HTTP 429'}; free RAM 6.4 GB
+2026-11-09T09:00:41Z evaluate: 1355 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921']; {('acad1921', 'found'): 42, ('acad1921', 'unanswered'): 169, ('decoy', 'unanswered'): 205, ('nonacad1921', 'found'): 605, ('nonacad1921', 'not found'): 19, ('nonacad1921', 'unanswered'): 215, ('posctl', 'found'): 99, ('posctl', 'unanswered'): 1}
+2026-11-09T09:22:42Z === set decoy: 205 refs; OpenAlex key; S2 key; free RAM 7.1 GB
+2026-11-09T09:22:42Z decoy/url: 0 references with a URL
+2026-11-09T09:22:42Z dblp: 0 titles to match (RAM 7.1 GB)
+2026-11-09T09:23:05Z decoy/arxiv: start, 2 requests, free RAM 7.1 GB
+2026-11-09T09:23:10Z decoy/arxiv: end; requests {'arxiv': 2}; refusals {}; first refusal {}; free RAM 7.1 GB
+2026-11-09T09:23:10Z decoy/s2: start, 14 requests, free RAM 7.1 GB
+2026-11-09T09:26:39Z decoy/s2: end; requests {'arxiv': 2, 's2': 28}; refusals {'s2': 18}; first refusal {'s2': '2026-11-09T09:23:12Z HTTP 429'}; free RAM 7.0 GB
+2026-11-09T09:27:38Z decoy/openalex: start, 205 requests, free RAM 6.8 GB
+2026-11-09T09:27:43Z openalex search: credits per call from first response = 10
+2026-11-09T09:29:46Z decoy/openalex: 100/205; requests {'arxiv': 2, 's2': 28, 'openalex': 100}
+2026-11-09T09:32:06Z decoy/openalex: 200/205; requests {'arxiv': 2, 's2': 28, 'openalex': 200}
+2026-11-09T09:32:13Z decoy/openalex: end; requests {'arxiv': 2, 's2': 28, 'openalex': 205}; refusals {'s2': 18}; first refusal {'s2': '2026-11-09T09:23:12Z HTTP 429'}; free RAM 6.7 GB
+2026-11-09T09:34:26Z evaluate: 1355 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921']; {('acad1921', 'found'): 42, ('acad1921', 'unanswered'): 169, ('decoy', 'not found'): 201, ('decoy', 'unanswered'): 4, ('nonacad1921', 'found'): 605, ('nonacad1921', 'not found'): 19, ('nonacad1921', 'unanswered'): 215, ('posctl', 'found'): 99, ('posctl', 'unanswered'): 1}
+2026-11-09T09:34:59Z === set posctl: 100 refs; OpenAlex key; S2 key; free RAM 7.1 GB
+2026-11-09T09:34:59Z posctl/url: 0 references with a URL
+2026-11-09T09:35:00Z dblp: 0 titles to match (RAM 7.1 GB)
+2026-11-09T09:35:05Z posctl/openalex: start, 1 requests, free RAM 7.1 GB
+2026-11-09T09:35:08Z posctl/openalex: end; requests {'openalex': 1}; refusals {}; first refusal {}; free RAM 7.1 GB
+2026-11-09T09:36:43Z evaluate: 1355 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921']; {('acad1921', 'found'): 42, ('acad1921', 'unanswered'): 169, ('decoy', 'not found'): 201, ('decoy', 'unanswered'): 4, ('nonacad1921', 'found'): 605, ('nonacad1921', 'not found'): 19, ('nonacad1921', 'unanswered'): 215, ('posctl', 'found'): 99, ('posctl', 'not found'): 1}
+2026-11-09T09:37:12Z === set acad1921: 211 refs; OpenAlex key; S2 key; free RAM 7.0 GB
+2026-11-09T09:37:12Z acad1921/url: 0 references with a URL
+2026-11-09T09:37:12Z dblp: 0 titles to match (RAM 7.0 GB)
+2026-11-09T09:37:28Z acad1921/arxiv: start, 7 requests, free RAM 7.0 GB
+2026-11-09T09:37:48Z acad1921/arxiv: end; requests {'arxiv': 7}; refusals {}; first refusal {}; free RAM 7.0 GB
+2026-11-09T09:37:49Z acad1921/s2: start, 17 requests, free RAM 7.0 GB
+2026-11-09T09:42:18Z acad1921/s2: end; requests {'arxiv': 7, 's2': 36}; refusals {'s2': 24}; first refusal {'s2': '2026-11-09T09:37:51Z HTTP 429'}; free RAM 6.4 GB
+2026-11-09T09:42:35Z acad1921/openalex: start, 168 requests, free RAM 6.4 GB
+2026-11-09T09:44:23Z acad1921/openalex: 100/168; requests {'arxiv': 7, 's2': 36, 'openalex': 98}
+2026-11-09T09:45:36Z acad1921/openalex: end; requests {'arxiv': 7, 's2': 36, 'openalex': 162}; refusals {'s2': 24}; first refusal {'s2': '2026-11-09T09:37:51Z HTTP 429'}; free RAM 6.7 GB
+2026-11-09T09:47:23Z evaluate: 1355 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921']; {('acad1921', 'found'): 43, ('acad1921', 'not found'): 163, ('acad1921', 'unanswered'): 5, ('decoy', 'not found'): 201, ('decoy', 'unanswered'): 4, ('nonacad1921', 'found'): 605, ('nonacad1921', 'not found'): 20, ('nonacad1921', 'unanswered'): 214, ('posctl', 'found'): 99, ('posctl', 'not found'): 1}
+2026-11-09T09:48:20Z === set nonacad1921: 839 refs; OpenAlex key; S2 key; free RAM 6.5 GB
+2026-11-09T09:48:20Z nonacad1921/url: 601 references with a URL
+2026-11-09T09:48:20Z nonacad1921/url: 100/601
+2026-11-09T09:48:20Z nonacad1921/url: 200/601
+2026-11-09T09:48:20Z nonacad1921/url: 300/601
+2026-11-09T09:48:20Z nonacad1921/url: 400/601
+2026-11-09T09:48:20Z nonacad1921/url: 500/601
+2026-11-09T09:48:20Z nonacad1921/url: 600/601
+2026-11-09T09:48:21Z dblp: 0 titles to match (RAM 6.5 GB)
+2026-11-09T09:48:43Z nonacad1921/arxiv: start, 6 requests, free RAM 6.1 GB
+2026-11-09T09:49:00Z nonacad1921/arxiv: end; requests {'arxiv': 6}; refusals {}; first refusal {}; free RAM 6.5 GB
+2026-11-09T09:49:00Z nonacad1921/s2: start, 8 requests, free RAM 6.5 GB
+2026-11-09T09:51:01Z nonacad1921/s2: end; requests {'arxiv': 6, 's2': 17}; refusals {'s2': 11}; first refusal {'s2': '2026-11-09T09:49:03Z HTTP 429'}; free RAM 11.7 GB
+2026-11-09T09:51:31Z nonacad1921/openalex: start, 214 requests, free RAM 6.6 GB
+2026-11-09T09:52:32Z nonacad1921/openalex: budget stop (header) or refusal; asking stops for this pass
+2026-11-09T09:52:32Z nonacad1921/openalex: end; requests {'arxiv': 6, 's2': 17, 'openalex': 57}; refusals {'s2': 11}; first refusal {'s2': '2026-11-09T09:49:03Z HTTP 429'}; free RAM 6.6 GB
+2026-11-09T09:54:00Z evaluate: 1355 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921']; {('acad1921', 'found'): 43, ('acad1921', 'not found'): 163, ('acad1921', 'unanswered'): 5, ('decoy', 'not found'): 201, ('decoy', 'unanswered'): 4, ('nonacad1921', 'found'): 607, ('nonacad1921', 'not found'): 75, ('nonacad1921', 'unanswered'): 157, ('posctl', 'found'): 99, ('posctl', 'not found'): 1}
+2026-11-09T09:56:28Z evaluate: 1355 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921']; {('acad1921', 'found'): 43, ('acad1921', 'not found'): 163, ('acad1921', 'unanswered'): 5, ('decoy', 'not found'): 201, ('decoy', 'unanswered'): 4, ('nonacad1921', 'found'): 607, ('nonacad1921', 'not found'): 75, ('nonacad1921', 'unanswered'): 157, ('posctl', 'found'): 99, ('posctl', 'not found'): 1}
+2026-11-10T01:20:20Z === set decoy: 205 refs; OpenAlex key; S2 key; free RAM 9.7 GB
+2026-11-10T01:20:20Z decoy/url: 0 references with a URL
+2026-11-10T01:20:24Z dblp: 0 titles to match (RAM 9.7 GB)
+2026-11-10T01:20:58Z decoy/s2: 3 passes used; 4 requests remain unanswered
+2026-11-10T01:25:44Z evaluate: 2161 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921', 'acad2426']; {('acad1921', 'found'): 43, ('acad1921', 'not found'): 163, ('acad1921', 'unanswered'): 5, ('acad2426', 'not found'): 1, ('acad2426', 'unanswered'): 826, ('decoy', 'not found'): 201, ('decoy', 'unanswered'): 4, ('nonacad1921', 'found'): 593, ('nonacad1921', 'not found'): 73, ('nonacad1921', 'unanswered'): 152, ('posctl', 'found'): 99, ('posctl', 'not found'): 1}
+2026-11-10T01:26:37Z === set posctl: 100 refs; OpenAlex key; S2 key; free RAM 8.8 GB
+2026-11-10T01:26:37Z posctl/url: 0 references with a URL
+2026-11-10T01:26:38Z dblp: 0 titles to match (RAM 8.7 GB)
+2026-11-10T02:17:22Z evaluate: 2161 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921', 'acad2426']; {('acad1921', 'found'): 43, ('acad1921', 'not found'): 163, ('acad1921', 'unanswered'): 5, ('acad2426', 'not found'): 1, ('acad2426', 'unanswered'): 826, ('decoy', 'not found'): 201, ('decoy', 'unanswered'): 4, ('nonacad1921', 'found'): 593, ('nonacad1921', 'not found'): 73, ('nonacad1921', 'unanswered'): 152, ('posctl', 'found'): 99, ('posctl', 'not found'): 1}
+2026-11-10T02:18:28Z === set acad1921: 211 refs; OpenAlex key; S2 key; free RAM 6.7 GB
+2026-11-10T02:18:28Z acad1921/url: 0 references with a URL
+2026-11-10T02:18:29Z dblp: 0 titles to match (RAM 6.7 GB)
+2026-11-10T02:19:05Z acad1921/s2: 3 passes used; 5 requests remain unanswered
+2026-11-10T02:23:35Z evaluate: 2161 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921', 'acad2426']; {('acad1921', 'found'): 43, ('acad1921', 'not found'): 163, ('acad1921', 'unanswered'): 5, ('acad2426', 'not found'): 1, ('acad2426', 'unanswered'): 826, ('decoy', 'not found'): 201, ('decoy', 'unanswered'): 4, ('nonacad1921', 'found'): 593, ('nonacad1921', 'not found'): 73, ('nonacad1921', 'unanswered'): 152, ('posctl', 'found'): 99, ('posctl', 'not found'): 1}
+2026-11-10T02:25:33Z === set nonacad1921: 818 refs; OpenAlex key; S2 key; free RAM 6.7 GB
+2026-11-10T02:25:33Z nonacad1921/url: 591 references with a URL
+2026-11-10T02:25:33Z nonacad1921/url: 100/591
+2026-11-10T02:25:33Z nonacad1921/url: 200/591
+2026-11-10T02:25:33Z nonacad1921/url: 300/591
+2026-11-10T02:25:33Z nonacad1921/url: 400/591
+2026-11-10T02:25:33Z nonacad1921/url: 500/591
+2026-11-10T02:25:35Z dblp: 0 titles to match (RAM 6.7 GB)
+2026-11-10T02:26:10Z nonacad1921/s2: 3 passes used; 2 requests remain unanswered
+2026-11-10T02:26:31Z nonacad1921/openalex: start, 152 requests, free RAM 6.7 GB
+2026-11-10T02:28:21Z nonacad1921/openalex: 100/152; requests {'openalex': 100}
+2026-11-10T02:29:15Z nonacad1921/openalex: end; requests {'openalex': 151}; refusals {}; first refusal {}; free RAM 7.0 GB
+2026-11-10T02:33:00Z evaluate: 2161 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921', 'acad2426']; {('acad1921', 'found'): 43, ('acad1921', 'not found'): 163, ('acad1921', 'unanswered'): 5, ('acad2426', 'not found'): 1, ('acad2426', 'unanswered'): 826, ('decoy', 'not found'): 201, ('decoy', 'unanswered'): 4, ('nonacad1921', 'found'): 593, ('nonacad1921', 'not found'): 223, ('nonacad1921', 'unanswered'): 2, ('posctl', 'found'): 99, ('posctl', 'not found'): 1}
+2026-11-10T02:34:26Z === set acad2426: 827 refs; OpenAlex key; S2 key; free RAM 7.5 GB
+2026-11-10T02:34:26Z acad2426/url: 0 references with a URL
+2026-11-10T02:34:26Z acad2426/crossref: start, 826 requests, free RAM 7.5 GB
+2026-11-10T02:37:28Z acad2426/crossref: 100/826; requests {'crossref': 100}
+2026-11-10T02:39:57Z acad2426/crossref: 200/826; requests {'crossref': 200}
+2026-11-10T02:42:49Z acad2426/crossref: 300/826; requests {'crossref': 299}
+2026-11-10T02:45:59Z acad2426/crossref: 400/826; requests {'crossref': 399}
+2026-11-10T02:49:52Z acad2426/crossref: 500/826; requests {'crossref': 498}
+2026-11-10T02:54:36Z acad2426/crossref: 600/826; requests {'crossref': 596}
+2026-11-10T03:00:01Z acad2426/crossref: 700/826; requests {'crossref': 695}
+2026-11-10T03:06:37Z acad2426/crossref: 800/826; requests {'crossref': 792}
+2026-11-10T03:07:57Z acad2426/crossref: end; requests {'crossref': 817}; refusals {}; first refusal {}; free RAM 7.3 GB
+2026-11-10T03:08:15Z dblp: 744 titles to match (RAM 7.3 GB)
+2026-11-10T03:17:58Z dblp: {'written': 711, 'pairs': 34746041}
+2026-11-10T03:18:22Z acad2426/arxiv: start, 652 requests, free RAM 7.6 GB
+2026-11-10T03:27:39Z acad2426/arxiv: 100/652; requests {'crossref': 817, 'arxiv': 113}
+2026-11-10T03:33:58Z acad2426/arxiv: 200/652; requests {'crossref': 817, 'arxiv': 213}
+2026-11-10T03:43:18Z acad2426/arxiv: 300/652; requests {'crossref': 817, 'arxiv': 324}
+2026-11-10T03:51:38Z acad2426/arxiv: 400/652; requests {'crossref': 817, 'arxiv': 430}
+2026-11-10T04:07:09Z acad2426/arxiv: 500/652; requests {'crossref': 817, 'arxiv': 562}
+2026-11-10T04:16:19Z acad2426/arxiv: 600/652; requests {'crossref': 817, 'arxiv': 671}
+2026-11-10T04:18:43Z acad2426/arxiv: end; requests {'crossref': 817, 'arxiv': 717}; refusals {'arxiv': 132}; first refusal {'arxiv': '2026-11-10T03:21:58Z HTTP 429'}; free RAM 13.3 GB
+2026-11-10T04:21:14Z acad2426/s2: start, 651 requests, free RAM 13.6 GB
+2026-11-10T04:56:46Z acad2426/s2: 100/651; requests {'crossref': 817, 'arxiv': 717, 's2': 235}
+2026-11-10T05:35:48Z acad2426/s2: 200/651; requests {'crossref': 817, 'arxiv': 717, 's2': 495}
+2026-11-10T06:06:52Z acad2426/s2: 300/651; requests {'crossref': 817, 'arxiv': 717, 's2': 715}
+2026-11-10T06:36:29Z acad2426/s2: 400/651; requests {'crossref': 817, 'arxiv': 717, 's2': 940}
+2026-11-10T07:05:31Z acad2426/s2: 500/651; requests {'crossref': 817, 'arxiv': 717, 's2': 1153}
+2026-11-10T07:32:31Z acad2426/s2: 600/651; requests {'crossref': 817, 'arxiv': 717, 's2': 1364}
+2026-11-10T07:42:56Z acad2426/s2: end; requests {'crossref': 817, 'arxiv': 717, 's2': 1463}; refusals {'arxiv': 132, 's2': 1051}; first refusal {'arxiv': '2026-11-10T03:21:58Z HTTP 429', 's2': '2026-11-10T04:21:15Z HTTP 429'}; free RAM 11.0 GB
+2026-11-10T07:47:06Z acad2426/openalex: start, 648 requests, free RAM 10.7 GB
+2026-11-10T07:48:22Z acad2426/openalex: budget stop (header) or refusal; asking stops for this pass
+2026-11-10T07:48:22Z acad2426/openalex: end; requests {'crossref': 817, 'arxiv': 717, 's2': 1463, 'openalex': 65}; refusals {'arxiv': 132, 's2': 1051}; first refusal {'arxiv': '2026-11-10T03:21:58Z HTTP 429', 's2': '2026-11-10T04:21:15Z HTTP 429'}; free RAM 11.0 GB
+2026-11-10T07:55:37Z evaluate: 2161 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921', 'acad2426']; {('acad1921', 'found'): 43, ('acad1921', 'not found'): 163, ('acad1921', 'unanswered'): 5, ('acad2426', 'found'): 174, ('acad2426', 'not found'): 53, ('acad2426', 'unanswered'): 600, ('decoy', 'not found'): 201, ('decoy', 'unanswered'): 4, ('nonacad1921', 'found'): 593, ('nonacad1921', 'not found'): 223, ('nonacad1921', 'unanswered'): 2, ('posctl', 'found'): 99, ('posctl', 'not found'): 1}
+2026-11-10T08:04:10Z evaluate: 2161 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921', 'acad2426']; {('acad1921', 'found'): 43, ('acad1921', 'not found'): 163, ('acad1921', 'unanswered'): 5, ('acad2426', 'found'): 174, ('acad2426', 'not found'): 53, ('acad2426', 'unanswered'): 600, ('decoy', 'not found'): 201, ('decoy', 'unanswered'): 4, ('nonacad1921', 'found'): 593, ('nonacad1921', 'not found'): 223, ('nonacad1921', 'unanswered'): 2, ('posctl', 'found'): 99, ('posctl', 'not found'): 1}
+2026-11-11T00:56:58Z === set decoy: 205 refs; OpenAlex key; S2 key; free RAM 12.4 GB
+2026-11-11T00:56:58Z decoy/url: 0 references with a URL
+2026-11-11T00:57:03Z dblp: 0 titles to match (RAM 12.4 GB)
+2026-11-11T00:57:42Z decoy/s2: 3 passes used; 4 requests remain unanswered
+2026-11-11T01:05:03Z evaluate: 2161 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921', 'acad2426']; {('acad1921', 'found'): 43, ('acad1921', 'not found'): 163, ('acad1921', 'unanswered'): 5, ('acad2426', 'found'): 174, ('acad2426', 'not found'): 53, ('acad2426', 'unanswered'): 600, ('decoy', 'not found'): 201, ('decoy', 'unanswered'): 4, ('nonacad1921', 'found'): 593, ('nonacad1921', 'not found'): 223, ('nonacad1921', 'unanswered'): 2, ('posctl', 'found'): 99, ('posctl', 'not found'): 1}
+2026-11-11T01:05:47Z === set posctl: 100 refs; OpenAlex key; S2 key; free RAM 12.2 GB
+2026-11-11T01:05:47Z posctl/url: 0 references with a URL
+2026-11-11T01:05:48Z dblp: 0 titles to match (RAM 12.1 GB)
+2026-11-11T01:11:42Z evaluate: 2161 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921', 'acad2426']; {('acad1921', 'found'): 43, ('acad1921', 'not found'): 163, ('acad1921', 'unanswered'): 5, ('acad2426', 'found'): 174, ('acad2426', 'not found'): 53, ('acad2426', 'unanswered'): 600, ('decoy', 'not found'): 201, ('decoy', 'unanswered'): 4, ('nonacad1921', 'found'): 593, ('nonacad1921', 'not found'): 223, ('nonacad1921', 'unanswered'): 2, ('posctl', 'found'): 99, ('posctl', 'not found'): 1}
+2026-11-11T01:12:22Z === set acad1921: 211 refs; OpenAlex key; S2 key; free RAM 12.3 GB
+2026-11-11T01:12:22Z acad1921/url: 0 references with a URL
+2026-11-11T01:12:22Z dblp: 0 titles to match (RAM 12.3 GB)
+2026-11-11T01:12:46Z acad1921/s2: 3 passes used; 5 requests remain unanswered
+2026-11-11T07:25:49Z === set nonacad1921: 818 refs; OpenAlex key; S2 key; free RAM 10.4 GB
+2026-11-11T07:25:49Z nonacad1921/url: 591 references with a URL
+2026-11-11T07:25:50Z nonacad1921/url: 100/591
+2026-11-11T07:25:51Z nonacad1921/url: 200/591
+2026-11-11T07:25:53Z nonacad1921/url: 300/591
+2026-11-11T07:25:54Z nonacad1921/url: 400/591
+2026-11-11T07:25:55Z nonacad1921/url: 500/591
+2026-11-11T07:26:01Z dblp: 0 titles to match (RAM 10.4 GB)
+2026-11-11T07:26:35Z nonacad1921/s2: 3 passes used; 2 requests remain unanswered
+2026-11-11T07:32:35Z evaluate: 2161 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921', 'acad2426']; {('acad1921', 'found'): 43, ('acad1921', 'not found'): 163, ('acad1921', 'unanswered'): 5, ('acad2426', 'found'): 174, ('acad2426', 'not found'): 53, ('acad2426', 'unanswered'): 600, ('decoy', 'not found'): 201, ('decoy', 'unanswered'): 4, ('nonacad1921', 'found'): 593, ('nonacad1921', 'not found'): 223, ('nonacad1921', 'unanswered'): 2, ('posctl', 'found'): 99, ('posctl', 'not found'): 1}
+2026-11-11T07:33:46Z === set acad2426: 827 refs; OpenAlex key; S2 key; free RAM 11.0 GB
+2026-11-11T07:33:46Z acad2426/url: 0 references with a URL
+2026-11-11T07:34:00Z dblp: 0 titles to match (RAM 10.9 GB)
+2026-11-11T07:36:32Z acad2426/arxiv: start, 41 requests, free RAM 10.8 GB
+2026-11-11T07:38:53Z acad2426/arxiv: end; requests {'arxiv': 41}; refusals {}; first refusal {}; free RAM 9.6 GB
+2026-11-11T07:40:10Z acad2426/s2: start, 214 requests, free RAM 9.3 GB
+2026-11-11T08:03:34Z acad2426/s2: 100/214; requests {'arxiv': 41, 's2': 211}
+2026-11-11T08:27:38Z acad2426/s2: 200/214; requests {'arxiv': 41, 's2': 414}
+2026-11-11T08:30:59Z acad2426/s2: end; requests {'arxiv': 41, 's2': 441}; refusals {'s2': 275}; first refusal {'s2': '2026-11-11T07:40:12Z HTTP 429'}; free RAM 9.5 GB
+2026-11-11T08:33:35Z acad2426/openalex: start, 570 requests, free RAM 9.6 GB
+2026-11-11T08:35:32Z acad2426/openalex: 100/570; requests {'arxiv': 41, 's2': 441, 'openalex': 100}
+2026-11-11T08:37:21Z acad2426/openalex: 200/570; requests {'arxiv': 41, 's2': 441, 'openalex': 198}
+2026-11-11T08:39:06Z acad2426/openalex: 300/570; requests {'arxiv': 41, 's2': 441, 'openalex': 295}
+2026-11-11T08:40:53Z acad2426/openalex: 400/570; requests {'arxiv': 41, 's2': 441, 'openalex': 392}
+2026-11-11T08:42:37Z acad2426/openalex: 500/570; requests {'arxiv': 41, 's2': 441, 'openalex': 489}
+2026-11-11T08:43:50Z acad2426/openalex: end; requests {'arxiv': 41, 's2': 441, 'openalex': 554}; refusals {'s2': 275}; first refusal {'s2': '2026-11-11T07:40:12Z HTTP 429'}; free RAM 9.7 GB
+2026-11-11T08:54:13Z evaluate: 2161 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921', 'acad2426']; {('acad1921', 'found'): 43, ('acad1921', 'not found'): 163, ('acad1921', 'unanswered'): 5, ('acad2426', 'found'): 181, ('acad2426', 'not found'): 600, ('acad2426', 'unanswered'): 46, ('decoy', 'not found'): 201, ('decoy', 'unanswered'): 4, ('nonacad1921', 'found'): 593, ('nonacad1921', 'not found'): 223, ('nonacad1921', 'unanswered'): 2, ('posctl', 'found'): 99, ('posctl', 'not found'): 1}
+2026-11-11T09:04:58Z evaluate: 2161 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921', 'acad2426']; {('acad1921', 'found'): 43, ('acad1921', 'not found'): 163, ('acad1921', 'unanswered'): 5, ('acad2426', 'found'): 181, ('acad2426', 'not found'): 600, ('acad2426', 'unanswered'): 46, ('decoy', 'not found'): 201, ('decoy', 'unanswered'): 4, ('nonacad1921', 'found'): 593, ('nonacad1921', 'not found'): 223, ('nonacad1921', 'unanswered'): 2, ('posctl', 'found'): 99, ('posctl', 'not found'): 1}
+2026-11-12T05:30:29Z === set acad2426: 827 refs; OpenAlex key; S2 key; free RAM 13.2 GB
+2026-11-12T05:30:29Z acad2426/url: 0 references with a URL
+2026-11-12T05:31:07Z dblp: 0 titles to match (RAM 13.0 GB)
+2026-11-12T05:35:13Z acad2426/s2: start, 47 requests, free RAM 9.3 GB
+2026-11-12T05:49:26Z acad2426/s2: end; requests {'s2': 100}; refusals {'s2': 71}; first refusal {'s2': '2026-11-12T05:35:15Z HTTP 429'}; free RAM 6.6 GB
+2026-11-12T06:13:41Z evaluate: 2161 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921', 'acad2426']; {('acad1921', 'found'): 43, ('acad1921', 'not found'): 163, ('acad1921', 'unanswered'): 5, ('acad2426', 'found'): 181, ('acad2426', 'not found'): 628, ('acad2426', 'unanswered'): 18, ('decoy', 'not found'): 201, ('decoy', 'unanswered'): 4, ('nonacad1921', 'found'): 593, ('nonacad1921', 'not found'): 223, ('nonacad1921', 'unanswered'): 2, ('posctl', 'found'): 99, ('posctl', 'not found'): 1}
+2026-11-12T06:28:43Z evaluate: 2161 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921', 'acad2426']; {('acad1921', 'found'): 43, ('acad1921', 'not found'): 163, ('acad1921', 'unanswered'): 5, ('acad2426', 'found'): 181, ('acad2426', 'not found'): 628, ('acad2426', 'unanswered'): 18, ('decoy', 'not found'): 201, ('decoy', 'unanswered'): 4, ('nonacad1921', 'found'): 593, ('nonacad1921', 'not found'): 223, ('nonacad1921', 'unanswered'): 2, ('posctl', 'found'): 99, ('posctl', 'not found'): 1}
+2026-11-12T07:35:41Z evaluate: 2161 rows, sets ['decoy', 'posctl', 'acad1921', 'nonacad1921', 'acad2426']; {('acad1921', 'found'): 43, ('acad1921', 'not found'): 163, ('acad1921', 'unanswered'): 5, ('acad2426', 'found'): 181, ('acad2426', 'not found'): 628, ('acad2426', 'unanswered'): 18, ('decoy', 'not found'): 201, ('decoy', 'unanswered'): 4, ('nonacad1921', 'found'): 593, ('nonacad1921', 'not found'): 223, ('nonacad1921', 'unanswered'): 2, ('posctl', 'found'): 99, ('posctl', 'not found'): 1}

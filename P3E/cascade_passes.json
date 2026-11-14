@@ -1,0 +1,192 @@
+{
+ "passes": [
+  {
+   "pass": 1,
+   "start": "2026-11-07T10:25:12Z",
+   "end": "2026-11-07T11:33:05Z",
+   "asked": 6181,
+   "completed_in_pass": 65,
+   "openalex_refused": true,
+   "requests": {
+    "openalex": 1,
+    "s2": 461
+   },
+   "refusals": {
+    "openalex": 1,
+    "s2": 434
+   },
+   "first_refusal": {
+    "openalex": "2026-11-07T10:25:13Z HTTP 429",
+    "s2": "2026-11-07T10:29:22Z HTTP 429"
+   },
+   "free_ram_gb": 7.4
+  },
+  {
+   "pass": 2,
+   "start": "2026-11-07T12:33:11Z",
+   "end": "2026-11-07T13:28:22Z",
+   "asked": 6116,
+   "completed_in_pass": 0,
+   "openalex_refused": true,
+   "requests": {
+    "openalex": 1,
+    "s2": 388
+   },
+   "refusals": {
+    "openalex": 1,
+    "s2": 372
+   },
+   "first_refusal": {
+    "openalex": "2026-11-07T12:33:11Z HTTP 429",
+    "s2": "2026-11-07T12:34:39Z HTTP 429"
+   },
+   "free_ram_gb": 5.5
+  },
+  {
+   "pass": 3,
+   "start": "2026-11-08T03:45:38Z",
+   "end": "2026-11-08T03:47:01Z",
+   "asked": 262,
+   "completed_in_pass": 81,
+   "openalex_refused": false,
+   "requests": {
+    "openalex": 79
+   },
+   "refusals": {},
+   "first_refusal": {},
+   "free_ram_gb": 6.1,
+   "addendum": "A",
+   "scope": "2019-21 academic (J/C/P)",
+   "reached": 81,
+   "stop_reason": "budget (header)",
+   "free_ram_gb_start": 11.2,
+   "openalex_budget": {
+    "remaining_first": 830,
+    "remaining": 40,
+    "credits_per_call": 10,
+    "limit": 1000,
+    "reserve": 50,
+    "stop_time": "2026-11-08T03:47:01Z"
+   }
+  },
+  {
+   "pass": 4,
+   "start": "2026-11-08T04:18:19Z",
+   "end": "2026-11-08T04:35:18Z",
+   "asked": 1579,
+   "completed_in_pass": 990,
+   "openalex_refused": false,
+   "requests": {
+    "openalex": 950
+   },
+   "refusals": {},
+   "first_refusal": {},
+   "free_ram_gb": 5.0,
+   "addendum": "2",
+   "openalex_key": true,
+   "scope": "academic (J/C/P), 2019-21 first, then 2024-26",
+   "reached": 990,
+   "not_asked_after_deadline": 0,
+   "stop_reason": "budget (header)",
+   "free_ram_gb_start": 6.4,
+   "openalex_budget": {
+    "remaining_first": 9990,
+    "remaining": 490,
+    "credits_per_call": 10,
+    "limit": 10000,
+    "reserve": 500,
+    "stop_time": "2026-11-08T04:35:18Z"
+   }
+  },
+  {
+   "pass": 5,
+   "start": "2026-11-09T09:05:14Z",
+   "end": "2026-11-09T09:22:36Z",
+   "asked": 562,
+   "completed_in_pass": 561,
+   "openalex_refused": false,
+   "requests": {
+    "openalex": 526,
+    "s2": 63
+   },
+   "refusals": {
+    "s2": 59
+   },
+   "first_refusal": {
+    "s2": "2026-11-09T09:06:26Z HTTP 429"
+   },
+   "free_ram_gb": 7.3,
+   "addendum": "2",
+   "openalex_key": true,
+   "scope": "academic (J/C/P), 2019-21 first, then 2024-26",
+   "reached": 562,
+   "not_asked_after_deadline": 0,
+   "stop_reason": "all reached",
+   "free_ram_gb_start": 5.8,
+   "openalex_budget": {
+    "remaining_first": 10000,
+    "remaining": 4740,
+    "credits_per_call": 10,
+    "limit": 10000,
+    "reserve": 500,
+    "stop_time": null
+   }
+  },
+  {
+   "pass": 6,
+   "start": "2026-11-10T00:10:00Z",
+   "end": "2026-11-10T00:10:18Z",
+   "asked": 1,
+   "completed_in_pass": 0,
+   "openalex_refused": false,
+   "requests": {
+    "s2": 2
+   },
+   "refusals": {
+    "s2": 2
+   },
+   "first_refusal": {
+    "s2": "2026-11-10T00:10:01Z HTTP 429"
+   },
+   "free_ram_gb": 11.3,
+   "addendum": "2",
+   "openalex_key": true,
+   "scope": "academic (J/C/P), 2019-21 first, then 2024-26",
+   "reached": 1,
+   "not_asked_after_deadline": 0,
+   "stop_reason": "all reached",
+   "free_ram_gb_start": 11.4,
+   "openalex_budget": {
+    "remaining_first": null,
+    "remaining": null,
+    "credits_per_call": null,
+    "limit": null,
+    "reserve": null,
+    "stop_time": null
+   }
+  }
+ ],
+ "unanswered_after_last_pass": {
+  "n": 3618,
+  "by_period_tier_state_before": {
+   "2024-26 W unresolved": 2398,
+   "2024-26 S unresolved": 578,
+   "2024-26 B unresolved": 299,
+   "2024-26 B rate-limited": 3,
+   "2024-26 W rate-limited": 11,
+   "2024-26 S rate-limited": 3,
+   "2024-26 C rate-limited": 1,
+   "2024-26 W resolved": 118,
+   "2024-26 B resolved": 203,
+   "2024-26 S resolved": 4
+  },
+  "scope": "acad (Addendum 2)",
+  "n_scope": 1703,
+  "n_scope_unanswered": 0,
+  "scope_rate_limited_after_rounds": [
+   "2504.01380/alderlake-micro"
+  ],
+  "n_acad1921": 291,
+  "n_acad1921_unanswered": 0
+ }
+}

@@ -1,0 +1,142 @@
+{
+ "seed": 43,
+ "boot": 1000,
+ "label": "recheck after Amendment 5 (post-hoc, supplementary)",
+ "threshold": "PABAK >= 0.8 (as P2); R1 labels under the original rules, R2/R3 under (b')-(d')",
+ "R1-R3": {
+  "n": 40,
+  "raw": 1.0,
+  "pabak": 1.0,
+  "ac1": 1.0,
+  "kappa": 0.0,
+  "table": [
+   [
+    40,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0
+   ]
+  ],
+  "raw_ci": [
+   1.0,
+   1.0
+  ],
+  "pabak_ci": [
+   1.0,
+   1.0
+  ],
+  "ac1_ci": [
+   1.0,
+   1.0
+  ],
+  "kappa_ci": [
+   0.0,
+   0.0
+  ],
+  "n_papers": 35,
+  "disagreements": []
+ },
+ "R1-R2": {
+  "n": 40,
+  "raw": 1.0,
+  "pabak": 1.0,
+  "ac1": 1.0,
+  "kappa": 0.0,
+  "table": [
+   [
+    40,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0
+   ]
+  ],
+  "raw_ci": [
+   1.0,
+   1.0
+  ],
+  "pabak_ci": [
+   1.0,
+   1.0
+  ],
+  "ac1_ci": [
+   1.0,
+   1.0
+  ],
+  "kappa_ci": [
+   0.0,
+   0.0
+  ],
+  "n_papers": 35,
+  "disagreements": []
+ },
+ "R2-R3": {
+  "n": 40,
+  "raw": 1.0,
+  "pabak": 1.0,
+  "ac1": 1.0,
+  "kappa": 0.0,
+  "table": [
+   [
+    40,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0
+   ]
+  ],
+  "raw_ci": [
+   1.0,
+   1.0
+  ],
+  "pabak_ci": [
+   1.0,
+   1.0
+  ],
+  "ac1_ci": [
+   1.0,
+   1.0
+  ],
+  "kappa_ci": [
+   0.0,
+   0.0
+  ],
+  "n_papers": 35,
+  "disagreements": []
+ },
+ "AC1 three raters": {
+  "n": 40,
+  "ac1": 1.0,
+  "ac1_ci": [
+   1.0,
+   1.0
+  ]
+ },
+ "meets_threshold_R1R3": true,
+ "meets_threshold_R2R3": true
+}

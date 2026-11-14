@@ -1,0 +1,817 @@
+interim,subset,source,style,variant,parser,tier,backend,n_refs,n_papers,k_flagged,fp,ci_lo,ci_hi,seed,boot
+True,certified-real,bib-title,bib-title,orig,none,all,crossref,2325,97,1104,0.47484,0.36813,0.54416,42,1000
+True,certified-real,bib-title,bib-title,orig,none,all,dblp,2325,97,17,0.00731,0.00341,0.01422,42,1000
+True,certified-real,bib-title,bib-title,orig,none,A,crossref,2297,96,1094,0.47627,0.36027,0.54616,42,1000
+True,certified-real,bib-title,bib-title,orig,none,A,dblp,2297,96,8,0.00348,0.00097,0.00733,42,1000
+True,certified-real,bib-title,bib-title,orig,none,J,crossref,395,47,26,0.06582,0.03703,0.09514,42,1000
+True,certified-real,bib-title,bib-title,orig,none,J,dblp,395,47,6,0.01519,0.00291,0.02817,42,1000
+True,certified-real,bib-title,bib-title,orig,none,C,crossref,260,47,14,0.05385,0.01734,0.09280,42,1000
+True,certified-real,bib-title,bib-title,orig,none,C,dblp,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,bib-title,bib-title,orig,none,P,crossref,1642,86,1054,0.64190,0.60439,0.68881,42,1000
+True,certified-real,bib-title,bib-title,orig,none,P,dblp,1642,86,2,0.00122,0.00000,0.00311,42,1000
+True,certified-real,bib-title,bib-title,orig,none,B,crossref,12,7,5,0.41667,,,42,1000
+True,certified-real,bib-title,bib-title,orig,none,B,dblp,12,7,4,0.33333,,,42,1000
+True,certified-real,bib-title,bib-title,orig,none,S,crossref,3,3,3,1.00000,,,42,1000
+True,certified-real,bib-title,bib-title,orig,none,S,dblp,3,3,3,1.00000,,,42,1000
+True,certified-real,bib-title,bib-title,orig,none,W,crossref,13,4,2,0.15385,,,42,1000
+True,certified-real,bib-title,bib-title,orig,none,W,dblp,13,4,2,0.15385,,,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,all,idonly,2325,97,605,0.26022,0.15238,0.41285,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,all,crossref,2325,97,49,0.02108,0.01180,0.03532,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,all,dblp,2325,97,7,0.00301,0.00086,0.00628,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,A,idonly,2294,96,577,0.25153,0.14825,0.42324,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,A,crossref,2294,96,40,0.01744,0.00824,0.03071,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,A,dblp,2294,96,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,J,idonly,394,47,332,0.84264,0.74364,0.92022,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,J,crossref,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,J,dblp,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,C,idonly,260,47,179,0.68846,0.51756,0.84562,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,C,crossref,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,C,dblp,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,P,idonly,1640,86,66,0.04024,0.02003,0.09013,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,P,crossref,1640,86,40,0.02439,0.01175,0.05022,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,P,dblp,1640,86,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,B,idonly,13,7,12,0.92308,,,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,B,crossref,13,7,3,0.23077,,,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,B,dblp,13,7,2,0.15385,,,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,S,idonly,3,3,1,0.33333,,,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,S,crossref,3,3,1,0.33333,,,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,S,dblp,3,3,1,0.33333,,,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,W,idonly,15,5,15,1.00000,,,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,W,crossref,15,5,5,0.33333,,,42,1000
+True,certified-real,render,IEEEtran,orig,anystyle,W,dblp,15,5,4,0.26667,,,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,all,idonly,2325,97,605,0.26022,0.15238,0.41285,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,all,crossref,2325,97,49,0.02108,0.01180,0.03532,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,all,dblp,2325,97,7,0.00301,0.00086,0.00628,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,A,idonly,2294,96,577,0.25153,0.14825,0.42324,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,A,crossref,2294,96,40,0.01744,0.00824,0.03071,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,A,dblp,2294,96,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,J,idonly,394,47,332,0.84264,0.74364,0.92022,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,J,crossref,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,J,dblp,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,C,idonly,260,47,179,0.68846,0.51756,0.84562,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,C,crossref,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,C,dblp,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,P,idonly,1640,86,66,0.04024,0.02003,0.09013,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,P,crossref,1640,86,40,0.02439,0.01175,0.05022,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,P,dblp,1640,86,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,B,idonly,13,7,12,0.92308,,,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,B,crossref,13,7,3,0.23077,,,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,B,dblp,13,7,2,0.15385,,,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,S,idonly,3,3,1,0.33333,,,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,S,crossref,3,3,1,0.33333,,,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,S,dblp,3,3,1,0.33333,,,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,W,idonly,15,5,15,1.00000,,,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,W,crossref,15,5,5,0.33333,,,42,1000
+True,certified-real,render,IEEEtran,orig,grobid,W,dblp,15,5,4,0.26667,,,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,all,idonly,2325,97,992,0.42667,0.26416,0.64884,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,all,crossref,2325,97,189,0.08129,0.04451,0.14102,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,all,dblp,2325,97,13,0.00559,0.00247,0.01091,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,A,idonly,2294,96,961,0.41892,0.26494,0.65678,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,A,crossref,2294,96,179,0.07803,0.04170,0.13991,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,A,dblp,2294,96,4,0.00174,0.00000,0.00471,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,J,idonly,394,47,394,1.00000,1.00000,1.00000,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,J,crossref,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,J,dblp,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,C,idonly,260,47,260,1.00000,1.00000,1.00000,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,C,crossref,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,C,dblp,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,P,idonly,1640,86,307,0.18720,0.09898,0.37700,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,P,crossref,1640,86,179,0.10915,0.05854,0.22458,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,P,dblp,1640,86,4,0.00244,0.00000,0.00745,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,B,idonly,13,7,13,1.00000,,,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,B,crossref,13,7,3,0.23077,,,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,B,dblp,13,7,2,0.15385,,,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,S,idonly,3,3,3,1.00000,,,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,S,crossref,3,3,3,1.00000,,,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,S,dblp,3,3,3,1.00000,,,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,W,idonly,15,5,15,1.00000,,,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,W,crossref,15,5,4,0.26667,,,42,1000
+True,certified-real,render,IEEEtran,strip,anystyle,W,dblp,15,5,4,0.26667,,,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,all,idonly,2325,97,992,0.42667,0.26416,0.64884,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,all,crossref,2325,97,189,0.08129,0.04451,0.14102,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,all,dblp,2325,97,16,0.00688,0.00329,0.01303,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,A,idonly,2294,96,961,0.41892,0.26494,0.65678,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,A,crossref,2294,96,179,0.07803,0.04170,0.13991,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,A,dblp,2294,96,7,0.00305,0.00062,0.00754,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,J,idonly,394,47,394,1.00000,1.00000,1.00000,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,J,crossref,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,J,dblp,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,C,idonly,260,47,260,1.00000,1.00000,1.00000,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,C,crossref,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,C,dblp,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,P,idonly,1640,86,307,0.18720,0.09898,0.37700,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,P,crossref,1640,86,179,0.10915,0.05854,0.22458,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,P,dblp,1640,86,7,0.00427,0.00102,0.01153,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,B,idonly,13,7,13,1.00000,,,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,B,crossref,13,7,3,0.23077,,,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,B,dblp,13,7,2,0.15385,,,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,S,idonly,3,3,3,1.00000,,,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,S,crossref,3,3,3,1.00000,,,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,S,dblp,3,3,3,1.00000,,,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,W,idonly,15,5,15,1.00000,,,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,W,crossref,15,5,4,0.26667,,,42,1000
+True,certified-real,render,IEEEtran,strip,grobid,W,dblp,15,5,4,0.26667,,,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,all,idonly,2325,97,74,0.03183,0.01741,0.05769,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,all,crossref,2325,97,36,0.01548,0.00785,0.02910,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,all,dblp,2325,97,3,0.00129,0.00000,0.00337,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,A,idonly,2294,96,71,0.03095,0.01635,0.06021,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,A,crossref,2294,96,33,0.01439,0.00610,0.02786,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,A,dblp,2294,96,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,J,idonly,394,47,4,0.01015,0.00263,0.02074,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,J,crossref,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,J,dblp,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,C,idonly,260,47,15,0.05769,0.02068,0.09388,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,C,crossref,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,C,dblp,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,P,idonly,1640,86,52,0.03171,0.01389,0.07416,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,P,crossref,1640,86,33,0.02012,0.00971,0.04348,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,P,dblp,1640,86,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,B,idonly,13,7,1,0.07692,,,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,B,crossref,13,7,1,0.07692,,,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,B,dblp,13,7,1,0.07692,,,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,S,idonly,3,3,0,0.00000,,,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,S,crossref,3,3,0,0.00000,,,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,S,dblp,3,3,0,0.00000,,,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,W,idonly,15,5,2,0.13333,,,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,W,crossref,15,5,2,0.13333,,,42,1000
+True,certified-real,render,IEEEtran_doi,orig,anystyle,W,dblp,15,5,2,0.13333,,,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,all,idonly,2325,97,74,0.03183,0.01741,0.05769,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,all,crossref,2325,97,36,0.01548,0.00785,0.02910,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,all,dblp,2325,97,3,0.00129,0.00000,0.00337,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,A,idonly,2294,96,71,0.03095,0.01635,0.06021,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,A,crossref,2294,96,33,0.01439,0.00610,0.02786,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,A,dblp,2294,96,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,J,idonly,394,47,4,0.01015,0.00263,0.02074,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,J,crossref,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,J,dblp,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,C,idonly,260,47,15,0.05769,0.02068,0.09388,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,C,crossref,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,C,dblp,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,P,idonly,1640,86,52,0.03171,0.01389,0.07416,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,P,crossref,1640,86,33,0.02012,0.00971,0.04348,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,P,dblp,1640,86,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,B,idonly,13,7,1,0.07692,,,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,B,crossref,13,7,1,0.07692,,,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,B,dblp,13,7,1,0.07692,,,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,S,idonly,3,3,0,0.00000,,,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,S,crossref,3,3,0,0.00000,,,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,S,dblp,3,3,0,0.00000,,,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,W,idonly,15,5,2,0.13333,,,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,W,crossref,15,5,2,0.13333,,,42,1000
+True,certified-real,render,IEEEtran_doi,orig,grobid,W,dblp,15,5,2,0.13333,,,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,all,idonly,2325,97,992,0.42667,0.26416,0.64884,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,all,crossref,2325,97,189,0.08129,0.04451,0.14102,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,all,dblp,2325,97,13,0.00559,0.00247,0.01091,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,A,idonly,2294,96,961,0.41892,0.26494,0.65678,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,A,crossref,2294,96,179,0.07803,0.04170,0.13991,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,A,dblp,2294,96,4,0.00174,0.00000,0.00471,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,J,idonly,394,47,394,1.00000,1.00000,1.00000,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,J,crossref,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,J,dblp,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,C,idonly,260,47,260,1.00000,1.00000,1.00000,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,C,crossref,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,C,dblp,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,P,idonly,1640,86,307,0.18720,0.09898,0.37700,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,P,crossref,1640,86,179,0.10915,0.05854,0.22458,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,P,dblp,1640,86,4,0.00244,0.00000,0.00745,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,B,idonly,13,7,13,1.00000,,,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,B,crossref,13,7,3,0.23077,,,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,B,dblp,13,7,2,0.15385,,,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,S,idonly,3,3,3,1.00000,,,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,S,crossref,3,3,3,1.00000,,,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,S,dblp,3,3,3,1.00000,,,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,W,idonly,15,5,15,1.00000,,,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,W,crossref,15,5,4,0.26667,,,42,1000
+True,certified-real,render,IEEEtran_doi,strip,anystyle,W,dblp,15,5,4,0.26667,,,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,all,idonly,2325,97,992,0.42667,0.26416,0.64884,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,all,crossref,2325,97,189,0.08129,0.04451,0.14102,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,all,dblp,2325,97,16,0.00688,0.00329,0.01303,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,A,idonly,2294,96,961,0.41892,0.26494,0.65678,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,A,crossref,2294,96,179,0.07803,0.04170,0.13991,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,A,dblp,2294,96,7,0.00305,0.00062,0.00754,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,J,idonly,394,47,394,1.00000,1.00000,1.00000,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,J,crossref,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,J,dblp,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,C,idonly,260,47,260,1.00000,1.00000,1.00000,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,C,crossref,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,C,dblp,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,P,idonly,1640,86,307,0.18720,0.09898,0.37700,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,P,crossref,1640,86,179,0.10915,0.05854,0.22458,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,P,dblp,1640,86,7,0.00427,0.00102,0.01153,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,B,idonly,13,7,13,1.00000,,,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,B,crossref,13,7,3,0.23077,,,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,B,dblp,13,7,2,0.15385,,,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,S,idonly,3,3,3,1.00000,,,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,S,crossref,3,3,3,1.00000,,,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,S,dblp,3,3,3,1.00000,,,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,W,idonly,15,5,15,1.00000,,,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,W,crossref,15,5,4,0.26667,,,42,1000
+True,certified-real,render,IEEEtran_doi,strip,grobid,W,dblp,15,5,4,0.26667,,,42,1000
+True,certified-real,render,acmart,orig,anystyle,all,idonly,2325,97,262,0.11269,0.08015,0.14228,42,1000
+True,certified-real,render,acmart,orig,anystyle,all,crossref,2325,97,39,0.01677,0.00419,0.02891,42,1000
+True,certified-real,render,acmart,orig,anystyle,all,dblp,2325,97,9,0.00387,0.00111,0.00625,42,1000
+True,certified-real,render,acmart,orig,anystyle,A,idonly,2294,96,253,0.11029,0.07627,0.14216,42,1000
+True,certified-real,render,acmart,orig,anystyle,A,crossref,2294,96,35,0.01526,0.00264,0.02777,42,1000
+True,certified-real,render,acmart,orig,anystyle,A,dblp,2294,96,5,0.00218,0.00000,0.00443,42,1000
+True,certified-real,render,acmart,orig,anystyle,J,idonly,394,47,92,0.23350,0.19208,0.27734,42,1000
+True,certified-real,render,acmart,orig,anystyle,J,crossref,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,acmart,orig,anystyle,J,dblp,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,acmart,orig,anystyle,C,idonly,260,47,76,0.29231,0.22271,0.35690,42,1000
+True,certified-real,render,acmart,orig,anystyle,C,crossref,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,acmart,orig,anystyle,C,dblp,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,acmart,orig,anystyle,P,idonly,1640,86,85,0.05183,0.00796,0.08721,42,1000
+True,certified-real,render,acmart,orig,anystyle,P,crossref,1640,86,35,0.02134,0.00401,0.03478,42,1000
+True,certified-real,render,acmart,orig,anystyle,P,dblp,1640,86,5,0.00305,0.00000,0.00534,42,1000
+True,certified-real,render,acmart,orig,anystyle,B,idonly,13,7,6,0.46154,,,42,1000
+True,certified-real,render,acmart,orig,anystyle,B,crossref,13,7,1,0.07692,,,42,1000
+True,certified-real,render,acmart,orig,anystyle,B,dblp,13,7,1,0.07692,,,42,1000
+True,certified-real,render,acmart,orig,anystyle,S,idonly,3,3,0,0.00000,,,42,1000
+True,certified-real,render,acmart,orig,anystyle,S,crossref,3,3,0,0.00000,,,42,1000
+True,certified-real,render,acmart,orig,anystyle,S,dblp,3,3,0,0.00000,,,42,1000
+True,certified-real,render,acmart,orig,anystyle,W,idonly,15,5,3,0.20000,,,42,1000
+True,certified-real,render,acmart,orig,anystyle,W,crossref,15,5,3,0.20000,,,42,1000
+True,certified-real,render,acmart,orig,anystyle,W,dblp,15,5,3,0.20000,,,42,1000
+True,certified-real,render,acmart,orig,grobid,all,idonly,2325,97,262,0.11269,0.08015,0.14228,42,1000
+True,certified-real,render,acmart,orig,grobid,all,crossref,2325,97,39,0.01677,0.00419,0.02891,42,1000
+True,certified-real,render,acmart,orig,grobid,all,dblp,2325,97,9,0.00387,0.00111,0.00625,42,1000
+True,certified-real,render,acmart,orig,grobid,A,idonly,2294,96,253,0.11029,0.07627,0.14216,42,1000
+True,certified-real,render,acmart,orig,grobid,A,crossref,2294,96,35,0.01526,0.00264,0.02777,42,1000
+True,certified-real,render,acmart,orig,grobid,A,dblp,2294,96,5,0.00218,0.00000,0.00443,42,1000
+True,certified-real,render,acmart,orig,grobid,J,idonly,394,47,92,0.23350,0.19208,0.27734,42,1000
+True,certified-real,render,acmart,orig,grobid,J,crossref,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,acmart,orig,grobid,J,dblp,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,acmart,orig,grobid,C,idonly,260,47,76,0.29231,0.22271,0.35690,42,1000
+True,certified-real,render,acmart,orig,grobid,C,crossref,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,acmart,orig,grobid,C,dblp,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,acmart,orig,grobid,P,idonly,1640,86,85,0.05183,0.00796,0.08721,42,1000
+True,certified-real,render,acmart,orig,grobid,P,crossref,1640,86,35,0.02134,0.00401,0.03478,42,1000
+True,certified-real,render,acmart,orig,grobid,P,dblp,1640,86,5,0.00305,0.00000,0.00534,42,1000
+True,certified-real,render,acmart,orig,grobid,B,idonly,13,7,6,0.46154,,,42,1000
+True,certified-real,render,acmart,orig,grobid,B,crossref,13,7,1,0.07692,,,42,1000
+True,certified-real,render,acmart,orig,grobid,B,dblp,13,7,1,0.07692,,,42,1000
+True,certified-real,render,acmart,orig,grobid,S,idonly,3,3,0,0.00000,,,42,1000
+True,certified-real,render,acmart,orig,grobid,S,crossref,3,3,0,0.00000,,,42,1000
+True,certified-real,render,acmart,orig,grobid,S,dblp,3,3,0,0.00000,,,42,1000
+True,certified-real,render,acmart,orig,grobid,W,idonly,15,5,3,0.20000,,,42,1000
+True,certified-real,render,acmart,orig,grobid,W,crossref,15,5,3,0.20000,,,42,1000
+True,certified-real,render,acmart,orig,grobid,W,dblp,15,5,3,0.20000,,,42,1000
+True,certified-real,render,acmart,strip,anystyle,all,idonly,2325,97,1048,0.45075,0.31050,0.64883,42,1000
+True,certified-real,render,acmart,strip,anystyle,all,crossref,2325,97,204,0.08774,0.05524,0.14048,42,1000
+True,certified-real,render,acmart,strip,anystyle,all,dblp,2325,97,57,0.02452,0.01482,0.04079,42,1000
+True,certified-real,render,acmart,strip,anystyle,A,idonly,2294,96,1017,0.44333,0.30808,0.65611,42,1000
+True,certified-real,render,acmart,strip,anystyle,A,crossref,2294,96,195,0.08500,0.04863,0.13892,42,1000
+True,certified-real,render,acmart,strip,anystyle,A,dblp,2294,96,48,0.02092,0.01084,0.03727,42,1000
+True,certified-real,render,acmart,strip,anystyle,J,idonly,394,47,394,1.00000,1.00000,1.00000,42,1000
+True,certified-real,render,acmart,strip,anystyle,J,crossref,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,acmart,strip,anystyle,J,dblp,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,acmart,strip,anystyle,C,idonly,260,47,260,1.00000,1.00000,1.00000,42,1000
+True,certified-real,render,acmart,strip,anystyle,C,crossref,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,acmart,strip,anystyle,C,dblp,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,acmart,strip,anystyle,P,idonly,1640,86,363,0.22134,0.14333,0.37782,42,1000
+True,certified-real,render,acmart,strip,anystyle,P,crossref,1640,86,195,0.11890,0.07323,0.22486,42,1000
+True,certified-real,render,acmart,strip,anystyle,P,dblp,1640,86,48,0.02927,0.01587,0.05848,42,1000
+True,certified-real,render,acmart,strip,anystyle,B,idonly,13,7,13,1.00000,,,42,1000
+True,certified-real,render,acmart,strip,anystyle,B,crossref,13,7,2,0.15385,,,42,1000
+True,certified-real,render,acmart,strip,anystyle,B,dblp,13,7,2,0.15385,,,42,1000
+True,certified-real,render,acmart,strip,anystyle,S,idonly,3,3,3,1.00000,,,42,1000
+True,certified-real,render,acmart,strip,anystyle,S,crossref,3,3,3,1.00000,,,42,1000
+True,certified-real,render,acmart,strip,anystyle,S,dblp,3,3,3,1.00000,,,42,1000
+True,certified-real,render,acmart,strip,anystyle,W,idonly,15,5,15,1.00000,,,42,1000
+True,certified-real,render,acmart,strip,anystyle,W,crossref,15,5,4,0.26667,,,42,1000
+True,certified-real,render,acmart,strip,anystyle,W,dblp,15,5,4,0.26667,,,42,1000
+True,certified-real,render,acmart,strip,grobid,all,idonly,2325,97,1048,0.45075,0.31050,0.64883,42,1000
+True,certified-real,render,acmart,strip,grobid,all,crossref,2325,97,204,0.08774,0.05524,0.14048,42,1000
+True,certified-real,render,acmart,strip,grobid,all,dblp,2325,97,50,0.02151,0.01227,0.03731,42,1000
+True,certified-real,render,acmart,strip,grobid,A,idonly,2294,96,1017,0.44333,0.30808,0.65611,42,1000
+True,certified-real,render,acmart,strip,grobid,A,crossref,2294,96,195,0.08500,0.04863,0.13892,42,1000
+True,certified-real,render,acmart,strip,grobid,A,dblp,2294,96,41,0.01787,0.00895,0.03300,42,1000
+True,certified-real,render,acmart,strip,grobid,J,idonly,394,47,394,1.00000,1.00000,1.00000,42,1000
+True,certified-real,render,acmart,strip,grobid,J,crossref,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,acmart,strip,grobid,J,dblp,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,acmart,strip,grobid,C,idonly,260,47,260,1.00000,1.00000,1.00000,42,1000
+True,certified-real,render,acmart,strip,grobid,C,crossref,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,acmart,strip,grobid,C,dblp,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,acmart,strip,grobid,P,idonly,1640,86,363,0.22134,0.14333,0.37782,42,1000
+True,certified-real,render,acmart,strip,grobid,P,crossref,1640,86,195,0.11890,0.07323,0.22486,42,1000
+True,certified-real,render,acmart,strip,grobid,P,dblp,1640,86,41,0.02500,0.01320,0.05377,42,1000
+True,certified-real,render,acmart,strip,grobid,B,idonly,13,7,13,1.00000,,,42,1000
+True,certified-real,render,acmart,strip,grobid,B,crossref,13,7,2,0.15385,,,42,1000
+True,certified-real,render,acmart,strip,grobid,B,dblp,13,7,2,0.15385,,,42,1000
+True,certified-real,render,acmart,strip,grobid,S,idonly,3,3,3,1.00000,,,42,1000
+True,certified-real,render,acmart,strip,grobid,S,crossref,3,3,3,1.00000,,,42,1000
+True,certified-real,render,acmart,strip,grobid,S,dblp,3,3,3,1.00000,,,42,1000
+True,certified-real,render,acmart,strip,grobid,W,idonly,15,5,15,1.00000,,,42,1000
+True,certified-real,render,acmart,strip,grobid,W,crossref,15,5,4,0.26667,,,42,1000
+True,certified-real,render,acmart,strip,grobid,W,dblp,15,5,4,0.26667,,,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,all,idonly,2325,97,159,0.06839,0.04052,0.10921,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,all,crossref,2325,97,16,0.00688,0.00255,0.01183,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,all,dblp,2325,97,4,0.00172,0.00031,0.00427,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,A,idonly,2294,96,152,0.06626,0.03931,0.11028,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,A,crossref,2294,96,13,0.00567,0.00153,0.00991,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,A,dblp,2294,96,1,0.00044,0.00000,0.00170,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,J,idonly,394,47,80,0.20305,0.15611,0.25345,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,J,crossref,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,J,dblp,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,C,idonly,260,47,52,0.20000,0.12798,0.26667,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,C,crossref,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,C,dblp,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,P,idonly,1640,86,20,0.01220,0.00466,0.02800,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,P,crossref,1640,86,13,0.00793,0.00201,0.01545,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,P,dblp,1640,86,1,0.00061,0.00000,0.00279,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,B,idonly,13,7,4,0.30769,,,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,B,crossref,13,7,1,0.07692,,,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,B,dblp,13,7,1,0.07692,,,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,S,idonly,3,3,0,0.00000,,,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,S,crossref,3,3,0,0.00000,,,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,S,dblp,3,3,0,0.00000,,,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,W,idonly,15,5,3,0.20000,,,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,W,crossref,15,5,2,0.13333,,,42,1000
+True,certified-real,render,elsarticle-num,orig,anystyle,W,dblp,15,5,2,0.13333,,,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,all,idonly,2325,97,159,0.06839,0.04052,0.10921,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,all,crossref,2325,97,16,0.00688,0.00255,0.01183,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,all,dblp,2325,97,5,0.00215,0.00046,0.00478,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,A,idonly,2294,96,152,0.06626,0.03931,0.11028,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,A,crossref,2294,96,13,0.00567,0.00153,0.00991,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,A,dblp,2294,96,2,0.00087,0.00000,0.00258,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,J,idonly,394,47,80,0.20305,0.15611,0.25345,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,J,crossref,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,J,dblp,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,C,idonly,260,47,52,0.20000,0.12798,0.26667,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,C,crossref,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,C,dblp,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,P,idonly,1640,86,20,0.01220,0.00466,0.02800,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,P,crossref,1640,86,13,0.00793,0.00201,0.01545,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,P,dblp,1640,86,2,0.00122,0.00000,0.00434,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,B,idonly,13,7,4,0.30769,,,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,B,crossref,13,7,1,0.07692,,,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,B,dblp,13,7,1,0.07692,,,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,S,idonly,3,3,0,0.00000,,,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,S,crossref,3,3,0,0.00000,,,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,S,dblp,3,3,0,0.00000,,,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,W,idonly,15,5,3,0.20000,,,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,W,crossref,15,5,2,0.13333,,,42,1000
+True,certified-real,render,elsarticle-num,orig,grobid,W,dblp,15,5,2,0.13333,,,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,all,idonly,2325,97,990,0.42581,0.26373,0.64850,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,all,crossref,2325,97,186,0.08000,0.04372,0.13899,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,all,dblp,2325,97,21,0.00903,0.00448,0.01642,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,A,idonly,2294,96,959,0.41805,0.26446,0.65609,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,A,crossref,2294,96,177,0.07716,0.04060,0.13824,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,A,dblp,2294,96,12,0.00523,0.00149,0.01099,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,J,idonly,394,47,394,1.00000,1.00000,1.00000,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,J,crossref,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,J,dblp,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,C,idonly,260,47,260,1.00000,1.00000,1.00000,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,C,crossref,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,C,dblp,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,P,idonly,1640,86,305,0.18598,0.09832,0.37692,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,P,crossref,1640,86,177,0.10793,0.05847,0.22343,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,P,dblp,1640,86,12,0.00732,0.00229,0.01844,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,B,idonly,13,7,13,1.00000,,,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,B,crossref,13,7,2,0.15385,,,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,B,dblp,13,7,2,0.15385,,,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,S,idonly,3,3,3,1.00000,,,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,S,crossref,3,3,3,1.00000,,,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,S,dblp,3,3,3,1.00000,,,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,W,idonly,15,5,15,1.00000,,,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,W,crossref,15,5,4,0.26667,,,42,1000
+True,certified-real,render,elsarticle-num,strip,anystyle,W,dblp,15,5,4,0.26667,,,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,all,idonly,2325,97,990,0.42581,0.26373,0.64850,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,all,crossref,2325,97,186,0.08000,0.04372,0.13899,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,all,dblp,2325,97,27,0.01161,0.00490,0.02227,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,A,idonly,2294,96,959,0.41805,0.26446,0.65609,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,A,crossref,2294,96,177,0.07716,0.04060,0.13824,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,A,dblp,2294,96,18,0.00785,0.00196,0.01763,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,J,idonly,394,47,394,1.00000,1.00000,1.00000,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,J,crossref,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,J,dblp,394,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,C,idonly,260,47,260,1.00000,1.00000,1.00000,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,C,crossref,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,C,dblp,260,47,0,0.00000,0.00000,0.00000,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,P,idonly,1640,86,305,0.18598,0.09832,0.37692,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,P,crossref,1640,86,177,0.10793,0.05847,0.22343,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,P,dblp,1640,86,18,0.01098,0.00336,0.02801,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,B,idonly,13,7,13,1.00000,,,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,B,crossref,13,7,2,0.15385,,,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,B,dblp,13,7,2,0.15385,,,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,S,idonly,3,3,3,1.00000,,,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,S,crossref,3,3,3,1.00000,,,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,S,dblp,3,3,3,1.00000,,,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,W,idonly,15,5,15,1.00000,,,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,W,crossref,15,5,4,0.26667,,,42,1000
+True,certified-real,render,elsarticle-num,strip,grobid,W,dblp,15,5,4,0.26667,,,42,1000
+True,manual-exists,bib-title-manual,bib-title,orig,none,all,crossref,189,113,108,0.57143,0.46927,0.66861,42,1000
+True,manual-exists,bib-title-manual,bib-title,orig,none,all,dblp,189,113,59,0.31217,0.22749,0.40484,42,1000
+True,manual-exists,bib-title-manual,bib-title,orig,none,A,crossref,105,70,44,0.41905,0.26965,0.57630,42,1000
+True,manual-exists,bib-title-manual,bib-title,orig,none,A,dblp,105,70,8,0.07619,0.02409,0.13393,42,1000
+True,manual-exists,bib-title-manual,bib-title,orig,none,J,crossref,36,31,7,0.19444,0.06061,0.33333,42,1000
+True,manual-exists,bib-title-manual,bib-title,orig,none,J,dblp,36,31,4,0.11111,0.00000,0.22510,42,1000
+True,manual-exists,bib-title-manual,bib-title,orig,none,C,crossref,37,31,17,0.45946,0.27778,0.65627,42,1000
+True,manual-exists,bib-title-manual,bib-title,orig,none,C,dblp,37,31,4,0.10811,0.02630,0.22222,42,1000
+True,manual-exists,bib-title-manual,bib-title,orig,none,P,crossref,32,15,20,0.62500,0.23798,0.89189,42,1000
+True,manual-exists,bib-title-manual,bib-title,orig,none,P,dblp,32,15,0,0.00000,0.00000,0.00000,42,1000
+True,manual-exists,bib-title-manual,bib-title,orig,none,B,crossref,34,29,23,0.67647,0.48569,0.84375,42,1000
+True,manual-exists,bib-title-manual,bib-title,orig,none,B,dblp,34,29,13,0.38235,0.21208,0.54563,42,1000
+True,manual-exists,bib-title-manual,bib-title,orig,none,S,crossref,22,14,22,1.00000,1.00000,1.00000,42,1000
+True,manual-exists,bib-title-manual,bib-title,orig,none,S,dblp,22,14,22,1.00000,1.00000,1.00000,42,1000
+True,manual-exists,bib-title-manual,bib-title,orig,none,W,crossref,28,26,19,0.67857,0.48148,0.85714,42,1000
+True,manual-exists,bib-title-manual,bib-title,orig,none,W,dblp,28,26,16,0.57143,0.37037,0.75022,42,1000
+True,all refs,bib-title,bib-title,orig,none,all,crossref,5733,100,2386,0.41619,0.35012,0.46438,42,1000
+True,all refs,bib-title,bib-title,orig,none,all,dblp,5733,100,541,0.09437,0.07043,0.12967,42,1000
+True,all refs,bib-title,bib-title,orig,none,A,crossref,5215,100,1973,0.37833,0.30320,0.43073,42,1000
+True,all refs,bib-title,bib-title,orig,none,A,dblp,5215,100,171,0.03279,0.02358,0.04988,42,1000
+True,all refs,bib-title,bib-title,orig,none,J,crossref,1673,96,303,0.18111,0.14044,0.22535,42,1000
+True,all refs,bib-title,bib-title,orig,none,J,dblp,1673,96,106,0.06336,0.04137,0.09640,42,1000
+True,all refs,bib-title,bib-title,orig,none,C,crossref,1738,97,478,0.27503,0.22338,0.31772,42,1000
+True,all refs,bib-title,bib-title,orig,none,C,dblp,1738,97,47,0.02704,0.01789,0.03590,42,1000
+True,all refs,bib-title,bib-title,orig,none,P,crossref,1804,88,1192,0.66075,0.62774,0.71005,42,1000
+True,all refs,bib-title,bib-title,orig,none,P,dblp,1804,88,18,0.00998,0.00412,0.02478,42,1000
+True,all refs,bib-title,bib-title,orig,none,B,crossref,105,42,59,0.56190,0.45940,0.66667,42,1000
+True,all refs,bib-title,bib-title,orig,none,B,dblp,105,42,42,0.40000,0.28332,0.51088,42,1000
+True,all refs,bib-title,bib-title,orig,none,S,crossref,72,31,72,1.00000,1.00000,1.00000,42,1000
+True,all refs,bib-title,bib-title,orig,none,S,dblp,72,31,71,0.98611,0.96104,1.00000,42,1000
+True,all refs,bib-title,bib-title,orig,none,W,crossref,341,57,282,0.82698,0.71666,0.89769,42,1000
+True,all refs,bib-title,bib-title,orig,none,W,dblp,341,57,257,0.75367,0.64144,0.84015,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,all,idonly,5754,100,3979,0.69152,0.61489,0.79560,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,all,crossref,5754,100,1117,0.19413,0.16646,0.23092,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,all,dblp,5754,100,452,0.07855,0.05712,0.11202,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,A,idonly,5216,100,3446,0.66066,0.58179,0.77242,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,A,crossref,5216,100,729,0.13976,0.11994,0.16275,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,A,dblp,5216,100,119,0.02281,0.01543,0.03658,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,J,idonly,1674,96,1603,0.95759,0.92924,0.98053,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,J,crossref,1674,96,188,0.11231,0.08069,0.15283,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,J,dblp,1674,96,71,0.04241,0.02396,0.07368,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,C,idonly,1738,97,1656,0.95282,0.90850,0.98080,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,C,crossref,1738,97,399,0.22957,0.17900,0.27074,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,C,dblp,1738,97,32,0.01841,0.01148,0.02555,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,P,idonly,1804,88,187,0.10366,0.07842,0.14987,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,P,crossref,1804,88,142,0.07871,0.05543,0.10396,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,P,dblp,1804,88,16,0.00887,0.00330,0.02108,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,B,idonly,108,42,105,0.97222,0.92981,1.00000,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,B,crossref,108,42,39,0.36111,0.26889,0.45536,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,B,dblp,108,42,25,0.23148,0.12975,0.33602,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,S,idonly,74,31,72,0.97297,0.93331,1.00000,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,S,crossref,74,31,72,0.97297,0.93331,1.00000,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,S,dblp,74,31,66,0.89189,0.80555,0.96154,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,W,idonly,356,58,356,1.00000,1.00000,1.00000,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,W,crossref,356,58,277,0.77809,0.66392,0.84503,42,1000
+True,all refs,render,IEEEtran,orig,anystyle,W,dblp,356,58,242,0.67978,0.58059,0.75909,42,1000
+True,all refs,render,IEEEtran,orig,grobid,all,idonly,5754,100,3979,0.69152,0.61489,0.79560,42,1000
+True,all refs,render,IEEEtran,orig,grobid,all,crossref,5754,100,1117,0.19413,0.16646,0.23092,42,1000
+True,all refs,render,IEEEtran,orig,grobid,all,dblp,5754,100,455,0.07908,0.05753,0.11279,42,1000
+True,all refs,render,IEEEtran,orig,grobid,A,idonly,5216,100,3446,0.66066,0.58179,0.77242,42,1000
+True,all refs,render,IEEEtran,orig,grobid,A,crossref,5216,100,729,0.13976,0.11994,0.16275,42,1000
+True,all refs,render,IEEEtran,orig,grobid,A,dblp,5216,100,120,0.02301,0.01561,0.03681,42,1000
+True,all refs,render,IEEEtran,orig,grobid,J,idonly,1674,96,1603,0.95759,0.92924,0.98053,42,1000
+True,all refs,render,IEEEtran,orig,grobid,J,crossref,1674,96,188,0.11231,0.08069,0.15283,42,1000
+True,all refs,render,IEEEtran,orig,grobid,J,dblp,1674,96,71,0.04241,0.02396,0.07368,42,1000
+True,all refs,render,IEEEtran,orig,grobid,C,idonly,1738,97,1656,0.95282,0.90850,0.98080,42,1000
+True,all refs,render,IEEEtran,orig,grobid,C,crossref,1738,97,399,0.22957,0.17900,0.27074,42,1000
+True,all refs,render,IEEEtran,orig,grobid,C,dblp,1738,97,33,0.01899,0.01202,0.02587,42,1000
+True,all refs,render,IEEEtran,orig,grobid,P,idonly,1804,88,187,0.10366,0.07842,0.14987,42,1000
+True,all refs,render,IEEEtran,orig,grobid,P,crossref,1804,88,142,0.07871,0.05543,0.10396,42,1000
+True,all refs,render,IEEEtran,orig,grobid,P,dblp,1804,88,16,0.00887,0.00330,0.02108,42,1000
+True,all refs,render,IEEEtran,orig,grobid,B,idonly,108,42,105,0.97222,0.92981,1.00000,42,1000
+True,all refs,render,IEEEtran,orig,grobid,B,crossref,108,42,39,0.36111,0.26889,0.45536,42,1000
+True,all refs,render,IEEEtran,orig,grobid,B,dblp,108,42,27,0.25000,0.14582,0.34822,42,1000
+True,all refs,render,IEEEtran,orig,grobid,S,idonly,74,31,72,0.97297,0.93331,1.00000,42,1000
+True,all refs,render,IEEEtran,orig,grobid,S,crossref,74,31,72,0.97297,0.93331,1.00000,42,1000
+True,all refs,render,IEEEtran,orig,grobid,S,dblp,74,31,65,0.87838,0.77966,0.96000,42,1000
+True,all refs,render,IEEEtran,orig,grobid,W,idonly,356,58,356,1.00000,1.00000,1.00000,42,1000
+True,all refs,render,IEEEtran,orig,grobid,W,crossref,356,58,277,0.77809,0.66392,0.84503,42,1000
+True,all refs,render,IEEEtran,orig,grobid,W,dblp,356,58,243,0.68258,0.58330,0.76471,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,all,idonly,5752,100,4366,0.75904,0.67153,0.87272,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,all,crossref,5752,100,1247,0.21679,0.18471,0.25970,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,all,dblp,5752,100,452,0.07858,0.05734,0.11207,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,A,idonly,5216,100,3831,0.73447,0.64169,0.85689,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,A,crossref,5216,100,864,0.16564,0.13998,0.19752,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,A,dblp,5216,100,122,0.02339,0.01582,0.03722,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,J,idonly,1674,96,1665,0.99462,0.98735,0.99938,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,J,crossref,1674,96,187,0.11171,0.08013,0.15194,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,J,dblp,1674,96,70,0.04182,0.02345,0.07363,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,C,idonly,1738,97,1738,1.00000,1.00000,1.00000,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,C,crossref,1738,97,396,0.22785,0.17877,0.26820,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,C,dblp,1738,97,32,0.01841,0.01148,0.02555,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,P,idonly,1804,88,428,0.23725,0.16528,0.40925,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,P,crossref,1804,88,281,0.15576,0.11387,0.25200,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,P,dblp,1804,88,20,0.01109,0.00442,0.02457,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,B,idonly,108,42,107,0.99074,0.97273,1.00000,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,B,crossref,108,42,39,0.36111,0.26889,0.45536,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,B,dblp,108,42,25,0.23148,0.12975,0.33602,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,S,idonly,74,31,74,1.00000,1.00000,1.00000,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,S,crossref,74,31,73,0.98649,0.95455,1.00000,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,S,dblp,74,31,68,0.91892,0.84121,0.97619,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,W,idonly,354,58,354,1.00000,1.00000,1.00000,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,W,crossref,354,58,271,0.76554,0.65510,0.83505,42,1000
+True,all refs,render,IEEEtran,strip,anystyle,W,dblp,354,58,237,0.66949,0.57333,0.75001,42,1000
+True,all refs,render,IEEEtran,strip,grobid,all,idonly,5752,100,4366,0.75904,0.67153,0.87272,42,1000
+True,all refs,render,IEEEtran,strip,grobid,all,crossref,5752,100,1247,0.21679,0.18471,0.25970,42,1000
+True,all refs,render,IEEEtran,strip,grobid,all,dblp,5752,100,458,0.07962,0.05846,0.11319,42,1000
+True,all refs,render,IEEEtran,strip,grobid,A,idonly,5216,100,3831,0.73447,0.64169,0.85689,42,1000
+True,all refs,render,IEEEtran,strip,grobid,A,crossref,5216,100,864,0.16564,0.13998,0.19752,42,1000
+True,all refs,render,IEEEtran,strip,grobid,A,dblp,5216,100,126,0.02416,0.01640,0.03835,42,1000
+True,all refs,render,IEEEtran,strip,grobid,J,idonly,1674,96,1665,0.99462,0.98735,0.99938,42,1000
+True,all refs,render,IEEEtran,strip,grobid,J,crossref,1674,96,187,0.11171,0.08013,0.15194,42,1000
+True,all refs,render,IEEEtran,strip,grobid,J,dblp,1674,96,70,0.04182,0.02345,0.07363,42,1000
+True,all refs,render,IEEEtran,strip,grobid,C,idonly,1738,97,1738,1.00000,1.00000,1.00000,42,1000
+True,all refs,render,IEEEtran,strip,grobid,C,crossref,1738,97,396,0.22785,0.17877,0.26820,42,1000
+True,all refs,render,IEEEtran,strip,grobid,C,dblp,1738,97,33,0.01899,0.01202,0.02587,42,1000
+True,all refs,render,IEEEtran,strip,grobid,P,idonly,1804,88,428,0.23725,0.16528,0.40925,42,1000
+True,all refs,render,IEEEtran,strip,grobid,P,crossref,1804,88,281,0.15576,0.11387,0.25200,42,1000
+True,all refs,render,IEEEtran,strip,grobid,P,dblp,1804,88,23,0.01275,0.00552,0.02812,42,1000
+True,all refs,render,IEEEtran,strip,grobid,B,idonly,108,42,107,0.99074,0.97273,1.00000,42,1000
+True,all refs,render,IEEEtran,strip,grobid,B,crossref,108,42,39,0.36111,0.26889,0.45536,42,1000
+True,all refs,render,IEEEtran,strip,grobid,B,dblp,108,42,27,0.25000,0.14582,0.34822,42,1000
+True,all refs,render,IEEEtran,strip,grobid,S,idonly,74,31,74,1.00000,1.00000,1.00000,42,1000
+True,all refs,render,IEEEtran,strip,grobid,S,crossref,74,31,73,0.98649,0.95455,1.00000,42,1000
+True,all refs,render,IEEEtran,strip,grobid,S,dblp,74,31,67,0.90541,0.82456,0.97223,42,1000
+True,all refs,render,IEEEtran,strip,grobid,W,idonly,354,58,354,1.00000,1.00000,1.00000,42,1000
+True,all refs,render,IEEEtran,strip,grobid,W,crossref,354,58,271,0.76554,0.65510,0.83505,42,1000
+True,all refs,render,IEEEtran,strip,grobid,W,dblp,354,58,238,0.67232,0.57543,0.75541,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,all,idonly,5754,100,3434,0.59680,0.53602,0.68280,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,all,crossref,5754,100,1106,0.19221,0.16392,0.22862,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,all,dblp,5754,100,449,0.07803,0.05666,0.11155,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,A,idonly,5216,100,2928,0.56135,0.49582,0.65246,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,A,crossref,5216,100,723,0.13861,0.11860,0.16153,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,A,dblp,5216,100,119,0.02281,0.01543,0.03658,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,J,idonly,1674,96,1274,0.76105,0.66121,0.84220,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,J,crossref,1674,96,188,0.11231,0.08069,0.15283,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,J,dblp,1674,96,71,0.04241,0.02396,0.07368,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,C,idonly,1738,97,1481,0.85213,0.78264,0.90853,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,C,crossref,1738,97,400,0.23015,0.17953,0.27075,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,C,dblp,1738,97,32,0.01841,0.01148,0.02555,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,P,idonly,1804,88,173,0.09590,0.07079,0.13805,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,P,crossref,1804,88,135,0.07483,0.05258,0.09857,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,P,dblp,1804,88,16,0.00887,0.00330,0.02108,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,B,idonly,108,42,92,0.85185,0.74489,0.95193,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,B,crossref,108,42,37,0.34259,0.25000,0.44214,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,B,dblp,108,42,24,0.22222,0.12174,0.33010,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,S,idonly,74,31,71,0.95946,0.90740,1.00000,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,S,crossref,74,31,71,0.95946,0.90740,1.00000,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,S,dblp,74,31,65,0.87838,0.78746,0.95182,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,W,idonly,356,58,343,0.96348,0.88999,0.99770,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,W,crossref,356,58,275,0.77247,0.65160,0.84296,42,1000
+True,all refs,render,IEEEtran_doi,orig,anystyle,W,dblp,356,58,241,0.67697,0.57707,0.75671,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,all,idonly,5754,100,3434,0.59680,0.53602,0.68280,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,all,crossref,5754,100,1106,0.19221,0.16392,0.22862,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,all,dblp,5754,100,452,0.07855,0.05704,0.11195,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,A,idonly,5216,100,2928,0.56135,0.49582,0.65246,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,A,crossref,5216,100,723,0.13861,0.11860,0.16153,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,A,dblp,5216,100,120,0.02301,0.01561,0.03681,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,J,idonly,1674,96,1274,0.76105,0.66121,0.84220,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,J,crossref,1674,96,188,0.11231,0.08069,0.15283,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,J,dblp,1674,96,71,0.04241,0.02396,0.07368,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,C,idonly,1738,97,1481,0.85213,0.78264,0.90853,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,C,crossref,1738,97,400,0.23015,0.17953,0.27075,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,C,dblp,1738,97,33,0.01899,0.01202,0.02587,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,P,idonly,1804,88,173,0.09590,0.07079,0.13805,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,P,crossref,1804,88,135,0.07483,0.05258,0.09857,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,P,dblp,1804,88,16,0.00887,0.00330,0.02108,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,B,idonly,108,42,92,0.85185,0.74489,0.95193,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,B,crossref,108,42,37,0.34259,0.25000,0.44214,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,B,dblp,108,42,26,0.24074,0.13733,0.34405,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,S,idonly,74,31,71,0.95946,0.90740,1.00000,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,S,crossref,74,31,71,0.95946,0.90740,1.00000,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,S,dblp,74,31,64,0.86486,0.76827,0.95000,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,W,idonly,356,58,343,0.96348,0.88999,0.99770,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,W,crossref,356,58,275,0.77247,0.65160,0.84296,42,1000
+True,all refs,render,IEEEtran_doi,orig,grobid,W,dblp,356,58,242,0.67978,0.57861,0.76255,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,all,idonly,5752,100,4366,0.75904,0.67153,0.87272,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,all,crossref,5752,100,1247,0.21679,0.18471,0.25970,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,all,dblp,5752,100,452,0.07858,0.05734,0.11207,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,A,idonly,5216,100,3831,0.73447,0.64169,0.85689,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,A,crossref,5216,100,864,0.16564,0.13998,0.19752,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,A,dblp,5216,100,122,0.02339,0.01582,0.03722,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,J,idonly,1674,96,1665,0.99462,0.98735,0.99938,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,J,crossref,1674,96,187,0.11171,0.08013,0.15194,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,J,dblp,1674,96,70,0.04182,0.02345,0.07363,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,C,idonly,1738,97,1738,1.00000,1.00000,1.00000,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,C,crossref,1738,97,396,0.22785,0.17877,0.26820,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,C,dblp,1738,97,32,0.01841,0.01148,0.02555,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,P,idonly,1804,88,428,0.23725,0.16528,0.40925,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,P,crossref,1804,88,281,0.15576,0.11387,0.25200,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,P,dblp,1804,88,20,0.01109,0.00442,0.02457,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,B,idonly,108,42,107,0.99074,0.97273,1.00000,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,B,crossref,108,42,39,0.36111,0.26889,0.45536,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,B,dblp,108,42,25,0.23148,0.12975,0.33602,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,S,idonly,74,31,74,1.00000,1.00000,1.00000,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,S,crossref,74,31,73,0.98649,0.95455,1.00000,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,S,dblp,74,31,68,0.91892,0.84121,0.97619,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,W,idonly,354,58,354,1.00000,1.00000,1.00000,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,W,crossref,354,58,271,0.76554,0.65510,0.83505,42,1000
+True,all refs,render,IEEEtran_doi,strip,anystyle,W,dblp,354,58,237,0.66949,0.57333,0.75001,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,all,idonly,5752,100,4366,0.75904,0.67153,0.87272,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,all,crossref,5752,100,1247,0.21679,0.18471,0.25970,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,all,dblp,5752,100,458,0.07962,0.05846,0.11319,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,A,idonly,5216,100,3831,0.73447,0.64169,0.85689,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,A,crossref,5216,100,864,0.16564,0.13998,0.19752,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,A,dblp,5216,100,126,0.02416,0.01640,0.03835,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,J,idonly,1674,96,1665,0.99462,0.98735,0.99938,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,J,crossref,1674,96,187,0.11171,0.08013,0.15194,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,J,dblp,1674,96,70,0.04182,0.02345,0.07363,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,C,idonly,1738,97,1738,1.00000,1.00000,1.00000,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,C,crossref,1738,97,396,0.22785,0.17877,0.26820,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,C,dblp,1738,97,33,0.01899,0.01202,0.02587,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,P,idonly,1804,88,428,0.23725,0.16528,0.40925,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,P,crossref,1804,88,281,0.15576,0.11387,0.25200,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,P,dblp,1804,88,23,0.01275,0.00552,0.02812,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,B,idonly,108,42,107,0.99074,0.97273,1.00000,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,B,crossref,108,42,39,0.36111,0.26889,0.45536,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,B,dblp,108,42,27,0.25000,0.14582,0.34822,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,S,idonly,74,31,74,1.00000,1.00000,1.00000,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,S,crossref,74,31,73,0.98649,0.95455,1.00000,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,S,dblp,74,31,67,0.90541,0.82456,0.97223,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,W,idonly,354,58,354,1.00000,1.00000,1.00000,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,W,crossref,354,58,271,0.76554,0.65510,0.83505,42,1000
+True,all refs,render,IEEEtran_doi,strip,grobid,W,dblp,354,58,238,0.67232,0.57543,0.75541,42,1000
+True,all refs,render,acmart,orig,anystyle,all,idonly,5753,100,3566,0.61985,0.55779,0.70669,42,1000
+True,all refs,render,acmart,orig,anystyle,all,crossref,5753,100,1087,0.18894,0.16100,0.22533,42,1000
+True,all refs,render,acmart,orig,anystyle,all,dblp,5753,100,456,0.07926,0.05785,0.11146,42,1000
+True,all refs,render,acmart,orig,anystyle,A,idonly,5215,100,3054,0.58562,0.52099,0.67846,42,1000
+True,all refs,render,acmart,orig,anystyle,A,crossref,5215,100,711,0.13634,0.11555,0.15877,42,1000
+True,all refs,render,acmart,orig,anystyle,A,dblp,5215,100,130,0.02493,0.01754,0.03772,42,1000
+True,all refs,render,acmart,orig,anystyle,J,idonly,1673,96,1337,0.79916,0.72336,0.86373,42,1000
+True,all refs,render,acmart,orig,anystyle,J,crossref,1673,96,188,0.11237,0.07991,0.15348,42,1000
+True,all refs,render,acmart,orig,anystyle,J,dblp,1673,96,72,0.04304,0.02380,0.07402,42,1000
+True,all refs,render,acmart,orig,anystyle,C,idonly,1738,97,1516,0.87227,0.82712,0.91380,42,1000
+True,all refs,render,acmart,orig,anystyle,C,crossref,1738,97,393,0.22612,0.18074,0.26763,42,1000
+True,all refs,render,acmart,orig,anystyle,C,dblp,1738,97,32,0.01841,0.01191,0.02566,42,1000
+True,all refs,render,acmart,orig,anystyle,P,idonly,1804,88,201,0.11142,0.05942,0.15139,42,1000
+True,all refs,render,acmart,orig,anystyle,P,crossref,1804,88,130,0.07206,0.04184,0.09207,42,1000
+True,all refs,render,acmart,orig,anystyle,P,dblp,1804,88,26,0.01441,0.00647,0.02404,42,1000
+True,all refs,render,acmart,orig,anystyle,B,idonly,108,42,100,0.92593,0.87093,0.98182,42,1000
+True,all refs,render,acmart,orig,anystyle,B,crossref,108,42,37,0.34259,0.24995,0.44565,42,1000
+True,all refs,render,acmart,orig,anystyle,B,dblp,108,42,25,0.23148,0.13042,0.33913,42,1000
+True,all refs,render,acmart,orig,anystyle,S,idonly,74,31,69,0.93243,0.87036,0.98630,42,1000
+True,all refs,render,acmart,orig,anystyle,S,crossref,74,31,68,0.91892,0.85227,0.98183,42,1000
+True,all refs,render,acmart,orig,anystyle,S,dblp,74,31,64,0.86486,0.76623,0.94292,42,1000
+True,all refs,render,acmart,orig,anystyle,W,idonly,356,58,343,0.96348,0.89129,0.99774,42,1000
+True,all refs,render,acmart,orig,anystyle,W,crossref,356,58,271,0.76124,0.64502,0.82950,42,1000
+True,all refs,render,acmart,orig,anystyle,W,dblp,356,58,237,0.66573,0.56603,0.74601,42,1000
+True,all refs,render,acmart,orig,grobid,all,idonly,5753,100,3566,0.61985,0.55779,0.70669,42,1000
+True,all refs,render,acmart,orig,grobid,all,crossref,5753,100,1087,0.18894,0.16100,0.22533,42,1000
+True,all refs,render,acmart,orig,grobid,all,dblp,5753,100,462,0.08031,0.05818,0.11444,42,1000
+True,all refs,render,acmart,orig,grobid,A,idonly,5215,100,3054,0.58562,0.52099,0.67846,42,1000
+True,all refs,render,acmart,orig,grobid,A,crossref,5215,100,711,0.13634,0.11555,0.15877,42,1000
+True,all refs,render,acmart,orig,grobid,A,dblp,5215,100,129,0.02474,0.01717,0.03839,42,1000
+True,all refs,render,acmart,orig,grobid,J,idonly,1673,96,1337,0.79916,0.72336,0.86373,42,1000
+True,all refs,render,acmart,orig,grobid,J,crossref,1673,96,188,0.11237,0.07991,0.15348,42,1000
+True,all refs,render,acmart,orig,grobid,J,dblp,1673,96,71,0.04244,0.02332,0.07346,42,1000
+True,all refs,render,acmart,orig,grobid,C,idonly,1738,97,1516,0.87227,0.82712,0.91380,42,1000
+True,all refs,render,acmart,orig,grobid,C,crossref,1738,97,393,0.22612,0.18074,0.26763,42,1000
+True,all refs,render,acmart,orig,grobid,C,dblp,1738,97,36,0.02071,0.01374,0.02838,42,1000
+True,all refs,render,acmart,orig,grobid,P,idonly,1804,88,201,0.11142,0.05942,0.15139,42,1000
+True,all refs,render,acmart,orig,grobid,P,crossref,1804,88,130,0.07206,0.04184,0.09207,42,1000
+True,all refs,render,acmart,orig,grobid,P,dblp,1804,88,22,0.01220,0.00637,0.02323,42,1000
+True,all refs,render,acmart,orig,grobid,B,idonly,108,42,100,0.92593,0.87093,0.98182,42,1000
+True,all refs,render,acmart,orig,grobid,B,crossref,108,42,37,0.34259,0.24995,0.44565,42,1000
+True,all refs,render,acmart,orig,grobid,B,dblp,108,42,25,0.23148,0.13042,0.33913,42,1000
+True,all refs,render,acmart,orig,grobid,S,idonly,74,31,69,0.93243,0.87036,0.98630,42,1000
+True,all refs,render,acmart,orig,grobid,S,crossref,74,31,68,0.91892,0.85227,0.98183,42,1000
+True,all refs,render,acmart,orig,grobid,S,dblp,74,31,64,0.86486,0.76623,0.94292,42,1000
+True,all refs,render,acmart,orig,grobid,W,idonly,356,58,343,0.96348,0.89129,0.99774,42,1000
+True,all refs,render,acmart,orig,grobid,W,crossref,356,58,271,0.76124,0.64502,0.82950,42,1000
+True,all refs,render,acmart,orig,grobid,W,dblp,356,58,244,0.68539,0.57999,0.76474,42,1000
+True,all refs,render,acmart,strip,anystyle,all,idonly,5753,100,4367,0.75908,0.67179,0.87230,42,1000
+True,all refs,render,acmart,strip,anystyle,all,crossref,5753,100,1253,0.21780,0.18564,0.26071,42,1000
+True,all refs,render,acmart,strip,anystyle,all,dblp,5753,100,506,0.08795,0.06610,0.12233,42,1000
+True,all refs,render,acmart,strip,anystyle,A,idonly,5215,100,3832,0.73480,0.64210,0.85662,42,1000
+True,all refs,render,acmart,strip,anystyle,A,crossref,5215,100,871,0.16702,0.14135,0.19893,42,1000
+True,all refs,render,acmart,strip,anystyle,A,dblp,5215,100,173,0.03317,0.02389,0.04742,42,1000
+True,all refs,render,acmart,strip,anystyle,J,idonly,1673,96,1641,0.98087,0.95366,0.99935,42,1000
+True,all refs,render,acmart,strip,anystyle,J,crossref,1673,96,188,0.11237,0.08011,0.15328,42,1000
+True,all refs,render,acmart,strip,anystyle,J,dblp,1673,96,72,0.04304,0.02380,0.07402,42,1000
+True,all refs,render,acmart,strip,anystyle,C,idonly,1738,97,1712,0.98504,0.96136,1.00000,42,1000
+True,all refs,render,acmart,strip,anystyle,C,crossref,1738,97,393,0.22612,0.18040,0.26815,42,1000
+True,all refs,render,acmart,strip,anystyle,C,dblp,1738,97,32,0.01841,0.01191,0.02566,42,1000
+True,all refs,render,acmart,strip,anystyle,P,idonly,1804,88,479,0.26552,0.19839,0.40925,42,1000
+True,all refs,render,acmart,strip,anystyle,P,crossref,1804,88,290,0.16075,0.12053,0.25001,42,1000
+True,all refs,render,acmart,strip,anystyle,P,dblp,1804,88,69,0.03825,0.02438,0.06796,42,1000
+True,all refs,render,acmart,strip,anystyle,B,idonly,108,42,107,0.99074,0.97273,1.00000,42,1000
+True,all refs,render,acmart,strip,anystyle,B,crossref,108,42,38,0.35185,0.26014,0.45536,42,1000
+True,all refs,render,acmart,strip,anystyle,B,dblp,108,42,26,0.24074,0.14283,0.34261,42,1000
+True,all refs,render,acmart,strip,anystyle,S,idonly,74,31,73,0.98649,0.95946,1.00000,42,1000
+True,all refs,render,acmart,strip,anystyle,S,crossref,74,31,71,0.95946,0.90137,1.00000,42,1000
+True,all refs,render,acmart,strip,anystyle,S,dblp,74,31,67,0.90541,0.82430,0.97261,42,1000
+True,all refs,render,acmart,strip,anystyle,W,idonly,356,58,355,0.99719,0.99180,1.00000,42,1000
+True,all refs,render,acmart,strip,anystyle,W,crossref,356,58,273,0.76685,0.65980,0.83411,42,1000
+True,all refs,render,acmart,strip,anystyle,W,dblp,356,58,240,0.67416,0.58329,0.75758,42,1000
+True,all refs,render,acmart,strip,grobid,all,idonly,5753,100,4367,0.75908,0.67179,0.87230,42,1000
+True,all refs,render,acmart,strip,grobid,all,crossref,5753,100,1253,0.21780,0.18564,0.26071,42,1000
+True,all refs,render,acmart,strip,grobid,all,dblp,5753,100,501,0.08708,0.06427,0.12235,42,1000
+True,all refs,render,acmart,strip,grobid,A,idonly,5215,100,3832,0.73480,0.64210,0.85662,42,1000
+True,all refs,render,acmart,strip,grobid,A,crossref,5215,100,871,0.16702,0.14135,0.19893,42,1000
+True,all refs,render,acmart,strip,grobid,A,dblp,5215,100,163,0.03126,0.02245,0.04656,42,1000
+True,all refs,render,acmart,strip,grobid,J,idonly,1673,96,1641,0.98087,0.95366,0.99935,42,1000
+True,all refs,render,acmart,strip,grobid,J,crossref,1673,96,188,0.11237,0.08011,0.15328,42,1000
+True,all refs,render,acmart,strip,grobid,J,dblp,1673,96,70,0.04184,0.02332,0.07128,42,1000
+True,all refs,render,acmart,strip,grobid,C,idonly,1738,97,1712,0.98504,0.96136,1.00000,42,1000
+True,all refs,render,acmart,strip,grobid,C,crossref,1738,97,393,0.22612,0.18040,0.26815,42,1000
+True,all refs,render,acmart,strip,grobid,C,dblp,1738,97,35,0.02014,0.01327,0.02780,42,1000
+True,all refs,render,acmart,strip,grobid,P,idonly,1804,88,479,0.26552,0.19839,0.40925,42,1000
+True,all refs,render,acmart,strip,grobid,P,crossref,1804,88,290,0.16075,0.12053,0.25001,42,1000
+True,all refs,render,acmart,strip,grobid,P,dblp,1804,88,58,0.03215,0.01873,0.06250,42,1000
+True,all refs,render,acmart,strip,grobid,B,idonly,108,42,107,0.99074,0.97273,1.00000,42,1000
+True,all refs,render,acmart,strip,grobid,B,crossref,108,42,38,0.35185,0.26014,0.45536,42,1000
+True,all refs,render,acmart,strip,grobid,B,dblp,108,42,26,0.24074,0.14283,0.34261,42,1000
+True,all refs,render,acmart,strip,grobid,S,idonly,74,31,73,0.98649,0.95946,1.00000,42,1000
+True,all refs,render,acmart,strip,grobid,S,crossref,74,31,71,0.95946,0.90137,1.00000,42,1000
+True,all refs,render,acmart,strip,grobid,S,dblp,74,31,66,0.89189,0.80700,0.96923,42,1000
+True,all refs,render,acmart,strip,grobid,W,idonly,356,58,355,0.99719,0.99180,1.00000,42,1000
+True,all refs,render,acmart,strip,grobid,W,crossref,356,58,273,0.76685,0.65980,0.83411,42,1000
+True,all refs,render,acmart,strip,grobid,W,dblp,356,58,246,0.69101,0.59178,0.77244,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,all,idonly,5754,100,3533,0.61401,0.55259,0.70001,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,all,crossref,5754,100,1084,0.18839,0.16050,0.22435,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,all,dblp,5754,100,467,0.08116,0.05905,0.11554,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,A,idonly,5216,100,3020,0.57899,0.51454,0.67097,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,A,crossref,5216,100,702,0.13459,0.11464,0.15731,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,A,dblp,5216,100,132,0.02531,0.01781,0.03911,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,J,idonly,1674,96,1349,0.80585,0.72322,0.87255,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,J,crossref,1674,96,187,0.11171,0.08013,0.15194,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,J,dblp,1674,96,79,0.04719,0.02766,0.07818,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,C,idonly,1738,97,1530,0.88032,0.82354,0.92515,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,C,crossref,1738,97,400,0.23015,0.17953,0.27075,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,C,dblp,1738,97,32,0.01841,0.01148,0.02555,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,P,idonly,1804,88,141,0.07816,0.05573,0.09860,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,P,crossref,1804,88,115,0.06375,0.04135,0.08006,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,P,dblp,1804,88,21,0.01164,0.00596,0.02297,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,B,idonly,108,42,98,0.90741,0.83941,0.97778,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,B,crossref,108,42,38,0.35185,0.25713,0.45354,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,B,dblp,108,42,24,0.22222,0.12491,0.32560,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,S,idonly,74,31,71,0.95946,0.90740,1.00000,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,S,crossref,74,31,70,0.94595,0.88882,0.98735,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,S,dblp,74,31,65,0.87838,0.78746,0.95182,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,W,idonly,356,58,344,0.96629,0.89590,1.00000,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,W,crossref,356,58,274,0.76966,0.65022,0.84091,42,1000
+True,all refs,render,elsarticle-num,orig,anystyle,W,dblp,356,58,246,0.69101,0.58146,0.76852,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,all,idonly,5754,100,3533,0.61401,0.55259,0.70001,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,all,crossref,5754,100,1084,0.18839,0.16050,0.22435,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,all,dblp,5754,100,468,0.08133,0.05911,0.11584,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,A,idonly,5216,100,3020,0.57899,0.51454,0.67097,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,A,crossref,5216,100,702,0.13459,0.11464,0.15731,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,A,dblp,5216,100,132,0.02531,0.01781,0.03887,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,J,idonly,1674,96,1349,0.80585,0.72322,0.87255,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,J,crossref,1674,96,187,0.11171,0.08013,0.15194,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,J,dblp,1674,96,71,0.04241,0.02440,0.07164,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,C,idonly,1738,97,1530,0.88032,0.82354,0.92515,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,C,crossref,1738,97,400,0.23015,0.17953,0.27075,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,C,dblp,1738,97,43,0.02474,0.01661,0.03226,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,P,idonly,1804,88,141,0.07816,0.05573,0.09860,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,P,crossref,1804,88,115,0.06375,0.04135,0.08006,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,P,dblp,1804,88,18,0.00998,0.00417,0.02338,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,B,idonly,108,42,98,0.90741,0.83941,0.97778,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,B,crossref,108,42,38,0.35185,0.25713,0.45354,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,B,dblp,108,42,26,0.24074,0.13591,0.33947,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,S,idonly,74,31,71,0.95946,0.90740,1.00000,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,S,crossref,74,31,70,0.94595,0.88882,0.98735,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,S,dblp,74,31,65,0.87838,0.78746,0.95182,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,W,idonly,356,58,344,0.96629,0.89590,1.00000,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,W,crossref,356,58,274,0.76966,0.65022,0.84091,42,1000
+True,all refs,render,elsarticle-num,orig,grobid,W,dblp,356,58,245,0.68820,0.58487,0.77249,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,all,idonly,5754,100,4366,0.75878,0.67153,0.87190,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,all,crossref,5754,100,1245,0.21637,0.18421,0.25873,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,all,dblp,5754,100,476,0.08273,0.06101,0.11696,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,A,idonly,5216,100,3829,0.73409,0.64168,0.85587,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,A,crossref,5216,100,863,0.16545,0.13971,0.19755,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,A,dblp,5216,100,144,0.02761,0.01977,0.04181,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,J,idonly,1674,96,1665,0.99462,0.98735,0.99938,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,J,crossref,1674,96,188,0.11231,0.08069,0.15283,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,J,dblp,1674,96,80,0.04779,0.02795,0.07838,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,C,idonly,1738,97,1738,1.00000,1.00000,1.00000,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,C,crossref,1738,97,396,0.22785,0.17877,0.26820,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,C,dblp,1738,97,32,0.01841,0.01148,0.02555,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,P,idonly,1804,88,426,0.23614,0.16470,0.40921,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,P,crossref,1804,88,279,0.15466,0.11165,0.25099,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,P,dblp,1804,88,32,0.01774,0.01083,0.03301,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,B,idonly,108,42,107,0.99074,0.97273,1.00000,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,B,crossref,108,42,38,0.35185,0.25713,0.45354,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,B,dblp,108,42,24,0.22222,0.12491,0.32560,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,S,idonly,74,31,74,1.00000,1.00000,1.00000,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,S,crossref,74,31,73,0.98649,0.95455,1.00000,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,S,dblp,74,31,68,0.91892,0.84121,0.97619,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,W,idonly,356,58,356,1.00000,1.00000,1.00000,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,W,crossref,356,58,271,0.76124,0.65160,0.82484,42,1000
+True,all refs,render,elsarticle-num,strip,anystyle,W,dblp,356,58,240,0.67416,0.57483,0.75003,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,all,idonly,5754,100,4366,0.75878,0.67153,0.87190,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,all,crossref,5754,100,1245,0.21637,0.18421,0.25873,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,all,dblp,5754,100,487,0.08464,0.06204,0.11966,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,A,idonly,5216,100,3829,0.73409,0.64168,0.85587,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,A,crossref,5216,100,863,0.16545,0.13971,0.19755,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,A,dblp,5216,100,151,0.02895,0.02030,0.04391,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,J,idonly,1674,96,1665,0.99462,0.98735,0.99938,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,J,crossref,1674,96,188,0.11231,0.08069,0.15283,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,J,dblp,1674,96,72,0.04301,0.02463,0.07195,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,C,idonly,1738,97,1738,1.00000,1.00000,1.00000,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,C,crossref,1738,97,396,0.22785,0.17877,0.26820,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,C,dblp,1738,97,45,0.02589,0.01751,0.03340,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,P,idonly,1804,88,426,0.23614,0.16470,0.40921,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,P,crossref,1804,88,279,0.15466,0.11165,0.25099,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,P,dblp,1804,88,34,0.01885,0.00852,0.04053,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,B,idonly,108,42,107,0.99074,0.97273,1.00000,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,B,crossref,108,42,38,0.35185,0.25713,0.45354,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,B,dblp,108,42,26,0.24074,0.13591,0.33947,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,S,idonly,74,31,74,1.00000,1.00000,1.00000,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,S,crossref,74,31,73,0.98649,0.95455,1.00000,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,S,dblp,74,31,68,0.91892,0.84121,0.97619,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,W,idonly,356,58,356,1.00000,1.00000,1.00000,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,W,crossref,356,58,271,0.76124,0.65160,0.82484,42,1000
+True,all refs,render,elsarticle-num,strip,grobid,W,dblp,356,58,242,0.67978,0.58329,0.75621,42,1000

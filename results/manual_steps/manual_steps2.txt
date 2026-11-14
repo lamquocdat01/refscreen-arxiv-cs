@@ -1,0 +1,51 @@
+Note: Google Scholar answered 1 query (M051) then returned robot check; DBLP API returned Anubis bot-block then HTTP 429. Step 1 thereafter = WebSearch exact title (GS substitute) or the arXiv abs page named in the entry.
+M051: GS exact-title query -> hit (Chen, Vemuri 2018, ieeexplore)
+M052: GS exact title (blocked); DBLP API (bot-block/429); WebSearch exact title + Lin -> aclanthology.org/W04-1013
+M053: GS (blocked); DBLP API (429); WebSearch exact title -> aclanthology.org/N13-1050
+M054: GS (blocked); DBLP API (429); WebSearch exact title + authors -> proceedings.mlr.press/v37/limb15
+M055: GS (blocked); DBLP API (429); WebSearch exact title + Guri -> arxiv 1608.08397, cyber.bgu.ac.il
+M056: GS (blocked); DBLP API (429); WebSearch exact title + Kelkar -> eprint.iacr.org/2020/269, iacr.org crypto2020 archive
+M057: GS (blocked); DBLP (429); WebSearch exact title + Pesce -> UFMG news, HF scidocs mirror; WebSearch authors + PSOSM/ACM (no ACM page); WebFetch UFMG page
+M058: GS (blocked); DBLP (429); WebSearch exact title + Sun ECCV -> CVF openaccess, ecva.net, arXiv 1804.04779
+M059: GS (blocked); DBLP (429); WebSearch exact title -> proceedings.neurips.cc
+M060: GS (blocked); DBLP (429); WebSearch exact title + authors -> escholarship 46r654df, langev.com
+M061: GS (blocked); DBLP (429); WebSearch exact title + Dong -> aclanthology P15-1166
+M062: GS (blocked); DBLP (429); WebSearch exact title + Bellini -> arXiv 1706.07956, sisinflab, iris.poliba.it
+M063: GS (blocked); DBLP (429); WebSearch exact title + Ayoub -> proceedings.mlr.press/v119/ayoub20a
+M064: GS (blocked); DBLP (429); WebSearch exact title + Zhang -> PMLR v119 zhang20d, icml.cc poster, arXiv 2003.03709
+M065: GS (blocked); DBLP (429); WebSearch exact title + authors -> isi.edu record, bibsonomy, cs.umd.edu award news
+M066: GS (blocked); DBLP (429); WebSearch exact title + Huang -> isca-archive huang18b
+M067: GS (blocked); DBLP (429); WebSearch exact title + Esser -> CVF openaccess, arXiv 1804.04694
+M068: GS (blocked); DBLP (429); WebSearch exact title + Hendrycks -> proceedings.neurips.cc (same as entry url), arXiv 1906.12340
+M069: GS (blocked); DBLP (429); WebSearch exact title + authors -> arXiv 1708.03416
+M070: GS (blocked); DBLP (429); WebSearch exact title + authors -> CVF openaccess ECCV 2018, arXiv 1804.00175
+M071: GS (blocked); DBLP (429); WebSearch 'Pyronia: Redesigning...' + Melara -> only v2 title found; WebFetch arxiv.org/abs/1903.01950v1 -> v1 title matches
+M072: GS (blocked); DBLP (429); WebSearch exact title + authors -> aclanthology P16-1014, arXiv 1603.08148
+M073: GS (blocked); DBLP (429); WebSearch exact title + Lebanoff -> arXiv 1906.00077, ACL Anthology P19-1209
+M074: GS (blocked); DBLP (429); WebSearch exact title + authors -> arXiv 1711.09357, ojs.aaai.org 12141
+M075: GS (blocked); DBLP (429); WebSearch exact title + authors -> arXiv 1902.10360, aclanthology D19-5407
+M076: GS (blocked); DBLP (429); WebSearch exact title + Nallapati -> arXiv 1611.04230, ojs.aaai.org 10958
+M077: GS (blocked); DBLP (429); WebSearch exact title + authors -> arXiv 1902.09243v1, aclanthology K19-1074
+M078: GS (blocked); DBLP (429); WebSearch exact title + Islam -> usenix.org, arXiv 1903.00446
+M079: GS (blocked); DBLP (429); WebFetch arxiv.org/abs/2004.12254v1 (id from entry) -> title/authors match, v1 date after citing date
+M080: GS (blocked); DBLP (429); WebFetch arxiv.org/abs/2001.01525v1 (id in entry)
+M081: GS (blocked); DBLP (429); WebFetch arxiv.org/abs/1801.07704v1 (id in entry)
+M082: GS (blocked); WebSearch exact title + Shoer -> medrxiv.org (venue named in entry)
+M083: GS (blocked); DBLP (429); WebFetch arxiv.org/abs/1909.08855v1 (id in entry)
+M084: GS (blocked); DBLP (429); WebFetch arxiv.org/abs/1905.05812v1 (id in entry)
+M085: GS (blocked); DBLP (429); WebFetch arxiv.org/abs/1811.00347v1 (id in entry)
+M086: GS (blocked); DBLP (429); WebFetch arxiv.org/abs/1907.11692v1 (id in entry)
+M087: GS (blocked); DBLP (429); WebFetch arxiv.org/abs/2005.03228v1 (id in entry)
+M088: GS (blocked); DBLP (429); WebFetch arxiv.org/abs/2008.03156v1 (id in entry)
+M089: GS (blocked); DBLP (429); WebFetch arxiv.org/abs/2011.01403v1 (id in entry)
+M090: GS (blocked); DBLP (429); WebFetch arxiv.org/abs/2002.08909v1 (id in entry)
+M091: GS (blocked); DBLP (429); WebFetch arxiv.org/abs/1909.11299v1 (id in entry)
+M092: GS (blocked); DBLP (429); WebFetch arxiv.org/abs/1907.11692v1 (id in entry; fetched for M086)
+M093: GS (blocked); DBLP (429); WebFetch arxiv.org/abs/1310.4546v1 (id in entry)
+M094: GS (blocked); DBLP (429); WebFetch arxiv.org/abs/2006.04884v1 (id in entry)
+M095: GS (blocked); DBLP (429); WebFetch arxiv.org/abs/1802.08760v1 (id in entry)
+M096: GS (blocked); DBLP (429); WebFetch arxiv.org/abs/1802.05365v1 (id in entry)
+M097: GS (blocked); DBLP (429); WebFetch arxiv.org/abs/1910.03771v1 (title w/o HuggingFace's); WebFetch v4 -> exact title
+M098: GS (blocked); DBLP API (429); WebSearch exact title + authors + SSRN -> DBLP mirror rec conf/aies/LuLKD20
+M099: GS (blocked); DBLP (429); WebFetch arxiv.org/abs/1806.00582v1 (arxivid in entry)
+M100: GS (blocked); DBLP (429); WebSearch exact title + authors -> arXiv 2106.11795, EPFL infoscience

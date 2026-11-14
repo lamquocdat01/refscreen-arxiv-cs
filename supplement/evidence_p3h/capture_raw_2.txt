@@ -1,0 +1,265 @@
+=== URL: https://www.cs.ucdavis.edu/~rogaway/papers/siv.pdf
+STATUS: ok
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE: siv.dvi
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: PDF text compressed and unreadable; PDF CreationDate 2007-08-20
+
+=== URL: https://www.cs.ucdavis.edu/~rogaway/papers/keywrap.html
+STATUS: ok
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: Deterministic Authenticated-Encryption: A Provable-Security Treatment of the Key-Wrap Problem
+DISPLAYED_AUTHORS: Phillip Rogaway and Thomas Shrimpton
+YEAR: 2006
+NOTE: no citation/DC meta tags present
+
+=== URL: https://misc0110.net/files/drama_wp.pdf
+STATUS: ok
+ROBOTS: robots.txt unavailable
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: PDF fetched; first-page text and metadata compressed, unreadable
+
+=== URL: https://libcat.library.tamu.edu/Record/in00000323069
+STATUS: robots
+ROBOTS: User-agent: ClaudeBot / anthropic-ai -&gt; Disallow: /
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: not fetched
+
+=== URL: https://lilianweng.github.io/posts/2020-01-29-curriculum-rl/
+STATUS: ok
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: Curriculum for Reinforcement Learning
+DISPLAYED_AUTHORS: Lilian Weng
+YEAR: 2020
+NOTE: displayed date January 29, 2020
+
+=== URL: https://www.nongnu.org/lwip/2_1_x/
+STATUS: blocked
+ROBOTS: robots.txt unavailable
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: HTTP 429 Too Many Requests on robots.txt and page
+
+=== URL: https://www.wiley-vch.de/en/areas-interest/mathematics-statistics/statistical-learning-theory-978-0-471-03003-4
+STATUS: ok
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: Statistical Learning Theory
+DISPLAYED_AUTHORS: Vapnik, Vladimir N.
+YEAR: 1998
+NOTE: 1st Edition, October 1998
+
+=== URL: https://infocondb.org/con/black-hat/black-hat-usa-2012/the-info-leak-era-on-software-exploitation
+STATUS: ok
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: The Info Leak Era on Software Exploitation
+DISPLAYED_AUTHORS: Fermin J. Serna
+YEAR: 2012
+NOTE: Black Hat USA 2012 talk, July 25, 2012
+
+=== URL: https://www.blackhat.com/docs/us-16/materials/us-16-Weston-Windows-10-Mitigation-Improvements.pdf
+STATUS: ok
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: PDF fetched; first-page text compressed, no readable metadata
+
+=== URL: https://crackedlabs.org/en/data-against-people
+STATUS: ok
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: How Companies Use Personal Data Against People
+DISPLAYED_AUTHORS: Wolfie Christl (Author); Katharina Kopp and Patrick Urs Riechert (Contributors)
+YEAR: 2017
+NOTE: working paper dated October 2017
+
+=== URL: https://people.maths.ox.ac.uk/nanda/perseus/index.html
+STATUS: ok
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: Perseus: the Persistent Homology Software
+DISPLAYED_AUTHORS: vidit nanda
+YEAR:
+NOTE: no year shown for software; suggested citation has none
+
+=== URL: https://wiki.owasp.org/index.php/Top_10_2013
+STATUS: ok
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: Top 10 2013
+DISPLAYED_AUTHORS:
+YEAR: 2013
+NOTE: no authors; footer "© 2002-2013 OWASP Foundation."
+
+=== URL: https://www.nokia.com/bell-labs/publications-and-media/publications/energy-efficiency-analysis-of-the-reference-systems-areas-of-improvements-and-target-breakdown/
+STATUS: blocked
+ROBOTS: robots.txt unavailable
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: HTTP 403 on robots.txt and page
+
+=== URL: https://www.uni-due.de/imperia/md/content/srs/forschung/veroeffentlichungen/09380554.pdf
+STATUS: ok
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE: A Review of the current HMM-based Approaches of Driving Behaviors Recognition and Prediction
+DC_CREATOR:
+DC_DATE: D:20210316144639-04'00'
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: values from PDF metadata only; first-page text unreadable
+
+=== URL: https://www.computing.co.uk/analysis/2235886/case-study-the-google-sdn-wan
+STATUS: blocked
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: HTTP 403 Forbidden
+
+=== URL: https://orbi.uliege.be/handle/2268/245268
+STATUS: ok
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: Building a chain of high-speed VNFs in no time
+DISPLAYED_AUTHORS: Barbette, Tom; Soldani, Cyril; Gaillard, Romain; Mathy, Laurent
+YEAR: 2018
+NOTE: byline shows "Barbette, Tom; Soldani, Cyril; Gaillard, Romain et al."
+
+=== URL: https://www.thieme-connect.com/products/ejournals/html/10.1055/s-0038-1627819
+STATUS: robots
+ROBOTS: User-agent: ClaudeBot -&gt; Disallow: /
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: not fetched
+
+=== URL: https://proceedings.mlr.press/v119/zhang20d.html
+STATUS: ok
+ROBOTS: robots.txt unavailable
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: Generative Adversarial Imitation Learning with Neural Network Parameterization: Global Optimality and Convergence Rate
+DISPLAYED_AUTHORS: Yufeng Zhang, Qi Cai, Zhuoran Yang, Zhaoran Wang
+YEAR: 2020
+NOTE: fetch tool did not expose meta tags
+
+=== URL: https://cdn.gurobi.com/documentation/8.0/refman/index.html
+STATUS: error
+ROBOTS: robots.txt unavailable
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: HTTP 503 Service Unavailable on robots.txt and page

@@ -1,0 +1,42 @@
+{
+ "label": "R_B (AI sub-agent) label x GT-3 state, 48 flagged rows; Supplement only; descriptive; no inference",
+ "n": 48,
+ "crosstab": {
+  "exists": {
+   "found": 14,
+   "not found": 32,
+   "unanswered": 1,
+   "not in acad1921": 0,
+   "total": 47
+  },
+  "ambiguous": {
+   "found": 0,
+   "not found": 1,
+   "unanswered": 0,
+   "not in acad1921": 0,
+   "total": 1
+  },
+  "not-exists": {
+   "found": 0,
+   "not found": 0,
+   "unanswered": 0,
+   "not in acad1921": 0,
+   "total": 0
+  },
+  "total": {
+   "found": 14,
+   "not found": 33,
+   "unanswered": 1,
+   "not in acad1921": 0,
+   "total": 48
+  }
+ },
+ "found_by_source": {
+  "crossref": 7,
+  "dblp": 7
+ },
+ "gt3_file_sha256": "b1c99663c7c7ace4cb4318018b6b46d0e6937ada4ec09a1adf50103e006ad13e",
+ "rater_file_sha256": "722c1e94855fb294d0e490c08f12362bc45272491fb79cd57b3499c81a2ee763",
+ "key_plaintext_sha256_checked": "b4bba6e0f361bc56b203fea1339fbad6c038eefbb327aced8fd563f204266fd7",
+ "note": "acad1921 has no request left (S2 3/3 passes, other sources answered); its states are final"
+}

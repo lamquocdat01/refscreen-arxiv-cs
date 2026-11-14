@@ -1,14 +1,17 @@
-# refscreen-fp
+# refscreen-arxiv-cs
 
-Code and derived data for "Which Backend Decides? False Positives of Reference-Existence Screens on Legitimate
+Code and derived data for "Which Data Source Decides? False Positives of Reference-Existence Checks on arXiv
 Computer-Science Bibliographies" (submitted to *Scientometrics*). The study measures how often reference-existence
 screens flag legitimate references, on 1,298 arXiv computer-science papers (cs.CV/LG/CL/NI/CR; citing papers 2019–21
 and 2024–26), and bounds what any screen can achieve.
 
 ## Contents (allow-list)
 - `code/`: analysis scripts (Python 3.11, `requirements.txt`). Scripts take `--seed` and write to `results/`.
-- `docs/`: pre-registration `PREREG_43.md`, the manual verification protocol, Amendments 1–5, and their sha256 in
-  `prereg_hash.txt` (Amendment 5 is post hoc).
+- `docs/` and `supplement/prereg/`: pre-registration `PREREG_43.md`, the manual verification protocol, Amendments 1–9,
+  the addenda and the post-hoc note, with their sha256 in `prereg_hash.txt` (which documents are post hoc is stated in
+  each file and in the article).
+- `supplement/evidence_p3h/`: the web evidence of Amendment 9 (sheet, URLs, capture manifest, rule check, the author's
+  decisions, the key).
 - `theory/`: theorem statements and full proofs, with the measured numbers.
 - `results/`: derived tables (CSV/JSON) behind every number of the article; all files are final (`interim: false`).
 - `figures/`: figures as PDF/PNG; each has a `.sources.txt` with the sha256 of the result files it was drawn from.
@@ -17,16 +20,20 @@ and 2024–26), and bounds what any screen can achieve.
 - `supplement/`: copies of the pre-registration documents and the diagnostic and audit tables, with `SHA256SUMS`.
 
 ## Reproduce the reported numbers (no network, no API key)
-1. Download the derived reference-level files from Zenodo ([DOI to be inserted]) and place them so that they sit at
-   `$THS_DATASETS/_derived/43/` (`p1_groundtruth_refs_full.csv`, `p2_retry_ratelimited.csv`,
-   `screen_p1/screen_refs.csv`).
+1. Download `refscreen-derived-v1.0.0.zip` from the GitHub release `v1.0.0` of this repository and unzip it into a
+   folder `<data>`, so that the files sit at `<data>/_derived/43/` (`p1_groundtruth_refs_full.csv`,
+   `p2_groundtruth_refs_full.csv`, `p3e_groundtruth_refs_full.csv`, `p2_retry_ratelimited.csv`,
+   `screen_p1/screen_refs.csv`, `fake/`, `cache_p3h/`). Set `THS_DATASETS=<data>`.
 2. In a fresh virtual environment: `pip install -r requirements.txt`, then `python code/reproduce.py` (or `make reproduce`).
 
 The script reruns the main table, H1/H2, the beta-binomial fit, both H4-render variants, the theory and policy tables,
 the merge of the night retry and the post-hoc recheck statistics. It then compares every number with the committed results and exits 1 on any
 difference. `code/make_ms_numbers.py` turns the result files into the number macros and tables of the manuscript.
 
-Not included: arXiv source files (not re-hosted), raw database responses and the DBLP dump. The resolution and
+One step (`p3f_deep_search.py --evaluate`) re-reads the stored deep-search responses and the arXiv sources; without
+them it is skipped, its committed output is used, and the script says so.
+
+Not included: arXiv source files (not re-hosted), the stored database responses and the DBLP dump. The resolution and
 render stages need them, so they are not part of the offline reproduction.
 
 ## Main entry points (from `code/`)
@@ -42,5 +49,4 @@ python p3_recheck.py stats --seed 43                 # its agreement statistics 
 ```
 
 ## License
-Code: MIT (`LICENSE`). Derived data and documents: CC BY 4.0 (`LICENSE-DATA`). Citation metadata: `CITATION.cff`,
-`.zenodo.json`.
+Code: MIT (`LICENSE`). Derived data and documents: CC BY 4.0 (`LICENSE-DATA`). Citation metadata: `CITATION.cff`.

@@ -11,3 +11,19 @@ bc53f7d0447ea53281435088e175efd2522ab8c7c156319541c37d9da8dba40e *PREREG_AMENDME
 593e64b52c1ebfcb4c4b633afa7beb7cac7a4c840f43b4e44b57a2f52475104d *PREREG_AMENDMENT_4.md
 # amendment 5 (POST-HOC) hashed at 2026-10-24T08:15:32Z (UTC), authorised by LQD CP-B2 decision 2026-10-24 15:11
 64e192ad67a67486d88ed84081a61f8a2f089af6f38239b7a3c443b558254573 *PREREG_AMENDMENT_5.md
+# amendment 7 (POST-HOC, after review R2) hashed at 2026-11-07T10:22:38Z (UTC), authorised by LQD CP3 decision 2026-11-07 16:32
+df36318bd95e48dce29c4325e5dcc7e84112ecaeea65444294217a782b7d0e55 *PREREG_AMENDMENT_7.md
+# amendment 7 addendum A (POST-HOC procedural deviation: keyless daily passes, 2019-21 academic only) hashed at 2026-11-08T03:40:45Z (UTC), authorised by LQD 2026-11-08
+10f8b213472fcd79f742c8e0403d17c3b7df4f2a17660652a34f0411610c1aff *P3E/AMENDMENT_7_ADDENDUM.md
+# amendment 7 addendum 2 (POST-HOC procedural deviation: OpenAlex key, academic both periods) hashed at 2026-11-08T04:17:44Z (UTC), authorised by LQD 2026-11-08
+e4c9f26b64c2df205de53d70f4f1b3ad7ab7d4d643c43fa533c1bd93bc1c269c *P3E/AMENDMENT_7_ADDENDUM_2.md
+# amendment 7 addendum 3 (POST-HOC procedural deviation: R_H1 retrieval-aided blind rating, two passes >= 12 h) hashed at 2026-11-08T06:25:16Z (UTC), authorised by LQD 2026-11-08
+30e0c789aff31278f125053de7bc68510ba69b688260621b43500b2f6f81bcc9 *P3E/AMENDMENT_7_ADDENDUM_3.md
+# amendment 8 (POST-HOC: withdrawal of human arms; automated ground truth GT-1/2/3 and FP bounds) hashed at 2026-11-08T09:00:21Z (UTC), authorised by LQD CP3c decision 2026-11-08
+4498a06258b2180a03e56179401180d44c1b156a5e8b1e61f98ab195fa3c3260 *PREREG_AMENDMENT_8.md
+# amendment 7 addendum 4 (POST-HOC procedural deviation: Semantic Scholar key in the cascade from pass 6) hashed at 2026-11-09T15:27:52Z (UTC), authorised by LQD 2026-11-09
+146a8e67cef110d8a9738c065128624831d4686278835d9d9ccd71a3d6e40890 *P3E/AMENDMENT_7_ADDENDUM_4.md
+# P3G post-hoc note (POST-HOC: S6′ fixes, offline analyses P1–P12) hashed at 2026-11-12T10:02:39Z (UTC), authorised by LQD CP3d decision 2026-11-12 16:55 ICT
+c2c23b6fbf9f7a25e09e5f6b218b6dfc8dbad8d9f2cbf9316ffe3b3c33e0934a *P3G/POSTHOC_NOTE_P3G.md
+# amendment 9 (POST-HOC: web evidence of existence for flagged .bib references 2019-21) hashed at 2026-11-13T00:42:40Z (UTC), authorised by LQD CP3e decision 2026-11-13 07:35 ICT
+c4966646f8729d94cced091579eb4b865fe3704fceebf482e123e017c8e21536 *PREREG_AMENDMENT_9.md

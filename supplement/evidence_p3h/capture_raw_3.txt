@@ -1,0 +1,251 @@
+=== URL: https://www.theguardian.com/cities/datablog/2017/feb/13/most-polluted-cities-world-listed-region
+STATUS: blocked
+ROBOTS: robots.txt unavailable
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: Fetch tool refuses this domain ("unable to fetch")
+
+=== URL: https://www.theguardian.com/news/2018/mar/17/cambridge-analytica-facebook-influence-us-election
+STATUS: blocked
+ROBOTS: robots.txt unavailable
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: Fetch tool refuses this domain ("unable to fetch")
+
+=== URL: https://dblp.uni-trier.de/rec/conf/sigir/ManevitzY00.html
+STATUS: blocked
+ROBOTS: no matching disallow (* blocks only /rec export subpaths)
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: Anubis bot-check page: "Oh noes! Access Denied"
+
+=== URL: https://www.smartgrid.gov/document/arizona_southern_california_outages_september_8_2011_causes_and_recommendations
+STATUS: error
+ROBOTS: robots.txt unavailable
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: DNS failure: getaddrinfo ENOTFOUND www.smartgrid.gov
+
+=== URL: https://projectzero.google/2015/03/exploiting-dram-rowhammer-bug-to-gain.html
+STATUS: ok
+ROBOTS: robots.txt unavailable
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: Exploiting the DRAM rowhammer bug to gain kernel privileges
+DISPLAYED_AUTHORS: Mark Seaborn, Thomas Dullien
+YEAR: 2015
+NOTE: Date shown "2015-Mar-09"; no citation/DC meta tags
+
+=== URL: https://openaccess.thecvf.com/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html
+STATUS: blocked
+ROBOTS: robots.txt unavailable
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: HTTP 403 Forbidden (robots.txt also 403)
+
+=== URL: https://owasp.org/www-project-top-ten/2017/Top_10
+STATUS: ok
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: 2017 Top 10
+DISPLAYED_AUTHORS:
+YEAR: 2017
+NOTE: 308 redirect to owasp.github.io; section "OWASP Top Ten 2017"
+
+=== URL: https://www.aminer.cn/pub/619b95d61c45e57ce9dd7c5e/metrics-framework-of-cyber-operations-on-command-and-control
+STATUS: error
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: Only the AMiner site header was returned, no paper content (JS shell)
+
+=== URL: https://netdevconf.org/2.2/papers/brakmo-tcpbpf-talk.pdf
+STATUS: error
+ROBOTS: robots.txt unavailable
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: PDF fetched, but first-page text was compressed and could not be read
+
+=== URL: https://www.rfc-editor.org/info/rfc3917
+STATUS: ok
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: RFC 3917: Requirements for IP Flow Information Export (IPFIX)
+DISPLAYED_AUTHORS: J. Quittek, T. Zseby, B. Claise, S. Zander
+YEAR: 2004
+NOTE: Date shown "October 2004"
+
+=== URL: https://www.intel.com/content/www/us/en/content-details/338023.html
+STATUS: ok
+ROBOTS: no matching disallow (ClaudeBot/anthropic-ai: Allow: /)
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: 8th Generation Intel® Core™ Processor Family Datasheet, Volume 1 of 2
+DISPLAYED_AUTHORS:
+YEAR: 2022
+NOTE: 302 redirect on same host; "Date 2022-02-08"; only "© Intel Corporation"
+
+=== URL: https://sites.tufts.edu/eeseniordesignhandbook/?p=2439
+STATUS: ok
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: Red Team 2017
+DISPLAYED_AUTHORS: Adam Chapman, Noel Hwang
+YEAR:
+NOTE: Project "Beamforming Phased Array for GPS Spoofing"; no post date shown
+
+=== URL: https://www.indrastra.com/2017/09/Military-Applications-of-Blockchain-Technology-003-09-2017-0005.html
+STATUS: ok
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: Military Applications of Blockchain Technology
+DISPLAYED_AUTHORS: Rear Admiral Dr. S. Kulshrestha (Retd.), Indian Navy
+YEAR: 2017
+NOTE: Date shown "Sunday, September 03, 2017"
+
+=== URL: https://www.kaggle.com/code/cdeotte/triple-stratified-kfold-with-tfrecords
+STATUS: ok
+ROBOTS: robots.txt unavailable
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE: Triple Stratified KFold with TFRecords | Kaggle
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: Only the page title was returned; no author or date
+
+=== URL: https://dl.packetstormsecurity.net/defcon10/dc10-endler-idefense/dc10-iDEFENSESessionIDs.pdf
+STATUS: error
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: PDF fetched, but first-page text was compressed and could not be read
+
+=== URL: https://repository.tudelft.nl/record/uuid:60b241e8-8b92-4dff-a7e7-e5ad40b62ee1
+STATUS: error
+ROBOTS: robots.txt unavailable
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: Connection failure: ECONNREFUSED 131.180.123.142:443
+
+=== URL: https://www.ic.unicamp.br/~fkm/software/cplex/Cplex121-Manual.pdf
+STATUS: error
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: PDF fetched, cover page unreadable; outline suggests an IBM ILOG CPLEX manual
+
+=== URL: https://sia.tech/whitepaper.pdf
+STATUS: error
+ROBOTS: no matching disallow
+CITATION_TITLE:
+CITATION_AUTHORS:
+CITATION_DATE:
+DC_TITLE:
+DC_CREATOR:
+DC_DATE:
+DISPLAYED_TITLE:
+DISPLAYED_AUTHORS:
+YEAR:
+NOTE: PDF fetched, but first-page text was compressed and could not be read

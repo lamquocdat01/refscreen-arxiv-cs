@@ -17,6 +17,12 @@ Lee2026citecheck,10.48550/arXiv.2603.17339,,citecheck: An MCP Server for Automat
 Stringhini2026hallucinator,10.1109/SPW72489.2026.00037,,Experience Paper: Is This the Real Life? Is This Just Fantasy? Hunting for Hallucinated References in Paper Submissions,2026,OK (registry)
 Rao2026bibtex,10.48550/arXiv.2604.03159,,BibTeX Citation Errors in Scientific Publishing Agents: Evaluation and Mitigation,2026,OK (registry)
 HALLMARK2026,10.48550/arXiv.2607.18360,,HALLMARK: How to Diagnose LLM Citation Verifiers and When to Deploy Them,2026,OK (registry)
+Shi2026citeaudit,10.48550/arXiv.2602.23452,,"CiteAudit: You Cited It, But Did You Read It? A Benchmark for Verifying Scientific References in the LLM Era",2026,OK (registry)
+Citetracer2026,10.48550/arXiv.2605.08583,,Source or It Didn't Happen: A Multi-Agent Framework for Citation Hallucination Detection,2026,OK (registry)
+Ilter2026gap,10.48550/arXiv.2601.17431,,The 17% Gap: Quantifying Epistemic Decay in AI-Assisted Survey Papers,2026,OK (registry)
+OracleGrounding2026,10.48550/arXiv.2606.00898,,Citation Grounding Measures the Oracle: Graph Coverage Determines Reported LLM Hallucination Rates in Law,2026,OK (registry)
+An2026whatcitations,10.21203/rs.3.rs-10449790/v1,,What Citations Get Wrong: A Full-Corpus Audit of Reference Existence and Claim Support in a Major NLP Conference,2026,OK (registry)
+Deb2026marebito,10.1007/s11192-026-05868-8,,Marebito: citation matching interface for the digital library zbMATH open,2026,OK (registry)
 Culbert2025openalex,10.1007/s11192-025-05293-3,,Reference coverage analysis of OpenAlex compared to Web of Science and Scopus,2025,OK (registry)
 Visser2021largescale,10.1162/qss_a_00112,,"Large-scale comparison of bibliographic data sources: Scopus, Web of
                     Science, Dimensions, Crossref, and Microsoft Academic",2021,OK (registry)
@@ -39,6 +45,9 @@ Priem2022openalex,10.48550/arXiv.2205.01833,,"OpenAlex: A fully-open index of sc
 Kinney2023s2,10.48550/arXiv.2301.10140,,The Semantic Scholar Open Data Platform,2023,OK (registry)
 Ley2009dblp,10.14778/1687553.1687577,,DBLP: some lessons learned,2009,OK (registry)
 Lopez2009grobid,10.1007/978-3-642-04346-8_62,,GROBID: Combining Automatic Bibliographic Data Recognition and Term Extraction for Scholarship Publications,2009,OK (registry)
+Olensky2016matching,10.1002/asi.23590,,Evaluation of the citation matching algorithms of <scp>CWTS</scp> and i<scp>FQ</scp> in comparison to the <scp>W</scp>eb of science,2016,OK (registry)
+MartinMartin2021coverage,10.1007/s11192-020-03690-4,,"Google Scholar, Microsoft Academic, Scopus, Dimensions, Web of Science, and OpenCitations’ COCI: a multidisciplinary comparison of coverage via citations",2021,OK (registry)
+Xu2026ghostcite,10.48550/arXiv.2602.06718,,GhostCite: A Large-Scale Analysis of Citation Validity in the Age of Large Language Models,2026,OK (registry)
 LeCam1960,10.2140/pjm.1960.10.1181,,An approximation theorem for the Poisson binomial distribution,1960,OK (registry)
 Hoeffding1956,10.1214/aoms/1177728178,,On the Distribution of the Number of Successes in Independent Trials,1956,OK (registry)
 Barbour1984,10.1017/S0305004100061806,,On the rate of Poisson convergence,1984,OK (registry)
@@ -47,12 +56,12 @@ Byrt1993,10.1016/0895-4356(93)90018-V,,"Bias, prevalence and kappa",1993,OK (reg
 Gwet2008,10.1348/000711006X126600,,Computing inter‐rater reliability and its variance in the presence of high agreement,2008,OK (registry)
 Wilson1927,10.1080/01621459.1927.10502953,,"Probable Inference, the Law of Succession, and Statistical Inference",1927,OK (registry)
 Efron1979,10.1214/aos/1176344552,,Bootstrap Methods: Another Look at the Jackknife,1979,OK (registry)
-Benjamini1995fdr,10.1111/j.2517-6161.1995.tb02031.x,,Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing,1995,OK (registry)
 Ioannidis2005why,10.1371/journal.pmed.0020124,,Why Most Published Research Findings Are False,2005,OK (registry)
 Nosek2018prereg,10.1073/pnas.1708274114,,The preregistration revolution,2018,OK (registry)
 ACL2026statement,,https://2026.aclweb.org/acl_statement/,{ACL} Statement on Desk Rejecting Papers with Hallucinated References,2026,URL-ONLY
 EMNLP2026integrity,,https://2026.emnlp.org/paper-integrity-policy/,{EMNLP} 2026 Paper Integrity Policy,2026,URL-ONLY
 ICLR2025response,,https://blog.iclr.cc/2025/11/19/iclr-2026-response-to-llm-generated-papers-and-reviews/,{ICLR} 2026 Response to {LLM}-Generated Papers and Reviews,2025,URL-ONLY
+ICLR2026retrospective,,https://blog.iclr.cc/2026/03/31/a-retrospective-on-the-iclr-2026-review-process/,A Retrospective on the {ICLR} 2026 Review Process,2026,URL-ONLY
 NeurIPS2026handbook,,https://neurips.cc/Conferences/2026/MainTrackHandbook,{NeurIPS} 2026 Main Track Handbook,2026,URL-ONLY
 ICML2026ethics,,https://icml.cc/Conferences/2026/PeerReviewEthics,{ICML} 2026 Peer Review Ethics,2026,URL-ONLY
 ICML2026ACinstructions,,https://icml.cc/Conferences/2026/AreaChairInstructions,{ICML} 2026 Area Chair Instructions,2026,URL-ONLY
@@ -63,4 +72,3 @@ SpringerNature2025checker,,https://group.springernature.com/gp/group/media/press
 GPTZero2026neurips,,https://gptzero.me/news/neurips/,{GPTZero} Finds 100 New Hallucinations in {NeurIPS} 2025 Accepted Papers,2026,URL-ONLY
 anystyle,,https://github.com/inukshuk/anystyle,{AnyStyle}: Fast and Smart Citation Reference Parsing,2026,URL-ONLY
 Shell2015ieeetran,,https://ctan.org/pkg/ieeetran,"{IEEEtran} {BibTeX} Style, Version 1.14",2015,URL-ONLY
-refscreenRepo,,https://github.com/[to be created at CP-B3],refscreen-fp: Code and Derived Data for ``Which Backend Decides?'',2026,URL-ONLY

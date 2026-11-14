@@ -50,6 +50,12 @@ DOI = [  # key, doi
     ("Stringhini2026hallucinator", "10.1109/SPW72489.2026.00037"),
     ("Rao2026bibtex", "10.48550/arXiv.2604.03159"),
     ("HALLMARK2026", "10.48550/arXiv.2607.18360"),
+    ("Shi2026citeaudit", "10.48550/arXiv.2602.23452"),
+    ("Citetracer2026", "10.48550/arXiv.2605.08583"),
+    ("Ilter2026gap", "10.48550/arXiv.2601.17431"),
+    ("OracleGrounding2026", "10.48550/arXiv.2606.00898"),
+    ("An2026whatcitations", "10.21203/rs.3.rs-10449790/v1"),
+    ("Deb2026marebito", "10.1007/s11192-026-05868-8"),
     # coverage, data quality, matching
     ("Culbert2025openalex", "10.1007/s11192-025-05293-3"),
     ("Visser2021largescale", "10.1162/qss_a_00112"),
@@ -72,6 +78,9 @@ DOI = [  # key, doi
     ("Kinney2023s2", "10.48550/arXiv.2301.10140"),
     ("Ley2009dblp", "10.14778/1687553.1687577"),
     ("Lopez2009grobid", "10.1007/978-3-642-04346-8_62"),
+    ("Olensky2016matching", "10.1002/asi.23590"),
+    ("MartinMartin2021coverage", "10.1007/s11192-020-03690-4"),
+    ("Xu2026ghostcite", "10.48550/arXiv.2602.06718"),
     # statistics
     ("LeCam1960", "10.2140/pjm.1960.10.1181"),
     ("Hoeffding1956", "10.1214/aoms/1177728178"),
@@ -81,7 +90,6 @@ DOI = [  # key, doi
     ("Gwet2008", "10.1348/000711006X126600"),
     ("Wilson1927", "10.1080/01621459.1927.10502953"),
     ("Efron1979", "10.1214/aos/1176344552"),
-    ("Benjamini1995fdr", "10.1111/j.2517-6161.1995.tb02031.x"),
     ("Ioannidis2005why", "10.1371/journal.pmed.0020124"),
     ("Nosek2018prereg", "10.1073/pnas.1708274114"),
 ]
@@ -94,6 +102,9 @@ URL = [  # key, type, fields
     ("ICLR2025response", "misc", dict(author="{ICLR 2026 Program Chairs}", title="{ICLR} 2026 Response to {LLM}-Generated Papers and Reviews",
                                       year="2025", url="https://blog.iclr.cc/2025/11/19/iclr-2026-response-to-llm-generated-papers-and-reviews/",
                                       howpublished="Blog post, accessed 21 October 2026")),
+    ("ICLR2026retrospective", "misc", dict(author="{ICLR 2026 Program Chairs}", title="A Retrospective on the {ICLR} 2026 Review Process",
+                                           year="2026", url="https://blog.iclr.cc/2026/03/31/a-retrospective-on-the-iclr-2026-review-process/",
+                                           howpublished="Blog post, accessed 21 October 2026")),
     ("NeurIPS2026handbook", "misc", dict(author="{NeurIPS 2026 Organizers}", title="{NeurIPS} 2026 Main Track Handbook", year="2026",
                                          url="https://neurips.cc/Conferences/2026/MainTrackHandbook", howpublished="Web page, accessed 21 October 2026")),
     ("ICML2026ethics", "misc", dict(author="{ICML 2026 Organizers}", title="{ICML} 2026 Peer Review Ethics", year="2026",
@@ -117,18 +128,31 @@ URL = [  # key, type, fields
                               url="https://github.com/inukshuk/anystyle", howpublished="Software repository, accessed 18 October 2026")),
     ("Shell2015ieeetran", "misc", dict(author="Shell, Michael", title="{IEEEtran} {BibTeX} Style, Version 1.14", year="2015",
                                       url="https://ctan.org/pkg/ieeetran", howpublished="CTAN package, accessed 16 October 2026")),
-    ("refscreenRepo", "misc", dict(author="Lam Quoc, Dat", title="refscreen-fp: Code and Derived Data for ``Which Backend Decides?''",
-                                   year="2026", url="https://github.com/[to be created at CP-B3]", howpublished="Software repository")),
 ]
+
+# fields the registry record leaves incomplete (R2 Q17): set after cleaning; None removes the field
+FIX = {
+    "Lopez2009grobid": {"booktitle": "Research and Advanced Technology for Digital Libraries: 13th European Conference, "
+                                     "{ECDL} 2009", "series": "Lecture Notes in Computer Science", "volume": "5714"},
+    "Walters2023fabrication": {"number": None, "pages": "14045"},  # article number; the registry issue "1" is not one
+    "DelgadoQuiros2024missing": {"year": "2024"},  # one convention: the year of the issue (75(1), 2024; online 2023)
+    "Olensky2016matching": {"year": "2016",  # issue 67(10), 2016; online 2015
+                            "title": "Evaluation of the citation matching algorithms of {CWTS} and {iFQ} in comparison "
+                                     "to the {Web of Science}"},
+    "MartinMartin2021coverage": {"year": "2021"},  # issue 126(1), 2021; online 2020
+    "Xu2026ghostcite": {"title": "{GhostCite}: A Large-Scale Analysis of Citation Validity in the Age of Large Language "
+                                 "Models"},
+}
 
 PROTECT = ["OpenAlex", "Crossref", "CrossRef", "Scopus", "Web of Science", "Semantic Scholar", "DBLP", "GROBID", "ChatGPT", "LLM", "LLMs",
            "AI", "NeurIPS", "ACL", "ICLR", "arXiv", "BibTeX", "MCP", "PubMed", "Dimensions", "Scilit", "Lens", "Google Scholar",
-           "African", "China", "Africa", "HalluCitation", "CheckIfExist", "Kappa", "F1000Research", "Poisson", "GPT", "HALLMARK"]
+           "African", "China", "Africa", "HalluCitation", "CheckIfExist", "Kappa", "F1000Research", "Poisson", "GPT", "HALLMARK",
+           "NLP", "CiteAudit", "zbMATH", "Microsoft Academic", "OpenCitations", "COCI"]
 
 
 # accented letters as LaTeX accents (sn-basic abbreviates first names byte-wise, which breaks UTF-8), typographic
 # punctuation as ASCII TeX ligatures
-TO_LATEX = [("Á", r"{\'A}"), ("á", r"{\'a}"), ("é", r"{\'e}"), ("É", r"{\'E}"), ("í", r"{\'i}"),
+TO_LATEX = [("İ", r"{\.I}"), ("Á", r"{\'A}"), ("á", r"{\'a}"), ("é", r"{\'e}"), ("É", r"{\'E}"), ("í", r"{\'i}"),
             ("ó", r"{\'o}"), ("ú", r"{\'u}"), ("ñ", r"{\~n}"), ("ç", r"{\c c}"), ("è", r"{\`e}"),
             ("ö", r'{\"o}'), ("ü", r'{\"u}'), ("ä", r'{\"a}'), ("‐", "-"), ("‑", "-"),
             ("–", "--"), ("—", "---"), ("’", "'"), ("‘", "`"), ("“", "``"), ("”", "''"),
@@ -197,16 +221,25 @@ def clean(bib, key, title_cr):
         typ = "article"
         fields["journal"] = "arXiv preprint"
         fields.pop("publisher", None)
+    if fields.get("doi", "").lower().startswith("10.21203/"):  # Research Square preprint
+        fields["journal"] = "Research Square preprint"
+        fields.pop("publisher", None)
     if fields.get("doi", "").lower().startswith("10.48550/arxiv."):
         fields["doi"] = "10.48550/arXiv." + fields["doi"].split(".", 2)[2]
-    fields["title"] = protect(fields.get("title", ""))
+    fields["title"] = re.sub(r"(?<!\\)%", r"\\%", protect(fields.get("title", "")))
     for k in ("journal", "booktitle", "publisher"):
         if k in fields:
             fields[k] = protect(fields[k])
     if "doi" in fields:
         fields["doi"] = fields["doi"].replace("https://doi.org/", "")
         fields.pop("url", None)  # the DOI is printed as a link; a duplicate URL adds nothing
-    order = ["author", "title", "journal", "booktitle", "editor", "volume", "number", "pages", "year", "publisher", "school",
+    for k, v in FIX.get(key, {}).items():
+        if v is None:
+            fields.pop(k, None)
+        else:
+            fields[k] = v
+    typ = {"Lopez2009grobid": "inproceedings"}.get(key, typ)  # P3H: an LNCS proceedings paper; @inbook drops the booktitle
+    order = ["author", "title", "journal", "booktitle", "series", "editor", "volume", "number", "pages", "year", "publisher", "school",
              "institution", "doi", "url", "howpublished"]
     keys = [k for k in order if k in fields] + sorted(k for k in fields if k not in order)
     return f"@{typ}{{{key},\n" + ",\n".join(f"  {k} = {{{fields[k]}}}" for k in keys) + "\n}\n"

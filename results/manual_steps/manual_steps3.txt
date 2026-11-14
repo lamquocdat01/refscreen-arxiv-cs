@@ -1,0 +1,51 @@
+Note: Google Scholar (captcha) and DBLP (Anubis bot wall, incl. uni-trier mirror) blocked all automated fetches this session; step 1 = WebSearch with exact title in quotes.
+M101: GS exact title (blocked captcha); DBLP api (blocked Anubis, also uni-trier mirror); WebSearch "title" Armeni -> arxiv 1702.01105; fetched arxiv.org/abs/1702.01105
+M102: GS/DBLP blocked; WebSearch "title" Bishop Springer 2006; link.springer.com (login redirect); fetched microsoft.com research publication page
+M103: GS/DBLP blocked; WebSearch "Deep Learning" Goodfellow MIT Press 2016 (library catalogues); mitpress.mit.edu 403; fetched deeplearningbook.org
+M104: GS/DBLP blocked; WebSearch "title" Agrawal; fetched papers.nips.cc NIPS 29 abstract page
+M105: GS/DBLP blocked; WebSearch "Wireless Sensor Networks" Akyildiz Vuran Wiley 2010; library.usi.edu 403; schweitzer 429; wiley onlinelibrary Cloudflare; fetched KIT OPAC record (also openlibrary search)
+M106: GS/DBLP blocked; WebSearch "title" Kang (only ICACT variant); WebSearch extended "title" springer -> link.springer chapter; fetched with curl (citation_* meta)
+M107: GS/DBLP blocked; WebSearch "title" Hayes Armitage -> IFIP dl / Springer DOI 10.1007/978-3-642-20798-3_25; fetched Springer chapter (curl meta)
+M108: GS/DBLP blocked; WebSearch "title" Ramantas (no hit); WebSearch authors+keywords -> CTTC listing DOI 10.1007/978-3-319-75175-7_77; fetched Springer chapter (curl meta)
+M109: GS/DBLP blocked; WebSearch "title" Pinheiro Bates Springer 2000 (library catalogues); fetched link.springer.com/book/10.1007/b98882 (curl)
+M110: GS/DBLP blocked; WebSearch "title" Knowles Thiele Zitzler TIK 214 (only citing refs); WebSearch -> sop.tik.ee.ethz.ch PISA slides; fetched pisa homepage -> bugs.html (bibtex + PDF link)
+M111: GS/DBLP blocked; WebSearch "title" Ortega Rheinboldt SIAM; epubs.siam.org Cloudflare; TUM vufind refused; i2m catalogue cert error; fetched shop.elsevier.com page
+M112: GS/DBLP blocked; WebSearch "title" Schrijver Wiley; fetched CiNii record BA00282063
+M113: GS/DBLP blocked; WebSearch "title" Smit -> ACL Anthology E14-2006; fetched page meta (curl)
+M114: GS/DBLP blocked; WebSearch "title" Chaudhuri Monteleoni NIPS; fetched papers.nips.cc/paper/3486 (curl meta)
+M115: GS/DBLP blocked; WebSearch "title" Dai -> HKBU/NTNU repo, arXiv 1909.00413; tandfonline Cloudflare; NTNU page no meta; fetched arxiv abs
+M116: GS/DBLP blocked; WebSearch "title" Madni (only SERC report variants); WebSearch authors+book title -> book TOC; curl Springer book page, chapters _27.._31 -> _29 matches
+M117: GS/DBLP blocked; WebSearch "title" Peterson -> UVic DSpace; fetched item full record
+M118: GS/DBLP blocked; WebSearch "Neural network design" Hagan Demuth Beale PWS 1996; lib.ecu.edu 503; hagan.okstate.edu DNS fail; fetched upatras catalogue record
+M119: GS/DBLP blocked; WebSearch "title" Kim Dekker 1982 (catalogues); nantes DNS fail, TAMU 403, aegean refused, gifu 403; fetched CiNii NCID BA00834567
+M120: GS/DBLP blocked; WebSearch "title" DiskFiltration Guri ESORICS -> arXiv 1608.03431, BGU pages; fetched Springer ESORICS 2017 chapter _6 (curl meta)
+M121: GS/DBLP blocked; WebSearch "title" Scheffler PAM 2018 -> springerprofessional chapter; fetched Springer PAM 2018 chapter _12 (curl meta)
+M122: GS/DBLP blocked; WebSearch "title" Ganea NeurIPS 2018; fetched entry URL papers.nips.cc/paper/7780 (curl meta)
+M123: GS/DBLP blocked; WebSearch "Poincare Embeddings for Learning Hierarchical Representations" Nickel Kiela; fetched entry URL papers.nips.cc/paper/7213 (curl meta)
+M124: GS/DBLP blocked; WebSearch "title" Weisstein 2002 (wikipedia, CUP review, retailers); cambridge.org 429; gifu 403 -> fetched CiNii NCID BA60466111
+M125: GS/DBLP blocked; WebSearch "The Java Language Specification" "Java SE 11 Edition" authors -> docs.oracle.com; fetched jls/se11 index
+M126: GS/DBLP blocked; WebSearch "title" Snoek; fetched entry URL papers.nips.cc/paper/4522 (curl meta)
+M127: GS/DBLP blocked; WebSearch "title" Geurts CUP 2010 -> cambridge.org/core book page (fetch 429); abie catalogue bad redirect; fetched LINGUIST List 22.3291 review
+M128: GS/DBLP blocked; WebSearch "Dual Learning" Tao Qin Springer 2020 (catalogues, ISBN 9789811588846); fetched Springer book page via eISBN DOI (curl)
+M129: GS/DBLP blocked; WebSearch "title" Freedman CUP 2009; maa.org 521; fetched bookshare record
+M130: GS/DBLP blocked; WebSearch "Tabu search" Gendreau Potvin Search Methodologies -> Springer DOI 10.1007/0-387-28356-0_6; fetched (curl meta)
+M131: GS/DBLP blocked; WebSearch "title" Chen Nixon Mok Springer -> catalogues give DOI 10.1007/978-1-4419-6047-4; fetched Springer book page (curl)
+M132: GS/DBLP blocked; WebSearch "title" Singh Sharma (no hit); WebSearch +book title (no hit); step 2 publisher: curl Springer book 10.1007/978-3-030-25797-2 TOC lists title -> chapter _3 fetched (meta)
+M133: GS/DBLP blocked; WebSearch "title" Cover Wiley (catalogues, worldcat); fetched wiley-vch.de product page
+M134: GS/DBLP blocked; WebSearch "title" Canese Weis -> NCBI NBK153385 (and 1st-ed NBK21094 w/ other coauthors); live fetch captcha; Wayback CDX -> 20190109 capture fetched (citation meta)
+M135: step 3 entry URL: WebFetch github.com/ayyoob/mudgee; GitHub API repos/ayyoob/mudgee (created_at) + users/ayyoob (name Hamza)
+M136: step 3 entry URL: WebFetch github tree SenseMe; GitHub API commits?path=SenseMe until 2019-02-07 (2017-09-18)
+M137: step 3 entry URL github.com/srsLTE/srsLTE -> GitHub API 301 moved; step 4 Wayback CDX to 20190429 -> capture 20160914064037 fetched (title/description)
+M138: step 3 entry URL: WebFetch github.com/math-comp/finmap (README authors); GitHub API repo created_at 2015-05-13, commits until 2019-07-11
+M139: step 4 entry (Wayback) URL fetched (title + commit date); cross-check GitHub API commit c04bc6d
+M140: step 3 entry URL -> 301 to facebookarchive (GitHub API created 2015-03-18); step 4 Wayback CDX to 20190813 -> capture 20190614134310 fetched (title, README h1)
+M141: step 3 entry URL WebFetch (header comment); raw file; GitHub API commits?path until 2019-08-13 (earliest by Sasha Levin 2012-10-30)
+M142: step 3 entry URL WebFetch github.com/myriadrf/LoRa-SDR; GitHub API created_at 2016-06-02
+M143: step 3 entry URL WebFetch github.com/SheffieldML/GPy (README bibtex); GitHub API created_at 2012-11-28
+M144: step 4 entry URL downloaded (PDF, Swiss Post, v1.5.0, revision chart 0.9.8 initial published 2021-01-19); Wayback CDX gitlab.com/swisspost-evoting/documentation* to 20191201 -> no captures; WebSearch "title" computational proof; WebSearch 2019 predecessor (none found)
+M145: step 4 entry URL fetched (title, in-page date); Wayback CDX first capture 20150828072201
+M146: step 3 entry URL github.com/ethz-asl/kalibr/wiki; GitHub API created_at 2014-05-29; README authors Furgale/Maye/Rehder; Wayback CDX to 20200227 -> 20190723195616 fetched
+M147: step 3 entry URL: GitHub API repos/vusec/drammer (created_at) + raw README
+M148: step 3 entry URL: GitHub API repos/CMU-SAFARI/ramulator (created_at) + raw README
+M149: step 3 entry URL: GitHub API repos/CMU-SAFARI/SoftMC (created_at) + raw README
+M150: step 3 entry URL WebFetch github.com/keras-team/keras; GitHub API created_at 2015-03-28

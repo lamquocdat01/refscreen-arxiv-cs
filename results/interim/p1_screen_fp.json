@@ -1,0 +1,447 @@
+{
+  "seed": 42,
+  "boot": 1000,
+  "threshold": 0.9,
+  "n_render_papers": 100,
+  "n_rendered_refs": 46032,
+  "n_unique_strings": 21793,
+  "n_stage_b_queries": 5481,
+  "s2_live": false,
+  "arxiv_ids_in_strings": 1559,
+  "arxiv_ids_without_title": 4,
+  "query_errors": {
+    "crossref": 0,
+    "s2": 0,
+    "arxiv": 0
+  },
+  "manual_exists_in_render_papers": 0,
+  "manual_note": "manual sample (2019-21 papers) does not overlap the 2024-26 render papers; manual-exists rows are the bib-title screen (substitute, labelled)",
+  "render_missing": {
+    "IEEEtran/orig": {
+      "k": 0,
+      "n": 5754,
+      "n_papers": 0
+    },
+    "IEEEtran/strip": {
+      "k": 2,
+      "n": 5754,
+      "n_papers": 1
+    },
+    "IEEEtran_doi/orig": {
+      "k": 0,
+      "n": 5754,
+      "n_papers": 0
+    },
+    "IEEEtran_doi/strip": {
+      "k": 2,
+      "n": 5754,
+      "n_papers": 1
+    },
+    "IEEEtran_doi_raw/orig": {
+      "k": 207,
+      "n": 5754,
+      "n_papers": 5
+    },
+    "IEEEtran_doi_raw/strip": {
+      "k": 2,
+      "n": 5754,
+      "n_papers": 1
+    },
+    "acmart/orig": {
+      "k": 1,
+      "n": 5754,
+      "n_papers": 1
+    },
+    "acmart/strip": {
+      "k": 1,
+      "n": 5754,
+      "n_papers": 1
+    },
+    "elsarticle-num/orig": {
+      "k": 0,
+      "n": 5754,
+      "n_papers": 0
+    },
+    "elsarticle-num/strip": {
+      "k": 0,
+      "n": 5754,
+      "n_papers": 0
+    }
+  },
+  "H3": {
+    "status": "pending: the full-cascade screen needs S2 (final run)"
+  },
+  "H3_crossref_only": {
+    "fp_a": 0.08129032258064516,
+    "k_a": 189,
+    "n_a": 2325,
+    "fp_b": 0.015483870967741935,
+    "k_b": 36,
+    "n_b": 2325,
+    "ratio": 5.25,
+    "ratio_ci": [
+      2.7883890845070423,
+      11.817187499999996
+    ],
+    "n_papers": 97,
+    "PASS": true,
+    "strong": true,
+    "spec": "same as H3 but Crossref-only screen (secondary)"
+  },
+  "H3_plus_dblp": {
+    "fp_a": 0.006881720430107527,
+    "k_a": 16,
+    "n_a": 2325,
+    "fp_b": 0.0012903225806451613,
+    "k_b": 3,
+    "n_b": 2325,
+    "ratio": 5.333333333333333,
+    "ratio_ci": [
+      2.3333333333333335,
+      NaN
+    ],
+    "n_papers": 97,
+    "PASS": true,
+    "strong": true,
+    "spec": "same as H3 but Crossref-only + DBLP offline screen (secondary, not preregistered)"
+  },
+  "H4": {
+    "crossref": {
+      "screen": "crossref",
+      "fp_manual_weighted": 0.4114804742410747,
+      "fp_certified": 0.4077877620881472,
+      "diff": 0.003692712152927491,
+      "diff_ci": [
+        -0.1056229365585529,
+        0.11113051567655728
+      ],
+      "n_certified": 2337,
+      "k_certified": 953,
+      "n_manual": 189,
+      "k_manual": 108,
+      "manual_by_tier": {
+        "B": [
+          23,
+          34
+        ],
+        "C": [
+          17,
+          37
+        ],
+        "J": [
+          7,
+          36
+        ],
+        "P": [
+          20,
+          32
+        ],
+        "S": [
+          22,
+          22
+        ],
+        "W": [
+          19,
+          28
+        ]
+      },
+      "weights": {
+        "B": 0.0366,
+        "C": 0.5126,
+        "J": 0.3223,
+        "P": 0.01,
+        "S": 0.0058,
+        "W": 0.1126
+      },
+      "n_papers": 264,
+      "PASS": false,
+      "seed": 42,
+      "boot": 1000
+    },
+    "dblp": {
+      "screen": "dblp",
+      "fp_manual_weighted": 0.17542186395223794,
+      "fp_certified": 0.0038510911424903724,
+      "diff": 0.17157077280974756,
+      "diff_ci": [
+        0.11269628735868395,
+        0.2324450270030432
+      ],
+      "n_certified": 2337,
+      "k_certified": 9,
+      "n_manual": 189,
+      "k_manual": 59,
+      "manual_by_tier": {
+        "B": [
+          13,
+          34
+        ],
+        "C": [
+          4,
+          37
+        ],
+        "J": [
+          4,
+          36
+        ],
+        "P": [
+          0,
+          32
+        ],
+        "S": [
+          22,
+          22
+        ],
+        "W": [
+          16,
+          28
+        ]
+      },
+      "weights": {
+        "B": 0.0366,
+        "C": 0.5126,
+        "J": 0.3223,
+        "P": 0.01,
+        "S": 0.0058,
+        "W": 0.1126
+      },
+      "n_papers": 264,
+      "PASS": true,
+      "seed": 42,
+      "boot": 1000
+    }
+  },
+  "ratios_vs_doi_style_exploratory": [
+    {
+      "fp_a": 0.021075268817204302,
+      "k_a": 49,
+      "n_a": 2325,
+      "fp_b": 0.015483870967741935,
+      "k_b": 36,
+      "n_b": 2325,
+      "ratio": 1.3611111111111112,
+      "ratio_ci": [
+        1.1081081081081081,
+        2.0
+      ],
+      "n_papers": 97,
+      "screen": "crossref",
+      "style": "IEEEtran",
+      "variant": "orig",
+      "parser": "grobid",
+      "label": "exploratory"
+    },
+    {
+      "fp_a": 0.021075268817204302,
+      "k_a": 49,
+      "n_a": 2325,
+      "fp_b": 0.015483870967741935,
+      "k_b": 36,
+      "n_b": 2325,
+      "ratio": 1.3611111111111112,
+      "ratio_ci": [
+        1.1081081081081081,
+        2.0
+      ],
+      "n_papers": 97,
+      "screen": "crossref",
+      "style": "IEEEtran",
+      "variant": "orig",
+      "parser": "anystyle",
+      "label": "exploratory"
+    },
+    {
+      "fp_a": 0.006881720430107527,
+      "k_a": 16,
+      "n_a": 2325,
+      "fp_b": 0.015483870967741935,
+      "k_b": 36,
+      "n_b": 2325,
+      "ratio": 0.4444444444444444,
+      "ratio_ci": [
+        0.18964352283317804,
+        0.75
+      ],
+      "n_papers": 97,
+      "screen": "crossref",
+      "style": "elsarticle-num",
+      "variant": "orig",
+      "parser": "grobid",
+      "label": "exploratory"
+    },
+    {
+      "fp_a": 0.006881720430107527,
+      "k_a": 16,
+      "n_a": 2325,
+      "fp_b": 0.015483870967741935,
+      "k_b": 36,
+      "n_b": 2325,
+      "ratio": 0.4444444444444444,
+      "ratio_ci": [
+        0.18964352283317804,
+        0.75
+      ],
+      "n_papers": 97,
+      "screen": "crossref",
+      "style": "elsarticle-num",
+      "variant": "orig",
+      "parser": "anystyle",
+      "label": "exploratory"
+    },
+    {
+      "fp_a": 0.08,
+      "k_a": 186,
+      "n_a": 2325,
+      "fp_b": 0.015483870967741935,
+      "k_b": 36,
+      "n_b": 2325,
+      "ratio": 5.166666666666667,
+      "ratio_ci": [
+        2.7082650448143406,
+        11.6509375
+      ],
+      "n_papers": 97,
+      "screen": "crossref",
+      "style": "elsarticle-num",
+      "variant": "strip",
+      "parser": "grobid",
+      "label": "exploratory"
+    },
+    {
+      "fp_a": 0.08,
+      "k_a": 186,
+      "n_a": 2325,
+      "fp_b": 0.015483870967741935,
+      "k_b": 36,
+      "n_b": 2325,
+      "ratio": 5.166666666666667,
+      "ratio_ci": [
+        2.7082650448143406,
+        11.6509375
+      ],
+      "n_papers": 97,
+      "screen": "crossref",
+      "style": "elsarticle-num",
+      "variant": "strip",
+      "parser": "anystyle",
+      "label": "exploratory"
+    },
+    {
+      "fp_a": 0.08129032258064516,
+      "k_a": 189,
+      "n_a": 2325,
+      "fp_b": 0.015483870967741935,
+      "k_b": 36,
+      "n_b": 2325,
+      "ratio": 5.25,
+      "ratio_ci": [
+        2.7883890845070423,
+        11.817187499999996
+      ],
+      "n_papers": 97,
+      "screen": "crossref",
+      "style": "IEEEtran_doi",
+      "variant": "strip",
+      "parser": "grobid",
+      "label": "exploratory"
+    },
+    {
+      "fp_a": 0.08129032258064516,
+      "k_a": 189,
+      "n_a": 2325,
+      "fp_b": 0.015483870967741935,
+      "k_b": 36,
+      "n_b": 2325,
+      "ratio": 5.25,
+      "ratio_ci": [
+        2.7883890845070423,
+        11.817187499999996
+      ],
+      "n_papers": 97,
+      "screen": "crossref",
+      "style": "IEEEtran_doi",
+      "variant": "strip",
+      "parser": "anystyle",
+      "label": "exploratory"
+    },
+    {
+      "fp_a": 0.016774193548387096,
+      "k_a": 39,
+      "n_a": 2325,
+      "fp_b": 0.015483870967741935,
+      "k_b": 36,
+      "n_b": 2325,
+      "ratio": 1.0833333333333333,
+      "ratio_ci": [
+        0.2666176470588235,
+        2.5201944444444444
+      ],
+      "n_papers": 97,
+      "screen": "crossref",
+      "style": "acmart",
+      "variant": "orig",
+      "parser": "grobid",
+      "label": "exploratory"
+    },
+    {
+      "fp_a": 0.016774193548387096,
+      "k_a": 39,
+      "n_a": 2325,
+      "fp_b": 0.015483870967741935,
+      "k_b": 36,
+      "n_b": 2325,
+      "ratio": 1.0833333333333333,
+      "ratio_ci": [
+        0.2666176470588235,
+        2.5201944444444444
+      ],
+      "n_papers": 97,
+      "screen": "crossref",
+      "style": "acmart",
+      "variant": "orig",
+      "parser": "anystyle",
+      "label": "exploratory"
+    },
+    {
+      "fp_a": 0.08774193548387096,
+      "k_a": 204,
+      "n_a": 2325,
+      "fp_b": 0.015483870967741935,
+      "k_b": 36,
+      "n_b": 2325,
+      "ratio": 5.666666666666666,
+      "ratio_ci": [
+        3.0180555555555557,
+        12.07172619047619
+      ],
+      "n_papers": 97,
+      "screen": "crossref",
+      "style": "acmart",
+      "variant": "strip",
+      "parser": "grobid",
+      "label": "exploratory"
+    },
+    {
+      "fp_a": 0.08774193548387096,
+      "k_a": 204,
+      "n_a": 2325,
+      "fp_b": 0.015483870967741935,
+      "k_b": 36,
+      "n_b": 2325,
+      "ratio": 5.666666666666666,
+      "ratio_ci": [
+        3.0180555555555557,
+        12.07172619047619
+      ],
+      "n_papers": 97,
+      "screen": "crossref",
+      "style": "acmart",
+      "variant": "strip",
+      "parser": "anystyle",
+      "label": "exploratory"
+    }
+  ],
+  "interim": true,
+  "s2_pending": 949,
+  "interim_note": "INTERIM: screens Crossref-only and Crossref-only + DBLP offline; no S2, no arXiv title search; H3 (full cascade) pending"
+}

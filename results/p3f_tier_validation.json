@@ -1,0 +1,109 @@
+{
+ "label": "tier-rule validation (Amendment 8 (I)); only resolved references; S and W are rare in registries",
+ "n": 54468,
+ "agreement": 0.7313101270470735,
+ "kappa": 0.607793553079306,
+ "confusion_machine_rows_record_cols": [
+  [
+   13342,
+   2034,
+   1184,
+   553,
+   63,
+   259
+  ],
+  [
+   1093,
+   17275,
+   2037,
+   1760,
+   18,
+   161
+  ],
+  [
+   920,
+   2876,
+   8405,
+   234,
+   4,
+   10
+  ],
+  [
+   146,
+   82,
+   44,
+   596,
+   1,
+   71
+  ],
+  [
+   3,
+   12,
+   4,
+   1,
+   0,
+   0
+  ],
+  [
+   290,
+   401,
+   229,
+   139,
+   6,
+   215
+  ]
+ ],
+ "labels": [
+  "J",
+  "C",
+  "P",
+  "B",
+  "S",
+  "W"
+ ],
+ "excluded_counts": {
+  "s2": 642,
+  "crossref": 95,
+  "dblp": 19,
+  "gt3:s2": 16,
+  "gt3:url": 489,
+  "gt3:wayback": 84
+ },
+ "version_mismatch_n": 7017,
+ "version_mismatch_by_pair": [
+  {
+   "tier_machine": "C",
+   "tier_record": "P",
+   "n": 2037
+  },
+  {
+   "tier_machine": "J",
+   "tier_record": "P",
+   "n": 1184
+  },
+  {
+   "tier_machine": "P",
+   "tier_record": "C",
+   "n": 2876
+  },
+  {
+   "tier_machine": "P",
+   "tier_record": "J",
+   "n": 920
+  }
+ ],
+ "agreement_without_version_mismatches": 0.8394554382415544,
+ "n_without_version_mismatches": 47451,
+ "by_source": {
+  "arxiv": 7417,
+  "crossref": 36682,
+  "dblp": 9306,
+  "gt3:arxiv": 1,
+  "gt3:crossref": 111,
+  "gt3:dblp": 109,
+  "gt3:openalex": 7,
+  "openalex": 835
+ },
+ "crossref_types_stored": 29763,
+ "interim": false
+}
