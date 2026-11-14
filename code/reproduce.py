@@ -48,7 +48,17 @@ STEPS = [["p1_backend_table.py", "--seed", "42"], ["p1_hypotheses.py", "--seed",
          # P3H (Amendment 9 and the closure check, post hoc, offline): periods by branch, rule check of the stored web
          # captures (cache_p3h), score with the released key and the author's file, numbers.json keys *_p3h
          ["p3h_period_standardised.py"], ["p3h_evidence_check.py"], ["p3h_evidence_score.py"], ["p3h_numbers.py"]]
-NEEDS = {"p3f_deep_search.py --evaluate": ["_derived/43/cache_p3f", "arxiv_src_43/src"]}
+# P4B: inputs that are not redistributed (stored backend and deep-search responses, arXiv sources). A step whose
+# inputs are missing is skipped (its committed outputs stay in results/ and feed the later steps); for p3e_recompute the
+# listed outputs are put back to the committed files after the step. The script prints every skip.
+_C = ["_derived/43/cache", "_derived/43/cache_p3e", "_derived/43/cache_p3f"]
+NEEDS = {"p3f_deep_search.py --evaluate": ["_derived/43/cache_p3f", "arxiv_src_43/src"],
+         "p3f_tier_validation.py": _C,
+         "p3f_notfound_profile.py": ["_derived/43/cache_p3f", "arxiv_src_43/src"],
+         "p3g_branch_split.py": _C + ["arxiv_src_43/src"],
+         "p3g_bounds.py": _C + ["arxiv_src_43/src"]}
+KEEP = {"p3e_recompute.py": (["_derived/43/cache", "_derived/43/cache_p3e"],
+                             ["p3e_exploratory_p3e.csv", "p3e_exploratory_p3e.json"])}
 CSVS = ["p1_backend_table.csv", "p1_h5_betabinom.csv", "p2_render_manual_fp.csv", "p2_theory_final.csv",
         "p2_backend_table_retry.csv", "p2_render_manual_fp_adjudicated.csv", "p3d_theory_fix.csv",
         "p2_backend_table_retry_p3e.csv", "p1_h5_betabinom_p3e.csv", "p2_theory_final_p3e.csv", "p3d_theory_fix_p3e.csv",
@@ -107,11 +117,20 @@ def main():
         if r.returncode:
             print(r.stdout[-2000:], r.stderr[-2000:])
             sys.exit(f"step failed: {step[0]}")
+        if step[0] in KEEP:
+            need, files = KEEP[step[0]]
+            missing = [n for n in need if not (data / n).exists()]
+            if missing:
+                for f in files:
+                    shutil.copy2(snap / f, RES / f)
+                print("   kept committed", ", ".join(files), "(needs", ", ".join(missing) + ", not redistributed)", flush=True)
+                skipped.append(f"{step[0]} ({', '.join(files)})")
     bad = 0
     for f in JSONS:
         a = dict(flat(json.loads((snap / f).read_text(encoding="utf-8"))))
         b = dict(flat(json.loads((RES / f).read_text(encoding="utf-8"))))
         a.pop("interim", None), b.pop("interim", None)
+        a.pop("input", None), b.pop("input", None)  # P4B: a local file path, differs with THS_DATASETS
         diff = sorted(k for k in set(a) | set(b) if k not in a or k not in b or not same(a[k], b[k]))
         print(f"{f}: {len(a)} keys, {len(diff)} differ", *(f"\n   {k}: {a.get(k)} -> {b.get(k)}" for k in diff[:10]))
         bad += len(diff)

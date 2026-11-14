@@ -30,8 +30,12 @@ The script reruns the main table, H1/H2, the beta-binomial fit, both H4-render v
 the merge of the night retry and the post-hoc recheck statistics. It then compares every number with the committed results and exits 1 on any
 difference. `code/make_ms_numbers.py` turns the result files into the number macros and tables of the manuscript.
 
-One step (`p3f_deep_search.py --evaluate`) re-reads the stored deep-search responses and the arXiv sources; without
-them it is skipped, its committed output is used, and the script says so.
+Five steps re-read the stored backend and deep-search responses or the arXiv sources, which are not redistributed:
+`p3f_deep_search.py --evaluate`, `p3f_tier_validation.py`, `p3f_notfound_profile.py`, `p3g_branch_split.py` and
+`p3g_bounds.py`, plus the exploratory table of `p3e_recompute.py` (`p3e_exploratory_p3e.*`). Without those inputs the
+script skips them, keeps their committed outputs (which the later steps then read), prints each skip, and compares
+everything else. With the release files only, the comparison then reports 0 differences (checked on 14-11-2026);
+with the stored responses and the arXiv sources present, every step runs.
 
 Not included: arXiv source files (not re-hosted), the stored database responses and the DBLP dump. The resolution and
 render stages need them, so they are not part of the offline reproduction.

@@ -22,7 +22,7 @@ Checks, each PASS/FAIL:
                submitted sources (comments stripped) and in the text of main.pdf, supplement.pdf and cover_letter.pdf;
                placeholders only inside \\TODOSUBMIT{...}; --final (P4) fails on any \\TODOSUBMIT left
   G11k secrets no .env / key material (code/package_exclude.py) and no OpenAlex or S2 key value in the package, source.zip,
-               repository working tree, Zenodo stage, cache_p3e or cache_p3f (prints counts and file names only)
+               repository working tree, release data, cache_p3e or cache_p3f (prints counts and file names only)
 Usage: python verify_package.py [--final]   (exit 1 on any FAIL)
        python verify_package.py --g11k      (G11k alone)
 """
@@ -182,7 +182,7 @@ def main():
                      r"manuscript v1\.\d|Reviewer 2|\d\d:\d\d ICT|repository = a result|file a result file|"
                      # P3H (closure S18, S19, N9): pre-completion numbers of the theory note, version and review labels,
                      # replacement garbage
-                     r"Theorem 1\b|u_A = 2\.11|2\.11 ?% \[1\.64|\b15\.7 ?% \[13\.2|3\.3 ?×|142/299|12/299 = 4\.0|19/299 = 6\.4|61\.75|\bv1\.[0-9](?![0-9])|S6′|S6'|"
+                     r"Theorem 1\b|u_A = 2\.11|2\.11 ?% \[1\.64|\b15\.7 ?% \[13\.2|3\.3 ?×|142/299|12/299 = 4\.0|19/299 = 6\.4|61\.75|\bv1\.[0-9](?![0-9]|\.[0-9])|S6′|S6'|"
                      r"Fable 5\.2|\bR_H2\b|_p3[a-h]\b(?!\.(pdf|md))|earlier versions?\b|previous version|official spot check|"
                      r"R2_REVIEW|deep_search_state|a project note §|reviewer's objections|"
                      r"\(deposited\),? (and )?the stored responses \(deposited\)|the AI rater the AI rater", re.I)
@@ -212,7 +212,7 @@ def main():
         s = strip(s) if p.suffix == ".tex" else s
         scan(p.name, s)
         todo = re.findall(r"\\TODOSUBMIT\{[^{}]*\}", s)
-        n_todo += len(todo) if p.name != "main.tex" else len(todo) - len(re.findall(r"\\newcommand\{\\TODOSUBMIT\}", s))
+        n_todo += len(todo)  # P4B: the \newcommand{\TODOSUBMIT} definition does not match the pattern above
         rest = re.sub(r"\\TODOSUBMIT\{[^{}]*\}", "", s)
         hits2 += [f"{p.name}: placeholder outside \\TODOSUBMIT: {m.group(0)!r}" for m in ph.finditer(rest)]
     for pdf in (TEX / "main.pdf", PKG / "supplement" / "supplement.pdf", PKG / "cover_letter.pdf"):
@@ -238,7 +238,7 @@ def gate_secrets():
     keys = [k for k in (read_env_key(), read_s2_key()) if k]
     needles = [n.encode() for k in keys for n in {k, k[:16]} if len(n) >= 8]
     der = Path(os.environ.get("THS_DATASETS", r"D:\Datasets")) / "_derived" / "43"
-    roots = [PKG, Path(r"D:\Repos\refscreen-fp"), der / "zenodo_stage", der / "cache_p3e", der / "cache_p3f"]
+    roots = [PKG, Path(r"D:\Repos\refscreen-fp"), der / "release_v1.0.0", der / "cache_p3e", der / "cache_p3f"]
     bad_name, bad_key, n_files = [], [], 0
     for rt in roots:
         if not rt.exists():
